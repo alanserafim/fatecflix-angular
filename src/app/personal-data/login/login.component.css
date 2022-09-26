@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+mat-card {
+  width: 80vw;
+}
+
+.login{
+  margin: 1em;
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 600px){
+  mat-card {
+    width: 40vw;
+  }
+}
+
+button{
+  background-color: var(--primary-color);
+  color: var(--primary-text-color);
+  margin: 1em;
+}
+
+p{
+  text-align: center;
+}

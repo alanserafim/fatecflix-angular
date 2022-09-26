@@ -3,7 +3,7 @@
   flex-direction: column;
 }
 
-mat-card {
+.card {
   width: 80vw;
 }
 
@@ -14,9 +14,9 @@ mat-card {
   justify-content: center;
 }
 
-@media (min-width: 600px){
-  mat-card {
-    width: 40vw;
+@media screen and (min-width:1080px){
+  .card {
+    width: 25vw;
   }
 }
 

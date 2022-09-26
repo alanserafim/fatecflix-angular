@@ -16,3 +16,9 @@ button{
   color: var(--primary-text-color);
   margin: 1em;
 }
+
+@media screen and (min-width:720px){
+  .card {
+    width: 40%;
+  }
+}

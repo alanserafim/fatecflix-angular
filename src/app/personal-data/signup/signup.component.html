@@ -4,31 +4,31 @@
       <p>Cadastro</p>
       <mat-form-field appearance="fill">
         <mat-label>E-mail</mat-label>
-        <input matInput placeholder="aluno@fatec.sp.gov.br">
+        <input type="email" matInput placeholder="aluno@fatec.sp.gov.br">
       </mat-form-field>
       <mat-form-field appearance="fill">
         <mat-label>CPF</mat-label>
-        <input matInput placeholder="000.000.000-00">
+        <input type="text" matInput placeholder="000.000.000-00">
       </mat-form-field>
       <mat-form-field appearance="fill">
         <mat-label>Nome</mat-label>
-        <input matInput placeholder="Nome Sobrenome">
+        <input type="text" matInput placeholder="Nome Sobrenome">
       </mat-form-field>
       <mat-form-field appearance="fill">
         <mat-label>Data de Nascimento</mat-label>
-        <input matInput placeholder="00/00/0000">
+        <input type="date" matInput placeholder="00/00/0000">
       </mat-form-field>
       <mat-form-field appearance="fill">
         <mat-label>RA</mat-label>
-        <input matInput>
+        <input type="number" matInput>
       </mat-form-field>
       <mat-form-field appearance="fill">
         <mat-label>Curso</mat-label>
-        <input matInput>
+        <input type="text" matInput>
       </mat-form-field>
       <mat-form-field appearance="fill">
         <mat-label>Ano de ingresso</mat-label>
-        <input matInput>
+        <input type="number" matInput>
       </mat-form-field>
       <mat-form-field appearance="fill">
         <mat-label>Semestre de Ingresso</mat-label>
@@ -45,6 +45,14 @@
             <mat-option value="Noite">Noite</mat-option>
         </mat-select>
       </mat-form-field>
-      <button mat-flat-button>CADASTRAR</button>
+      <mat-form-field appearance="fill">
+        <mat-label>Senha</mat-label>
+        <input type="password" matInput #senha>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Confirmação de senha</mat-label>
+        <input type="password" matInput>
+      </mat-form-field>
+      <button type="submit" mat-flat-button>CADASTRAR</button>
   </mat-card>
 </section>

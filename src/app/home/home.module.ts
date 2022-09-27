@@ -6,6 +6,7 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import {MatButtonModule} from '@angular/material/button';
     HomeRoutingModule,
     MatToolbarModule,
     MatButtonModule,
+    MatGridListModule
   ],
   exports:[NavbarComponent]
 })

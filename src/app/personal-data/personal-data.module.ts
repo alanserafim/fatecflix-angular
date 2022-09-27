@@ -10,12 +10,17 @@ import {MatInputModule} from '@angular/material/input';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import {MatSelectModule} from '@angular/material/select';
+import { SucessComponent } from './sucess/sucess.component';
+import {MatIconModule} from '@angular/material/icon';
+import { FormsModule } from '@angular/forms';
+
 
 
 @NgModule({
   declarations: [
     LoginComponent,
     SignupComponent,
+    SucessComponent,
   ],
   imports: [
     CommonModule,
@@ -26,7 +31,9 @@ import {MatSelectModule} from '@angular/material/select';
     MatButtonModule,
     MatSelectModule,
     MatButtonModule,
-    HomeModule
+    HomeModule,
+    MatIconModule,
+    FormsModule
   ]
 })
 export class PersonalDataModule { }

@@ -1,18 +1,30 @@
 <app-navbar></app-navbar>
-<section class="login">
+<form class="login" (ngSubmit)="login()">
   <mat-card class="card">
     <h2>Login</h2>
     <div class="container">
       <mat-form-field appearance="fill">
         <mat-label>E-mail</mat-label>
-        <input type="email" matInput>
+        <input
+          matInput
+          type="email"
+          [(ngModel)]="email"
+          name="email"
+        >
       </mat-form-field>
       <mat-form-field appearance="fill">
         <mat-label>Senha</mat-label>
-        <input type="password" matInput #senha>
+        <input
+          matInput [type]="hide ? 'password' : 'text'"
+          [(ngModel)]="senha"
+          name="senha"
+        >
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
       </mat-form-field>
       <button type="submit" mat-flat-button>ENTRAR</button>
     </div>
     <p><a routerLink='cadastro'>Ainda nâo tem acesso? Cadastre-se!</a></p>
   </mat-card>
-</section>
+</form>

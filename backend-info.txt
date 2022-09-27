@@ -1,0 +1,11 @@
+a BASE_URL é https://fatecflix-api.herokuapp.com
+
+é as endpoints são:
+
+https://fatecflix-api.herokuapp.com/api/v1/signUp <- para cadastrar
+https://fatecflix-api.herokuapp.com/api/v1/signIn <- para logar
+https://fatecflix-api.herokuapp.com/api/v1/me <- retorna todas as informações do usuario logado
+para você conseguir diferenciar aluno de professor
+
+A api documentada está aqui:
+https://fatecflix-api.herokuapp.com/swagger-ui.html

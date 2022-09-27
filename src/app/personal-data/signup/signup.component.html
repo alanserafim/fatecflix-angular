@@ -1,45 +1,81 @@
 <app-navbar></app-navbar>
-<section class="cadastro">
+<form class="cadastro" (ngSubmit)="cadastra()">
   <mat-card class="container card">
       <p>Cadastro</p>
       <mat-form-field appearance="fill">
         <mat-label>E-mail</mat-label>
-        <input type="email" matInput placeholder="aluno@fatec.sp.gov.br">
+        <input
+          matInput
+          type="email"
+          placeholder="aluno@fatec.sp.gov.br"
+          name="email"
+         >
       </mat-form-field>
       <mat-form-field appearance="fill">
         <mat-label>CPF</mat-label>
-        <input type="text" matInput placeholder="000.000.000-00">
+        <input
+        matInput
+        type="text"
+        placeholder="000.000.000-00"
+        name="cpf"
+        >
       </mat-form-field>
       <mat-form-field appearance="fill">
         <mat-label>Nome</mat-label>
-        <input type="text" matInput placeholder="Nome Sobrenome">
+        <input
+          matInput
+          type="text"
+          placeholder="Nome Sobrenome"
+          name="nome"
+        >
       </mat-form-field>
       <mat-form-field appearance="fill">
         <mat-label>Data de Nascimento</mat-label>
-        <input type="date" matInput placeholder="00/00/0000">
+        <input
+          matInput
+          type="date"
+          placeholder="00/00/0000"
+          name="dataNascimento"
+        >
       </mat-form-field>
       <mat-form-field appearance="fill">
         <mat-label>RA</mat-label>
-        <input type="number" matInput>
+        <input
+          matInput
+          type="number"
+          name="ra"
+        >
       </mat-form-field>
       <mat-form-field appearance="fill">
         <mat-label>Curso</mat-label>
-        <input type="text" matInput>
+        <input
+          matInput
+          type="text"
+          name="curso"
+        >
       </mat-form-field>
       <mat-form-field appearance="fill">
         <mat-label>Ano de ingresso</mat-label>
-        <input type="number" matInput>
+        <input
+        matInput
+        type="number"
+        name="anoIngresso"
+        >
       </mat-form-field>
       <mat-form-field appearance="fill">
         <mat-label>Semestre de Ingresso</mat-label>
-        <mat-select>
+        <mat-select
+        name="semestreIngresso"
+        >
             <mat-option value="1">1º</mat-option>
             <mat-option value="2">2º</mat-option>
         </mat-select>
       </mat-form-field>
       <mat-form-field appearance="fill">
         <mat-label>Período</mat-label>
-        <mat-select>
+        <mat-select
+        name="periodo"
+        >
             <mat-option value="Manhã">Manhã</mat-option>
             <mat-option value="Tarde">Tarde</mat-option>
             <mat-option value="Noite">Noite</mat-option>
@@ -47,12 +83,23 @@
       </mat-form-field>
       <mat-form-field appearance="fill">
         <mat-label>Senha</mat-label>
-        <input type="password" matInput #senha>
+        <input
+        matInput
+        type="password"
+        name="senha"
+        >
       </mat-form-field>
       <mat-form-field appearance="fill">
         <mat-label>Confirmação de senha</mat-label>
-        <input type="password" matInput>
+        <input
+        matInput
+        type="password"
+        name="confirmacao"
+        >
       </mat-form-field>
-      <button type="submit" mat-flat-button>CADASTRAR</button>
+      <button
+      mat-flat-button
+      type="submit"
+      >CADASTRAR</button>
   </mat-card>
-</section>
+</form>

@@ -9,6 +9,7 @@
           type="email"
           placeholder="aluno@fatec.sp.gov.br"
           name="email"
+          [(ngModel)]="usuario.email"
          >
       </mat-form-field>
       <mat-form-field appearance="fill">
@@ -18,6 +19,7 @@
         type="text"
         placeholder="000.000.000-00"
         name="cpf"
+        [(ngModel)]="usuario.cpf"
         >
       </mat-form-field>
       <mat-form-field appearance="fill">
@@ -27,6 +29,7 @@
           type="text"
           placeholder="Nome Sobrenome"
           name="nome"
+          [(ngModel)]="usuario.nome"
         >
       </mat-form-field>
       <mat-form-field appearance="fill">
@@ -36,14 +39,15 @@
           type="date"
           placeholder="00/00/0000"
           name="dataNascimento"
+          [(ngModel)]="usuario.dataNascimento"
         >
       </mat-form-field>
       <mat-form-field appearance="fill">
         <mat-label>RA</mat-label>
         <input
           matInput
-          type="number"
           name="ra"
+          [(ngModel)]="usuario.ra"
         >
       </mat-form-field>
       <mat-form-field appearance="fill">
@@ -51,21 +55,24 @@
         <input
           matInput
           type="text"
-          name="curso"
+          name="usuario"
+          [(ngModel)]="usuario.curso"
         >
       </mat-form-field>
       <mat-form-field appearance="fill">
         <mat-label>Ano de ingresso</mat-label>
         <input
         matInput
-        type="number"
+        type="text"
         name="anoIngresso"
+        [(ngModel)]="usuario.anoIngresso"
         >
       </mat-form-field>
       <mat-form-field appearance="fill">
         <mat-label>Semestre de Ingresso</mat-label>
         <mat-select
         name="semestreIngresso"
+        [(ngModel)]="usuario.semestreIngresso"
         >
             <mat-option value="1">1º</mat-option>
             <mat-option value="2">2º</mat-option>
@@ -75,6 +82,7 @@
         <mat-label>Período</mat-label>
         <mat-select
         name="periodo"
+        [(ngModel)]="usuario.periodo"
         >
             <mat-option value="Manhã">Manhã</mat-option>
             <mat-option value="Tarde">Tarde</mat-option>
@@ -87,6 +95,7 @@
         matInput
         type="password"
         name="senha"
+        [(ngModel)]="usuario.senha"
         >
       </mat-form-field>
       <mat-form-field appearance="fill">
@@ -95,6 +104,7 @@
         matInput
         type="password"
         name="confirmacao"
+        [(ngModel)]="usuario.confimacao"
         >
       </mat-form-field>
       <button

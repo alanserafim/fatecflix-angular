@@ -12,7 +12,7 @@ const routes: Routes = [
     loadChildren:()=> import ('./home/home.module').then((m)=> m.HomeModule )
   },
   {
-    path: 'login',
+    path: 'dados',
     loadChildren:()=> import ('./personal-data/personal-data.module').then((m)=> m.PersonalDataModule )
   },
 ];

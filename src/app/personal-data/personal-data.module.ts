@@ -33,7 +33,7 @@ import { FormsModule } from '@angular/forms';
     MatButtonModule,
     HomeModule,
     MatIconModule,
-    FormsModule
+    FormsModule,
   ]
 })
 export class PersonalDataModule { }

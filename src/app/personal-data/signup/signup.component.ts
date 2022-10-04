@@ -16,7 +16,7 @@ export class SignupComponent implements OnInit {
     cpf : '',
     nome : '',
     dataNascimento : '',
-    ra : 1,
+    ra : 0,
     curso : '',
     anoIngresso : '',
     semestreIngresso : '',
@@ -27,20 +27,6 @@ export class SignupComponent implements OnInit {
 
   }
 
-  // email = '';
-  // cpf = '';
-  // nome = '';
-  // dataNascimento = '';
-  // ra = 1;
-  // curso = '';
-  // anoIngresso = '';
-  // semestreIngresso = '';
-  // periodo = '';
-  // senha = '';
-  // confimacao = '';
-  // perfil=["user"];
-
-
   constructor(private registServive: RegistrationService, private router:Router) { }
 
   ngOnInit(): void {
@@ -48,21 +34,8 @@ export class SignupComponent implements OnInit {
 
   cadastra(){
     this.registServive.cadastra(this.usuario
-      // this.email,
-      // this.cpf,
-      // this.nome,
-      //this.dataNascimento,
-      //this.ra,
-      //this.curso,
-      //this.anoIngresso,
-      //this.semestreIngresso,
-      //this.periodo,
-      // this.senha,
-      //this.confimacao,
-      // this.perfil
       ).subscribe(()=>{
-      //this.router.navigate(['sucesso'])
-      console.log("Deu certo");
+      this.router.navigate(['dados/sucesso'])
 
     }, (error)=> {
       alert("Cadastro não realizado!");

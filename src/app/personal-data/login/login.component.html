@@ -1,5 +1,5 @@
 <app-navbar></app-navbar>
-<form class="login" (ngSubmit)="login()">
+<form class="login" (ngSubmit)="login()" #loginForm="ngForm">
   <mat-card class="card">
     <h2>Login</h2>
     <div class="container">
@@ -15,7 +15,7 @@
         >
       </mat-form-field>
       <app-messages
-      *ngIf="campoEmail.invalid"
+      *ngIf="campoEmail.invalid && campoEmail.touched"
         mensagem="Usuário obrigatório"
         >
       </app-messages>
@@ -33,11 +33,15 @@
         </button>
       </mat-form-field>
       <app-messages
-          *ngIf="campoSenha.invalid"
+          *ngIf="campoSenha.invalid && campoSenha.touched"
            mensagem="Senha obrigatória"
         >
       </app-messages>
-      <button type="submit" mat-flat-button>ENTRAR</button>
+      <button
+        type="submit"
+        mat-flat-button
+        [disabled]="loginForm.invalid"
+        >ENTRAR</button>
     </div>
     <p><a routerLink='cadastro'>Ainda nâo tem acesso? Cadastre-se!</a></p>
   </mat-card>

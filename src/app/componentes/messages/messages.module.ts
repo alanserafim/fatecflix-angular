@@ -10,6 +10,9 @@ import { MessagesComponent } from './messages.component';
   ],
   imports: [
     CommonModule
+  ],
+  exports:[
+    MessagesComponent
   ]
 })
 export class MessagesModule { }

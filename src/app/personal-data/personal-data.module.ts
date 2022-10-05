@@ -1,3 +1,4 @@
+import { MessagesModule } from './../componentes/messages/messages.module';
 import { HomeModule } from './../home/home.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -34,6 +35,7 @@ import { FormsModule } from '@angular/forms';
     HomeModule,
     MatIconModule,
     FormsModule,
+    MessagesModule
   ]
 })
 export class PersonalDataModule { }

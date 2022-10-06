@@ -16,7 +16,6 @@ export class SignupComponent implements OnInit {
     cpf : '',
     nome : '',
     dataNascimento : '',
-    ra : 0,
     curso : '',
     anoIngresso : '',
     semestreIngresso : '',

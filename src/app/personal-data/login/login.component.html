@@ -16,7 +16,7 @@
       </mat-form-field>
       <app-messages
       *ngIf="campoEmail.invalid && campoEmail.touched"
-        mensagem="Usuário obrigatório"
+        mensagem="O campo e-mail é obrigatório"
         >
       </app-messages>
       <mat-form-field appearance="fill">
@@ -34,7 +34,7 @@
       </mat-form-field>
       <app-messages
           *ngIf="campoSenha.invalid && campoSenha.touched"
-           mensagem="Senha obrigatória"
+           mensagem="O campo senha é obrigatório"
         >
       </app-messages>
       <button
@@ -43,6 +43,6 @@
         [disabled]="loginForm.invalid"
         >ENTRAR</button>
     </div>
-    <p><a routerLink='cadastro'>Ainda nâo tem acesso? Cadastre-se!</a></p>
+    <p><a [routerLink]="['cadastro']">Ainda nâo tem acesso? Cadastre-se!</a></p>
   </mat-card>
 </form>

@@ -3,7 +3,7 @@ export interface Usuario {
   cpf: string,
   nome: string,
   dataNascimento: string,
-  ra: number,
+  ra?: number,
   curso: string,
   anoIngresso: string,
   semestreIngresso: string;

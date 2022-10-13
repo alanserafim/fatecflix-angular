@@ -13,7 +13,8 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatSelectModule} from '@angular/material/select';
 import { SucessComponent } from './sucess/sucess.component';
 import {MatIconModule} from '@angular/material/icon';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NovoUsuarioComponent } from './novo-usuario/novo-usuario.component';
 
 
 
@@ -22,6 +23,7 @@ import { FormsModule } from '@angular/forms';
     LoginComponent,
     SignupComponent,
     SucessComponent,
+    NovoUsuarioComponent,
   ],
   imports: [
     CommonModule,
@@ -35,7 +37,8 @@ import { FormsModule } from '@angular/forms';
     HomeModule,
     MatIconModule,
     FormsModule,
-    MessagesModule
+    MessagesModule,
+    ReactiveFormsModule
   ]
 })
 export class PersonalDataModule { }

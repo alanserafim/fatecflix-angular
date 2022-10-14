@@ -1,5 +1,5 @@
 <app-navbar></app-navbar>
-<form class="cadastro" (ngSubmit)="cadastrar()" #cadastroForm="ngForm">
+<form class="cadastro" [formGroup]="novoUsuarioForm" (submit)="cadastrar()">
   <mat-card class="container card">
       <p>Cadastro</p>
       <mat-form-field appearance="fill">
@@ -9,8 +9,25 @@
           type="email"
           placeholder="aluno@fatec.sp.gov.br"
           name="email"
+          formControlName="email"
          >
       </mat-form-field>
+      <app-messages
+        *ngIf="novoUsuarioForm.get('email')?.errors?.['required'] &&
+          novoUsuarioForm.get('email')?.touched"
+        mensagem = "Campo email é obrigatório"
+      >
+      </app-messages>
+      <app-messages
+        *ngIf="
+          novoUsuarioForm.get('email')?.errors?.['email'] &&
+          novoUsuarioForm.get('email')?.touched"
+        mensagem="E-mail no formato incorreto">
+      </app-messages>
+      <app-messages
+        *ngIf="novoUsuarioForm.errors?.['emailSenhaIguaisValidator']"
+        mensagem="E-mail e senha não podem ser iguais">
+      </app-messages>
       <mat-form-field appearance="fill">
         <mat-label>CPF</mat-label>
         <input
@@ -18,6 +35,7 @@
         type="text"
         placeholder="000.000.000-00"
         name="cpf"
+        formControlName="cpf"
         >
       </mat-form-field>
       <mat-form-field appearance="fill">
@@ -27,6 +45,7 @@
           type="text"
           placeholder="Nome Sobrenome"
           name="nome"
+          formControlName="nome"
         >
       </mat-form-field>
       <mat-form-field appearance="fill">
@@ -36,6 +55,7 @@
           type="date"
           placeholder="00/00/0000"
           name="dataNascimento"
+          formControlName="dataNascimento"
         >
       </mat-form-field>
       <mat-form-field appearance="fill">
@@ -43,6 +63,7 @@
         <input
           matInput
           name="ra"
+          formControlName="ra"
         >
       </mat-form-field>
       <mat-form-field appearance="fill">
@@ -51,6 +72,7 @@
           matInput
           type="text"
           name="curso"
+          formControlName="curso"
         >
       </mat-form-field>
       <mat-form-field appearance="fill">
@@ -59,12 +81,14 @@
         matInput
         type="text"
         name="anoIngresso"
+        formControlName="anoIngresso"
         >
       </mat-form-field>
       <mat-form-field appearance="fill">
         <mat-label>Semestre de Ingresso</mat-label>
         <mat-select
         name="semestreIngresso"
+        formControlName="semestreIngresso"
         >
             <mat-option value="1">1º</mat-option>
             <mat-option value="2">2º</mat-option>
@@ -74,6 +98,7 @@
         <mat-label>Período</mat-label>
         <mat-select
         name="periodo"
+        formControlName="periodo"
         >
             <mat-option value="Manhã">Manhã</mat-option>
             <mat-option value="Tarde">Tarde</mat-option>
@@ -86,6 +111,7 @@
         matInput
         type="password"
         name="senha"
+        formControlName="senha"
         >
       </mat-form-field>
       <mat-form-field appearance="fill">
@@ -94,12 +120,15 @@
         matInput
         type="password"
         name="confirmacao"
+        formControlName="confirmacao"
         >
       </mat-form-field>
+      <app-messages
+        *ngIf="novoUsuarioForm.errors?.['senhaDiferenteConfirmacao']"
+        mensagem="As senhas informadas não são iguais."
+      ></app-messages>
       <button
       mat-flat-button
-      type="submit"
-      [disabled]="cadastroForm.invalid"
       >CADASTRAR</button>
       <p><a routerLink="/home/login">Já é usuário? Faça login!</a></p>
   </mat-card>

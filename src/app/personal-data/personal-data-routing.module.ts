@@ -1,3 +1,4 @@
+import { NovoUsuarioComponent } from './novo-usuario/novo-usuario.component';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { NgModule } from '@angular/core';
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: 'sucesso',
     component: SucessComponent
+  },
+  {
+    path: 'novo-usuario',
+    component: NovoUsuarioComponent
   }
 ];
 

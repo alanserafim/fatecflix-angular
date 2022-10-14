@@ -1,4 +1,4 @@
-import { Usuario } from './../personal-data/signup/usuario';
+import { Usuario } from '../../personal-data/signup/usuario';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';

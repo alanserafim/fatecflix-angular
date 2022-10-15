@@ -8,7 +8,7 @@ const routes: Routes = [
     component: HomepageComponent},
   {
     path: 'login',
-    loadChildren:()=> import ('../personal-data/personal-data.module').then((m)=> m.PersonalDataModule )
+    loadChildren:()=> import ('../usuario/usuario.module' ).then((m)=> m.UsuarioModule )
   },
 ];
 

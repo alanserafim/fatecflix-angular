@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
 import { controlValuesAreEqual } from './validators/campos-iguais.validator';
 
 @Component({
@@ -23,6 +24,7 @@ export class NovoUsuarioCadastroComponent implements OnInit {
         cpf: ['', [Validators.required, Validators.minLength(11)]],
         nome: ['', [Validators.required]],
         dataNascimento: [''],
+        ra: [''],
         curso: [''],
         anoIngresso: [''],
         semestreIngresso: [''],

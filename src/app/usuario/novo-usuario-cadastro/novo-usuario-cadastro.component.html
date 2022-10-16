@@ -24,10 +24,6 @@
           novoUsuarioForm.get('email')?.touched"
         mensagem="E-mail no formato incorreto">
       </app-messages>
-      <app-messages
-        *ngIf="novoUsuarioForm.errors?.['emailSenhaIguaisValidator']"
-        mensagem="E-mail e senha não podem ser iguais">
-      </app-messages>
       <mat-form-field appearance="fill">
         <mat-label>CPF</mat-label>
         <input

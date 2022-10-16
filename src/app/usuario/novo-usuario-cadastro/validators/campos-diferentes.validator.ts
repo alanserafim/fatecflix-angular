@@ -6,10 +6,10 @@ export function controlValuesDifferent(controlNameA: string, controlNameB: strin
     const valueOfControlA = formGroup.get(controlNameA)?.value
     const valueOfControlB = formGroup.get(controlNameB)?.value
 
-    if (valueOfControlA !== valueOfControlB) {
+    if (valueOfControlA != valueOfControlB) {
       return null
     } else {
-      return { valuesDoMatch: true }
+      return { matchValues: true }
     }
   }
 }

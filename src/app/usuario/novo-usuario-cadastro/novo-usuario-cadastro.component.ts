@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { controlValuesDifferent } from './validators/campos-diferentes.validator';
 
 import { controlValuesAreEqual } from './validators/campos-iguais.validator';
+import { cpfValido } from './validators/cpf-valido.validator';
 
 @Component({
   selector: 'app-novo-usuario-cadastro',
@@ -33,7 +35,12 @@ export class NovoUsuarioCadastroComponent implements OnInit {
         confirmacao: ['', [Validators.required]]
       },
       {
-        validators: [controlValuesAreEqual("senha", "confirmacao")]
+        validators: [
+          controlValuesAreEqual("senha", "confirmacao"),
+          controlValuesDifferent("senha", "email"),
+          controlValuesDifferent("senha", "cpf"),
+          cpfValido("cpf")
+        ]
       }
     )
   }

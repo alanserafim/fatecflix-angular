@@ -1,3 +1,4 @@
+import { FooterModule } from './../componentes/footer/footer.module';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -37,7 +38,8 @@ import { UsuarioRoutingModule } from './usuario-routing.module';
     FormsModule,
     MessagesModule,
     ReactiveFormsModule,
-    HeaderModule
+    HeaderModule,
+    FooterModule
   ]
 })
 export class UsuarioModule { }

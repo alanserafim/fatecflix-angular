@@ -1,0 +1,33 @@
+.rodape{
+  background-color: lightblue ;
+  color: white;
+  height: 150px;
+  margin-top: 5em;
+
+}
+
+.container{
+  display: flex;
+  margin: auto;
+}
+
+.equipe{
+  align-items: center;
+  justify-content: space-between;
+}
+
+.titulo, p {
+  line-height: 2em;
+  font-size: 0.9em;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+.icone{
+  transform: scale(0.9);
+  padding: 0 0 0 0.1em;
+  margin: 0;
+  border: 0;
+}
+

@@ -1,3 +1,4 @@
+import { FooterModule } from './../componentes/footer/footer.module';
 import { HeaderModule } from './../componentes/header/header.module';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
@@ -18,7 +19,8 @@ import { HomepageComponent } from './homepage/homepage.component';
     MatToolbarModule,
     MatButtonModule,
     MatGridListModule,
-    HeaderModule
+    HeaderModule,
+    FooterModule
   ],
   exports:[]
 })

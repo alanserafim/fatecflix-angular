@@ -22,3 +22,17 @@ button{
     width: 40%;
   }
 }
+
+app-messages{
+  color: red;
+  padding: 0 0 0 0;
+  margin: 0;
+  border: 0;
+}
+
+mat-form-field{
+  margin-top: 0.9em;
+  height: 65px;
+  padding: 0;
+  border: 0;
+}

@@ -31,7 +31,7 @@ export class NovoUsuarioCadastroComponent implements OnInit {
         anoIngresso: [''],
         semestreIngresso: [''],
         periodo: [''],
-        senha: ['', [Validators.required]],
+        senha: ['', [Validators.required, Validators.minLength(8)]],
         confirmacao: ['', [Validators.required]]
       },
       {

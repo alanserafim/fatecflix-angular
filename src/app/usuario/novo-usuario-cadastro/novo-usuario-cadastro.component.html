@@ -15,14 +15,14 @@
       <app-messages
         *ngIf="novoUsuarioForm.get('email')?.errors?.['required'] &&
           novoUsuarioForm.get('email')?.touched"
-        mensagem = "Campo email é obrigatório"
+        mensagem = "O campo e-mail é obrigatório."
       >
       </app-messages>
       <app-messages
         *ngIf="
           novoUsuarioForm.get('email')?.errors?.['email'] &&
           novoUsuarioForm.get('email')?.touched"
-        mensagem="E-mail no formato incorreto">
+        mensagem="O e-mail informado não é válido.">
       </app-messages>
       <mat-form-field appearance="fill">
         <mat-label>CPF</mat-label>
@@ -35,12 +35,16 @@
         >
       </mat-form-field>
       <app-messages
+        *ngIf="novoUsuarioForm.get('cpf')?.errors?.['required'] &&
+          novoUsuarioForm.get('cpf')?.touched"
+        mensagem = "O campo CPF é obrigatório."
+      >
+      </app-messages>
+      <app-messages
       *ngIf="novoUsuarioForm.errors?.['cpfInvalido'] &&
-      novoUsuarioForm.get('cpf')?.touched"
+      novoUsuarioForm.get('cpf')?.dirty"
       mensagem="O CPF digitado não é válido."
     ></app-messages>
-
-
       <mat-form-field appearance="fill">
         <mat-label>Nome</mat-label>
         <input
@@ -51,6 +55,12 @@
           formControlName="nome"
         >
       </mat-form-field>
+      <app-messages
+        *ngIf="novoUsuarioForm.get('nome')?.errors?.['required'] &&
+          novoUsuarioForm.get('nome')?.touched"
+        mensagem = "O campo nome é obrigatório."
+      >
+      </app-messages>
       <mat-form-field appearance="fill">
         <mat-label>Data de Nascimento</mat-label>
         <input
@@ -117,6 +127,23 @@
         formControlName="senha"
         >
       </mat-form-field>
+      <app-messages
+      *ngIf="novoUsuarioForm.get('senha')?.errors?.['required'] &&
+        novoUsuarioForm.get('senha')?.touched"
+      mensagem = "O campo senha é obrigatório."
+    >
+    </app-messages>
+    <app-messages
+    *ngIf="novoUsuarioForm.errors?.['matchValues'] &&
+    novoUsuarioForm.get('senha')?.dirty"
+    mensagem="A senha não pode ser igual ao email, cpf ou data de nascimento."
+  ></app-messages>
+  <app-messages
+  *ngIf="novoUsuarioForm.get('senha')?.errors?.['minlength'] &&
+    novoUsuarioForm.get('senha')?.touched"
+  mensagem = "A senha deve possuir ao mínimo 8 digitos."
+>
+</app-messages>
       <mat-form-field appearance="fill">
         <mat-label>Confirmação de senha</mat-label>
         <input
@@ -127,16 +154,18 @@
         >
       </mat-form-field>
       <app-messages
+      *ngIf="novoUsuarioForm.get('confirmacao')?.errors?.['required'] &&
+        novoUsuarioForm.get('confirmacao')?.touched"
+      mensagem = "O campo confirmação de senha é obrigatório."
+    >
+    </app-messages>
+      <app-messages
         *ngIf="novoUsuarioForm.errors?.['valuesDoNotMatch'] &&
         novoUsuarioForm.get('confirmacao')?.touched"
         mensagem="As senhas informadas não são iguais."
       ></app-messages>
-      <app-messages
-        *ngIf="novoUsuarioForm.errors?.['matchValues'] &&
-        novoUsuarioForm.get('senha')?.touched"
-        mensagem="As senha não pode ser igual ao email, cpf ou data de nascimento"
-      ></app-messages>
       <button
+      [disabled]="novoUsuarioForm.invalid"
       mat-flat-button
       >CADASTRAR</button>
       <p><a routerLink="/home/login">Já é usuário? Faça login!</a></p>

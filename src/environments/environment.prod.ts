@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  baseUrl: 'https://alanserafim.github.io/fatecflix-angular/'
 };

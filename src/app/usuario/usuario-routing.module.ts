@@ -1,3 +1,4 @@
+import { SucessoRequisicaoComponent } from './sucesso-requisicao/sucesso-requisicao.component';
 import { NovoUsuarioCadastroComponent } from './novo-usuario-cadastro/novo-usuario-cadastro.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -11,7 +12,12 @@ const routes: Routes = [
   {
     path: 'cadastro',
     component: NovoUsuarioCadastroComponent
+  },
+  {
+    path: 'sucesso',
+    component: SucessoRequisicaoComponent
   }
+
 ];
 
 @NgModule({

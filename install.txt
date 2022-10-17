@@ -4,6 +4,5 @@ npm install & npm install -g @angular/cli
 git config --global user.email "alan.serafim@fatec.sp.gov.br"
 git config --global user.name "alanserafim"
 
-ng build --sourcemaps --base-href https://alanserafim.github.io/fatecflix-angular/
+Deploy no gitHub Pages
 ng build --base-href 'https://alanserafim.github.io/fatecflix-angular/'
-

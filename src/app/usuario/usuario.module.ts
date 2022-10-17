@@ -1,3 +1,4 @@
+import { SucessoModule } from './../componentes/sucesso/sucesso.module';
 import { FooterModule } from './../componentes/footer/footer.module';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
@@ -16,13 +17,15 @@ import { LoginComponent } from './login/login.component';
 import { NovoUsuarioCadastroComponent } from './novo-usuario-cadastro/novo-usuario-cadastro.component';
 import { PerfilUsuarioComponent } from './perfil-usuario/perfil-usuario.component';
 import { UsuarioRoutingModule } from './usuario-routing.module';
+import { SucessoRequisicaoComponent } from './sucesso-requisicao/sucesso-requisicao.component';
 
 
 @NgModule({
   declarations: [
     LoginComponent,
     NovoUsuarioCadastroComponent,
-    PerfilUsuarioComponent
+    PerfilUsuarioComponent,
+    SucessoRequisicaoComponent
   ],
   imports: [
     CommonModule,
@@ -39,7 +42,8 @@ import { UsuarioRoutingModule } from './usuario-routing.module';
     MessagesModule,
     ReactiveFormsModule,
     HeaderModule,
-    FooterModule
+    FooterModule,
+    SucessoModule
   ]
 })
 export class UsuarioModule { }

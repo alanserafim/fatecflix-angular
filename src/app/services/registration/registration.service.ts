@@ -1,4 +1,3 @@
-import { Usuario } from '../../personal-data/signup/usuario';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
@@ -18,7 +17,7 @@ export class RegistrationService {
 
 
   constructor(private httpClient: HttpClient) { }
-  cadastra(usuario: Usuario): Observable<any>{
+  cadastra(usuario: any): Observable<any>{
     return this.httpClient.post('https://fatecflix-api.herokuapp.com/api/v1/users/signUp',  {
     email: usuario.email,
     cpf: usuario.cpf,

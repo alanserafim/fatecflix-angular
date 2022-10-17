@@ -1,3 +1,4 @@
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CadastrarCursoComponent implements OnInit {
 
-  constructor() { }
+  novoCursoForm!: FormGroup;
+
+  constructor(
+    private formBuilder: FormBuilder
+  ) { }
+
 
   ngOnInit(): void {
+
+    this.novoCursoForm = this.formBuilder.group(
+      {
+        titulo: ['',[Validators.required]],
+        descricao:['',[Validators.required]],
+        cargaHoraria: ['',[Validators.required]],
+        dataAtualizacao: ['', [Validators.required]],
+        mediaAvaliacao: [{value: '', disabled: true}]
+      })
+  }
+
+  cadastrarCurso(){
+
   }
 
 }

@@ -1,14 +1,18 @@
-import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import {MatInputModule} from '@angular/material/input';
+import { NgModule } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatInputModule } from '@angular/material/input';
 
-import { CoursesRoutingModule } from './courses-routing.module';
+import { FooterModule } from './../componentes/footer/footer.module';
+import { HeaderModule } from './../componentes/header/header.module';
+import { AtualizarCursoComponent } from './atualizar-curso/atualizar-curso.component';
 import { CadastrarCursoComponent } from './cadastrar-curso/cadastrar-curso.component';
-import {MatCardModule} from '@angular/material/card';
+import { CoursesRoutingModule } from './courses-routing.module';
 import { ExibirCursoComponent } from './exibir-curso/exibir-curso.component';
 import { ExibirTrilhaCursoComponent } from './exibir-trilha-curso/exibir-trilha-curso.component';
 import { ListarCursosComponent } from './listar-cursos/listar-cursos.component';
-import { AtualizarCursoComponent } from './atualizar-curso/atualizar-curso.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +26,12 @@ import { AtualizarCursoComponent } from './atualizar-curso/atualizar-curso.compo
     CommonModule,
     CoursesRoutingModule,
     MatInputModule,
-    MatCardModule
+    MatCardModule,
+    FooterModule,
+    HeaderModule,
+    MatButtonModule,
+    ReactiveFormsModule,
+    FormsModule
   ]
 })
 export class CoursesModule { }

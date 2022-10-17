@@ -1,25 +1,54 @@
-<section class="cadastro">
+<app-header></app-header>
+<form class="cadastro" [formGroup]="novoCursoForm" (submit)="cadastrarCurso">
   <mat-card class="card">
     <h1 class=>Cadastrar Curso</h1>
     <p class="titulo">Titulo:</p>
     <mat-form-field appearance="fill" class="input">
-      <input matInput class="input">
+      <input
+      matInput
+      class="input"
+      type="text"
+      formControlName="titulo"
+      >
     </mat-form-field>
     <p class="descricao">Descrição:</p>
       <mat-form-field class="descricaoInput" appearance="fill">
-        <textarea matInput></textarea>
+        <textarea
+        matInput
+        formControlName="descricao"
+        >
+      </textarea>
       </mat-form-field>
     <p class="cargaHoraria">Carga Horária:</p>
     <mat-form-field appearance="fill" class="input">
-      <input matInput>
+      <input
+      matInput
+      formControlName="cargaHoraria"
+      type="text"
+      >
     </mat-form-field>
     <p class="dataAtualizacao" >Data de atualização</p>
     <mat-form-field appearance="fill" class="input">
-      <input matInput class="input">
+      <input
+      matInput
+      class="input"
+      type="date"
+      formControlName="dataAtualizacao"
+      >
     </mat-form-field>
-    <p class="media">Avaliação</p>
+    <p class="media">Média Avaliação</p>
     <mat-form-field appearance="fill" class="input">
-      <input matInput  disabled="true">
+      <input
+      matInput
+      type="text"
+      formControlName="mediaAvaliacao"
+      >
     </mat-form-field>
+    <button
+      mat-flat-button
+      >CADASTRAR
+    </button>
     </mat-card>
-</section>
+  </form>
+
+<app-footer></app-footer>

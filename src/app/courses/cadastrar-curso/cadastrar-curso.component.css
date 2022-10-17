@@ -11,3 +11,10 @@
 .input{
   width: 100%;
 }
+
+
+button{
+  background-color: var(--primary-color);
+  color: var(--primary-text-color);
+  margin: auto;
+}

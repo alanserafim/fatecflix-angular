@@ -18,7 +18,7 @@ export class RegistrationService {
 
   constructor(private httpClient: HttpClient) { }
   cadastra(usuario: any): Observable<any>{
-    return this.httpClient.post('https://fatecflix-api.herokuapp.com/api/v1/users/signUp',  {
+    return this.httpClient.post('https://fatecflix.herokuapp.com/api/v1/users/signUp',  {
     email: usuario.email,
     cpf: usuario.cpf,
     lastname: usuario.nome,

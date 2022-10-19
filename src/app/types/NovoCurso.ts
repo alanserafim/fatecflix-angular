@@ -1,6 +1,6 @@
 export interface NovoCurso {
   titulo: string,
-  descricacao: string,
+  descricao: string,
   cargaHoraria: string,
   dataAtualizacao: string,
   mediaAvaliacao: string

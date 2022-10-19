@@ -3,6 +3,7 @@ import { NovoUsuarioCadastroComponent } from './novo-usuario-cadastro/novo-usuar
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
+import { PerfilUsuarioComponent } from './perfil-usuario/perfil-usuario.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: 'sucesso',
     component: SucessoRequisicaoComponent
+  },
+  {
+    path: 'perfil',
+    component: PerfilUsuarioComponent
   }
 
 ];

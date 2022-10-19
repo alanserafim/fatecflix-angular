@@ -1,0 +1,12 @@
+.example-container {
+    height: 80vh;
+    background: #eee;
+  }
+
+  mat-sidenav{
+      width: 10vw;
+  }
+
+  li{
+    padding-top: 2em;
+  }

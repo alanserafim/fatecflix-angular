@@ -9,3 +9,7 @@ para você conseguir diferenciar aluno de professor
 
 A api documentada está aqui:
 https://fatecflix-api.herokuapp.com/swagger-ui.html
+
+
+Respositório InterDSM
+https://fatecflix.herokuapp.com/swagger-ui.html

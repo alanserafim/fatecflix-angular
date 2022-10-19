@@ -9,6 +9,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
+import {MatSidenavModule} from '@angular/material/sidenav';
+
 
 import { HeaderModule } from '../componentes/header/header.module';
 import { MessagesModule } from '../componentes/messages/messages.module';
@@ -43,7 +45,8 @@ import { SucessoRequisicaoComponent } from './sucesso-requisicao/sucesso-requisi
     ReactiveFormsModule,
     HeaderModule,
     FooterModule,
-    SucessoModule
+    SucessoModule,
+    MatSidenavModule
   ]
 })
 export class UsuarioModule { }

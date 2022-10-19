@@ -13,6 +13,7 @@ import { CoursesRoutingModule } from './courses-routing.module';
 import { ExibirCursoComponent } from './exibir-curso/exibir-curso.component';
 import { ExibirTrilhaCursoComponent } from './exibir-trilha-curso/exibir-trilha-curso.component';
 import { ListarCursosComponent } from './listar-cursos/listar-cursos.component';
+import { SucessoModule } from '../componentes/sucesso/sucesso.module';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { ListarCursosComponent } from './listar-cursos/listar-cursos.component';
     HeaderModule,
     MatButtonModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    SucessoModule
   ]
 })
 export class CoursesModule { }

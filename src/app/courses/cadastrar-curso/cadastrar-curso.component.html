@@ -1,5 +1,5 @@
 <app-header></app-header>
-<form class="cadastro" [formGroup]="novoCursoForm" (submit)="cadastrarCurso">
+<form class="cadastro" [formGroup]="novoCursoForm" (submit)="cadastrarCurso()">
   <mat-card class="card">
     <h1 class=>Cadastrar Curso</h1>
     <p class="titulo">Titulo:</p>
@@ -46,6 +46,7 @@
     </mat-form-field>
     <button
       mat-flat-button
+      [disabled]="novoCursoForm.invalid"
       >CADASTRAR
     </button>
     </mat-card>

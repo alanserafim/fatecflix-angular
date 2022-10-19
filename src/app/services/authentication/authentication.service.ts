@@ -8,7 +8,7 @@ import { UsuarioService } from './usuario/usuario.service';
   providedIn: 'root'
 })
 export class AuthenticationService {
-  private API = "https://fatecflix-api.herokuapp.com/api/v1/users/signIn"
+  private API = "https://fatecflix.herokuapp.com/api/v1/users/signIn"
 
   constructor(
     private httpClient: HttpClient,

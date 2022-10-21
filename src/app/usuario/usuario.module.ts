@@ -1,5 +1,3 @@
-import { SucessoModule } from './../componentes/sucesso/sucesso.module';
-import { FooterModule } from './../componentes/footer/footer.module';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -8,18 +6,21 @@ import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
+import { MatListModule } from '@angular/material/list';
 import { MatSelectModule } from '@angular/material/select';
-import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatListModule} from '@angular/material/list';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatTableModule } from '@angular/material/table';
 
 import { HeaderModule } from '../componentes/header/header.module';
 import { MessagesModule } from '../componentes/messages/messages.module';
 import { HomeModule } from '../home/home.module';
+import { FooterModule } from './../componentes/footer/footer.module';
+import { SucessoModule } from './../componentes/sucesso/sucesso.module';
 import { LoginComponent } from './login/login.component';
 import { NovoUsuarioCadastroComponent } from './novo-usuario-cadastro/novo-usuario-cadastro.component';
 import { PerfilUsuarioComponent } from './perfil-usuario/perfil-usuario.component';
-import { UsuarioRoutingModule } from './usuario-routing.module';
 import { SucessoRequisicaoComponent } from './sucesso-requisicao/sucesso-requisicao.component';
+import { UsuarioRoutingModule } from './usuario-routing.module';
 
 
 @NgModule({
@@ -47,7 +48,8 @@ import { SucessoRequisicaoComponent } from './sucesso-requisicao/sucesso-requisi
     FooterModule,
     SucessoModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+    MatTableModule
   ]
 })
 export class UsuarioModule { }

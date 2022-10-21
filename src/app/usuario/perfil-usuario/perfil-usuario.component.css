@@ -14,9 +14,40 @@
 
  mat-card {
   margin: 0.8em;
-  height: 21vh;
+  min-height: 21vh;
  }
 
  mat-card:first-child {
   margin-top: 0;
  }
+
+ input{
+  border-radius: 6px;
+  border: 1px solid #d0d7de;
+  background-color: #f6f8fa;
+  padding: 8px 12px;
+  margin-bottom: 1rem;
+  width: 25vw;
+ }
+
+input:first{
+  width: 10vw;
+}
+ label {
+  margin-bottom: 0.4em;
+  font-weight: 500;
+ }
+
+.container {
+  display: flex;
+  flex-direction: column;
+ }
+
+ table {
+  width: 100%;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}

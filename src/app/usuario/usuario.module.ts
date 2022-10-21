@@ -10,7 +10,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import {MatSidenavModule} from '@angular/material/sidenav';
-
+import {MatListModule} from '@angular/material/list';
 
 import { HeaderModule } from '../componentes/header/header.module';
 import { MessagesModule } from '../componentes/messages/messages.module';
@@ -46,7 +46,8 @@ import { SucessoRequisicaoComponent } from './sucesso-requisicao/sucesso-requisi
     HeaderModule,
     FooterModule,
     SucessoModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatListModule
   ]
 })
 export class UsuarioModule { }

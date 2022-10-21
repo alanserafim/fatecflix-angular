@@ -9,4 +9,14 @@
 
   li{
     padding-top: 2em;
+    list-style: none;
   }
+
+ mat-card {
+  margin: 0.8em;
+  height: 21vh;
+ }
+
+ mat-card:first-child {
+  margin-top: 0;
+ }

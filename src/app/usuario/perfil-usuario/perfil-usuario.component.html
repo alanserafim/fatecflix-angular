@@ -1,12 +1,22 @@
 <app-header></app-header>
 <mat-sidenav-container class="example-container">
     <mat-sidenav mode="side" opened>
-        <li>Campo</li>
-        <li>Campo</li>
-        <li>Campo</li>
-        <li>Campo</li>
-        <li>Campo</li>
+      <mat-action-list>
+        <button mat-list-item >Dados Pessoais</button>
+        <button mat-list-item >Histórico de Participação</button>
+        <button mat-list-item >Certificados</button>
+      </mat-action-list>
     </mat-sidenav>
-    <mat-sidenav-content>Main content</mat-sidenav-content>
+    <mat-sidenav-content>
+      <section class="usuario-dados">
+        <mat-card><h2>Dados pessoais</h2></mat-card>
+      </section>
+      <section class="usuario-historico">
+        <mat-card><h2>Matrículas</h2></mat-card>
+      </section>
+      <section class="usuario-certificados">
+        <mat-card><h2>Certificados</h2></mat-card>
+      </section>
+    </mat-sidenav-content>
   </mat-sidenav-container>
 <app-footer></app-footer>

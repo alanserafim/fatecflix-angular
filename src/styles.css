@@ -1,8 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 :root {
   --primary-color: #8C1A0F;
-  --primary-text-color: #F2F2F2;
-  --primary-background-color: #F2F2F2;
+  --primary-text-color: black;
+  --secondary-text-color: #fefefe;
+  --primary-background-color: #fefefe;
+  --header-background-color: #fefefe;
+  --header-text-color: #8C1A0F;
+  --footer-background: #4C0E08;
+  --footer-text-color: #fefefe;
 }
 
 html, body { height: 100%; background-color: var(--primary-background-color); }

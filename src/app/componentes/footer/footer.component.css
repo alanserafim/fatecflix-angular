@@ -1,8 +1,8 @@
 .rodape{
-  background-color: lightblue ;
-  color: white;
+  background-color: var(--footer-background);
+  color: var(--footer-text-color);
   height: 150px;
-  margin-top: 5em;
+  margin-top:1em;
 
 }
 

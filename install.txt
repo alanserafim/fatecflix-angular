@@ -9,4 +9,7 @@ git commit -m "modulo: componente"
 git push origin main
 
 Deploy no gitHub Pages
-ng build --base-href 'https://alanserafim.github.io/fatecflix-angular/'
+ng build --base-href 'fatecflix-angular'
+
+ng deploy --base-href=/fatecflix-angular/
+ng deploy --branch=main

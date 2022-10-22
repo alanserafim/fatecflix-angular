@@ -4,7 +4,24 @@
 }
 
 .card {
-  width: 80vw;
+  width: 60vw;
+  height: 60vh;
+  display: flex;
+  margin-top: 1em;
+}
+
+.card__banner{
+  width: 30vw;
+}
+.card__form{
+  width: 30vw;
+}
+.imagem{
+  height: 60%;
+  background-image: url(./img/login.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 400px;
 }
 
 .login{
@@ -14,18 +31,44 @@
   justify-content: center;
 }
 
-@media screen and (min-width:1080px){
-  .card {
-    width: 25vw;
-  }
-}
+
 
 button{
   background-color: var(--primary-color);
   color: var(--primary-text-color);
-  margin: 1em;
+  width: 25vw;
+  margin-bottom: 1em;
 }
 
 p{
+  text-align: left;
+}
+
+h2{
   text-align: center;
+}
+
+.card__form h2{
+  text-align: left;
+}
+
+mat-form-field{
+  width: 25vw;
+}
+
+
+/*Sticky footer*/
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+.content {
+  flex: 1 0 auto;
+}
+.footer {
+  flex-shrink: 0;
 }

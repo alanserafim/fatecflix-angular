@@ -1,4 +1,5 @@
 import { CommonModule } from '@angular/common';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
@@ -14,6 +15,7 @@ import { MatTableModule } from '@angular/material/table';
 import { HeaderModule } from '../componentes/header/header.module';
 import { MessagesModule } from '../componentes/messages/messages.module';
 import { HomeModule } from '../home/home.module';
+import { TokenInterceptor } from '../services/interceptors/token.interceptor';
 import { FooterModule } from './../componentes/footer/footer.module';
 import { SucessoModule } from './../componentes/sucesso/sucesso.module';
 import { LoginComponent } from './login/login.component';
@@ -50,6 +52,13 @@ import { UsuarioRoutingModule } from './usuario-routing.module';
     MatSidenavModule,
     MatListModule,
     MatTableModule
+  ],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptor,
+      multi: true
+    }
   ]
 })
 export class UsuarioModule { }

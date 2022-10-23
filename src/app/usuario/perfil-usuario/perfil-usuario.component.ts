@@ -1,3 +1,4 @@
+import { UsuarioLogadoService } from './../../services/authentication/usuario/usuario-logado.service';
 import { Component, OnInit } from '@angular/core';
 import {MatTableDataSource} from '@angular/material/table';
 
@@ -28,9 +29,16 @@ export class PerfilUsuarioComponent implements OnInit {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
-  constructor() { }
+  constructor(
+    private usuarioLogadoService: UsuarioLogadoService
+  ) { }
 
   ngOnInit(): void {
   }
+
+  renderizar(){
+    this.usuarioLogadoService.retornaUsuarioLogado()
+  }
+
 
 }

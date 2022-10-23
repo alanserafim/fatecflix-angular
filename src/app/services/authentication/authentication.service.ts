@@ -8,7 +8,7 @@ import { UsuarioService } from './usuario/usuario.service';
   providedIn: 'root'
 })
 export class AuthenticationService {
-  private API = "https://fatecflix.herokuapp.com/api/v1/users/signIn"
+  private API = "https://fatecflix.herokuapp.com/api/v1/usuarios/signIn"
 
   constructor(
     private httpClient: HttpClient,
@@ -22,12 +22,13 @@ export class AuthenticationService {
     },
     { observe: 'response'}
     )
-    /*.pipe(
+    .pipe(
       tap((res) =>{
-        const authToken = res.headers.get('x-access-token') ?? '';
+       //console.log(JSON.stringify(res.body).split('"')[3]);
+        const authToken = JSON.stringify(res.body).split('"')[3] ?? '';
         this.usuarioService.salvaToken(authToken);
       })
-    )*/
+    )
   }
 }
 

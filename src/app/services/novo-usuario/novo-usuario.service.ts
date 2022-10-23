@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class NovoUsuarioService {
-  private API = "https://fatecflix.herokuapp.com/api/v1/users/signUp"
+  private API = "https://fatecflix.herokuapp.com/api/v1/usuarios/signUp"
 
   constructor(
     private http:HttpClient
@@ -23,7 +23,7 @@ export class NovoUsuarioService {
         password: novoUsuario.senha,
         roles: novoUsuario.perfil,
         username: novoUsuario.nome,
-      });
+      })
   }
 
   verificaUsuarioExistente(email : string) {

@@ -11,36 +11,35 @@
         <mat-sidenav-content>
           <section class="usuario-dados">
             <mat-card>
-              <button (click)="renderizar()">Teste</button>
-              <h2>Perfil</h2>
-              <section class="container dados">
-                <div class="campos">
-                  <fieldset class="dados_pessoais container">
-                    <p>Dados Pessoais</p>
-                    <label for="">Nome</label>
-                    <input class="dados__nome" type="text">
-                    <label for="">Email</label>
-                    <input class="dados__email" type="text">
-                    <label for="">CPF</label>
-                    <input class="dados__cpf" type="text">
-                    <label for="">Data de Nascimento</label>
-                    <input class="dados__nascimento" type="text">
-                  </fieldset>
-
-                  <fieldset class="dados_escolares container">
-                    <p>Dados Escolares</p>
-                    <label for="">RA</label>
-                    <input class="dados__ra" type="text">
-                    <label for="">Curso</label>
-                    <input class="dados__curso" type="text">
-                    <label for="">Ano de ingresso</label>
-                    <input class="dados__ingresso" type="text">
-                    <label for="">Período</label>
-                    <input class="dados__periodo" type="text">
-                  </fieldset>
-                </div>
-              </section>
-
+              <div *ngIf="usuarioLogado$ | async as user ">
+                <h2>Perfil</h2>
+                <section class="container dados">
+                  <div class="campos">
+                    <fieldset class="dados_pessoais container">
+                      <p>Dados Pessoais</p>
+                      <label for="">Nome</label>
+                      <input class="dados__nome" type="text" value="{{ user.name }}">
+                      <label for="">Email</label>
+                      <input class="dados__email" type="text" value="{{ user.email }}">
+                      <label for="">CPF</label>
+                      <input class="dados__cpf" type="text" value="{{ user.cpf }}">
+                      <label for="">Data de Nascimento</label>
+                      <input class="dados__nascimento" type="text">
+                    </fieldset>
+                    <fieldset class="dados_escolares container">
+                      <p>Dados Escolares</p>
+                      <label for="">RA</label>
+                      <input class="dados__ra" type="text">
+                      <label for="">Curso</label>
+                      <input class="dados__curso" type="text">
+                      <label for="">Ano de ingresso</label>
+                      <input class="dados__ingresso" type="text">
+                      <label for="">Período</label>
+                      <input class="dados__periodo" type="text">
+                    </fieldset>
+                  </div>
+                </section>
+              </div>
             </mat-card>
           </section>
           <section class="usuario-historico">

@@ -1,14 +1,14 @@
 import { NovoUsuario } from './../../types/NovoUsuario';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class NovoUsuarioService {
-  private API = "https://fatecflix.herokuapp.com/api/v1/usuarios/signUp"
-
+  private readonly API = `${environment.api_url}/api/v1/api/v1/usuarios/signUp`;
   constructor(
     private http:HttpClient
   ) { }

@@ -2,6 +2,7 @@ import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { HttpHeaders } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -14,11 +15,11 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class RegistrationService {
-
+  private readonly API = `${environment.api_url}/api/v1/usuarios/signUp`
 
   constructor(private httpClient: HttpClient) { }
   cadastra(usuario: any): Observable<any>{
-    return this.httpClient.post('https://fatecflix.herokuapp.com/api/v1/users/signUp',  {
+    return this.httpClient.post(this.API,  {
     email: usuario.email,
     cpf: usuario.cpf,
     lastname: usuario.nome,

@@ -2,13 +2,14 @@ import { UsuarioLogado } from './../../../types/UsuarioLogado';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UsuarioLogadoService {
 
-  private readonly API = "https://fatecflix.herokuapp.com/api/v1/usuarios/me"
+  private readonly API = `${environment.api_url}/api/v1/usuarios/me`
 
   constructor(
     private httpClient: HttpClient

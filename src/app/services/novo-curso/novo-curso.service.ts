@@ -1,14 +1,15 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { NovoCurso } from 'src/app/types/NovoCurso';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class NovoCursoService {
 
-  private API = "https://fatecflix.herokuapp.com/api/v1/cursos"
-
+  private readonly API = `${environment.api_url}/api/v1/cursos`
+  
   constructor(
     private http:HttpClient
   ) { }

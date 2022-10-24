@@ -1,6 +1,7 @@
 import { HttpClient, HttpResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, tap } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 import { UsuarioService } from './usuario/usuario.service';
 
@@ -8,8 +9,8 @@ import { UsuarioService } from './usuario/usuario.service';
   providedIn: 'root'
 })
 export class AuthenticationService {
-  private API = "https://fatecflix.herokuapp.com/api/v1/usuarios/signIn"
-
+  private readonly API = `${environment.api_url}/api/v1/usuarios/signIn`
+  
   constructor(
     private httpClient: HttpClient,
     private usuarioService: UsuarioService

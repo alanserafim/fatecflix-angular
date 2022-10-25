@@ -1,8 +1,8 @@
 import { UsuarioLogado } from './../../types/UsuarioLogado';
 import { Observable } from 'rxjs';
-import { UsuarioLogadoService } from './../../services/authentication/usuario/usuario-logado.service';
 import { Component, OnInit } from '@angular/core';
 import {MatTableDataSource} from '@angular/material/table';
+import { UsuarioLogadoService } from 'src/app/services/authentication/usuario-logado/usuario-logado.service';
 
 export interface PeriodicElement {
   curso: string;

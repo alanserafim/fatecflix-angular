@@ -14,6 +14,8 @@ import { ExibirCursoComponent } from './exibir-curso/exibir-curso.component';
 import { ExibirTrilhaCursoComponent } from './exibir-trilha-curso/exibir-trilha-curso.component';
 import { ListarCursosComponent } from './listar-cursos/listar-cursos.component';
 import { SucessoModule } from '../componentes/sucesso/sucesso.module';
+import {MatTableModule} from '@angular/material/table';
+
 
 @NgModule({
   declarations: [
@@ -33,7 +35,8 @@ import { SucessoModule } from '../componentes/sucesso/sucesso.module';
     MatButtonModule,
     ReactiveFormsModule,
     FormsModule,
-    SucessoModule
+    SucessoModule,
+    MatTableModule
   ]
 })
 export class CoursesModule { }

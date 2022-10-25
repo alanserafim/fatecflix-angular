@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { ListaCursosService } from '../../services/listar-cursos/listar-cursos.service';
 
 @Component({
   selector: 'app-listar-cursos',
@@ -6,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./listar-cursos.component.css']
 })
 export class ListarCursosComponent implements OnInit {
+  listaCursosUsuario$ : Observable<any> = this.listarCursosService.retornaCursosUsuario();
 
-  constructor() { }
+  constructor(
+    private listarCursosService : ListaCursosService
+  ) { }
 
   ngOnInit(): void {
+  console.log(this.listaCursosUsuario$);
+  
   }
 
 }

@@ -6,7 +6,7 @@
 
 .toolbar{
   display: flex;
-  height: 20%;
+  height: 7vh;
   justify-content: space-between;
   background-color: var(--header-background-color);
   margin-bottom: 1em;

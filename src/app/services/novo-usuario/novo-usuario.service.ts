@@ -8,7 +8,7 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class NovoUsuarioService {
-  private readonly API = `${environment.api_url}/api/v1/api/v1/usuarios/signUp`;
+  private readonly API = `${environment.api_url}/api/v1/usuarios/signUp`;
   constructor(
     private http:HttpClient
   ) { }

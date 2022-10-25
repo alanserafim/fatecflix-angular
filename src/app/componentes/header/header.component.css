@@ -23,7 +23,7 @@ button{
 .logoHeader{
   padding-top: 20px;
   padding-bottom: 20px;
-  width: 300px;
+  width: 280px;
 }
 
 @media (max-width: 676px) {

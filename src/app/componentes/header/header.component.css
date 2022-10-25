@@ -1,10 +1,12 @@
 .container {
   display: flex;
+
   font-size: 0.6em;
 }
 
 .toolbar{
   display: flex;
+  height: 20%;
   justify-content: space-between;
   background-color: var(--header-background-color);
   margin-bottom: 1em;
@@ -16,4 +18,23 @@ button{
   background-color: var(--header-background-color);
   color: var(--primary-color);
   font-size: 1.5em;
+}
+
+.logoHeader{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 300px;
+}
+
+@media (max-width: 676px) {
+  .logoHeader {
+    width: 130px;
+  }
+
+}
+
+@media (max-width: 768px) {
+ .logoHeader {
+    width: 170px;
+  }
 }

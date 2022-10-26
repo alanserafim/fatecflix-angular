@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { NovoUsuario } from 'src/app/types/NovoUsuario';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
@@ -13,5 +14,7 @@ export class AtualizarUsuarioService {
     private http:HttpClient
   ) { }
 
-  //post
+  atualizarMeuUsuario(usuario : NovoUsuario){
+    return this.http.post(this.API, usuario)
+  }
 }

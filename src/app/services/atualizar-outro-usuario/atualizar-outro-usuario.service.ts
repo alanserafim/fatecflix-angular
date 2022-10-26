@@ -1,3 +1,4 @@
+import { NovoUsuario } from './../../types/NovoUsuario';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
@@ -7,12 +8,12 @@ import { environment } from 'src/environments/environment';
 })
 export class AtualizarOutroUsuarioService {
 
-  id?: number
-  private readonly API = `${environment.api_url}/api/v1/usarios/${this.id}`
-
   constructor(
     private http:HttpClient
   ) { }
 
-  //post
+  atualizarOutroUsuario(usuario : NovoUsuario, id: number){
+    const API: string = `${environment.api_url}/api/v1/usarios/${id}`
+    return this.http.post(API, usuario)
+  }
 }

@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { NovoUsuario } from 'src/app/types/NovoUsuario';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
@@ -7,14 +8,13 @@ import { environment } from 'src/environments/environment';
 })
 export class DeletarUsuarioService {
 
-  id?: number
-  private readonly API = `${environment.api_url}/api/v1/usarios/${this.id}`
-
   constructor(
     private http:HttpClient
   ) { }
 
-    //delete
-
+  deletaUsuario(usuario : NovoUsuario, id: number){
+    const API: string = `${environment.api_url}/api/v1/usarios/${id}`
+    return this.http.delete(API)
+  }
 
 }

@@ -24,18 +24,18 @@
                       <label for="">CPF</label>
                       <input class="dados__cpf" type="text" value="{{ user.cpf }}">
                       <label for="">Data de Nascimento</label>
-                      <input class="dados__nascimento" type="text">
+                      <input class="dados__nascimento" type="date" value="{{ user.dtNascimento }}">
                     </fieldset>
                     <fieldset class="dados_escolares container">
                       <p>Dados Escolares</p>
                       <label for="">RA</label>
-                      <input class="dados__ra" type="text">
+                      <input class="dados__ra" type="text" value="{{ user.ra }}">
                       <label for="">Curso</label>
-                      <input class="dados__curso" type="text">
+                      <input class="dados__curso" type="text"  value="{{ user.cursoMatriculado }}">
                       <label for="">Ano de ingresso</label>
-                      <input class="dados__ingresso" type="text">
+                      <input class="dados__ingresso" type="text" value="{{ user.anoIngresso }}">
                       <label for="">Período</label>
-                      <input class="dados__periodo" type="text">
+                      <input class="dados__periodo" type="text" value="{{ user.periodo }}">
                     </fieldset>
                   </div>
                 </section>

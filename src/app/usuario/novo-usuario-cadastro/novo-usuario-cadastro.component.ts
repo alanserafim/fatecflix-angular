@@ -29,21 +29,21 @@ export class NovoUsuarioCadastroComponent implements OnInit {
       {
         email: ['', [Validators.required, Validators.email]],
         cpf: ['', [Validators.required, Validators.minLength(11)]],
-        nome: ['', [Validators.required]],
-        dataNascimento: [''],
+        name: ['', [Validators.required]],
+        dtNascimento: [''],
         ra: [''],
-        curso: [''],
+        cursoMatriculado: [''],
         anoIngresso: [''],
-        semestreIngresso: [''],
+        //semestreIngresso: [''],
         periodo: [''],
-        senha: ['', [Validators.required, Validators.minLength(8)]],
+        password: ['', [Validators.required, Validators.minLength(8)]],
         confirmacao: ['', [Validators.required]]
       },
       {
         validators: [
-          controlValuesAreEqual("senha", "confirmacao"),
-          controlValuesDifferent("senha", "email"),
-          controlValuesDifferent("senha", "cpf"),
+          controlValuesAreEqual("password", "confirmacao"),
+          controlValuesDifferent("password", "email"),
+          controlValuesDifferent("password", "cpf"),
           cpfValido("cpf")
         ]
       }
@@ -52,7 +52,7 @@ export class NovoUsuarioCadastroComponent implements OnInit {
 
   cadastrar(){
     const novoUsuario = this.novoUsuarioForm.getRawValue() as NovoUsuario
-    novoUsuario.perfil = ["user"]
+    novoUsuario.roles = ["aluno"]
     this.novoUsuarioService.cadastraNovoUsuario(novoUsuario).subscribe(()=> {
       this.router.navigate(['usuario/sucesso'])
     },

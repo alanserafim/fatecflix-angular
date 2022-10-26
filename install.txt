@@ -1,16 +1,15 @@
 
-npm install & npm install -g @angular/cli
+npm install
+npm install -g @angular/cli
+npm i angular-cli-ghpages
 
 git config --global user.email "alan.serafim@fatec.sp.gov.br"
 git config --global user.name "alanserafim"
-ng build --base-href 'https://alanserafim.github.io/fatecflix-angular'
+
 git add .
 git commit -m "modulo: componente"
 git push origin main
 
 Deploy no gitHub Pages
-ng build --base-href 'fatecflix-angular'
+ng deploy --base-href=/fatecflix-angular/
 
-ng deploy --base-href=/fatecflix-angular/
-ng deploy --branch=main
-ng deploy --base-href=/fatecflix-angular/

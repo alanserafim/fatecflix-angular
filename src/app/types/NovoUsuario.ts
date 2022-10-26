@@ -1,14 +1,16 @@
 export interface NovoUsuario {
-  email: string ,
-  cpf: string,
-  nome: string,
-  dataNascimento: string,
-  ra?: number,
-  curso: string,
   anoIngresso: string,
-  semestreIngresso: string;
+  cpf: string,
+  cursoMatriculado: string,
+  dtNascimento: string,
+  email: string,
+  lastname: string,
+  name: string,
+  password: string;
   periodo: string,
-  senha: string;
-  confirmacao: string,
-  perfil: Array<string>
+  ra?: number,
+  roles: Array<string>,
+  //semestreIngresso: string;
+  //confirmacao: string,
+  username: string
 }

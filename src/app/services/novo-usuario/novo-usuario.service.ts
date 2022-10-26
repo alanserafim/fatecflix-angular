@@ -16,13 +16,20 @@ export class NovoUsuarioService {
   cadastraNovoUsuario(novoUsuario : NovoUsuario){
     return this.http.post(this.API,
       {
-        email: novoUsuario.email,
+        anoIngresso: novoUsuario.anoIngresso,
         cpf: novoUsuario.cpf,
-        lastname: novoUsuario.nome,
-        name: novoUsuario.nome,
-        password: novoUsuario.senha,
-        roles: novoUsuario.perfil,
-        username: novoUsuario.nome,
+        cursoMatriculado: novoUsuario.cursoMatriculado,
+        dtNascimento: novoUsuario.dtNascimento,
+        email: novoUsuario.email,
+        lastname: novoUsuario.name,
+        name: novoUsuario.name,
+        password: novoUsuario.password,
+        periodo: novoUsuario.periodo,
+        ra: novoUsuario.ra,
+        roles: novoUsuario.roles,
+        //semestreIngresso: string;
+        //confirmacao: string,
+        username: novoUsuario.email,
       })
   }
 

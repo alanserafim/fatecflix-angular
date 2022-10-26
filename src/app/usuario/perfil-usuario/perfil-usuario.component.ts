@@ -18,7 +18,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
   {posicao: 3, curso: 'Estrutura de Dados', progresso: 100, status: 'Concluído', certificado: 'Disponível'},
 ];
 
-const usuarioLogado$ : UsuarioLogado = {name: "", email: '', cpf: "", perfil: ['']}
+var usuarioLogado$ : UsuarioLogado
 
 
 @Component({
@@ -48,11 +48,7 @@ export class PerfilUsuarioComponent implements OnInit {
   recebeUsuarioLogado(){
     this.usuarioLogadoService.retornaUsuarioLogado().subscribe(
       (usuario) => {
-        usuarioLogado$.name = usuario.name;
-        usuarioLogado$.email = usuario.email;
-        usuarioLogado$.cpf = usuario.cpf;
-        usuarioLogado$.perfil = usuario.roles;
-        console.log(usuarioLogado$);
+        console.log(usuario);
 
       }, (error) => {
         alert("Credenciais inválidas");

@@ -52,12 +52,12 @@
           type="text"
           placeholder="Nome Sobrenome"
           name="nome"
-          formControlName="nome"
+          formControlName="name"
         >
       </mat-form-field>
       <app-messages
-        *ngIf="novoUsuarioForm.get('nome')?.errors?.['required'] &&
-          novoUsuarioForm.get('nome')?.touched"
+        *ngIf="novoUsuarioForm.get('name')?.errors?.['required'] &&
+          novoUsuarioForm.get('name')?.touched"
         mensagem = "O campo nome é obrigatório."
       >
       </app-messages>
@@ -68,7 +68,7 @@
           type="date"
           placeholder="00/00/0000"
           name="dataNascimento"
-          formControlName="dataNascimento"
+          formControlName="dtNascimento"
         >
       </mat-form-field>
       <mat-form-field appearance="fill">
@@ -85,7 +85,7 @@
           matInput
           type="text"
           name="curso"
-          formControlName="curso"
+          formControlName="cursoMatriculado"
         >
       </mat-form-field>
       <mat-form-field appearance="fill">
@@ -97,16 +97,7 @@
         formControlName="anoIngresso"
         >
       </mat-form-field>
-      <mat-form-field appearance="fill">
-        <mat-label>Semestre de Ingresso</mat-label>
-        <mat-select
-        name="semestreIngresso"
-        formControlName="semestreIngresso"
-        >
-            <mat-option value="1">1º</mat-option>
-            <mat-option value="2">2º</mat-option>
-        </mat-select>
-      </mat-form-field>
+
       <mat-form-field appearance="fill">
         <mat-label>Período</mat-label>
         <mat-select
@@ -124,23 +115,23 @@
         matInput
         type="password"
         name="senha"
-        formControlName="senha"
+        formControlName="password"
         >
       </mat-form-field>
       <app-messages
-      *ngIf="novoUsuarioForm.get('senha')?.errors?.['required'] &&
-        novoUsuarioForm.get('senha')?.touched"
+      *ngIf="novoUsuarioForm.get('password')?.errors?.['required'] &&
+        novoUsuarioForm.get('password')?.touched"
       mensagem = "O campo senha é obrigatório."
     >
     </app-messages>
     <app-messages
     *ngIf="novoUsuarioForm.errors?.['matchValues'] &&
-    novoUsuarioForm.get('senha')?.dirty"
+    novoUsuarioForm.get('password')?.dirty"
     mensagem="A senha não pode ser igual ao email, cpf ou data de nascimento."
   ></app-messages>
   <app-messages
-  *ngIf="novoUsuarioForm.get('senha')?.errors?.['minlength'] &&
-    novoUsuarioForm.get('senha')?.touched"
+  *ngIf="novoUsuarioForm.get('password')?.errors?.['minlength'] &&
+    novoUsuarioForm.get('password')?.touched"
   mensagem = "A senha deve possuir ao mínimo 8 digitos."
 >
 </app-messages>

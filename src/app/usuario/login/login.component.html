@@ -1,63 +1,78 @@
 <body>
-
   <div class="content">
-  <app-header></app-header>
-  <form class="login" (ngSubmit)="login()" #loginForm="ngForm">
-    <mat-card class="card">
-      <section class="card__banner">
-        <h2 class="">Faça seu login e boa aula!</h2>
-        <div class="imagem"><br></div>
+    <app-header></app-header>
+    <form class="login" (ngSubmit)="login()" #loginForm="ngForm">
+      <mat-card class="card">
+        <section class="card__banner">
+          <h2 class="">Faça seu login e boa aula!</h2>
+          <div class="imagem"><br /></div>
+        </section>
+        <section class="card__form">
+          <h2>Login</h2>
+          <div class="container">
+            <mat-form-field appearance="fill" class="formfield__senha">
+              <mat-label>E-mail</mat-label>
+              <input
+                class="input"
+                matInput
+                type="email"
+                [(ngModel)]="email"
+                name="email"
+                #campoEmail="ngModel"
+                required
+              />
 
-      </section>
-      <section class="card__form">
-        <h2>Login</h2>
-        <div class="container">
-          <mat-form-field appearance="fill">
-            <mat-label>E-mail</mat-label>
-            <input
-              class="input"
-              matInput
-              type="email"
-              [(ngModel)]="email"
-              name="email"
-              #campoEmail="ngModel"
-              required
+              <mat-error *ngIf="campoEmail.invalid && campoEmail.touched"
+                >O campo e-mail é obrigatório.
+              </mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="formfield__senha" appearance="fill">
+              <mat-label>Senha</mat-label>
+              <input
+                class="input"
+                matInput
+                [type]="hide ? 'password' : 'text'"
+                [(ngModel)]="senha"
+                name="senha"
+                #campoSenha="ngModel"
+                required
+              />
+              <button
+                type="button"
+                class="btn__senha"
+                mat-icon-button
+                matSuffix
+                (click)="hide = !hide"
+                [attr.aria-label]="'Hide password'"
+                [attr.aria-pressed]="hide"
+              >
+                <mat-icon>{{
+                  hide ? "visibility_off" : "visibility"
+                }}</mat-icon>
+              </button>
+              <mat-error *ngIf="campoSenha.invalid && campoSenha.touched"
+                >O campo senha é obrigatório.
+              </mat-error>
+            </mat-form-field>
+
+            <button
+              class="btn__submit"
+              type="submit"
+              mat-flat-button
+              [disabled]="loginForm.invalid"
             >
-          </mat-form-field>
-          <app-messages
-          *ngIf="campoEmail.invalid && campoEmail.touched"
-            mensagem="O campo e-mail é obrigatório"
-            >
-          </app-messages>
-          <mat-form-field appearance="fill">
-            <mat-label>Senha</mat-label>
-            <input
-              class="input"
-              matInput [type]="hide ? 'password' : 'text'"
-              [(ngModel)]="senha"
-              name="senha"
-              #campoSenha="ngModel"
-              required
-            >
-            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+              ENTRAR
             </button>
-          </mat-form-field>
-          <app-messages
-              *ngIf="campoSenha.invalid && campoSenha.touched"
-              mensagem="O campo senha é obrigatório"
+          </div>
+          <p>
+            <a [routerLink]="['cadastro']"
+              >Ainda nâo tem acesso? Cadastre-se!</a
             >
-          </app-messages>
-          <button
-            type="submit"
-            mat-flat-button
-            [disabled]="loginForm.invalid"
-            >ENTRAR</button>
-        </div>
-        <p><a [routerLink]="['cadastro']">Ainda nâo tem acesso? Cadastre-se!</a></p>
-      </section>
-    </mat-card>
-  </form>
+          </p>
+        </section>
+      </mat-card>
+    </form>
   </div>
   <app-footer class="footer"></app-footer>
 </body>

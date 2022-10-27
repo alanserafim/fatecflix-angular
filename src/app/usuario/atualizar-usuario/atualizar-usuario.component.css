@@ -90,6 +90,10 @@ mat-card h2{
   border-bottom: 1px solid #d0d7de;
 }
 
+button{
+  border: 1px solid black;
+}
+
 /*Tabela*/
 
 table {
@@ -113,3 +117,29 @@ body {
   flex-shrink: 0;
 }
 
+.form-group{
+  display: flex;
+  flex-direction: column;
+}
+
+.perfil-form{
+  display: flex;
+  flex-direction: column;
+}
+.wrapper{
+  display: flex;
+  justify-content: space-between;
+}
+
+.wrapper input{
+  width: 75%;
+}
+.btn_deletar{
+  margin-bottom: 1em;
+}
+
+.mat-card{
+  width: 80vw;
+  height: auto;
+  margin: auto;
+}

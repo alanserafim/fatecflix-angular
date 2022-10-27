@@ -1,13 +1,13 @@
 <mat-toolbar class="toolbar">
   <div class="container">
-    <button mat-flat-button>FatecFlix</button>
+    <button mat-flat-button routerLink="/home">FatecFlix</button>
     <!--
     <img class="logoHeader" src="./img/logoFatecFlix.png" alt="Logo da Alura">
     -->
   </div>
     <div class="container usuario" *ngIf="!isLoggedIn; else admin">
-      <button mat-flat-button>Comunidade</button>
-      <button mat-flat-button routerLink="login" >Login</button>
+      <button mat-flat-button>Cursos</button>
+      <button mat-flat-button routerLink="/home/login" >Login</button>
     </div>
 
     <ng-template #admin>

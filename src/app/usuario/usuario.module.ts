@@ -11,6 +11,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatTableModule } from '@angular/material/table';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 import { HeaderModule } from '../componentes/header/header.module';
 import { MessagesModule } from '../componentes/messages/messages.module';
@@ -56,7 +57,9 @@ import { AtualizarUsuarioComponent } from './atualizar-usuario/atualizar-usuario
     SucessoModule,
     MatSidenavModule,
     MatListModule,
-    MatTableModule
+    MatTableModule,
+    MatPaginatorModule
+
   ]
 })
 export class UsuarioModule { }

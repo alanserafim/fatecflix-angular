@@ -1,7 +1,9 @@
 <app-header></app-header>
 <form class="cadastro" [formGroup]="novoUsuarioForm" (submit)="cadastrar()">
+  <div class="titulo">
+    <p>Cadastre-se e comece a aprender</p>
+  </div>
   <mat-card class="container card">
-      <p>Cadastro</p>
       <mat-form-field appearance="fill">
         <mat-label>E-mail</mat-label>
         <input

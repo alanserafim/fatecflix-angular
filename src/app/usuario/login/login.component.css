@@ -4,24 +4,31 @@
 }
 
 .card {
-  width: 60vw;
-  height: 60vh;
+  width: 50vw;
+  height: 50vh;
   display: flex;
-  margin-top: 1em;
 }
 
 .card__banner{
-  width: 30vw;
+  width: 25vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .card__form{
-  width: 30vw;
+  width: 25vw;
+  margin-left: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
+
 .imagem{
   height: 60%;
   background-image: url(./img/login.svg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 400px;
+  background-size: 90%;
 }
 
 .login{
@@ -31,11 +38,9 @@
   justify-content: center;
 }
 
-
-
 button{
   background-color: var(--primary-color);
-  color: var(--primary-text-color);
+  color: var(--secondary-text-color);
   width: 25vw;
   margin-bottom: 1em;
 }
@@ -52,8 +57,16 @@ h2{
   text-align: left;
 }
 
-mat-form-field{
-  width: 25vw;
+.formfield__senha{
+  height: 10vh;
+}
+
+.btn__senha{
+  width: 5px;
+}
+
+.btn__submit{
+  margin-top: .8em;
 }
 
 
@@ -71,4 +84,43 @@ body {
 }
 .footer {
   flex-shrink: 0;
+}
+
+@media only screen and (max-width: 1045px){
+  .card {
+    width: 80vw;
+    height: 40vh;
+  }
+
+  .card__banner{
+    width: 50%;
+    justify-content: unset;
+  }
+  .card__form{
+    width: 50%;
+    justify-content: unset;
+  }
+}
+
+
+@media screen and (max-width: 500px){
+
+  .imagem{
+    display: none;
+  }
+
+  .card {
+    width: 90vw;
+    height: auto;
+    flex-direction: column;
+  }
+
+  .card__banner{
+    width: auto;
+    justify-content: unset;
+  }
+  .card__form{
+    width: auto;
+    justify-content: unset;
+  }
 }

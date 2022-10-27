@@ -1,11 +1,11 @@
 <body>
   <app-header></app-header>
+  <div class="content">
   <div class="panel-body">
     <table class="table table-striped">
       <thead>
         <tr>
           <th>Nome</th>
-          <th>Sobrenome</th>
           <th>CPF</th>
           <th>Username</th>
           <th>Actions</th>
@@ -14,7 +14,6 @@
       <tbody>
         <tr *ngFor="let usuario of usuarios | async">
           <td>{{usuario.name}}</td>
-          <td>{{usuario.lastname}}</td>
           <td>{{usuario.cpf}}</td>
           <td>{{usuario.username}}</td>
           <td><button (click)="deletaUsuario(usuario.userId)" class="btn btn-danger">Deletar</button>
@@ -24,5 +23,6 @@
       </tbody>
     </table>
   </div>
+</div>
   <app-footer class="footer"></app-footer>
 </body>

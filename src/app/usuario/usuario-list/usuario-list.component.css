@@ -93,9 +93,20 @@ mat-card h2{
 /*Tabela*/
 
 table {
-  width: 100%;
+  width: 80%;
+  text-align: center;
+  margin: auto;
+  background-color: rgba(209, 209, 209, 0.562);
 }
 
+td{
+  border: 1px solid #fefefe;
+  margin: 0;
+  padding: 0;
+}
+tr{
+  line-height: 2em;
+}
 
 /*Sticky footer*/
 html, body {

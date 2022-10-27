@@ -1,65 +1,129 @@
 <body>
   <div class="content">
     <app-header></app-header>
-
-    <div [hidden]="submitted" style="width: 400px;">
-      <form (ngSubmit)="onSubmit()">
-        <div class="form-group">
-          <label for="name">Nome</label>
-          <input type="text" class="form-control" id="name" required [(ngModel)]="usuario.name" name="name">
-        </div>
-
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" class="form-control" id="email" required [(ngModel)]="usuario.email" name="date">
-        </div>
-
-        <div class="form-group">
-          <label for="cpf">cpf</label>
-          <input type="text" class="form-control" id="cpf" required [(ngModel)]="usuario.cpf" name="cpf">
-        </div>
-
-        <div class="form-group">
-          <label for="dtNascimento">Data de Nascimento</label>
-          <input type="text" class="form-control" id="dtNascimento" required [(ngModel)]="usuario.dtNascimento" name="dtNascimento">
-        </div>
-
-        <div class="form-group">
-          <label for="ra">RA</label>
-          <input type="number" class="form-control" id="ra" required [(ngModel)]="usuario.ra" name="ra">
-        </div>
-
-        <div class="form-group">
-          <label for="cursoMatriculado">Curso Matriculado</label>
-          <input type="text" class="form-control" id="cursoMatriculado" required [(ngModel)]="usuario.cursoMatriculado" name="cursoMatriculado">
-        </div>
-
-        <div class="form-group">
-          <label for="anoIngresso">Ano que Ingressou</label>
-          <input type="text" class="form-control" id="anoIngresso" required [(ngModel)]="usuario.anoIngresso" name="anoIngresso">
-        </div>
-
-        <div class="form-group">
-          <label for="periodo">Periodo do curso Matriculado</label>
-          <input type="text" class="form-control" id="periodo" required [(ngModel)]="usuario.periodo" name="periodo">
-        </div>
-
-        <form [formGroup]="myForm" >
-
-          <div formArrayName="roles">
-              <div *ngFor="let roles of rolesForms.controls; let i=index"
-                    [formGroupName]="i">
-                  <input type="text" formControlName="role">
-                  <button (click)="deleteRole(i)">Deletar</button>
-              </div>
+    <mat-card>
+      <mat-card-title>Autualizar ou deletar dados</mat-card-title>
+      <mat-card-subtitle>Formulário</mat-card-subtitle>
+      <div [hidden]="submitted" style="width: 400px">
+        <form (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <label for="name">Nome</label>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              required
+              [(ngModel)]="usuario.name"
+              name="name"
+            />
           </div>
-          <button (click)="addRole()">Adicionar</button>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              required
+              [(ngModel)]="usuario.email"
+              name="date"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="cpf">cpf</label>
+            <input
+              type="text"
+              class="form-control"
+              id="cpf"
+              required
+              [(ngModel)]="usuario.cpf"
+              name="cpf"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="dtNascimento">Data de Nascimento</label>
+            <input
+              type="text"
+              class="form-control"
+              id="dtNascimento"
+              required
+              [(ngModel)]="usuario.dtNascimento"
+              name="dtNascimento"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="ra">RA</label>
+            <input
+              type="number"
+              class="form-control"
+              id="ra"
+              required
+              [(ngModel)]="usuario.ra"
+              name="ra"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="cursoMatriculado">Curso Matriculado</label>
+            <input
+              type="text"
+              class="form-control"
+              id="cursoMatriculado"
+              required
+              [(ngModel)]="usuario.cursoMatriculado"
+              name="cursoMatriculado"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="anoIngresso">Ano que Ingressou</label>
+            <input
+              type="text"
+              class="form-control"
+              id="anoIngresso"
+              required
+              [(ngModel)]="usuario.anoIngresso"
+              name="anoIngresso"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="periodo">Periodo do curso Matriculado</label>
+            <input
+              type="text"
+              class="form-control"
+              id="periodo"
+              required
+              [(ngModel)]="usuario.periodo"
+              name="periodo"
+            />
+          </div>
+
+          <form [formGroup]="myForm">
+            <div class="perfil-form" formArrayName="roles">
+              <label for="perfil">Perfil</label>
+              <button class="btn_deletar" mat-button (click)="addRole()">Adicionar</button>
+              <div class="wrapper"
+              *ngFor="let roles of rolesForms.controls; let i = index"
+              [formGroupName]="i"
+              >
+                <input type="text" formControlName="role" />
+                <button mat-button (click)="deleteRole(i)">Deletar</button>
+              </div>
+            </div>
+          </form>
+          <mat-card-actions>
+            <button mat-button type="submit" class="btn btn-success">
+              ATUALIZAR
+            </button>
+          </mat-card-actions>
         </form>
-
-        <button type="submit" class="btn btn-success">Submit</button>
-      </form>
-    </div>
+      </div>
+    </mat-card>
   </div>
-  <app-footer class="footer"></app-footer>
 
+  <app-footer class="footer"></app-footer>
 </body>

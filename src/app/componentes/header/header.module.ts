@@ -5,12 +5,14 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { HomeRoutingModule } from 'src/app/home/home-routing.module';
 
 import { HeaderComponent } from './header.component';
+import { AdminComponent } from './navbar/admin/admin.component';
 
 
 
 @NgModule({
   declarations: [
-    HeaderComponent
+    HeaderComponent,
+    AdminComponent
   ],
   imports: [
     CommonModule,

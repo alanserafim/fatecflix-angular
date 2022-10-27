@@ -8,7 +8,7 @@ import { environment } from 'src/environments/environment';
 })
 export class AtualizarUsuarioService {
 
-  private readonly API = `${environment.api_url}/api/v1/usarios/me`
+  private readonly API = `${environment.api_url}/api/v1/usuarios/me`
 
   constructor(
     private http:HttpClient

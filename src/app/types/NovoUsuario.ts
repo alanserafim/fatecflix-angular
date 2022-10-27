@@ -1,4 +1,5 @@
 export interface NovoUsuario {
+  userId: number;
   anoIngresso: string,
   cpf: string,
   cursoMatriculado: string,

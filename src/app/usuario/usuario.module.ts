@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { HTTP_INTERCEPTORS } from '@angular/common/http';
+//import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
@@ -22,6 +22,9 @@ import { NovoUsuarioCadastroComponent } from './novo-usuario-cadastro/novo-usuar
 import { PerfilUsuarioComponent } from './perfil-usuario/perfil-usuario.component';
 import { SucessoRequisicaoComponent } from './sucesso-requisicao/sucesso-requisicao.component';
 import { UsuarioRoutingModule } from './usuario-routing.module';
+import { UsuarioListComponent } from './usuario-list/usuario-list.component';
+import { UsuarioDeleteComponent } from './usuario-delete/usuario-delete.component';
+import { AtualizarUsuarioComponent } from './atualizar-usuario/atualizar-usuario.component';
 
 
 @NgModule({
@@ -29,7 +32,10 @@ import { UsuarioRoutingModule } from './usuario-routing.module';
     LoginComponent,
     NovoUsuarioCadastroComponent,
     PerfilUsuarioComponent,
-    SucessoRequisicaoComponent
+    SucessoRequisicaoComponent,
+    UsuarioListComponent,
+    UsuarioDeleteComponent,
+    AtualizarUsuarioComponent
   ],
   imports: [
     CommonModule,

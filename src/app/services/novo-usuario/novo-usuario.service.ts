@@ -26,7 +26,9 @@ export class NovoUsuarioService {
         password: novoUsuario.password,
         periodo: novoUsuario.periodo,
         ra: novoUsuario.ra,
-        roles: novoUsuario.roles,
+        roles: [
+          "Aluno"
+        ],
         //semestreIngresso: string;
         //confirmacao: string,
         username: novoUsuario.email,

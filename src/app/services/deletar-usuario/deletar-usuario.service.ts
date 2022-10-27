@@ -12,8 +12,8 @@ export class DeletarUsuarioService {
     private http:HttpClient
   ) { }
 
-  deletaUsuario(usuario : NovoUsuario, id: number){
-    const API: string = `${environment.api_url}/api/v1/usarios/${id}`
+  deletaUsuario(id: number){
+    const API: string = `${environment.api_url}/api/v1/usuarios/${id}`
     return this.http.delete(API)
   }
 

@@ -18,7 +18,7 @@ const routes: Routes = [
   {
     path: 'cursos',
     loadChildren:()=> import ('./courses/courses.module' ).then((m)=> m.CoursesModule )
-  }
+  },
 ];
 
 @NgModule({

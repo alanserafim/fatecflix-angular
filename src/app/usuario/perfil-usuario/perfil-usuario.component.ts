@@ -3,6 +3,10 @@ import { Observable } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
 import {MatTableDataSource} from '@angular/material/table';
 import { UsuarioLogadoService } from 'src/app/services/authentication/usuario-logado/usuario-logado.service';
+import { NovoUsuario } from 'src/app/types/NovoUsuario';
+import { ActivatedRoute, Router } from '@angular/router';
+import { ConsultarUsuariosService } from 'src/app/services/consultar-usuarios/consultar-usuarios.service';
+import { Usuario } from 'src/app/types/Usuario';
 
 export interface PeriodicElement {
   curso: string;
@@ -32,19 +36,27 @@ export class PerfilUsuarioComponent implements OnInit {
   displayedColumns: string[] = ['posicao', 'curso', 'progresso', 'status', 'certificado'];
   dataSource = new MatTableDataSource(ELEMENT_DATA);
 
+  submitted = false;
+  // @ts-ignore: Object is possibly 'undefined'.
+  userId: number;
+  // @ts-ignore: Object is possibly 'undefined'.
+  usuario: Usuario;
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
   constructor(
     private usuarioLogadoService: UsuarioLogadoService,
-
+    private route: ActivatedRoute,
+    private router: Router,
+    private atualizaUsuario: ConsultarUsuariosService,
   ) { }
 
   ngOnInit(): void {
 
   }
 
+  
   recebeUsuarioLogado(){
     this.usuarioLogadoService.retornaUsuarioLogado().subscribe(
       (usuario) => {

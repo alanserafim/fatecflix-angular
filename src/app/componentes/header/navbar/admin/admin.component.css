@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+
+  font-size: 0.6em;
+}
+
+.toolbar{
+  display: flex;
+  height: 7vh;
+  justify-content: space-between;
+  background-color: var(--header-background-color);
+  margin-bottom: 1em;
+  /* offset-x | offset-y | blur-radius | color */
+  box-shadow: 0 1px 8px var(--primary-color);
+}
+
+button{
+  background-color: var(--header-background-color);
+  color: var(--primary-color);
+  font-size: 1.5em;
+}
+
+.logoHeader{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 280px;
+}
+
+@media (max-width: 676px) {
+  .logoHeader {
+    width: 130px;
+  }
+
+}
+
+@media (max-width: 768px) {
+ .logoHeader {
+    width: 170px;
+  }
+}

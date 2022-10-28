@@ -1,43 +1,79 @@
-<app-header></app-header>
-<form class="cadastro" [formGroup]="novoCursoForm" (submit)="cadastrarCurso()">
-  <mat-card class="card">
-    <h1 class=>Cadastrar Curso</h1>
-    <p class="titulo">Titulo:</p>
-    <mat-form-field appearance="fill" class="input">
+<body>
+  <app-header></app-header>
+  <div class="content">
+<mat-card class=card__container>
+<mat-card class="card__1">
+    <mat-card-header>
+        <mat-card-title>Fatecflix</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+       <h2>Cadastre um novo curso</h2>
+        <p>E contribua com a educação de nossos alunos.</p>
+    </mat-card-content>
+     <mat-card-footer>
+    </mat-card-footer>
+</mat-card >
+<mat-card class="card__2">
+    <form class="cadastro" [formGroup]="novoCursoForm" (submit)="cadastrarCurso()">
+    <h1 class=>Cadastrar curso</h1>
+
+    <mat-form-field appearance="outline" class="input">
+      <mat-label class="titulo">Titulo:</mat-label>
       <input
       matInput
       class="input"
       type="text"
       formControlName="titulo"
       >
+      <mat-error
+      *ngIf="novoCursoForm.get('titulo')?.errors?.['required']"
+      >
+      O campo título deve ser preenchido.</mat-error>
     </mat-form-field>
-    <p class="descricao">Descrição:</p>
-      <mat-form-field class="descricaoInput" appearance="fill">
+
+      <mat-form-field class="descricaoInput" appearance="outline">
+        <mat-label class="descricao">Descrição:</mat-label>
         <textarea
         matInput
         formControlName="descricao"
         >
       </textarea>
+      <mat-error
+      *ngIf="novoCursoForm.get('descricao')?.errors?.['required']"
+      >
+      O campo descrição deve ser preenchido.</mat-error>
       </mat-form-field>
-    <p class="cargaHoraria">Carga Horária:</p>
-    <mat-form-field appearance="fill" class="input">
+
+    <mat-form-field appearance="outline" class="input">
+      <mat-label class="cargaHoraria">Carga Horária:</mat-label>
       <input
       matInput
       formControlName="cargaHoraria"
       type="text"
       >
+      <mat-error
+      *ngIf="novoCursoForm.get('cargaHoraria')?.errors?.['required']"
+      >
+      O campo carga horária deve ser preenchido.</mat-error>
     </mat-form-field>
-    <p class="dataAtualizacao" >Data de atualização</p>
-    <mat-form-field appearance="fill" class="input">
+
+    <mat-form-field appearance="outline" class="input">
+      <mat-label class="dataAtualizacao" >Data de atualização</mat-label>
       <input
-      matInput
-      class="input"
-      type="date"
+      matInput [matDatepicker]="picker"
       formControlName="dataAtualizacao"
       >
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+      <mat-error
+      *ngIf="novoCursoForm.get('dataAtualizacao')?.errors?.['required']"
+      >
+      O campo data de atualização deve ser preenchido.</mat-error>
+
     </mat-form-field>
-    <p class="media">Média Avaliação</p>
-    <mat-form-field appearance="fill" class="input">
+
+    <mat-form-field appearance="outline" class="input">
+      <mat-label class="media">Média Avaliação</mat-label >
       <input
       matInput
       type="text"
@@ -45,11 +81,13 @@
       >
     </mat-form-field>
     <button
-      mat-flat-button
+      mat-stroked-button
       [disabled]="novoCursoForm.invalid"
       >CADASTRAR
     </button>
-    </mat-card>
-  </form>
-
-<app-footer></app-footer>
+    </form>
+  </mat-card>
+</mat-card>
+</div>
+<app-footer class="footer"></app-footer>
+</body>

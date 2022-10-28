@@ -1,10 +1,14 @@
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { MatNativeDateModule, MAT_DATE_LOCALE } from '@angular/material/core';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatInputModule } from '@angular/material/input';
+import { MatTableModule } from '@angular/material/table';
 
+import { SucessoModule } from '../componentes/sucesso/sucesso.module';
 import { FooterModule } from './../componentes/footer/footer.module';
 import { HeaderModule } from './../componentes/header/header.module';
 import { AtualizarCursoComponent } from './atualizar-curso/atualizar-curso.component';
@@ -13,9 +17,6 @@ import { CoursesRoutingModule } from './courses-routing.module';
 import { ExibirCursoComponent } from './exibir-curso/exibir-curso.component';
 import { ExibirTrilhaCursoComponent } from './exibir-trilha-curso/exibir-trilha-curso.component';
 import { ListarCursosComponent } from './listar-cursos/listar-cursos.component';
-import { SucessoModule } from '../componentes/sucesso/sucesso.module';
-import {MatTableModule} from '@angular/material/table';
-
 
 @NgModule({
   declarations: [
@@ -36,7 +37,12 @@ import {MatTableModule} from '@angular/material/table';
     ReactiveFormsModule,
     FormsModule,
     SucessoModule,
-    MatTableModule
-  ]
+    MatTableModule,
+    MatDatepickerModule,
+    MatNativeDateModule
+  ],
+  providers: [
+    {provide: MAT_DATE_LOCALE, useValue: 'pt-BR'},
+  ],
 })
 export class CoursesModule { }

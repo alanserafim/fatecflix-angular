@@ -4,13 +4,13 @@
     <form class="login" (ngSubmit)="login()" #loginForm="ngForm">
       <mat-card class="card">
         <section class="card__banner">
-          <h2 class="">Faça seu login e boa aula!</h2>
+          <h2>Faça seu login e boa aula!</h2>
           <div class="imagem"><br /></div>
         </section>
         <section class="card__form">
-          <h2>Login</h2>
+          <h1>Login</h1>
           <div class="container">
-            <mat-form-field appearance="fill" class="formfield__senha">
+            <mat-form-field appearance="outline" class="formfield__senha">
               <mat-label>E-mail</mat-label>
               <input
                 class="input"
@@ -27,7 +27,7 @@
               </mat-error>
             </mat-form-field>
 
-            <mat-form-field class="formfield__senha" appearance="fill">
+            <mat-form-field class="formfield__senha" appearance="outline">
               <mat-label>Senha</mat-label>
               <input
                 class="input"
@@ -67,7 +67,7 @@
           </div>
           <p>
             <a [routerLink]="['cadastro']"
-              >Ainda nâo tem acesso? Cadastre-se!</a
+              >Ainda nâo tem acesso? Cadastre-se > </a
             >
           </p>
         </section>

@@ -9,13 +9,13 @@
   display: flex;
 }
 
-.card__banner{
+.card__banner {
   width: 25vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.card__form{
+.card__form {
   width: 25vw;
   margin-left: 2em;
   display: flex;
@@ -23,7 +23,7 @@
   justify-content: center;
 }
 
-.imagem{
+.imagem {
   height: 60%;
   background-image: url(./img/login.svg);
   background-repeat: no-repeat;
@@ -31,81 +31,95 @@
   background-size: 90%;
 }
 
-.login{
+.login {
   margin: 1em;
   padding: 1em;
   display: flex;
   justify-content: center;
 }
 
-button{
+button {
   background-color: var(--primary-color);
   color: var(--secondary-text-color);
   width: 25vw;
   margin-bottom: 1em;
 }
 
-p{
+p {
   text-align: left;
 }
 
-h2{
+h2 {
   text-align: center;
 }
 
-.card__form h2{
+.card__form h2 {
   text-align: left;
 }
 
-.formfield__senha{
-  height: 10vh;
+.formfield__senha {
+  min-height: 10vh;
 }
 
-.btn__senha{
+.btn__senha {
   width: 5px;
 }
 
-.btn__submit{
-  margin-top: .8em;
+.btn__submit {
+  margin-top: 0.8em;
 }
-
 
 /*Sticky footer*/
-html, body {
-  height: 100%;
-}
 
-body {
+.super-container {
+  height: 100%;
   display: flex;
   flex-direction: column;
 }
+
 .content {
   flex: 1 0 auto;
 }
 .footer {
   flex-shrink: 0;
-}
+  background: rgb(66, 16, 11);
+      background: linear-gradient(
+        135deg,
+        rgba(66, 16, 11, 1) 51%,
+        rgba(0, 0, 0, 1) 91%,
+        rgba(0, 0, 0, 1) 100%
+      );
+  }
 
-@media only screen and (max-width: 1045px){
+  .header {
+    background: rgb(66, 16, 11);
+      background: linear-gradient(
+        135deg,
+        rgba(66, 16, 11, 1) 51%,
+        rgba(0, 0, 0, 1) 91%,
+        rgba(0, 0, 0, 1) 100%
+      );
+  }
+
+@media screen and (max-width: 1045px) {
   .card {
     width: 80vw;
     height: 40vh;
   }
-
-  .card__banner{
+  .card__banner {
     width: 50%;
     justify-content: unset;
   }
-  .card__form{
+  .card__form {
     width: 50%;
-    justify-content: unset;
   }
 }
 
-
-@media screen and (max-width: 500px){
-
-  .imagem{
+@media screen and (max-width: 500px) {
+  .footer{
+    display: none;
+  }
+  .imagem {
     display: none;
   }
 
@@ -113,36 +127,42 @@ body {
     width: 90vw;
     height: auto;
     flex-direction: column;
+    align-items: center;
     box-shadow: none;
   }
 
-  .card__banner{
+  .card__banner {
     width: auto;
     justify-content: unset;
   }
-  .card__form{
-    width: auto;
-    justify-content: unset;
+  .card__form {
+    width: 90%;
+    align-items: center;
+    margin: auto;
   }
 
-  app-header{
-    display: none;
+  app-header {
+    display: unset;
+    background-color: transparent;
   }
-  .content{
+  .content {
     height: 100vh;
   }
-  .btn__submit{
+  .btn__submit {
     margin-top: 1em;
     width: 100%;
     height: 50px;
     border-radius: 12px;
+  }
+  .btn__senha{
+    background-color: rgba(207, 200, 200, 0.795);
   }
 
   p {
     margin-top: 1em;
     text-align: center;
   }
-  a{
+  a {
     font-weight: 500;
     text-decoration: none;
     color: var(--primary-color);

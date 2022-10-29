@@ -1,6 +1,6 @@
-<body>
+<div class="super-container">
   <div class="content">
-    <app-header></app-header>
+    <app-header class="header"></app-header>
     <form class="login" (ngSubmit)="login()" #loginForm="ngForm">
       <mat-card class="card">
         <section class="card__banner">
@@ -10,7 +10,7 @@
         <section class="card__form">
           <h1>Login</h1>
           <div class="container">
-            <mat-form-field appearance="outline" class="formfield__senha">
+            <mat-form-field appearance="outline" class="formfield__senha" hideRequiredMarker>
               <mat-label>E-mail</mat-label>
               <input
                 class="input"
@@ -27,7 +27,7 @@
               </mat-error>
             </mat-form-field>
 
-            <mat-form-field class="formfield__senha" appearance="outline">
+            <mat-form-field class="formfield__senha" appearance="outline" hideRequiredMarker>
               <mat-label>Senha</mat-label>
               <input
                 class="input"
@@ -75,4 +75,4 @@
     </form>
   </div>
   <app-footer class="footer"></app-footer>
-</body>
+</div>

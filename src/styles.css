@@ -10,5 +10,22 @@
   --footer-text-color: #fefefe;
 }
 
-html, body { height: 100%; background-color: var(--primary-background-color); }
+html, body { height: 100% }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+@media only screen and (max-width: 1045px) {}
+
+@media screen and (max-width: 500px) {
+  .background{
+    background: rgb(66, 16, 11);
+      background: linear-gradient(
+        135deg,
+        rgba(66, 16, 11, 1) 51%,
+        rgba(0, 0, 0, 1) 91%,
+        rgba(0, 0, 0, 1) 100%
+      );
+  }
+
+}
+

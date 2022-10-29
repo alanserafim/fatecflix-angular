@@ -11,7 +11,7 @@ body{
 }
 
 .card__1{
-  background-color: var(--primary-color);
+  /*background-color: var(--primary-color);*/
   width: 30%;
   max-width: 350px;
   color: white;

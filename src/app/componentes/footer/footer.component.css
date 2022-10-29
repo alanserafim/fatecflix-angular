@@ -1,5 +1,4 @@
 .rodape{
-  background-color: var(--footer-background);
   color: var(--footer-text-color);
   height: 150px;
   margin-top:1em;
@@ -29,3 +28,8 @@
   margin: 0;
   border: 0;
 }
+
+.footer, .rodape, .container, .logo, footer{
+  background-color: transparent;
+}
+

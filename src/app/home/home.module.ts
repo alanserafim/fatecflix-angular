@@ -8,10 +8,12 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 
 import { HomeRoutingModule } from './home-routing.module';
 import { HomepageComponent } from './homepage/homepage.component';
+import { CardComponent } from './homepage/card/card.component';
 
 @NgModule({
   declarations: [
     HomepageComponent,
+    CardComponent,
   ],
   imports: [
     CommonModule,

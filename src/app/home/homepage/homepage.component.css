@@ -34,7 +34,14 @@ body {
 
 
 .size{
-  margin-top:50px;
+  margin-top:20px;
+  margin-left: 150px;
+  width: 660px;
+  height: 600px;
+}
+
+.size2{
+  margin-left:60px;
   width: 660px;
   height: 600px;
 }
@@ -53,12 +60,23 @@ main{
   background-color: rgb(66, 16, 11);
 }
 
+.secao2{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-Bottom:150px;
+}
+
+.secao3{
+  margin-Bottom: 150px;
+}
+
 #teste{
   color:black;
   font-size: 25px;
 }
 
-h2{
+#titulo1{
   margin-left: 30px;
   font-size:90px;
   line-height: 90px;
@@ -67,7 +85,16 @@ h2{
   color: white;
 }
 
-p{
+#titulo3{
+  font-size:70px;
+  line-height: 90px;
+  font-family: poppinsmedium;
+  margin-top: 200px;
+  margin-right: 100px;
+  color: black;
+}
+
+#titulo2{
   line-height:100px;
   max-width: 500px;
   font-family: poppinslight;
@@ -129,25 +156,21 @@ h1{
 
 .card p {
   color: #a3a5ae;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .image {
-  float: right;
-  max-width: 64px;
-  max-height: 64px;
+  padding-top:20px;
+  max-width: 84px;
+  max-height: 104px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto 
 }
 
-.blue {
-  border-left: 3px solid #4895ff;
+.card-color {
+  border-left: 3px solid #AC1305;
 }
 
-.green {
-  border-left: 3px solid #3bb54a;
-}
-
-.red {
-  border-left: 3px solid #b3404a;
-}
 
 

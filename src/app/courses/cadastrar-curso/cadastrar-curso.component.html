@@ -17,7 +17,7 @@
     <form class="cadastro" [formGroup]="novoCursoForm" (submit)="cadastrarCurso()">
     <h1 class=>Cadastrar curso</h1>
 
-    <mat-form-field appearance="outline" class="input">
+    <mat-form-field appearance="outline" class="input" hideRequiredMarker>
       <mat-label class="titulo">Titulo:</mat-label>
       <input
       matInput
@@ -31,7 +31,7 @@
       O campo título deve ser preenchido.</mat-error>
     </mat-form-field>
 
-      <mat-form-field class="descricaoInput" appearance="outline">
+      <mat-form-field class="descricaoInput" appearance="outline" hideRequiredMarker>
         <mat-label class="descricao">Descrição:</mat-label>
         <textarea
         matInput
@@ -44,7 +44,7 @@
       O campo descrição deve ser preenchido.</mat-error>
       </mat-form-field>
 
-    <mat-form-field appearance="outline" class="input">
+    <mat-form-field appearance="outline" class="input" hideRequiredMarker>
       <mat-label class="cargaHoraria">Carga Horária:</mat-label>
       <input
       matInput
@@ -57,7 +57,7 @@
       O campo carga horária deve ser preenchido.</mat-error>
     </mat-form-field>
 
-    <mat-form-field appearance="outline" class="input">
+    <mat-form-field appearance="outline" class="input" hideRequiredMarker>
       <mat-label class="dataAtualizacao" >Data de atualização</mat-label>
       <input
       matInput [matDatepicker]="picker"

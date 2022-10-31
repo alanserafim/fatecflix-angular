@@ -1,10 +1,11 @@
-<app-header></app-header>
-<form class="cadastro" [formGroup]="novoUsuarioForm" (submit)="cadastrar()">
-  <div class="titulo">
-    <p>Cadastre-se e comece a aprender</p>
-  </div>
+<div class="super-container">
+  <app-header></app-header>
+  <form class="cadastro" [formGroup]="novoUsuarioForm" (submit)="cadastrar()">
+    <div class="titulo">
+      <p>Cadastre-se e comece a aprender</p>
+    </div>
   <mat-card class="container card">
-      <mat-form-field appearance="fill">
+    <mat-form-field appearance="outline" hideRequiredMarker>
         <mat-label>E-mail</mat-label>
         <input
           matInput
@@ -26,7 +27,7 @@
           novoUsuarioForm.get('email')?.touched"
         mensagem="O e-mail informado não é válido.">
       </app-messages>
-      <mat-form-field appearance="fill">
+      <mat-form-field appearance="outline" hideRequiredMarker>
         <mat-label>CPF</mat-label>
         <input
         matInput
@@ -37,7 +38,7 @@
         >
       </mat-form-field>
       <app-messages
-        *ngIf="novoUsuarioForm.get('cpf')?.errors?.['required'] &&
+      *ngIf="novoUsuarioForm.get('cpf')?.errors?.['required'] &&
           novoUsuarioForm.get('cpf')?.touched"
         mensagem = "O campo CPF é obrigatório."
       >
@@ -47,14 +48,14 @@
       novoUsuarioForm.get('cpf')?.dirty"
       mensagem="O CPF digitado não é válido."
     ></app-messages>
-      <mat-form-field appearance="fill">
+      <mat-form-field appearance="outline" hideRequiredMarker>
         <mat-label>Nome</mat-label>
         <input
-          matInput
-          type="text"
-          placeholder="Nome Sobrenome"
-          name="nome"
-          formControlName="name"
+        matInput
+        type="text"
+        placeholder="Nome Sobrenome"
+        name="nome"
+        formControlName="name"
         >
       </mat-form-field>
       <app-messages
@@ -62,35 +63,35 @@
           novoUsuarioForm.get('name')?.touched"
         mensagem = "O campo nome é obrigatório."
       >
-      </app-messages>
-      <mat-form-field appearance="fill">
-        <mat-label>Data de Nascimento</mat-label>
-        <input
-          matInput
-          type="date"
+    </app-messages>
+    <mat-form-field appearance="outline">
+      <mat-label>Data de Nascimento</mat-label>
+      <input
+      matInput
+      type="date"
           placeholder="00/00/0000"
           name="dataNascimento"
           formControlName="dtNascimento"
         >
       </mat-form-field>
-      <mat-form-field appearance="fill">
+      <mat-form-field appearance="outline">
         <mat-label>RA</mat-label>
         <input
           matInput
           name="ra"
           formControlName="ra"
-        >
-      </mat-form-field>
-      <mat-form-field appearance="fill">
+          >
+        </mat-form-field>
+        <mat-form-field appearance="outline">
         <mat-label>Curso</mat-label>
         <input
-          matInput
-          type="text"
-          name="curso"
-          formControlName="cursoMatriculado"
+        matInput
+        type="text"
+        name="curso"
+        formControlName="cursoMatriculado"
         >
       </mat-form-field>
-      <mat-form-field appearance="fill">
+      <mat-form-field appearance="outline">
         <mat-label>Ano de ingresso</mat-label>
         <input
         matInput
@@ -100,7 +101,7 @@
         >
       </mat-form-field>
 
-      <mat-form-field appearance="fill">
+      <mat-form-field appearance="outline">
         <mat-label>Período</mat-label>
         <mat-select
         name="periodo"
@@ -111,7 +112,7 @@
             <mat-option value="Noite">Noite</mat-option>
         </mat-select>
       </mat-form-field>
-      <mat-form-field appearance="fill">
+      <mat-form-field appearance="outline" hideRequiredMarker>
         <mat-label>Senha</mat-label>
         <input
         matInput
@@ -130,14 +131,14 @@
     *ngIf="novoUsuarioForm.errors?.['matchValues'] &&
     novoUsuarioForm.get('password')?.dirty"
     mensagem="A senha não pode ser igual ao email, cpf ou data de nascimento."
-  ></app-messages>
-  <app-messages
-  *ngIf="novoUsuarioForm.get('password')?.errors?.['minlength'] &&
+    ></app-messages>
+    <app-messages
+    *ngIf="novoUsuarioForm.get('password')?.errors?.['minlength'] &&
     novoUsuarioForm.get('password')?.touched"
-  mensagem = "A senha deve possuir ao mínimo 8 digitos."
->
-</app-messages>
-      <mat-form-field appearance="fill">
+    mensagem = "A senha deve possuir ao mínimo 8 digitos."
+    >
+  </app-messages>
+      <mat-form-field appearance="outline" hideRequiredMarker>
         <mat-label>Confirmação de senha</mat-label>
         <input
         matInput
@@ -148,9 +149,9 @@
       </mat-form-field>
       <app-messages
       *ngIf="novoUsuarioForm.get('confirmacao')?.errors?.['required'] &&
-        novoUsuarioForm.get('confirmacao')?.touched"
+      novoUsuarioForm.get('confirmacao')?.touched"
       mensagem = "O campo confirmação de senha é obrigatório."
-    >
+      >
     </app-messages>
       <app-messages
         *ngIf="novoUsuarioForm.errors?.['valuesDoNotMatch'] &&
@@ -158,11 +159,13 @@
         mensagem="As senhas informadas não são iguais."
       ></app-messages>
       <button
+      class="btn__cadastrar"
       [disabled]="novoUsuarioForm.invalid"
       mat-flat-button
       >CADASTRAR</button>
-      <p><a routerLink="/home/login">Já é usuário? Faça login!</a></p>
-  </mat-card>
-</form>
-
+      <p class="link"><a routerLink="/home/login">Já é usuário? Faça login!</a></p>
+    </mat-card>
+  </form>
 <app-footer></app-footer>
+
+</div>

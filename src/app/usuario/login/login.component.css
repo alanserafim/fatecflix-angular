@@ -116,6 +116,15 @@ h2 {
 }
 
 @media screen and (max-width: 500px) {
+  .super-container{
+    background: rgb(66, 16, 11);
+    background: linear-gradient(
+      135deg,
+      rgba(66, 16, 11, 1) 51%,
+      rgba(0, 0, 0, 1) 91%,
+      rgba(0, 0, 0, 1) 100%
+    );
+  }
   .footer{
     display: none;
   }

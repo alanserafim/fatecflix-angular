@@ -35,6 +35,9 @@ button{
   .toolbar{
     background-color: transparent;
   }
+  .btn__login{
+    display: none;
+  }
 
   button{
     background-color: transparent;

@@ -38,16 +38,11 @@ export class AtualizarCursoComponent implements OnInit {
       .subscribe(data => console.log(data), error => console.log(error));
       this.curso = new Curso();
 
-      // @ts-ignore: Object is possibly 'undefined'.
-      this.gotoList();
+      this.router.navigate(['/cursos/listar']);
   }
 
   onSubmit() {
     this.updateCurso();
-  }
-
-  gotoList() {
-    this.router.navigate(['/cursos/listar']);
   }
 
 }

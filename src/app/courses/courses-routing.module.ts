@@ -16,11 +16,11 @@ const routes: Routes = [
     component: ListarCursosComponent
   },
   {
-    path: 'deletar',
+    path: 'deletar/:id',
     component: DeletarCursoComponent
   },
   {
-    path: 'atualizar',
+    path: 'atualizar/:id',
     component: AtualizarCursoComponent
   },
   {

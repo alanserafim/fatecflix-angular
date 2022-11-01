@@ -2,6 +2,8 @@ import { CadastrarCursoComponent } from './cadastrar-curso/cadastrar-curso.compo
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ListarCursosComponent } from './listar-cursos/listar-cursos.component';
+import { DeletarCursoComponent } from './deletar-curso/deletar-curso.component';
+import { AtualizarCursoComponent } from './atualizar-curso/atualizar-curso.component';
 
 const routes: Routes = [
   {
@@ -11,6 +13,14 @@ const routes: Routes = [
   {
     path: 'listar',
     component: ListarCursosComponent
+  },
+  {
+    path: 'deletar',
+    component: DeletarCursoComponent
+  },
+  {
+    path: 'atualizar',
+    component: AtualizarCursoComponent
   }
 ];
 

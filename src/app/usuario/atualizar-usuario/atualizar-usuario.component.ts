@@ -20,7 +20,7 @@ export class AtualizarUsuarioComponent implements OnInit {
   // @ts-ignore: Object is possibly 'undefined'.
   usuario: Usuario;
 
-  constructor(private usuarioLogadoService: UsuarioLogadoService,
+  constructor(
     private route: ActivatedRoute,
     private router: Router,
     private atualizaUsuario: ConsultarUsuariosService,

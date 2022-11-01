@@ -9,7 +9,7 @@ import { environment } from 'src/environments/environment';
 export class NovoCursoService {
 
   private readonly API = `${environment.api_url}/api/v1/cursos`
-  
+
   constructor(
     private http:HttpClient
   ) { }
@@ -20,7 +20,7 @@ export class NovoCursoService {
       descricao: novoCurso.descricao,
       mediaAvaliacao: novoCurso.mediaAvaliacao,
       titulo: novoCurso.titulo,
-      cargaHorario: novoCurso.cargaHoraria
+      cargaHorario: novoCurso.cargaHorario
       })
   }
 }

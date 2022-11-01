@@ -17,6 +17,7 @@ import { CoursesRoutingModule } from './courses-routing.module';
 import { ExibirCursoComponent } from './exibir-curso/exibir-curso.component';
 import { ExibirTrilhaCursoComponent } from './exibir-trilha-curso/exibir-trilha-curso.component';
 import { ListarCursosComponent } from './listar-cursos/listar-cursos.component';
+import { DeletarCursoComponent } from './deletar-curso/deletar-curso.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { ListarCursosComponent } from './listar-cursos/listar-cursos.component';
     ExibirTrilhaCursoComponent,
     ListarCursosComponent,
     AtualizarCursoComponent,
+    DeletarCursoComponent,
   ],
   imports: [
     CommonModule,

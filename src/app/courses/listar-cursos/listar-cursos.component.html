@@ -20,9 +20,9 @@
           <td>{{curso.dataAtualizacao}}</td>
           <td>{{curso.mediaAvaliacao}}</td>
           <td>
-            <button (click)="atualizaCurso(curso.id)" class="btn btn-info" style="margin-right: 10px">Matricular</button>
-            <button (click)="deletaCurso(curso.id)" class="btn btn-danger">Deletar</button>
-            <button (click)="atualizaCurso(curso.id)" class="btn btn-info" style="margin-left: 10px">Atualizar</button>
+            <button (click)="matricular(curso.cursoId)" class="btn btn-info" style="margin-right: 10px">Matricular</button>
+            <button (click)="deletaCurso(curso.cursoId)" class="btn btn-danger">Deletar</button>
+            <button (click)="atualizaCurso(curso.cursoId)" class="btn btn-info" style="margin-left: 10px">Atualizar</button>
           </td>
         </tr>
       </tbody>

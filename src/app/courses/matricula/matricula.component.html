@@ -1,0 +1,24 @@
+<body>
+  <app-header></app-header>
+  <div class="content">
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Nota</th>
+          <th>Situação</th>
+          <th>Avaliação do curso</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let matricula of matriculas | async">
+          <td>{{matricula.nota}}</td>
+          <td>{{matricula.status}}</td>
+          <td>{{matricula.avaliacaoCurso}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+  <app-footer class="footer"></app-footer>
+</body>

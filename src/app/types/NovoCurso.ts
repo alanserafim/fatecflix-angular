@@ -1,5 +1,5 @@
 export interface NovoCurso {
-  id: number;
+  cursoId: number;
   titulo: string,
   descricao: string,
   cargaHorario: string,

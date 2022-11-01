@@ -1,9 +1,9 @@
-import { ListaCursosService } from './../../services/listar-cursos/listar-cursos.service';
-import { NovoCurso } from './../../types/NovoCurso';
+import { ListaCursosService } from './../../services/listar-cursos/listar-cursos.service';import { NovoCurso } from './../../types/NovoCurso';
 import { Component, OnInit } from '@angular/core';
-import { observable, Observable } from 'rxjs';
-import { MatTableDataSource } from '@angular/material/table';
+import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
+import { Matricula } from 'src/app/types/Matricula';
+import { MatricularService } from 'src/app/services/matricular/matricular.service';
 
 /**/
 
@@ -15,6 +15,12 @@ import { Router } from '@angular/router';
 export class ListarCursosComponent implements OnInit {
   // @ts-ignore: Object is possibly 'undefined'.
   cursos: Observable<NovoCurso[]>;
+
+  // @ts-ignore: Object is possibly 'undefined'.
+  matricula: Matricula;
+
+  // @ts-ignore: Object is possibly 'undefined'.
+  matriculado: Observable<Matricula>;
   displayedColumns: string[] = [
     'Título',
     'Descrição',
@@ -25,7 +31,7 @@ export class ListarCursosComponent implements OnInit {
 
   //listaCursosUsuario$ : Observable<NovoCurso> = this.listarCursosService.retornaCursosUsuario();
   //dataSource = new MatTableDataSource(cursos);
-  constructor(private listarCursosService: ListaCursosService, private router: Router) {
+  constructor(private listarCursosService: ListaCursosService, private router: Router, private matriculaService: MatricularService) {
 
   }
 
@@ -45,5 +51,17 @@ export class ListarCursosComponent implements OnInit {
 
   atualizaCurso(id : number) {
     this.router.navigate(['/cursos/atualizar', id])
+  }
+
+  matricular(id: number) {
+
+    console.log(id);
+
+    this.matricula = new Matricula(0.0, 0.0, "Em progresso")
+
+    this.matriculaService.matricular(id, this.matricula).subscribe(data => console.log(data),
+    error => console.log(error));
+
+    this.router.navigate(['/cursos/matricula']);
   }
 }

@@ -1,5 +1,5 @@
 export class Curso {
-  id?: number;
+  cursoId?: number;
   titulo?: string;
   descricao?: string;
   cargaHorario?: string;

@@ -18,6 +18,7 @@ import { ExibirCursoComponent } from './exibir-curso/exibir-curso.component';
 import { ExibirTrilhaCursoComponent } from './exibir-trilha-curso/exibir-trilha-curso.component';
 import { ListarCursosComponent } from './listar-cursos/listar-cursos.component';
 import { DeletarCursoComponent } from './deletar-curso/deletar-curso.component';
+import { MatriculaComponent } from './matricula/matricula.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { DeletarCursoComponent } from './deletar-curso/deletar-curso.component';
     ListarCursosComponent,
     AtualizarCursoComponent,
     DeletarCursoComponent,
+    MatriculaComponent,
   ],
   imports: [
     CommonModule,

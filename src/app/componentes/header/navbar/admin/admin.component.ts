@@ -34,6 +34,10 @@ export class AdminComponent implements OnInit {
     this.route.navigate(['/usuario/lista']);
   }
 
+  irParaListarCursos() {
+    this.route.navigate(['/cursos/listar']);
+  }
+
   loggout() {
     this.tokenService.excluiToken();
     this.route.navigate(['/home']);

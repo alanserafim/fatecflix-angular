@@ -1,7 +1,10 @@
 export interface NovoCurso {
+  id: number;
   titulo: string,
   descricao: string,
-  cargaHoraria: string,
+  cargaHorario: string,
   dataAtualizacao: string,
-  mediaAvaliacao: string
+  mediaAvaliacao: string,
+  aulas: string[];
+  exercicios: string[];
 }

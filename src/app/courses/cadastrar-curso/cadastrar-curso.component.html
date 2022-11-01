@@ -45,14 +45,14 @@
       </mat-form-field>
 
     <mat-form-field appearance="outline" class="input" hideRequiredMarker>
-      <mat-label class="cargaHoraria">Carga Horária:</mat-label>
+      <mat-label class="cargaHorario">Carga Horária:</mat-label>
       <input
       matInput
-      formControlName="cargaHoraria"
+      formControlName="cargaHorario"
       type="text"
       >
       <mat-error
-      *ngIf="novoCursoForm.get('cargaHoraria')?.errors?.['required']"
+      *ngIf="novoCursoForm.get('cargaHorario')?.errors?.['required']"
       >
       O campo carga horária deve ser preenchido.</mat-error>
     </mat-form-field>

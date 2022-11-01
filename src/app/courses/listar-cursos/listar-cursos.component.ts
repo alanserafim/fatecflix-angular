@@ -3,6 +3,7 @@ import { NovoCurso } from './../../types/NovoCurso';
 import { Component, OnInit } from '@angular/core';
 import { observable, Observable } from 'rxjs';
 import { MatTableDataSource } from '@angular/material/table';
+import { Router } from '@angular/router';
 
 /**/
 
@@ -12,7 +13,8 @@ import { MatTableDataSource } from '@angular/material/table';
   styleUrls: ['./listar-cursos.component.css'],
 })
 export class ListarCursosComponent implements OnInit {
-  cursos: NovoCurso[] = [];
+  // @ts-ignore: Object is possibly 'undefined'.
+  cursos: Observable<NovoCurso[]>;
   displayedColumns: string[] = [
     'Título',
     'Descrição',
@@ -23,16 +25,25 @@ export class ListarCursosComponent implements OnInit {
 
   //listaCursosUsuario$ : Observable<NovoCurso> = this.listarCursosService.retornaCursosUsuario();
   //dataSource = new MatTableDataSource(cursos);
+  constructor(private listarCursosService: ListaCursosService, private router: Router) {
 
-  applyFilter(event: Event) {
-    const filterValue = (event.target as HTMLInputElement).value;
-    //this.dataSource.filter = filterValue.trim().toLowerCase();
-  }
-  constructor(private listarCursosService: ListaCursosService) {
-    this.listarCursosService
-      .retornaCursosUsuario()
-      .subscribe((cursos) => (this.cursos = cursos));
   }
 
-  ngOnInit(): void {}
+  listaCursos() {
+    this.cursos = this.listarCursosService.retornaCursosUsuario();
+
+    console.log(this.cursos);
+  }
+
+  ngOnInit(): void {
+    this.listaCursos();
+  }
+
+  deletaCurso(id : number) {
+    this.router.navigate(['/cursos/deletar', id]);
+  }
+
+  atualizaCurso(id : number) {
+    this.router.navigate(['/cursos/atualizar', id])
+  }
 }

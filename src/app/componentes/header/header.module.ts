@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
+import { MatMenuModule } from '@angular/material/menu';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { HomeRoutingModule } from 'src/app/home/home-routing.module';
 
@@ -18,7 +19,8 @@ import { AdminComponent } from './navbar/admin/admin.component';
     CommonModule,
     HomeRoutingModule,
     MatToolbarModule,
-    MatButtonModule
+    MatButtonModule,
+    MatMenuModule
   ],
   exports: [
     HeaderComponent

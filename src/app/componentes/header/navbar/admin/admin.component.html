@@ -2,6 +2,10 @@
   <button mat-flat-button (click)="irParaConsultaDeUsuario()" *ngIf="user.roles.includes('ADMIN')" >Gestão de Usuarios</button>
   <button mat-flat-button *ngIf="user.roles.includes('ALUNO')" >Meus Cursos</button>
   <button mat-flat-button *ngIf="user.roles.includes('ALUNO')" >Meu Historico</button>
-  <button mat-flat-button (click)="irParaListarCursos()" *ngIf="user.roles.includes('INSTRUTOR')" >Gestão de Cursos</button>
+  <button mat-button [matMenuTriggerFor]="menu" *ngIf="user.roles.includes('INSTRUTOR')">Gestão de Cursos</button>
+  <mat-menu #menu="matMenu">
+    <button class="menu" mat-menu-item routerLink="/cursos/cadastrar">Cadastrar Curso</button>
+    <button class="menu" mat-menu-item routerLink="/cursos/listar">Listar Cursos</button>
+  </mat-menu>
   <button mat-flat-button (click)="loggout()" >Loggout</button>
 </div>

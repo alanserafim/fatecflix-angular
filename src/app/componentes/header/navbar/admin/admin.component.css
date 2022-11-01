@@ -1,6 +1,5 @@
 .container {
   display: flex;
-
   font-size: 0.6em;
 }
 
@@ -12,6 +11,10 @@
   margin-bottom: 1em;
   /* offset-x | offset-y | blur-radius | color */
   box-shadow: 0 1px 8px var(--primary-color);
+}
+
+.menu{
+  font-size: 1.2em;
 }
 
 button{

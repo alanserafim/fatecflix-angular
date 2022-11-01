@@ -1,3 +1,13 @@
+.super-container{
+  background: rgb(66, 16, 11);
+  background: linear-gradient(
+    135deg,
+    rgba(66, 16, 11, 1) 51%,
+    rgba(0, 0, 0, 1) 91%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -82,14 +92,7 @@ h2 {
 }
 .footer {
   flex-shrink: 0;
-  background: rgb(66, 16, 11);
-      background: linear-gradient(
-        135deg,
-        rgba(66, 16, 11, 1) 51%,
-        rgba(0, 0, 0, 1) 91%,
-        rgba(0, 0, 0, 1) 100%
-      );
-  }
+}
 
   .header {
     background: rgb(66, 16, 11);
@@ -126,7 +129,7 @@ h2 {
     );
   }
   .footer{
-    display: none;
+    display: unset;
   }
   .imagem {
     display: none;

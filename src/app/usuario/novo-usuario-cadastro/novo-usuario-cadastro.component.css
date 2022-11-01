@@ -1,3 +1,13 @@
+.super-container{
+    background-color: rgb(66, 16, 11);
+      background: linear-gradient(
+        135deg,
+        rgba(66, 16, 11, 1) 51%,
+        rgba(0, 0, 0, 1) 91%,
+        rgba(0, 0, 0, 1) 100%
+      );
+  }
+
 .container {
   display: flex;
   flex-direction: column;
@@ -15,11 +25,8 @@ button {
   margin: 1em;
 }
 
-@media screen and (min-width: 720px) {
-  .card {
-    width: 40%;
-  }
-}
+
+
 
 app-messages {
   color: red;
@@ -45,8 +52,32 @@ mat-form-field {
   text-align: center;
   font-size: 1.5em;
   font-weight: 500;
-  color: var(--primary-color);
+  color: var(--secondary-text-color);
 }
+.link {
+  text-align: center;
+}
+.link a {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: 500;
+}
+.btn__cadastrar{
+  margin: 1em 0;
+  width: 100%;
+  height: 50px;
+  border-radius: 12px;
+  color: var(--secondary-text-color)
+}
+
+
+@media screen and (min-width: 720px) {
+  .card {
+    width: 40%;
+  }
+}
+
+
 
 @media (max-width: 500px) {
   .super-container {

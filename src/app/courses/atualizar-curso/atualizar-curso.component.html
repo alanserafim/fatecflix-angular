@@ -1,68 +1,49 @@
 <body>
+  <app-header></app-header>
   <div class="content">
-    <app-header></app-header>
-    <mat-card>
-      <mat-card-title>Atualizar ou deletar dados</mat-card-title>
-      <mat-card-subtitle>Formulário</mat-card-subtitle>
-      <div [hidden]="submitted" style="width: 400px">
+    <mat-card class=card__container>
+      <mat-card class="card__1">
+          <mat-card-header>
+              <mat-card-title>Fatecflix</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <h2>Atualizar curso</h2>
+         </mat-card-content>
+          <mat-card-footer>
+         </mat-card-footer>
+     </mat-card >
+    <mat-card class="card__2">
+      <h1 class=>Atualizar ou deletar dados</h1>
+      <div [hidden]="submitted" style="width: 400px"></div>
         <form (ngSubmit)="onSubmit()">
-          <div class="form-group">
-            <label for="titulo">Titulo</label>
-            <input
-              type="text"
-              class="form-control"
-              id="titulo"
-              required
-              [(ngModel)]="curso.titulo"
-              name="titulo"
-            />
-          </div>
+          <mat-form-field appearance="outline" class="input" hideRequiredMarker>
+            <label for="titulo">Titulo:</label>
+            <input type="text" class="form-control" id="titulo" required [(ngModel)]="curso.titulo" name="titulo" />
+          </mat-form-field>
 
-          <div class="form-group">
-            <label for="descricao">Descrição</label>
-            <input
-              type="descricao"
-              class="form-control"
-              id="descricao"
-              required
-              [(ngModel)]="curso.descricao"
-              name="descricao"
-            />
-          </div>
+          <mat-form-field appearance="outline" class="input" hideRequiredMarker>
+            <label for="descricao">Descrição:</label>
+            <input type="descricao" class="form-control" id="descricao" required [(ngModel)]="curso.descricao"
+              name="descricao" />
+            </mat-form-field>
 
-          <div class="form-group">
-            <label for="cargaHorario">Carga Horaria</label>
-            <input
-              type="text"
-              class="form-control"
-              id="cargaHorario"
-              required
-              [(ngModel)]="curso.cargaHorario"
-              name="cargaHorario"
-            />
-          </div>
-
-          <div class="form-group">
-            <label for="dataAtualizacao">Data da Atualizacao</label>
-            <input
-              type="text"
-              class="form-control"
-              id="dataAtualizacao"
-              required
-              [(ngModel)]="curso.dataAtualizacao"
-              name="dataAtualizacao"
-            />
-          </div>
-          
+          <mat-form-field appearance="outline" class="input" hideRequiredMarker>
+            <label for="cargaHorario">Carga Horaria:</label>
+            <input type="text" class="form-control" id="cargaHorario" required [(ngModel)]="curso.cargaHorario"
+              name="cargaHorario" />
+            </mat-form-field>
+          <mat-form-field appearance="outline" class="input">
+            <label for="dataAtualizacao">Data da Atualizacao:</label>
+            <input type="text" class="form-control" id="dataAtualizacao" required [(ngModel)]="curso.dataAtualizacao"
+              name="dataAtualizacao" />
+          </mat-form-field>
           <mat-card-actions>
             <button mat-button type="submit" class="btn btn-success">
               ATUALIZAR
             </button>
           </mat-card-actions>
         </form>
-      </div>
+      </mat-card>
     </mat-card>
   </div>
-
-  <app-footer class="footer"></app-footer>
 </body>

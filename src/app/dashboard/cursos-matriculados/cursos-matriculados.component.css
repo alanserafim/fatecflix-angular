@@ -1,0 +1,9 @@
+
+table {
+  width: 100%;
+}
+
+.card_cursos{
+  padding: 2em;
+  min-height: 40vh;
+}

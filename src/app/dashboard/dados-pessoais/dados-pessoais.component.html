@@ -1,0 +1,31 @@
+<mat-card class="card__dados-pessoais">
+  <div *ngIf="usuarioLogado$ | async as user ">
+    <h2>Perfil</h2>
+    <section class="dados">
+      <div class="campos container-row">
+        <fieldset class="dados_pessoais container-column">
+          <p>Dados Pessoais</p>
+          <label for="">Nome</label>
+          <input class="dados__nome" type="text" value="{{ user.name }}">
+          <label for="">Email</label>
+          <input class="dados__email" type="text" value="{{ user.email }}">
+          <label for="">CPF</label>
+          <input class="dados__cpf" type="text" value="{{ user.cpf }}">
+          <label for="">Data de Nascimento</label>
+          <input class="dados__nascimento" type="date" value="{{ user.dtNascimento }}">
+        </fieldset>
+        <fieldset class="dados_escolares container-column">
+          <p>Dados Escolares</p>
+          <label for="">RA</label>
+          <input class="dados__ra" type="text" value="{{ user.ra }}">
+          <label for="">Curso</label>
+          <input class="dados__curso" type="text"  value="{{ user.cursoMatriculado }}">
+          <label for="">Ano de ingresso</label>
+          <input class="dados__ingresso" type="text" value="{{ user.anoIngresso }}">
+          <label for="">Período</label>
+          <input class="dados__periodo" type="text" value="{{ user.periodo }}">
+        </fieldset>
+      </div>
+    </section>
+  </div>
+</mat-card>

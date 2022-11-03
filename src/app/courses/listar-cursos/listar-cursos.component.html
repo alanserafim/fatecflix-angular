@@ -1,7 +1,48 @@
-<body>
+<div class="wrapper">
   <app-header></app-header>
   <div class="content">
-  <div class="panel-body">
+    <section class="tabela">
+      <h1>CURSOS CADASTRADOS</h1>
+      <table mat-table [dataSource]="cursos" class="mat-elevation-z8">
+        <ng-container matColumnDef="Titulo">
+          <th mat-header-cell *matHeaderCellDef> Título </th>
+          <td mat-cell *matCellDef="let curso"> {{curso.titulo}} </td>
+        </ng-container>
+        <ng-container matColumnDef="Descrição">
+          <th mat-header-cell *matHeaderCellDef> Descrição </th>
+          <td mat-cell *matCellDef="let curso"> {{curso.descricao}} </td>
+        </ng-container>
+        <ng-container matColumnDef="Carga Horária">
+          <th mat-header-cell *matHeaderCellDef> Carga Horária </th>
+          <td mat-cell *matCellDef="let curso"> {{curso.cargaHorario}} </td>
+        </ng-container>
+        <ng-container matColumnDef="Atualização">
+          <th mat-header-cell *matHeaderCellDef> Atualização </th>
+          <td mat-cell *matCellDef="let curso"> {{curso.dataAtualizacao | date: 'dd/MM/yyyy'}} </td>
+        </ng-container>
+        <ng-container matColumnDef="Avaliação">
+          <th mat-header-cell *matHeaderCellDef> Avaliação </th>
+          <td mat-cell *matCellDef="let curso"> {{curso.mediaAvaliacao}} </td>
+        </ng-container>
+        <ng-container matColumnDef="Ações">
+          <th mat-header-cell *matHeaderCellDef> Ações </th>
+          <td mat-cell *matCellDef="let curso">
+            <button mat-raised-button color="primary" (click)="matricular(curso.cursoId)" class="btn btn-info" style="margin-right: 10px">Matricular</button>
+            <button mat-raised-button color="warn" (click)="deletaCurso(curso.cursoId)" class="btn btn-danger">Deletar</button>
+            <button mat-raised-button (click)="atualizaCurso(curso.cursoId)" class="btn btn-info" style="margin-left: 10px">Atualizar</button>
+          </td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </section>
+  </div>
+  <app-footer class="footer"></app-footer>
+</div>
+
+
+<!--
+ <div class="panel-body">
     <table class="table table-striped">
       <thead>
         <tr>
@@ -27,7 +68,5 @@
         </tr>
       </tbody>
     </table>
-  </div>
-</div>
-  <app-footer class="footer"></app-footer>
-</body>
+
+-->

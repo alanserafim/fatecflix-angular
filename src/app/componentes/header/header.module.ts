@@ -7,6 +7,7 @@ import { HomeRoutingModule } from 'src/app/home/home-routing.module';
 
 import { HeaderComponent } from './header.component';
 import { AdminComponent } from './navbar/admin/admin.component';
+import {MatIconModule} from '@angular/material/icon';
 
 
 
@@ -20,7 +21,8 @@ import { AdminComponent } from './navbar/admin/admin.component';
     HomeRoutingModule,
     MatToolbarModule,
     MatButtonModule,
-    MatMenuModule
+    MatMenuModule,
+    MatIconModule
   ],
   exports: [
     HeaderComponent

@@ -18,7 +18,7 @@
 }
 
 button{
-  background-color: var(--header-background-color);
+  background-color: transparent;
   color: var(--primary-color);
   font-size: 1.5em;
 }
@@ -40,4 +40,13 @@ button{
  .logoHeader {
     width: 170px;
   }
+}
+
+.icone-sair{
+  margin-left: 16px;
+
+}
+
+.btn-sair{
+  margin-left: 8px;
 }

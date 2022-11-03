@@ -13,6 +13,14 @@ import { MatricularService } from 'src/app/services/matricular/matricular.servic
   styleUrls: ['./listar-cursos.component.css'],
 })
 export class ListarCursosComponent implements OnInit {
+
+  displayedColumns: string[] = ['Titulo', 'Descrição', 'Carga Horária', 'Atualização', 'Avaliação', 'Ações'];
+
+
+
+
+
+
   // @ts-ignore: Object is possibly 'undefined'.
   cursos: Observable<NovoCurso[]>;
 
@@ -21,13 +29,9 @@ export class ListarCursosComponent implements OnInit {
 
   // @ts-ignore: Object is possibly 'undefined'.
   matriculado: Observable<Matricula>;
-  displayedColumns: string[] = [
-    'Título',
-    'Descrição',
-    'Carga Horária',
-    'Atualização',
-    'Avaliação',
-  ];
+
+
+
 
   //listaCursosUsuario$ : Observable<NovoCurso> = this.listarCursosService.retornaCursosUsuario();
   //dataSource = new MatTableDataSource(cursos);

@@ -101,18 +101,23 @@
               name="periodo"
             />
           </div>
-
-          <form [formGroup]="myForm">
-            <div class="perfil-form" formArrayName="roles">
-              <label for="perfil">Perfil</label>
-              <button class="btn_deletar" mat-button (click)="addRole()">Adicionar</button>
-              <div class="wrapper"
-              *ngFor="let roles of rolesForms.controls; let i = index"
-              [formGroupName]="i"
-              >
-                <input type="text" formControlName="role" />
-                <button mat-button (click)="deleteRole(i)">Deletar</button>
-              </div>
+          <span>Perfis do Usuario</span>
+          <form [formGroup]="formRole">
+            <button mat-button type="button" color="primary" (click)="addRoles()">
+              <mat-icon>add</mat-icon>
+            </button>
+            <div formArrayName="roles" fxFlex="100"  fxLayout="column">
+              <ng-container *ngFor="let roless of roles.controls; let i=index" >
+                <div [formGroupName]="i">
+                  <mat-form-field fxFlex="100">
+                    <div *ngIf="roless.value !== 'ADMIN' && roless.value !== 'ALUNO' && roless.value !== 'INSTRUTOR'; else perfilUser"><input formControlName="role" matInput type="text" class="form-control" placeholder="Perfil do usuario"></div>
+                    <ng-template #perfilUser><input formControlName="role" matInput type="text" class="form-control" placeholder="Perfil do Usuarios: {{ roless.value }}"></ng-template>
+                  </mat-form-field>
+                  <button mat-button type="button" color="primary" (click)="removeDoFormArray(roles, i)">
+                    <mat-icon>delete</mat-icon>
+                  </button>
+                </div>
+              </ng-container>
             </div>
           </form>
           <mat-card-actions>

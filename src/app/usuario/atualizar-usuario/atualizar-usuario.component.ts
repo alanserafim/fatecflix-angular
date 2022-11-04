@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { UsuarioLogadoService } from 'src/app/services/authentication/usuario-logado/usuario-logado.service';
-import { NovoUsuario } from 'src/app/types/NovoUsuario';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ConsultarUsuariosService } from 'src/app/services/consultar-usuarios/consultar-usuarios.service';
 import { Usuario } from 'src/app/types/Usuario';
-import { FormArray, FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { FormArray, FormBuilder, ValidatorFn, FormGroup, FormControl, Validators } from '@angular/forms';
+import { Roles } from 'src/app/types/Roles';
+import { __values } from 'tslib';
 
 @Component({
   selector: 'app-atualizar-usuario',
@@ -12,7 +12,10 @@ import { FormArray, FormBuilder, FormControl, FormGroup } from '@angular/forms';
   styleUrls: ['./atualizar-usuario.component.css']
 })
 export class AtualizarUsuarioComponent implements OnInit {
-  myForm: FormGroup;
+
+  formRole = this.fb.group({
+    roles: new FormArray([])
+  });
 
   submitted = false;
   // @ts-ignore: Object is possibly 'undefined'.
@@ -25,40 +28,21 @@ export class AtualizarUsuarioComponent implements OnInit {
     private router: Router,
     private atualizaUsuario: ConsultarUsuariosService,
     private fb: FormBuilder) {
-      this.myForm = this.fb.group({
-        roles: this.fb.array([this.createItem()])
+
+  }
+
+  roles = this.formRole.get('roles') as FormArray;
+
+
+  addRoles() {
+    this.roles.push(
+      this.fb.group({
+        role: ''
       })
+    );
+  }
 
-      console.log(this.myForm)
-    }
 
-    get rolesForms() {
-      return this.myForm.get('roles') as FormArray
-    }
-
-    createItem(): FormGroup {
-      return this.fb.group({
-        role: [],
-      });
-    }
-
-    addRole() {
-      const role = this.fb.group({
-        role: [],
-      })
-
-      this.rolesForms.push(role);
-
-      this.usuario.roles?.push(''+role.value);
-
-      console.log(this.myForm)
-    }
-
-    deleteRole(i: number) {
-      this.rolesForms.removeAt(i)
-      console.log(this.myForm)
-
-    }
 
   ngOnInit() {
     this.usuario = new Usuario();
@@ -69,15 +53,35 @@ export class AtualizarUsuarioComponent implements OnInit {
       .subscribe(data => {
         console.log(data)
         this.usuario = data;
+         // @ts-ignore: Object is possibly 'undefined'.
+        for(const role of this.usuario.roles) {
+          this.roles.push(new FormControl(role, Validators.required));
+        }
       }, error => console.log(error)
     );
+
+    console.log(this.roles);
+  }
+
+  getRoles(form: FormArray) {
+    // @ts-ignore: Object is possibly 'null'.
+    return form.get('roles').controls;
+  }
+
+  removeDoFormArray(controls: FormArray, index: number) {
+    controls.removeAt(index);
+    this.usuario.roles?.pop()?.at(index);
   }
 
   updateUsuario() {
+    for(let value of this.roles.value) {
+      console.log(value.role);
+      this.usuario.roles?.push(value.role);
+    }
+
     this.atualizaUsuario.updateUsuario(this.userId, this.usuario)
       .subscribe(data => console.log(data), error => console.log(error));
       this.usuario = new Usuario();
-
       // @ts-ignore: Object is possibly 'undefined'.
       this.gotoList();
   }
@@ -87,8 +91,7 @@ export class AtualizarUsuarioComponent implements OnInit {
   }
 
   gotoList() {
-    this.router.navigate(['/usuario/lista']);
+    this.router.navigate(['/usuario/sucesso']);
   }
-
-
 }
+

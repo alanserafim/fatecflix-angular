@@ -1,5 +1,7 @@
+import { CadastrarAulaService } from './../../services/cadastrar-aula/cadastrar-aula.service';
 import { Aula } from './../../types/Aula';
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-cadastrar-aulas',
@@ -10,16 +12,33 @@ export class CadastrarAulasComponent implements OnInit {
   // @ts-ignore: Object is possibly 'undefined'.
   aula: Aula;
   submitted = false;
+  // @ts-ignore: Object is possibly 'undefined'.
+  cursoId: number;
 
-  constructor() { }
+
+  constructor(
+    private router: Router,
+    private cadastrarAulaService : CadastrarAulaService,
+    private activatedRoute: ActivatedRoute
+  ) { }
 
   ngOnInit(): void {
     this.aula = new Aula();
+    this.cursoId = this.activatedRoute.snapshot.params['id'];
   }
 
   cadastraNovaAula(){
     this.submitted = true;
-    alert("Em desenvolvimento")
+    this.cadastrarAulaService.cadastrarNovaAula(this.aula, this.cursoId)
+    .subscribe((data) => {
+      console.log(data);
+      this.router.navigate(['usuario/sucesso']);
+    },
+    (error)=>{
+      alert("Cadastro não realizado!");
+      console.log(error);
+      console.log(this.aula);
+      console.log(this.cursoId)
+    })
   }
-
 }

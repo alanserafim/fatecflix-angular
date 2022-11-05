@@ -1,50 +1,56 @@
 <mat-card>
   <mat-card-title>Inclusão de aulas</mat-card-title>
   <mat-card-subtitle>Adicone novas aulas nos cursos selecionados</mat-card-subtitle>
-  <div (ngSubmit)="cadastraNovaAula()">
-    <div class="container">
+  <form #cadastrarAulaForm="ngForm" (ngSubmit)="cadastraNovaAula()">
+  <div class="container">
       <mat-form-field appearance="outline" hideRequiredMarker>
         <mat-label>Titulo da aula</mat-label>
         <input
           [(ngModel)]="aula.titulo"
+          name="titulo"
           required
           matInput
         >
       </mat-form-field>
-      <mat-form-field appearance="outline">
+      <mat-form-field appearance="outline" hideRequiredMarker>
         <mat-label>Descrição textual</mat-label>
         <textarea
         matInput
         [(ngModel)]="aula.conteudo"
+        name="conteudo"
         required
         ></textarea>
       </mat-form-field>
-      <mat-form-field appearance="fill">
+      <mat-form-field appearance="outline" hideRequiredMarker>
         <mat-label>Link do vídeo</mat-label>
         <input
         matInput
         [(ngModel)]="aula.video"
+        name="video"
         required
         >
       </mat-form-field>
-      <mat-form-field appearance="fill">
+      <!-- Implementar
+      <mat-form-field appearance="outline">
         <mat-label>Link da imagem da aula</mat-label>
         <input
         matInput
         [(ngModel)]="aula.img"
+        name="img"
         required
         >
       </mat-form-field>
+      -->
     </div>
     <mat-card-actions>
-      <button mat-button (click)="cadastraNovaAula()" [disabled]="" >SALVAR</button>
+      <button mat-button (click)="cadastraNovaAula()" [disabled]="cadastrarAulaForm.invalid">SALVAR</button>
       <button mat-button>CANCELAR</button>
     </mat-card-actions>
-  </div>
+  </form>
 </mat-card>
 <br>
-
-
+<!--
 <div [hidden]="!submitted">
   <h2>You submitted the form</h2>
 </div>
+-->

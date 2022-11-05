@@ -8,7 +8,7 @@ import { environment } from 'src/environments/environment';
 })
 export class NovoCursoService {
 
-  private readonly API = `${environment.api_url}/api/v1/cursos`
+  private readonly API = `${environment.api_url}/api/v1/aulas/curso/{cursoId}`
 
   constructor(
     private http:HttpClient

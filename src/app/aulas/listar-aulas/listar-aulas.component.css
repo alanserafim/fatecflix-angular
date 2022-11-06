@@ -1,0 +1,17 @@
+.example-card {
+  max-width: 400px;
+  margin-bottom: 1em;
+}
+
+mat-card-actions{
+  display: flex;
+  justify-content: space-between;
+}
+
+button.mat-fab {
+  background-color: var(--primary-color);
+}
+
+.lista_aulas{
+  max-height: 50%;
+}

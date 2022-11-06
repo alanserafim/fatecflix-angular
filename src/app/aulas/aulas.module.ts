@@ -5,6 +5,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 import { AulasRoutes } from './aulas.routing';
 import { CadastrarAulasComponent } from './cadastrar-aulas/cadastrar-aulas.component';
@@ -27,7 +28,8 @@ import { ListarAulasComponent } from './listar-aulas/listar-aulas.component';
     MatButtonModule,
     MatInputModule,
     FormsModule,
-    MatIconModule
+    MatIconModule,
+    MatGridListModule
   ]
 })
 export class AulasModule { }

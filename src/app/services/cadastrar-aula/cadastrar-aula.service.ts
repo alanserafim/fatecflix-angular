@@ -15,7 +15,7 @@ export class CadastrarAulaService {
   ) { }
 
     cadastrarNovaAula(aula: Aula, id: number){
-      const API = `${environment.api_url}/api/v1/cursos/${id}`
+      const API = `${environment.api_url}/api/v1/aulas/curso/${id}`
       return this.http.post(API, aula)
     }
 }

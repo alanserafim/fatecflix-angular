@@ -12,14 +12,17 @@ import { CadastrarAulasComponent } from './cadastrar-aulas/cadastrar-aulas.compo
 import { DashboardAulasComponent } from './dashboard-aulas/dashboard-aulas.component';
 import { ExibirAulaComponent } from './exibir-aula/exibir-aula.component';
 import { ListarAulasComponent } from './listar-aulas/listar-aulas.component';
-
-
+import { HeaderModule } from '../componentes/header/header.module';
+import { FooterModule } from '../componentes/footer/footer.module';
+import { SafePipe } from '../pipe/safe.pipe';
+import { YouTubePlayerModule } from '@angular/youtube-player';
 @NgModule({
   declarations: [
     CadastrarAulasComponent,
     ListarAulasComponent,
     DashboardAulasComponent,
-    ExibirAulaComponent
+    ExibirAulaComponent,
+    SafePipe,
   ],
   imports: [
     CommonModule,
@@ -29,7 +32,10 @@ import { ListarAulasComponent } from './listar-aulas/listar-aulas.component';
     MatInputModule,
     FormsModule,
     MatIconModule,
-    MatGridListModule
+    MatGridListModule,
+    FooterModule,
+    HeaderModule,
+    YouTubePlayerModule
   ]
 })
 export class AulasModule { }

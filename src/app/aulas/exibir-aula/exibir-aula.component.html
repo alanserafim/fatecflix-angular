@@ -8,7 +8,7 @@
     <iframe
     width="90%"
     height="555"
-    src="https://www.youtube.com/embed/hdDHg1p3YVc"
+    [src]='safeURL'
     title="YouTube video player"
     frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -43,14 +43,4 @@
       Espero ter ajudado conforme for aprendendo postarei cada vez mais :)
     </p>
   </mat-card-content>
-  <mat-card-actions>
-    <div class="btn-fluxo">
-      <button mat-button>ANTERIOR</button>
-      <button mat-button>PRÓXIMA</button>
-    </div>
-    <div class="btn-concluir">
-      <button mat-button>CONCLUIR AULA<mat-icon>skip_next</mat-icon></button>
-
-    </div>
-  </mat-card-actions>
 </mat-card>

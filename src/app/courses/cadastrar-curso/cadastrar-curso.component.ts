@@ -28,7 +28,8 @@ export class CadastrarCursoComponent implements OnInit {
         descricao:['',[Validators.required]],
         cargaHorario: ['',[Validators.required]],
         dataAtualizacao: ['', [Validators.required]],
-        mediaAvaliacao: [{value: '', disabled: true}]
+        mediaAvaliacao: [{value: 0, disabled: true}],
+        categoria: ['', [Validators.required]]
       })
   }
 

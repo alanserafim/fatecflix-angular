@@ -5,6 +5,5 @@ export interface NovoCurso {
   cargaHorario: string,
   dataAtualizacao: string,
   mediaAvaliacao: string,
-  aulas: string[];
-  exercicios: string[];
+  categoria: string,
 }

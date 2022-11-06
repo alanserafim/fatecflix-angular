@@ -7,19 +7,19 @@ import { NgModule } from '@angular/core';
 
 const routes: Routes = [
   {
-    path: 'cadastrar',
+    path: 'cadastrar/:id',
     component: CadastrarAulasComponent
   },
   {
-    path: 'exibir',
+    path: 'exibir/:id',
     component: ExibirAulaComponent
   },
   {
-    path: 'listar',
+    path: 'listar/:id',
     component: ListarAulasComponent
   },
   {
-    path: 'dashboard',
+    path: 'dashboard/:id',
     component: DashboardAulasComponent
   }
 

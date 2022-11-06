@@ -44,3 +44,24 @@ app-listar-aulas{
 .tile_aula{
 background-color: #ffffff;
 }
+
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: rgb(66, 16, 11);
+  background: linear-gradient(
+    135deg,
+    rgba(66, 16, 11, 1) 51%,
+    rgba(0, 0, 0, 1) 91%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+
+.content {
+  flex: 1 0 auto;
+
+}
+.footer {
+  flex-shrink: 0;
+}

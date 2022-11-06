@@ -9,8 +9,7 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./cadastrar-aulas.component.css']
 })
 export class CadastrarAulasComponent implements OnInit {
-  // @ts-ignore: Object is possibly 'undefined'.
-  aula: Aula;
+  aula: Aula = new Aula();
   submitted = false;
   // @ts-ignore: Object is possibly 'undefined'.
   cursoId: number;
@@ -27,8 +26,13 @@ export class CadastrarAulasComponent implements OnInit {
     this.cursoId = this.activatedRoute.snapshot.params['id'];
   }
 
-  cadastraNovaAula(){
+  novaAula(): void {
     this.submitted = true;
+    this.aula = new Aula();
+  }
+
+  cadastraNovaAula(){
+
     this.cadastrarAulaService.cadastrarNovaAula(this.aula, this.cursoId)
     .subscribe((data) => {
       console.log(data);
@@ -40,5 +44,14 @@ export class CadastrarAulasComponent implements OnInit {
       console.log(this.aula);
       console.log(this.cursoId)
     })
+  }
+
+  onSubmit() {
+    this.submitted = true;
+    this.cadastraNovaAula();
+  }
+
+  gotoCurso(id: number) {
+    this.router.navigate(['/cursos/detalhar', id]);
   }
 }

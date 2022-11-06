@@ -15,3 +15,71 @@ button.mat-fab {
 .lista_aulas{
   max-height: 50%;
 }
+
+.dashboard{
+  margin: 1em;
+  padding: 1em;
+  height: auto;
+  background: rgb(66, 16, 11);
+      background: linear-gradient(
+        135deg,
+        rgba(66, 16, 11, 1) 51%,
+        rgba(0, 0, 0, 1) 91%,
+        rgba(0, 0, 0, 1) 100%
+      );
+}
+
+mat-grid-tile {
+  height: 70vh;
+  overflow-y: scroll;
+  background-color: transparent;
+}
+
+mat-grid-list{
+  height: 70vh;
+}
+
+
+.container{
+  max-height: 95%;
+  max-width: 95%;
+}
+
+app-exibir-aula{
+  width: auto;
+  height: auto;
+}
+
+app-listar-aulas{
+  padding: 1em;
+  height: auto;
+  width: auto;
+}
+
+.tile_lista{
+  background-color: transparent;
+}
+.tile_aula{
+background-color: #ffffff;
+}
+
+.wrapper{
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  background: rgb(66, 16, 11);
+  background: linear-gradient(
+    135deg,
+    rgba(66, 16, 11, 1) 51%,
+    rgba(0, 0, 0, 1) 91%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+
+.content {
+  flex: 1 0 auto;
+
+}
+.footer {
+  flex-shrink: 0;
+}

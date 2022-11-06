@@ -72,11 +72,24 @@
 
     </mat-form-field>
 
+    <mat-form-field appearance="outline" class="input" hideRequiredMarker>
+      <mat-label class="cargaHorario">Categoria</mat-label >
+      <input
+      matInput
+      type="text"
+      formControlName="categoria"
+      >
+      <mat-error
+      *ngIf="novoCursoForm.get('categoria')?.errors?.['required']"
+      >
+      O campo categoria deve ser preenchido.</mat-error>
+    </mat-form-field>
+
     <mat-form-field appearance="outline" class="input">
       <mat-label class="media">Média Avaliação</mat-label >
       <input
       matInput
-      type="text"
+      type="number"
       formControlName="mediaAvaliacao"
       >
     </mat-form-field>

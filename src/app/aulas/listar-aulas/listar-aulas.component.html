@@ -1,89 +1,27 @@
-<section class="lista_aulas">
+<div class="wrapper" *ngIf="usuarioLogado$ | async as user ">
+  <section class="container">
+    <div class="card-video">
+      <youtube-player
+        [videoId]='videoId'
+        suggestedQuality="highres"
+        [height]="555"
+        [width]="900"
+      ></youtube-player>
+    </div>
+  </section>
+  <section class="container">
+    <div class="mat-elevation-z4" style="margin-left: 5px;" *ngFor="let aula of aulas | async">
 
+      <button (click)="updateSrc(aula.video)">
+          {{aula.titulo}}
+      </button>
+      <button *ngIf="user.roles.includes('INSTRUTOR')" (click)="updateSrc(aula.aulaId)">Atualizar</button>
+      <button *ngIf="user.roles.includes('INSTRUTOR')" (click)="updateSrc(aula.aulaId)">Deletar</button>
+    </div>
 
-<mat-card class="example-card">
-  <mat-card-title-group>
-    <mat-card-title>Aula 01</mat-card-title>
-    <mat-card-subtitle>Introdução</mat-card-subtitle>
-    <img mat-card-md-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
-  </mat-card-title-group>
-  <mat-card-content>
-    {{longText}}
-  </mat-card-content>
-  <mat-card-actions>
-    <button mat-button>INICIAR</button>
-    <button mat-fab aria-label="Example icon button with a heart icon">
-      <mat-icon size="small">favorite</mat-icon>
-    </button>
-  </mat-card-actions>
-</mat-card>
+    <div class="mat-elevation-z4" style="margin-top: 10px; margin-left: 5px;">
+      <button>Realizar os Exercicios</button>
+    </div>
+  </section>
+</div>
 
-<mat-card class="example-card">
-  <mat-card-title-group>
-    <mat-card-title>Aula 02</mat-card-title>
-    <mat-card-subtitle>Introdução</mat-card-subtitle>
-    <img mat-card-md-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
-  </mat-card-title-group>
-  <mat-card-content>
-    {{longText}}
-  </mat-card-content>
-  <mat-card-actions>
-    <button mat-button>INICIAR</button>
-    <button mat-fab aria-label="Example icon button with a heart icon">
-      <mat-icon size="small">favorite</mat-icon>
-    </button>
-  </mat-card-actions>
-</mat-card>
-
-<mat-card class="example-card">
-  <mat-card-title-group>
-    <mat-card-title>Aula 03</mat-card-title>
-    <mat-card-subtitle>Introdução</mat-card-subtitle>
-    <img mat-card-md-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
-  </mat-card-title-group>
-  <mat-card-content>
-    {{longText}}
-  </mat-card-content>
-  <mat-card-actions>
-    <button mat-button>INICIAR</button>
-    <button mat-fab aria-label="Example icon button with a heart icon">
-      <mat-icon size="small">favorite</mat-icon>
-    </button>
-  </mat-card-actions>
-</mat-card>
-
-<mat-card class="example-card">
-  <mat-card-title-group>
-    <mat-card-title>Aula 04</mat-card-title>
-    <mat-card-subtitle>Introdução</mat-card-subtitle>
-    <img mat-card-md-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
-  </mat-card-title-group>
-  <mat-card-content>
-    {{longText}}
-  </mat-card-content>
-  <mat-card-actions>
-    <button mat-button>INICIAR</button>
-    <button mat-fab aria-label="Example icon button with a heart icon">
-      <mat-icon size="small">favorite</mat-icon>
-    </button>
-  </mat-card-actions>
-</mat-card>
-
-<mat-card class="example-card">
-  <mat-card-title-group>
-    <mat-card-title>Aula 05</mat-card-title>
-    <mat-card-subtitle>Introdução</mat-card-subtitle>
-    <img mat-card-md-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
-  </mat-card-title-group>
-  <mat-card-content>
-    {{longText}}
-  </mat-card-content>
-  <mat-card-actions>
-    <button mat-button>INICIAR</button>
-    <button mat-fab aria-label="Example icon button with a heart icon">
-      <mat-icon size="small">favorite</mat-icon>
-    </button>
-  </mat-card-actions>
-</mat-card>
-
-</section>

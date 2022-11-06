@@ -5,6 +5,7 @@ import { ListarCursosComponent } from './listar-cursos/listar-cursos.component';
 import { DeletarCursoComponent } from './deletar-curso/deletar-curso.component';
 import { AtualizarCursoComponent } from './atualizar-curso/atualizar-curso.component';
 import { MatriculaComponent } from './matricula/matricula.component';
+import { ExibirCursoComponent } from './exibir-curso/exibir-curso.component';
 
 const routes: Routes = [
   {
@@ -22,6 +23,10 @@ const routes: Routes = [
   {
     path: 'atualizar/:id',
     component: AtualizarCursoComponent
+  },
+  {
+    path: 'detalhar/:id',
+    component: ExibirCursoComponent
   },
   {
     path: 'matricula',

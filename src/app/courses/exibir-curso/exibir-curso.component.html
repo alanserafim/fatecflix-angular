@@ -1,1 +1,12 @@
-<p>exibir-curso works!</p>
+<div class="wrapper"  *ngIf="usuarioLogado$ | async as user ">
+  <div class="content">
+    <app-header></app-header>
+    <h1>{{ curso.titulo }}</h1>
+    <h2>{{ curso.categoria }}</h2>
+    <h3>{{ curso.cargaHorario }}</h3>
+
+    <button (click)="gotoAulas(cursoId)">Ir para aulas</button>
+    <button (click)="gotoCadastroAulas(cursoId)" *ngIf="user.roles.includes('INSTRUTOR')">Cadastrar aulas</button>
+    <app-footer></app-footer>
+  </div>
+</div>

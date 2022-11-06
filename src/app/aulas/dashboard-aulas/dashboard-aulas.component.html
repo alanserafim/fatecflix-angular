@@ -1,14 +1,10 @@
-<section class="dashboard">
-  <mat-grid-list cols="8">
-    <mat-grid-tile [colspan]="2" class=tile_lista>
-      <div class="container lista">
-        <app-listar-aulas></app-listar-aulas>
-      </div>
-    </mat-grid-tile>
-    <mat-grid-tile [colspan]="6" class=tile_aula>
-      <div class="container aula">
-        <app-exibir-aula></app-exibir-aula>
-      </div>
-    </mat-grid-tile>
-  </mat-grid-list>
-</section>
+<div class="wrapper">
+  <app-header></app-header>
+
+  <div class="content">
+    <app-listar-aulas></app-listar-aulas>
+  </div>
+  <app-footer class="footer"></app-footer>
+</div>
+
+

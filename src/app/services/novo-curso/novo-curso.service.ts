@@ -8,7 +8,7 @@ import { environment } from 'src/environments/environment';
 })
 export class NovoCursoService {
 
-  private readonly API = `${environment.api_url}/api/v1/aulas/curso/{cursoId}`
+  private readonly API = `${environment.api_url}/api/v1/cursos`
 
   constructor(
     private http:HttpClient
@@ -20,7 +20,8 @@ export class NovoCursoService {
       descricao: novoCurso.descricao,
       mediaAvaliacao: novoCurso.mediaAvaliacao,
       titulo: novoCurso.titulo,
-      cargaHorario: novoCurso.cargaHorario
+      cargaHorario: novoCurso.cargaHorario,
+      categoria: novoCurso.categoria
       })
   }
 }

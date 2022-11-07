@@ -16,6 +16,8 @@ import { ListarAulasComponent } from './listar-aulas/listar-aulas.component';
 import { HeaderModule } from '../componentes/header/header.module';
 import { FooterModule } from '../componentes/footer/footer.module';
 import { SafePipe } from '../pipe/safe.pipe';
+import { AtualizarAulasComponent } from './atualizar-aulas/atualizar-aulas.component';
+import { DeletarAulasComponent } from './deletar-aulas/deletar-aulas.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,8 @@ import { SafePipe } from '../pipe/safe.pipe';
     DashboardAulasComponent,
     ExibirAulaComponent,
     SafePipe,
+    AtualizarAulasComponent,
+    DeletarAulasComponent,
   ],
   imports: [
     CommonModule,

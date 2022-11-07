@@ -3,6 +3,9 @@ npm install
 npm install -g @angular/cli
 npm i angular-cli-ghpages
 
+npm i -g @angular/youtube-player
+npm install tslib
+
 git config --global user.email "alan.serafim@fatec.sp.gov.br"
 git config --global user.name "alanserafim"
 

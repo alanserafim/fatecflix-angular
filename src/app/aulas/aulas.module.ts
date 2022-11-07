@@ -1,3 +1,4 @@
+import { YouTubePlayerModule } from '@angular/youtube-player';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -15,7 +16,7 @@ import { ListarAulasComponent } from './listar-aulas/listar-aulas.component';
 import { HeaderModule } from '../componentes/header/header.module';
 import { FooterModule } from '../componentes/footer/footer.module';
 import { SafePipe } from '../pipe/safe.pipe';
-import { YouTubePlayerModule } from '@angular/youtube-player';
+
 @NgModule({
   declarations: [
     CadastrarAulasComponent,

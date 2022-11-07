@@ -6,10 +6,10 @@ echo "******************"
 echo "Baixando dependências"
 call npm install
 echo "******************"
-echo "Instalndo angular cli"
+echo "Instalando angular cli"
 call angular-cli
 echo "******************"
-echo "Instalndo angular cli pages"
+echo "Instalando angular cli pages"
 call angular-cli-pages
 echo "******************"
 echo "Git Config: Alan"

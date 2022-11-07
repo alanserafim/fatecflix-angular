@@ -1,9 +1,10 @@
-import { DashboardAulasComponent } from './dashboard-aulas/dashboard-aulas.component';
-import { ListarAulasComponent } from './listar-aulas/listar-aulas.component';
-import { ExibirAulaComponent } from './exibir-aula/exibir-aula.component';
-import { CadastrarAulasComponent } from './cadastrar-aulas/cadastrar-aulas.component';
-import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+
+import { CadastrarAulasComponent } from './cadastrar-aulas/cadastrar-aulas.component';
+import { DashboardAulasComponent } from './dashboard-aulas/dashboard-aulas.component';
+import { ExibirAulaComponent } from './exibir-aula/exibir-aula.component';
+import { ListarAulasComponent } from './listar-aulas/listar-aulas.component';
 
 const routes: Routes = [
   {
@@ -28,5 +29,6 @@ const routes: Routes = [
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
+
 })
 export class AulasRoutes { }

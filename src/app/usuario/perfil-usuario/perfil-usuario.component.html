@@ -25,7 +25,7 @@
                       <label for="">CPF</label>
                       <input class="dados__cpf" type="text" value="{{ user.cpf }}">
                       <label for="">Data de Nascimento</label>
-                      <input class="dados__nascimento" type="date" value="{{ user.dtNascimento }}">
+                      <input class="dados__nascimento" type="text" value="{{ user.dtNascimento | date: 'dd/MM/yyyy' }}">
                     </fieldset>
                     <fieldset class="dados_escolares container">
                       <p>Dados Escolares</p>

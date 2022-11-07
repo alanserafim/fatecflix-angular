@@ -1,9 +1,10 @@
 
 .tabela th{
   text-align: center;
-  font-size: 1.5em;
+  font-size: 1.2em;
   font-weight: 500;
   color: black;
+  padding: .2em;
 }
 
 .tabela td{
@@ -11,7 +12,7 @@
 }
 
 table {
-  width: 80%;
+  width: 90%;
   margin: auto;
 }
 
@@ -26,6 +27,17 @@ th.mat-sort-header-sorted {
   font-weight: 500;
 }
 
+.th-descricao{
+  font-size: .5em;
+}
+
+button{
+  font-size: 1em;
+}
+
+.buttons{
+  display: flex;
+}
 
 /*Sticky footer*/
 .wrapper{

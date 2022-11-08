@@ -7,6 +7,7 @@ import { PerfilUsuarioComponent } from './perfil-usuario/perfil-usuario.componen
 import { UsuarioListComponent } from './usuario-list/usuario-list.component';
 import { UsuarioDeleteComponent } from './usuario-delete/usuario-delete.component';
 import { AtualizarUsuarioComponent } from './atualizar-usuario/atualizar-usuario.component';
+import { HistoricoUsuarioComponent } from './historico-usuario/historico-usuario.component';
 
 const routes: Routes = [
   {
@@ -36,6 +37,10 @@ const routes: Routes = [
   {
     path: 'atualizar/:id',
     component: AtualizarUsuarioComponent
+  },
+  {
+    path: 'historico',
+    component: HistoricoUsuarioComponent
   }
 ];
 

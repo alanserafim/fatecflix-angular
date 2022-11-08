@@ -1,0 +1,50 @@
+
+.tabela th{
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: 500;
+  color: black;
+}
+
+.tabela td{
+  text-align: center;
+}
+
+table {
+  width: 80%;
+  margin: auto;
+}
+
+th.mat-sort-header-sorted {
+  color: black;
+}
+
+.tabela h1 {
+  color: var(--secondary-text-color);
+  text-align: center;
+  font-size: 2em;
+  font-weight: 500;
+}
+
+
+/*Sticky footer*/
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: rgb(66, 16, 11);
+  background: linear-gradient(
+    135deg,
+    rgba(66, 16, 11, 1) 51%,
+    rgba(0, 0, 0, 1) 91%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+
+.content {
+  flex: 1 0 auto;
+
+}
+.footer {
+  flex-shrink: 0;
+}

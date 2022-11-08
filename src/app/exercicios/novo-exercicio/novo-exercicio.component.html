@@ -1,0 +1,82 @@
+<body>
+  <app-header></app-header>
+  <div class="content">
+    <mat-card class=card__container>
+      <mat-card class="card__1">
+          <mat-card-header>
+              <mat-card-title>Fatecflix</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <h2>Cadastrar exercicio</h2>
+         </mat-card-content>
+          <mat-card-footer>
+         </mat-card-footer>
+     </mat-card >
+    <mat-card class="card__2">
+      <h1 class=>Cadastrar Dados</h1>
+      <div [hidden]="submitted"></div>
+        <form (ngSubmit)="onSubmit()">
+          <div class="input">
+            <label for="titulo">Titulo:</label>
+            <input
+            type="text"
+            class="form-control"
+            id="titulo"
+            required
+            [value]="exercicio.titulo"
+            [(ngModel)]="exercicio.titulo"
+            name="titulo"
+            />
+          </div>
+          <div class="input">
+            <label for="enunciado">Enunciado:</label>
+            <input
+            type="text"
+            class="form-control"
+            id="enunciado"
+            required
+            [value]="exercicio.enunciado"
+            [(ngModel)]="exercicio.enunciado"
+            name="enunciado"
+            />
+            </div>
+          <div class="input">
+            <label for="resposta">Resposta da Questão:</label>
+            <input
+            type="text"
+            class="form-control"
+            id="resposta"
+            required
+            [value]="exercicio.resposta"
+            [(ngModel)]="exercicio.resposta"
+            name="resposta"
+            />
+            </div>
+            <span>Afirmativas</span>
+            <form [formGroup]="formAfirmativa">
+              <button mat-button type="button" color="primary" (click)="addAfirmativa()">
+                <mat-icon>add</mat-icon>
+              </button>
+              <div formArrayName="afirmativas" fxFlex="100"  fxLayout="column">
+                <ng-container *ngFor="let a of afirmativas.controls; let i=index" >
+                  <div [formGroupName]="i">
+                    <mat-form-field fxFlex="100">
+                      <input formControlName="afirmativas" matInput type="text" class="form-control" placeholder="Afirmativa:">
+                    </mat-form-field>
+                    <button mat-button type="button" color="primary" (click)="removeDoFormArray(afirmativas, i)">
+                      <mat-icon>delete</mat-icon>
+                    </button>
+                  </div>
+                </ng-container>
+              </div>
+            </form>
+          <mat-card-actions>
+            <button mat-button type="submit">
+              Cadastrar
+            </button>
+          </mat-card-actions>
+        </form>
+      </mat-card>
+    </mat-card>
+  </div>
+</body>

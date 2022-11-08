@@ -6,6 +6,7 @@
         <mat-form-field appearance="outline" hideRequiredMarker>
           <mat-label>Titulo da aula</mat-label>
           <input
+            [value]="aula.titulo"
             [(ngModel)]="aula.titulo"
             name="titulo"
             required
@@ -16,6 +17,7 @@
           <mat-label>Descrição textual</mat-label>
           <textarea
           matInput
+          [value]="aula.conteudo"
           [(ngModel)]="aula.conteudo"
           name="conteudo"
           required
@@ -25,6 +27,7 @@
           <mat-label>Link do vídeo</mat-label>
           <input
           matInput
+          [value]="aula.video"
           [(ngModel)]="aula.video"
           name="video"
           required
@@ -33,12 +36,11 @@
       </div>
       <mat-card-actions>
         <button mat-button type="submit" [disabled]="cadastrarAulaForm.invalid">SALVAR</button>
-        <button mat-button (click)="gotoCurso(cursoId)">CANCELAR</button>
+        <button mat-button (click)="gotoAula()">CANCELAR</button>
       </mat-card-actions>
     </form>
   </mat-card>
   <div [hidden]="!submitted">
-    <button class="btn btn-success" (click)="novaAula()">Add</button>
+    <button class="btn btn-success" (click)="updateAula()">UPDATE</button>
   </div>
   <br>
-  

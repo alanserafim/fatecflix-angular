@@ -26,6 +26,10 @@ const routes: Routes = [
   {
     path: 'aulas',
     loadChildren:()=> import ('./aulas/aulas.module' ).then((m)=> m.AulasModule )
+  },
+  {
+    path: 'exercicios',
+    loadChildren:()=> import ('./exercicios/exercicios.module' ).then((m)=> m.ExerciciosModule )
   }
 ];
 

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { ListarAulasService } from 'src/app/services/listar-aulas/listar-aulas.service';
 import { Aula } from 'src/app/types/Aula';
@@ -27,7 +27,7 @@ export class ListarAulasComponent implements OnInit {
   usuarioLogado$ : Observable <UsuarioLogado> = this.usuarioLogadoService.retornaUsuarioLogado()
   isLoggedIn = true;
 
-  constructor(private usuarioLogadoService: UsuarioLogadoService,private aulasService: ListarAulasService, private activatedRoute: ActivatedRoute, private _sanitizer: DomSanitizer) {
+  constructor(private usuarioLogadoService: UsuarioLogadoService,private aulasService: ListarAulasService, private activatedRoute: ActivatedRoute, private router: Router, private _sanitizer: DomSanitizer) {
    }
 
   ngOnInit(){
@@ -73,5 +73,17 @@ export class ListarAulasComponent implements OnInit {
 
   reloadData() {
     this.aulas = this.aulasService.listarAulas(this.cursoId);
+  }
+
+  atualiza(id: any) {
+    this.router.navigate(['/aulas/atualizar', id, 'cursos', this.cursoId]);
+  }
+
+  deleta(id: any) {
+    this.router.navigate(['/aulas/deletar', id]);
+  }
+
+  gotoExercicio(id: number) {
+    this.router.navigate(['/exercicios/listar', id])
   }
 }

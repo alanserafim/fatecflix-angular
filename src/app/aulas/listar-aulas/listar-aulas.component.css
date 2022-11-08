@@ -51,25 +51,12 @@ mat-card {
   text-transform: capitalize;
 }
 
-/*
-
-.example-card {
-  max-width: 400px;
-  margin-bottom: 1em;
+.btn_exercicios button{
+  width: 98%;
+  height: 50px;
+  margin-bottom: .4em ;
 }
 
-mat-card-actions{
-  display: flex;
-  justify-content: space-between;
-}
-
-button.mat-fab {
-  background-color: var(--primary-color);
-}
-
-.lista_aulas{
-  max-height: 50%;
-}
 
 .dashboard{
   margin: 1em;
@@ -84,37 +71,4 @@ button.mat-fab {
       );
 }
 
-mat-grid-tile {
-  height: 70vh;
-  overflow-y: scroll;
-  background-color: transparent;
-}
-
-mat-grid-list{
-  height: 70vh;
-}
-
-
-.container{
-  max-height: 95%;
-  max-width: 95%;
-}
-
-app-exibir-aula{
-  width: auto;
-  height: auto;
-}
-
-app-listar-aulas{
-  padding: 1em;
-  height: auto;
-  width: auto;
-}
-
-.tile_lista{
-  background-color: transparent;
-}
-.tile_aula{
-background-color: #ffffff;
-} */
 

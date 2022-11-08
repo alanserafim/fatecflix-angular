@@ -1,12 +1,30 @@
 <div class="wrapper"  *ngIf="usuarioLogado$ | async as user ">
   <div class="content">
     <app-header></app-header>
-    <h1>{{ curso.titulo }}</h1>
-    <h2>{{ curso.categoria }}</h2>
-    <h3>{{ curso.cargaHorario }}</h3>
-
-    <button (click)="gotoAulas(cursoId)">Ir para aulas</button>
-    <button (click)="gotoCadastroAulas(cursoId)" *ngIf="user.roles.includes('INSTRUTOR')">Cadastrar aulas</button>
+    <mat-card class="example-card">
+      <mat-card-title><h1>{{ curso.titulo }}</h1></mat-card-title>
+      <mat-card-subtitle><h2>{{ curso.categoria }}</h2></mat-card-subtitle>
+      <mat-card-content>
+        <h3>{{ curso.cargaHorario }}</h3>
+      </mat-card-content>
+      <mat-card-actions>
+        <div class="buttons">
+          <button mat-flat-button color="primary" (click)="gotoAulas(cursoId)">Ir para aulas</button>
+          <button mat-flat-button color="primary" (click)="gotoCadastroAulas(cursoId)" *ngIf="user.roles.includes('INSTRUTOR')">Cadastrar aulas</button>
+        </div>
+      </mat-card-actions>
+    </mat-card>
     <app-footer></app-footer>
   </div>
 </div>
+
+<!-- <mat-card class="example-card">
+  <mat-card-title-group>
+    <mat-card-title>Shiba Inu</mat-card-title>
+    <mat-card-subtitle>Medium</mat-card-subtitle>
+    <img mat-card-md-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
+  </mat-card-title-group>
+  <mat-card-content>
+    {{longText}}
+  </mat-card-content>
+</mat-card> -->

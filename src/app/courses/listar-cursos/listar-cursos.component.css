@@ -40,15 +40,32 @@ button{
   justify-content: flex-start;
 }
 
+.example-card {
+  max-width: 400px;
+  height: 250px;
+  margin: 1em;
+}
+
+.cards{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
 
 
+.cards mat-card{
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
 
 /*Sticky footer*/
 .wrapper{
   display: flex;
   flex-direction: column;
-  height: 100%;
+  min-height: 100%;
   background: rgb(66, 16, 11);
   background: linear-gradient(
     135deg,

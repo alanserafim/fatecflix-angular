@@ -59,6 +59,7 @@ export class ListarAulasComponent implements OnInit {
     this.aulasService.listarAulas(this.cursoId).subscribe(data => {
       this.videoUrl = data[0].video;
       this.videoId = this.videoUrl.replace('https://www.youtube.com/watch?v=', '');
+      
       console.log(this.videoId);
       //this.videoUrl = url;
       //this.safeUrl = this._sanitizer.bypassSecurityTrustResourceUrl(url);

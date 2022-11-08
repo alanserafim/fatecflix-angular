@@ -37,7 +37,10 @@ button{
 
 .buttons{
   display: flex;
-  justify-content: flex-start;
+}
+
+.buttons{
+  color: green;
 }
 
 

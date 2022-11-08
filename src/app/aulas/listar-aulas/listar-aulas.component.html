@@ -1,5 +1,5 @@
 <div class="wrapper" *ngIf="usuarioLogado$ | async as user ">
-  <section class="container">
+  <section class="container aula">
     <div class="card-video">
       <youtube-player
         [videoId]='videoId'
@@ -9,18 +9,25 @@
       ></youtube-player>
     </div>
   </section>
-  <section class="container">
-    <div class="mat-elevation-z4" style="margin-left: 5px;" *ngFor="let aula of aulas | async">
-
-      <button (click)="updateSrc(aula.video)">
-          {{aula.titulo}}
-      </button>
-      <button *ngIf="user.roles.includes('INSTRUTOR')" (click)="atualiza(aula.aulaId)">Atualizar</button>
-      <button *ngIf="user.roles.includes('INSTRUTOR')" (click)="deleta(aula.aulaId)">Deletar</button>
+  <section class="container lista">
+    <div  style="margin-left: 5px;" *ngFor="let aula of aulas | async">
+      <mat-card>
+        <mat-card-title>
+          <button mat-button (click)="updateSrc(aula.video)">
+            {{aula.titulo}}
+        </button>
+        </mat-card-title>
+        <mat-card-subtitle>
+          {{aula.conteudo}}
+        </mat-card-subtitle>
+        <mat-card-actions>
+          <button mat-raised-button *ngIf="user.roles.includes('INSTRUTOR')" (click)="atualiza(aula.aulaId)">Atualizar</button>
+          <button mat-raised-button color="warn" *ngIf="user.roles.includes('INSTRUTOR')" (click)="deleta(aula.aulaId)">Deletar</button>
+        </mat-card-actions>
+      </mat-card>
     </div>
-
-    <div class="mat-elevation-z4" style="margin-top: 10px; margin-left: 5px;">
-      <button (click)="gotoExercicio(cursoId)">Realizar os Exercicios</button>
+    <div class="btn_exercicios" style="margin-top: 10px; margin-left: 5px;">
+      <button mat-raised-button color="primary" (click)="gotoExercicio(cursoId)">Realizar os Exercicios</button>
     </div>
   </section>
 </div>

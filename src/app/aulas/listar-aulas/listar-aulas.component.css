@@ -1,3 +1,58 @@
+
+.wrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 90%;
+  background: rgb(66, 16, 11);
+  background: linear-gradient(
+    135deg,
+    rgba(66, 16, 11, 1) 51%,
+    rgba(0, 0, 0, 1) 91%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+
+.container{
+  overflow-y: scroll;
+}
+
+.aula{
+  /* background-color: white; */
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  height: 80vh;
+}
+
+.lista{
+  width: 40%;
+  height: 80vh;
+  /* background-color: grey; */
+}
+
+.content {
+  flex: 1 0 auto;
+
+}
+.footer {
+  flex-shrink: 0;
+}
+
+mat-card {
+  margin-bottom: 1em;
+  margin-right: 1em;
+}
+
+.card-video{
+}
+
+.btn_titulo{
+  text-transform: capitalize;
+}
+
+/*
+
 .example-card {
   max-width: 400px;
   margin-bottom: 1em;
@@ -61,25 +116,5 @@ app-listar-aulas{
 }
 .tile_aula{
 background-color: #ffffff;
-}
+} */
 
-.wrapper{
-  display: flex;
-  flex-direction: row;
-  height: 100%;
-  background: rgb(66, 16, 11);
-  background: linear-gradient(
-    135deg,
-    rgba(66, 16, 11, 1) 51%,
-    rgba(0, 0, 0, 1) 91%,
-    rgba(0, 0, 0, 1) 100%
-  );
-}
-
-.content {
-  flex: 1 0 auto;
-
-}
-.footer {
-  flex-shrink: 0;
-}

@@ -6,32 +6,37 @@ import { DeletarCursoComponent } from './deletar-curso/deletar-curso.component';
 import { AtualizarCursoComponent } from './atualizar-curso/atualizar-curso.component';
 import { MatriculaComponent } from './matricula/matricula.component';
 import { ExibirCursoComponent } from './exibir-curso/exibir-curso.component';
+import { ExibirTrilhaCursoComponent } from './exibir-trilha-curso/exibir-trilha-curso.component';
 
 const routes: Routes = [
   {
     path: 'cadastrar',
-    component: CadastrarCursoComponent
+    component: CadastrarCursoComponent,
   },
   {
     path: 'listar',
-    component: ListarCursosComponent
+    component: ListarCursosComponent,
+  },
+  {
+    path: 'trilha',
+    component: ExibirTrilhaCursoComponent,
   },
   {
     path: 'deletar/:id',
-    component: DeletarCursoComponent
+    component: DeletarCursoComponent,
   },
   {
     path: 'atualizar/:id',
-    component: AtualizarCursoComponent
+    component: AtualizarCursoComponent,
   },
   {
     path: 'detalhar/:id',
-    component: ExibirCursoComponent
+    component: ExibirCursoComponent,
   },
   {
     path: 'matricula',
-    component: MatriculaComponent
-  }
+    component: MatriculaComponent,
+  },
 ];
 
 @NgModule({

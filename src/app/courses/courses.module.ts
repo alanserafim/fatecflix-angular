@@ -19,6 +19,8 @@ import { ExibirTrilhaCursoComponent } from './exibir-trilha-curso/exibir-trilha-
 import { ListarCursosComponent } from './listar-cursos/listar-cursos.component';
 import { DeletarCursoComponent } from './deletar-curso/deletar-curso.component';
 import { MatriculaComponent } from './matricula/matricula.component';
+import { CardComponent } from './exibir-trilha-curso/card/card.component';
+import { ModalTrilhaComponent } from './exibir-trilha-curso/modal-trilha/modal-trilha.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,8 @@ import { MatriculaComponent } from './matricula/matricula.component';
     AtualizarCursoComponent,
     DeletarCursoComponent,
     MatriculaComponent,
+    CardComponent,
+    ModalTrilhaComponent,
   ],
   imports: [
     CommonModule,
@@ -43,10 +47,8 @@ import { MatriculaComponent } from './matricula/matricula.component';
     SucessoModule,
     MatTableModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
   ],
-  providers: [
-    {provide: MAT_DATE_LOCALE, useValue: 'pt-BR'},
-  ],
+  providers: [{ provide: MAT_DATE_LOCALE, useValue: 'pt-BR' }],
 })
-export class CoursesModule { }
+export class CoursesModule {}

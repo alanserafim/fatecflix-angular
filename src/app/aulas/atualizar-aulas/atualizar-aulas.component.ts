@@ -53,6 +53,6 @@ export class AtualizarAulasComponent implements OnInit {
   }
 
   gotoAula() {
-    this.router.navigate(['/aulas/dashboard', this.id]);
+    this.router.navigate(['/aulas/dashboard', this.cursoId]);
   }
 }

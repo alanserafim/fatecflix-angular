@@ -1,15 +1,4 @@
-.dashboard{
-  margin: 1em;
-  padding: 1em;
-  height: auto;
-  background: rgb(66, 16, 11);
-      background: linear-gradient(
-        135deg,
-        rgba(66, 16, 11, 1) 51%,
-        rgba(0, 0, 0, 1) 91%,
-        rgba(0, 0, 0, 1) 100%
-      );
-}
+
 
 mat-grid-tile {
   height: 70vh;
@@ -48,7 +37,7 @@ background-color: #ffffff;
 .wrapper{
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: auto;
   background: rgb(66, 16, 11);
   background: linear-gradient(
     135deg,
@@ -58,10 +47,5 @@ background-color: #ffffff;
   );
 }
 
-.content {
-  flex: 1 0 auto;
 
-}
-.footer {
-  flex-shrink: 0;
-}
+

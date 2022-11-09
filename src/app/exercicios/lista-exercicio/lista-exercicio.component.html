@@ -26,7 +26,7 @@
             </div>
           <div *ngIf="user.roles.includes('INSTRUTOR')" class="input">
             <label  for="resposta">Resposta da Questão: {{exercicio.resposta}}</label>
-     
+
             </div>
             <span>Afirmativas</span>
             <form *ngFor="let afirmativa of exercicio.afirmativas">
@@ -39,7 +39,7 @@
               name="resposta"
               />
               <label for="resposta">{{afirmativa}}</label>
-               
+
             </form>
           <mat-card-actions>
             <button mat-button type="submit">
@@ -52,4 +52,6 @@
       </mat-card>
     </mat-card>
   </div>
+  <app-footer class="footer"></app-footer>
 </body>
+

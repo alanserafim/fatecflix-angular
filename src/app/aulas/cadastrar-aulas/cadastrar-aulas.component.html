@@ -1,59 +1,63 @@
-<mat-card [hidden]="submitted">
-  <mat-card-title>Inclusão de aulas</mat-card-title>
-  <mat-card-subtitle>Adicone novas aulas nos cursos selecionados</mat-card-subtitle>
-  <form #cadastrarAulaForm="ngForm" (ngSubmit)="onSubmit()">
-  <div class="container">
-      <mat-form-field appearance="outline" hideRequiredMarker>
-        <mat-label>Titulo da aula</mat-label>
-        <input
-          [(ngModel)]="aula.titulo"
-          name="titulo"
-          required
+<body>
+  <app-header></app-header>
+  <mat-card [hidden]="submitted">
+    <mat-card-title>Inclusão de aulas</mat-card-title>
+    <mat-card-subtitle>Adicone novas aulas nos cursos selecionados</mat-card-subtitle>
+    <form #cadastrarAulaForm="ngForm" (ngSubmit)="onSubmit()">
+    <div class="container">
+        <mat-form-field appearance="outline" hideRequiredMarker>
+          <mat-label>Titulo da aula</mat-label>
+          <input
+            [(ngModel)]="aula.titulo"
+            name="titulo"
+            required
+            matInput
+          >
+        </mat-form-field>
+        <mat-form-field appearance="outline" hideRequiredMarker>
+          <mat-label>Descrição textual</mat-label>
+          <textarea
           matInput
-        >
-      </mat-form-field>
-      <mat-form-field appearance="outline" hideRequiredMarker>
-        <mat-label>Descrição textual</mat-label>
-        <textarea
-        matInput
-        [(ngModel)]="aula.conteudo"
-        name="conteudo"
-        required
-        ></textarea>
-      </mat-form-field>
-      <mat-form-field appearance="outline" hideRequiredMarker>
-        <mat-label>Link do vídeo</mat-label>
-        <input
-        matInput
-        [(ngModel)]="aula.video"
-        name="video"
-        required
-        >
-      </mat-form-field>
-      <!-- Implementar
-      <mat-form-field appearance="outline">
-        <mat-label>Link da imagem da aula</mat-label>
-        <input
-        matInput
-        [(ngModel)]="aula.img"
-        name="img"
-        required
-        >
-      </mat-form-field>
-      -->
-    </div>
-    <mat-card-actions>
-      <button mat-button type="submit" [disabled]="cadastrarAulaForm.invalid">SALVAR</button>
-      <button mat-button (click)="gotoCurso(cursoId)">CANCELAR</button>
-    </mat-card-actions>
-  </form>
-</mat-card>
-<div [hidden]="!submitted">
-  <button class="btn btn-success" (click)="novaAula()">Add</button>
-</div>
-<br>
-<!--
-<div [hidden]="!submitted">
-  <h2>You submitted the form</h2>
-</div>
--->
+          [(ngModel)]="aula.conteudo"
+          name="conteudo"
+          required
+          ></textarea>
+        </mat-form-field>
+        <mat-form-field appearance="outline" hideRequiredMarker>
+          <mat-label>Link do vídeo</mat-label>
+          <input
+          matInput
+          [(ngModel)]="aula.video"
+          name="video"
+          required
+          >
+        </mat-form-field>
+        <!-- Implementar
+        <mat-form-field appearance="outline">
+          <mat-label>Link da imagem da aula</mat-label>
+          <input
+          matInput
+          [(ngModel)]="aula.img"
+          name="img"
+          required
+          >
+        </mat-form-field>
+        -->
+      </div>
+      <mat-card-actions>
+        <button mat-button type="submit" [disabled]="cadastrarAulaForm.invalid">SALVAR</button>
+        <button mat-button (click)="gotoCurso(cursoId)">CANCELAR</button>
+      </mat-card-actions>
+    </form>
+  </mat-card>
+  <div [hidden]="!submitted">
+    <button class="btn btn-success" (click)="novaAula()">Add</button>
+  </div>
+  <br>
+  <!--
+  <div [hidden]="!submitted">
+    <h2>You submitted the form</h2>
+  </div>
+  -->
+<app-footer></app-footer>
+</body>

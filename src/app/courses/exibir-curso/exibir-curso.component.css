@@ -15,15 +15,19 @@
 
 .content {
   flex: 1 0 auto;
-
 }
 .footer {
   flex-shrink: 0;
 }
 
 .example-card {
-  max-width: 400px;
-  margin-bottom: 8px;
+  width: 400px;
+  height: 400px;
+  margin: auto;
+  box-shadow: 5px 5px 15px #ff0534;;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .buttons {
@@ -33,4 +37,11 @@
 
 .buttons button{
   width: 45%;
+}
+
+.card-align{
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

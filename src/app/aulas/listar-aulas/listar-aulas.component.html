@@ -13,7 +13,7 @@
     <div  style="margin-left: 5px;" *ngFor="let aula of aulas | async">
       <mat-card>
         <mat-card-title>
-          <button mat-button (click)="updateSrc(aula.video)">
+          <button mat-raised-button color="primary" (click)="updateSrc(aula.video)">
             {{aula.titulo}}
         </button>
         </mat-card-title>
@@ -21,8 +21,8 @@
           {{aula.conteudo}}
         </mat-card-subtitle>
         <mat-card-actions>
-          <button mat-raised-button *ngIf="user.roles.includes('INSTRUTOR')" (click)="atualiza(aula.aulaId)">Atualizar</button>
-          <button mat-raised-button color="warn" *ngIf="user.roles.includes('INSTRUTOR')" (click)="deleta(aula.aulaId)">Deletar</button>
+          <button mat-stroked-button *ngIf="user.roles.includes('INSTRUTOR')" (click)="atualiza(aula.aulaId)">Atualizar</button>
+          <button mat-stroked-button color="warn" *ngIf="user.roles.includes('INSTRUTOR')" (click)="deleta(aula.aulaId)">Deletar</button>
         </mat-card-actions>
       </mat-card>
     </div>

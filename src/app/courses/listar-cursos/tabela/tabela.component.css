@@ -1,0 +1,42 @@
+
+.tabela th{
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: 500;
+  color: black;
+  padding: .2em;
+}
+
+.tabela td{
+  text-align: center;
+}
+
+table {
+  width: 90%;
+  margin: auto;
+}
+
+th.mat-sort-header-sorted {
+  color: black;
+}
+
+.tabela h1 {
+  color: var(--secondary-text-color);
+  text-align: center;
+  font-size: 2em;
+  font-weight: 500;
+}
+
+.th-descricao{
+  font-size: .5em;
+}
+
+button{
+  font-size: 1em;
+}
+
+.buttons{
+  display: flex;
+  justify-content: flex-start;
+}
+

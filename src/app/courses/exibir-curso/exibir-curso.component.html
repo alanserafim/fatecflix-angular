@@ -1,19 +1,22 @@
 <div class="wrapper"  *ngIf="usuarioLogado$ | async as user ">
   <div class="content">
     <app-header></app-header>
-    <mat-card class="example-card">
-      <mat-card-title><h1>{{ curso.titulo }}</h1></mat-card-title>
-      <mat-card-subtitle><h2>{{ curso.categoria }}</h2></mat-card-subtitle>
-      <mat-card-content>
-        <h3>{{ curso.cargaHorario }}</h3>
-      </mat-card-content>
-      <mat-card-actions>
-        <div class="buttons">
-          <button mat-flat-button color="primary" (click)="gotoAulas(cursoId)">Ir para aulas</button>
-          <button mat-flat-button color="primary" (click)="gotoCadastroAulas(cursoId)" *ngIf="user.roles.includes('INSTRUTOR')">Cadastrar aulas</button>
+    <div class="card-align">
+      <mat-card class="example-card">
+        <div class="container">
+          <mat-card-title><h1>{{ curso.titulo }}</h1></mat-card-title>
+          <mat-card-subtitle><h2>{{ curso.categoria }}</h2></mat-card-subtitle>
+          <h3>{{ curso.cargaHorario }}</h3>
+          <p>{{ curso.descricao }}</p>
         </div>
-      </mat-card-actions>
-    </mat-card>
-    <app-footer></app-footer>
+        <mat-card-actions>
+          <div class="buttons">
+            <button mat-stroked-button (click)="gotoAulas(cursoId)">Ir para aulas</button>
+            <button mat-stroked-button (click)="gotoCadastroAulas(cursoId)" *ngIf="user.roles.includes('INSTRUTOR')">Cadastrar aulas</button>
+          </div>
+        </mat-card-actions>
+      </mat-card>
+    </div>
   </div>
+  <app-footer></app-footer>
 </div>

@@ -1,3 +1,11 @@
+.titulo {
+  color: white;
+  text-align: center;
+}
+.titulo h1 {
+  font-size: 2em;
+}
+
 
 .tabela th{
   text-align: center;
@@ -42,22 +50,27 @@ button{
 
 .example-card {
   max-width: 400px;
-  height: 250px;
+  height: 300px;
   margin: 1em;
 }
 
 .cards{
-  width: 100%;
+  width: 90%;
   display: flex;
+  justify-content: space-around;
   flex-wrap: wrap;
+  margin: auto;
+
 }
 
 
 .cards mat-card{
-  width: 25%;
+  width: 28%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  box-shadow: 5px 5px 15px #ff0534;;
+
 }
 
 

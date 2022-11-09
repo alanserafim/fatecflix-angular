@@ -1,19 +1,17 @@
-import { ListaCursosService } from './../../services/listar-cursos/listar-cursos.service';import { NovoCurso } from './../../types/NovoCurso';
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
-import { Matricula } from 'src/app/types/Matricula';
+import { Observable } from 'rxjs';
+import { UsuarioLogadoService } from 'src/app/services/authentication/usuario-logado/usuario-logado.service';
+import { ListaCursosService } from 'src/app/services/listar-cursos/listar-cursos.service';
 import { MatricularService } from 'src/app/services/matricular/matricular.service';
 import { UsuarioLogado } from 'src/app/types/UsuarioLogado';
-import { UsuarioLogadoService } from 'src/app/services/authentication/usuario-logado/usuario-logado.service';
-/**/
 
 @Component({
-  selector: 'app-listar-cursos',
-  templateUrl: './listar-cursos.component.html',
-  styleUrls: ['./listar-cursos.component.css'],
+  selector: 'app-tabela',
+  templateUrl: './tabela.component.html',
+  styleUrls: ['./tabela.component.css']
 })
-export class ListarCursosComponent implements OnInit {
+export class TabelaComponent implements OnInit {
 
   displayedColumns: string[] = ['Titulo', 'Descrição', 'Carga Horária', 'Atualização', 'Avaliação', 'Ações'];
   usuarioLogado$ : Observable <UsuarioLogado> = this.usuarioLogadoService.retornaUsuarioLogado()
@@ -25,6 +23,8 @@ export class ListarCursosComponent implements OnInit {
   // @ts-ignore: Object is possibly 'undefined'.
   matriculado: Observable<Matricula>;
 
+  //listaCursosUsuario$ : Observable<NovoCurso> = this.listarCursosService.retornaCursosUsuario();
+  //dataSource = new MatTableDataSource(cursos);
   constructor(private usuarioLogadoService: UsuarioLogadoService,private listarCursosService: ListaCursosService, private router: Router, private matriculaService: MatricularService) {
 
   }

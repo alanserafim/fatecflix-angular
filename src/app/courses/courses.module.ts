@@ -2,8 +2,9 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatCardModule } from '@angular/material/card';
-import { MatNativeDateModule, MAT_DATE_LOCALE } from '@angular/material/core';
+import { MAT_DATE_LOCALE, MatNativeDateModule } from '@angular/material/core';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatInputModule } from '@angular/material/input';
 import { MatTableModule } from '@angular/material/table';
@@ -14,13 +15,16 @@ import { HeaderModule } from './../componentes/header/header.module';
 import { AtualizarCursoComponent } from './atualizar-curso/atualizar-curso.component';
 import { CadastrarCursoComponent } from './cadastrar-curso/cadastrar-curso.component';
 import { CoursesRoutingModule } from './courses-routing.module';
-import { ExibirCursoComponent } from './exibir-curso/exibir-curso.component';
-import { ExibirTrilhaCursoComponent } from './exibir-trilha-curso/exibir-trilha-curso.component';
-import { ListarCursosComponent } from './listar-cursos/listar-cursos.component';
 import { DeletarCursoComponent } from './deletar-curso/deletar-curso.component';
-import { MatriculaComponent } from './matricula/matricula.component';
+import { ExibirCursoComponent } from './exibir-curso/exibir-curso.component';
 import { CardComponent } from './exibir-trilha-curso/card/card.component';
+import { ExibirTrilhaCursoComponent } from './exibir-trilha-curso/exibir-trilha-curso.component';
 import { ModalTrilhaComponent } from './exibir-trilha-curso/modal-trilha/modal-trilha.component';
+import { CardsComponent } from './listar-cursos/cards/cards.component';
+import { ListarCursosComponent } from './listar-cursos/listar-cursos.component';
+import { TabelaComponent } from './listar-cursos/tabela/tabela.component';
+import { MatriculaComponent } from './matricula/matricula.component';
+
 
 @NgModule({
   declarations: [
@@ -33,6 +37,8 @@ import { ModalTrilhaComponent } from './exibir-trilha-curso/modal-trilha/modal-t
     MatriculaComponent,
     CardComponent,
     ModalTrilhaComponent,
+    CardsComponent,
+    TabelaComponent,
   ],
   imports: [
     CommonModule,
@@ -48,6 +54,7 @@ import { ModalTrilhaComponent } from './exibir-trilha-curso/modal-trilha/modal-t
     MatTableModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    MatButtonToggleModule
   ],
   providers: [{ provide: MAT_DATE_LOCALE, useValue: 'pt-BR' }],
 })

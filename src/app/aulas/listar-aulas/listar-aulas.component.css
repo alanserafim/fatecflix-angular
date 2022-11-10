@@ -14,7 +14,7 @@
 }
 
 .container{
-  overflow-y: scroll;
+  overflow-y: hidden;
 }
 
 .aula{
@@ -23,11 +23,12 @@
   display: flex;
   justify-content: center;
   height: 80vh;
+  overflow-y: hidden
 }
 
 .lista{
   width: 40%;
-  height: 80vh;
+  height: auto;
   /* background-color: grey; */
 }
 mat-card-subtitle{

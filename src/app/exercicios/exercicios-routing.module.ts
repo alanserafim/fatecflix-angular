@@ -1,3 +1,4 @@
+import { ResponderExercicioComponent } from './responder-exercicio/responder-exercicio.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AtualizaExercicioComponent } from './atualiza-exercicio/atualiza-exercicio.component';
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: 'atualizar/:id/curso/:cursoId',
     component: AtualizaExercicioComponent
+  },
+  {
+    path: 'responder',
+    component: ResponderExercicioComponent
   },
 ];
 

@@ -8,6 +8,7 @@ import { MAT_DATE_LOCALE, MatNativeDateModule } from '@angular/material/core';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatInputModule } from '@angular/material/input';
 import { MatTableModule } from '@angular/material/table';
+import { MatTabsModule } from '@angular/material/tabs';
 
 import { SucessoModule } from '../componentes/sucesso/sucesso.module';
 import { FooterModule } from './../componentes/footer/footer.module';
@@ -24,7 +25,6 @@ import { CardsComponent } from './listar-cursos/cards/cards.component';
 import { ListarCursosComponent } from './listar-cursos/listar-cursos.component';
 import { TabelaComponent } from './listar-cursos/tabela/tabela.component';
 import { MatriculaComponent } from './matricula/matricula.component';
-
 
 @NgModule({
   declarations: [
@@ -54,7 +54,8 @@ import { MatriculaComponent } from './matricula/matricula.component';
     MatTableModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    MatTabsModule
   ],
   providers: [{ provide: MAT_DATE_LOCALE, useValue: 'pt-BR' }],
 })

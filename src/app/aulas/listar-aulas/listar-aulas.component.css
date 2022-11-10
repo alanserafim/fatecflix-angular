@@ -30,6 +30,9 @@
   height: 80vh;
   /* background-color: grey; */
 }
+mat-card-subtitle{
+  padding-top: 1em;
+}
 
 .content {
   flex: 1 0 auto;
@@ -39,9 +42,10 @@
   flex-shrink: 0;
 }
 
-mat-card {
+.lista mat-card {
   margin-bottom: 1em;
   margin-right: 1em;
+  box-shadow: 2px 2px 8px #ff0534;;
 }
 
 

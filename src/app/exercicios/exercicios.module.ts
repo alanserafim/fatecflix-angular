@@ -16,6 +16,8 @@ import { ExerciciosRoutingModule } from './exercicios-routing.module';
 import { ListaExercicioComponent } from './lista-exercicio/lista-exercicio.component';
 import { NovoExercicioComponent } from './novo-exercicio/novo-exercicio.component';
 import { ResponderExercicioComponent } from './responder-exercicio/responder-exercicio.component';
+import {MatListModule} from '@angular/material/list';
+
 
 
 @NgModule({
@@ -38,7 +40,8 @@ import { ResponderExercicioComponent } from './responder-exercicio/responder-exe
     MatCardModule,
     MatGridListModule,
     ReactiveFormsModule,
-    MatStepperModule
+    MatStepperModule,
+    MatListModule
   ]
 })
 export class ExerciciosModule { }

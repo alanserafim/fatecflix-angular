@@ -7,6 +7,7 @@ import {FormBuilder, Validators} from '@angular/forms';
   styleUrls: ['./responder-exercicio.component.css']
 })
 export class ResponderExercicioComponent implements OnInit {
+  typesOfShoes: string[] = ['Boots', 'Clogs', 'Loafers', 'Moccasins', 'Sneakers'];
   firstFormGroup = this._formBuilder.group({
     firstCtrl: ['', Validators.required],
   });

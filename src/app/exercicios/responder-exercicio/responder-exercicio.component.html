@@ -2,6 +2,50 @@
   <div class="content">
     <mat-stepper labelPosition="bottom" #stepper>
       <!--STEP 1-->
+      <mat-step [stepControl]="firstFormGroup" *ngFor="let exercicio of exercicios | async; let i=index">
+        <form [formGroup]="firstFormGroup">
+          <ng-template matStepLabel>Exercício {{ i + 1 }}</ng-template>
+          <div class="exercicio">
+            <h2 class="exercicio-titulo">{{ exercicio.titulo }}</h2>
+            <mat-selection-list #afirmativa [multiple]="false">
+              <mat-list-option  *ngFor="let afirmativa of exercicio.afirmativas; let i=index" [value]="afirmativa">
+                <div class="alternativa">
+                  <div class="opcao">{{ alternativa[i] }}</div>
+                  <p>{{ afirmativa }}</p>
+                </div>
+              </mat-list-option>
+            </mat-selection-list>
+            <p>Opção selecionada: {{ afirmativa.selectedOptions.selected[0]?.value }}</p>
+          </div>
+            <div>
+              <button mat-button matStepperNext (click)="respostas.push(afirmativa.selectedOptions.selected[0]?.value)">Avançar</button>
+            </div>
+        </form>
+      </mat-step>
+      <!--STEP Final-->
+      <mat-step>
+        <ng-template matStepLabel>Fim</ng-template>
+        <p>Você chegou ao final do exercício.</p>
+        <p>Parabéns, continue assim.</p>
+        <p>Alternativas selecionadas</p>
+        <div class="gabarito" *ngFor="let resposta of respostas, let i=index">
+          <p>Questão {{ i + 1}}:</p>
+          <p> &nbsp; {{ resposta }}</p>
+        </div>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button (click)="stepper.reset()">Reset</button>
+        </div>
+      </mat-step>
+    </mat-stepper>
+  </div>
+</div>
+
+
+<!-- <div class="wrapper">
+  <div class="content">
+    <mat-stepper labelPosition="bottom" #stepper>
+
       <mat-step [stepControl]="firstFormGroup">
         <form [formGroup]="firstFormGroup">
           <ng-template matStepLabel>Exercício 1</ng-template>
@@ -22,7 +66,7 @@
             </div>
         </form>
       </mat-step>
-      <!--STEP 2-->
+
       <mat-step [stepControl]="secondFormGroup" optional>
         <form [formGroup]="secondFormGroup">
           <ng-template matStepLabel>Botas em inglês</ng-template>
@@ -38,7 +82,7 @@
           </div>
         </form>
       </mat-step>
-      <!--STEP Final-->
+
       <mat-step>
         <ng-template matStepLabel>Done</ng-template>
         <p>You are now done.</p>
@@ -49,4 +93,4 @@
       </mat-step>
     </mat-stepper>
   </div>
-</div>
+</div> -->

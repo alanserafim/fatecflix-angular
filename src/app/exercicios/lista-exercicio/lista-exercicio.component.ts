@@ -20,7 +20,12 @@ export class ListaExercicioComponent implements OnInit {
    usuarioLogado$ : Observable<UsuarioLogado> = this.usuarioLogadoService.retornaUsuarioLogado()
   isLoggedIn = true;
 
-  constructor(private listarExercicios: ListaExercicioService, private router: Router,private route: ActivatedRoute, private usuarioLogadoService: UsuarioLogadoService) { }
+  constructor(
+    private listarExercicios: ListaExercicioService,
+    private router: Router,
+    private route: ActivatedRoute,
+    private usuarioLogadoService: UsuarioLogadoService
+    ) { }
 
   ngOnInit(): void {
     this.cursoId = this.route.snapshot.params['id'];

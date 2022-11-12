@@ -5,6 +5,7 @@
     <button *ngIf="user.roles.includes('INSTRUTOR')" (click)="gotoCadastra()" mat-button type="submit">
       CADASTRAR EXERCICIOS
     </button>
+    
     <mat-card class=card__container>
       <mat-card class="card__1">
           <mat-card-header>
@@ -51,6 +52,8 @@
         </form>
       </mat-card>
     </mat-card>
+
+    <app-responder-exercicio></app-responder-exercicio>
   </div>
   <app-footer class="footer"></app-footer>
 </body>

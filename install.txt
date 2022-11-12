@@ -14,5 +14,5 @@ git commit -m "modulo: componente"
 git push origin main
 
 Deploy no gitHub Pages
-ng deploy --base-href=/fatecflix-angular/
+ 
 

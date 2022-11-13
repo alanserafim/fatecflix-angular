@@ -16,9 +16,11 @@
               </mat-list-option>
             </mat-selection-list>
             <p>Opção selecionada: {{ afirmativa.selectedOptions.selected[0]?.value }}</p>
+            <!-- {{ respostas[i] = afirmativa.selectedOptions.selected[0]?.value }} -->
           </div>
             <div>
-              <button mat-button matStepperNext (click)="respostas.push(afirmativa.selectedOptions.selected[0]?.value)">Avançar</button>
+              <button *ngIf="i>0" mat-button matStepperPrevious>Anterior</button>
+              <button mat-button matStepperNext (click)="respostas[i] = afirmativa.selectedOptions.selected[0]?.value">Próximo</button>
             </div>
         </form>
       </mat-step>
@@ -27,14 +29,15 @@
         <ng-template matStepLabel>Fim</ng-template>
         <p>Você chegou ao final do exercício.</p>
         <p>Parabéns, continue assim.</p>
-        <p>Alternativas selecionadas</p>
+        <p class="altenartivas-selecionadas">Alternativas selecionadas</p>
         <div class="gabarito" *ngFor="let resposta of respostas, let i=index">
           <p>Questão {{ i + 1}}:</p>
           <p> &nbsp; {{ resposta }}</p>
         </div>
-        <div>
-          <button mat-button matStepperPrevious>Back</button>
-          <button mat-button (click)="stepper.reset()">Reset</button>
+        <div class="buttons">
+          <button mat-button matStepperPrevious>Anterior</button>
+          <button mat-button (click)="stepper.reset()">Voltar ao ínicio</button>
+          <button mat-button >Finalizar tentativa</button>
         </div>
       </mat-step>
     </mat-stepper>

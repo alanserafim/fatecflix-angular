@@ -59,3 +59,14 @@ h3
 {
   display: flex;
 }
+
+.altenartivas-selecionadas
+{
+  font-weight: 500;
+  margin-top: 2em;
+}
+
+.buttons
+{
+  margin-top: 2em;
+}

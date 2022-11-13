@@ -79,7 +79,7 @@ export class ListaExercicioComponent implements OnInit {
   selecionou(index: number) {
     this.controleAfirmativasSelecionadas++;
   }
-  
+
   actionMethod(event: any) {
     event.target.disabled = true;
   }

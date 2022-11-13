@@ -24,7 +24,7 @@
           </div>
             <div>
               <!--<button *ngIf="i>0" mat-button matStepperPrevious>Anterior</button>-->
-              <button mat-button matStepperNext matStepperNext (click)="respostas[i] = afirmativa.selectedOptions.selected[0]?.value"  [disabled]="!afirmativa.selectedOptions.selected[0]?.value">Proxima</button>
+              <button mat-button matStepperNext matStepperNext (click)="respostas[i] = afirmativa.selectedOptions.selected[0]?.value"  [disabled]="!afirmativa.selectedOptions.selected[0]?.value">Responder</button>
             </div>
         </form>
       </mat-step>

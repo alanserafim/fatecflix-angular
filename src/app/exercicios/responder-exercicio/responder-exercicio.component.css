@@ -1,13 +1,20 @@
 .content
 {
-  width: 40%;
-  background-color: rgb(155, 102, 24);
+  width: 95%;
+  margin: auto;
   padding: 1em;
+  background: rgb(66, 16, 11);
+      background: linear-gradient(
+        135deg,
+        rgba(66, 16, 11, 1) 51%,
+        rgba(0, 0, 0, 1) 91%,
+        rgba(0, 0, 0, 1) 100%
+      );
 }
 
 .exercicio
 {
-  background-color: sandybrown;
+  width: 50%;
   padding: 1em;
 }
 
@@ -16,15 +23,19 @@
   font-size: 1.5em;
 }
 
-mat-list-option
+/* mat-list-option
 {
-  border: 1px solid black;
-}
+
+} */
+
 
 .alternativa
 {
-  background-color: blueviolet;
   display: flex;
+}
+
+.alternativa p{
+  padding: 6px;
 }
 
 h3
@@ -39,4 +50,23 @@ h3
   background-color: aquamarine;
   width: 20px;
   text-align: center;
+  padding: 8px;
+  vertical-align: middle;
+  margin-right: 8px
+}
+
+.gabarito
+{
+  display: flex;
+}
+
+.altenartivas-selecionadas
+{
+  font-weight: 500;
+  margin-top: 2em;
+}
+
+.buttons
+{
+  margin-top: 2em;
 }

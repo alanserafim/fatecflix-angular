@@ -61,7 +61,7 @@
                 <ng-container *ngFor="let a of afirmativas.controls; let i=index" >
                   <div [formGroupName]="i">
                     <mat-form-field fxFlex="100">
-                      <input formControlName="afirmativas" matInput type="text" class="form-control" placeholder="Afirmativa:">
+                      <input formControlName="afirmativa" matInput type="text" class="form-control" placeholder="Afirmativa:">
                     </mat-form-field>
                     <button mat-button type="button" color="primary" (click)="removeDoFormArray(afirmativas, i)">
                       <mat-icon>delete</mat-icon>
@@ -79,4 +79,7 @@
       </mat-card>
     </mat-card>
   </div>
+  <div [hidden]="!submitted">
+    <button class="btn btn-success" (click)="novoExercicio()">Add</button>
+</div>
 </body>

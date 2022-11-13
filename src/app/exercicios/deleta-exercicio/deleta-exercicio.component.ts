@@ -14,6 +14,8 @@ export class DeletaExercicioComponent implements OnInit {
   exercicio: Exercicio;
   // @ts-ignore: Object is possibly 'undefined'.
   exercicioId: number;
+ // @ts-ignore: Object is possibly 'undefined'
+  cursoId: number;
 
   constructor(private deletarExercicio: DeletaExercicioService, private consultaExercicio: AtualizaExercicioService, private router: Router, private route: ActivatedRoute) { }
 
@@ -22,6 +24,7 @@ export class DeletaExercicioComponent implements OnInit {
     this.exercicio = new Exercicio();
 
     this.exercicioId = this.route.snapshot.params['id'];
+    this.cursoId = this.route.snapshot.params['cursoId'];
 
     this.consultaExercicio.getExercicioById(this.exercicioId)
       .subscribe(data => {
@@ -33,11 +36,11 @@ export class DeletaExercicioComponent implements OnInit {
 
   deleteExercicio(): void {
     this.deletarExercicio.deletaExercicio(this.exercicioId).subscribe(() => {
-      this.router.navigate(["/exercicio/listar"]);
+      this.router.navigate(["/exercicios/listar", this.cursoId]);
     });
   }
 
   cancel(): void {
-    this.router.navigate(["/exercicio/listar"]);
+    this.router.navigate(["/exercicios/listar", this.cursoId]);
   }
 }

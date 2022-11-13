@@ -17,8 +17,7 @@ import { ListaExercicioComponent } from './lista-exercicio/lista-exercicio.compo
 import { NovoExercicioComponent } from './novo-exercicio/novo-exercicio.component';
 import { ResponderExercicioComponent } from './responder-exercicio/responder-exercicio.component';
 import {MatListModule} from '@angular/material/list';
-
-
+import { JsonParsePipePipe } from '../pipe/json-parse-pipe.pipe';
 
 @NgModule({
   declarations: [
@@ -26,7 +25,8 @@ import {MatListModule} from '@angular/material/list';
     AtualizaExercicioComponent,
     DeletaExercicioComponent,
     ListaExercicioComponent,
-    ResponderExercicioComponent
+    ResponderExercicioComponent,
+    JsonParsePipePipe,
   ],
   imports: [
     CommonModule,

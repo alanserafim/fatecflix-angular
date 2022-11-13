@@ -3,5 +3,5 @@ export class Exercicio {
   titulo?: string;
   enunciado?: string;
   resposta?: string;
-  afirmativas?: string[];
+  afirmativas?: Array<string>;
 }

@@ -14,6 +14,10 @@ export class AtualizaExercicioComponent implements OnInit {
     afirmativas: new FormArray([])
   });
 
+  form = this.fb.group({
+    neoAf: new FormArray([])
+  });
+
   submitted = false;
   // @ts-ignore: Object is possibly 'undefined'.
   exercicioId: number;
@@ -24,6 +28,7 @@ export class AtualizaExercicioComponent implements OnInit {
   exercicio: Exercicio;
 
   afirmativas = this.formAfirmativa.get('afirmativas') as FormArray;
+  neoAf = this.form.get('neoAf') as FormArray;
 
   constructor(private fb: FormBuilder, private route: ActivatedRoute,
     private router: Router, private atualizaExercicio: AtualizaExercicioService) { }
@@ -48,11 +53,15 @@ export class AtualizaExercicioComponent implements OnInit {
     console.log(this.afirmativas);
   }
 
+  parseJson(json: string): any {
+    return JSON.parse(json);
+  }
+
   addAfirmativa() {
-    this.afirmativas.push(
+    this.neoAf.push(
       this.fb.group({
-        afirmativa: ''
-      })
+        neo: '',
+      }),
     );
   }
 
@@ -69,7 +78,14 @@ export class AtualizaExercicioComponent implements OnInit {
   updateExercicio() {
     for(let value of this.afirmativas.value) {
       console.log(value.afirmativa);
-      this.exercicio.afirmativas?.push(value.afirmativa);
+      if (value != null) {
+        this.exercicio.afirmativas?.push(value.afirmativa);
+      }
+    }
+
+    for(let el of this.neoAf.value) {
+      console.log(el.neo);
+      this.exercicio.afirmativas?.push(el.neo);
     }
 
     this.atualizaExercicio.atualizarExercicio(this.exercicio, this.exercicioId, this.cursoId)

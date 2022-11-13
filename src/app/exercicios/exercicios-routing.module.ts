@@ -12,11 +12,11 @@ const routes: Routes = [
     component: NovoExercicioComponent
   },
   {
-    path: 'listar/:id',
+    path: 'listar/:cursoId',
     component: ListaExercicioComponent
   },
   {
-    path: 'deletar/:id',
+    path: 'deletar/:id/curso/:cursoId',
     component: DeletaExercicioComponent
   },
   {

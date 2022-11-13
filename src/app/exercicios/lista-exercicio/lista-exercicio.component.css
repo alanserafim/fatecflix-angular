@@ -1,3 +1,49 @@
+.exercicio
+{
+  width: 50%;
+  padding: 1em;
+}
+
+.exercicio-titulo
+{
+  font-size: 1.5em;
+}
+
+.alternativa
+{
+  display: flex;
+}
+
+.alternativa p{
+  padding: 6px;
+}
+
+.opcao
+{
+  border: 1px solid black;
+  background-color: aquamarine;
+  width: 20px;
+  text-align: center;
+  padding: 8px;
+  vertical-align: middle;
+  margin-right: 8px
+}
+
+.gabarito
+{
+  display: flex;
+}
+
+.altenartivas-selecionadas
+{
+  font-weight: 500;
+  margin-top: 2em;
+}
+
+.buttons
+{
+  margin-top: 2em;
+}
 
 .tabela th{
   text-align: center;
@@ -39,6 +85,18 @@ th.mat-sort-header-sorted {
     rgba(0, 0, 0, 1) 91%,
     rgba(0, 0, 0, 1) 100%
   );
+}
+
+.resposta-correta {
+  color: green;
+}
+
+::ng-deep .mat-horizontal-stepper-header:not([ng-reflect-active="true"]){
+  pointer-events: none !important;
+}
+
+.resposta-errada {
+  color: red
 }
 
 .content {

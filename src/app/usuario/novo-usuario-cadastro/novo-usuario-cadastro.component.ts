@@ -52,7 +52,7 @@ export class NovoUsuarioCadastroComponent implements OnInit {
 
   cadastrar(){
     const novoUsuario = this.novoUsuarioForm.getRawValue() as NovoUsuario
-    novoUsuario.roles = ["aluno"]
+    novoUsuario.roles = ["ALUNO"]
     this.novoUsuarioService.cadastraNovoUsuario(novoUsuario).subscribe(()=> {
       this.router.navigate(['usuario/sucesso'])
     },

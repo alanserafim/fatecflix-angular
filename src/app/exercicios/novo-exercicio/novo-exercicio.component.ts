@@ -24,21 +24,33 @@ export class NovoExercicioComponent implements OnInit {
 
   constructor(private fb: FormBuilder, private cadastrarExercicioService: NovoExercicioService, private router: Router, private activatedRoute: ActivatedRoute) { }
 
-  ngOnInit(): void {
-    this.exercicio = new Exercicio();
+  ngOnInit(){
     this.cursoId = this.activatedRoute.snapshot.params['id'];
   }
 
   novoExercicio(): void {
-    this.submitted = true;
+    this.submitted = false;
     this.exercicio = new Exercicio();
   }
 
   cadastraNovoExercicio(){
+    let arr = [];
+
     for(let value of this.afirmativas.value) {
-      console.log(value.role);
-      this.exercicio.afirmativas?.push(value.role);
+
+
+      console.log(value.afirmativa);
+      //this.exercicio.afirmativas?.push(value.afirmativa);
+      arr.push(value.afirmativa);
+      //console.log(this.exercicio.afirmativas);
     }
+
+    console.log(arr);
+    this.exercicio.afirmativas = [];
+    for (let el of arr) {
+      this.exercicio.afirmativas?.push(el);
+    }
+    console.log(this.exercicio.afirmativas)
 
     this.cadastrarExercicioService.cadastrarNovoExercicio(this.exercicio, this.cursoId)
     .subscribe((data) => {

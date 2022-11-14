@@ -1,5 +1,6 @@
+import { AuntenticacaoGuard } from './services/guarda-rotas/auntenticacao.guard';
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes, CanLoad } from '@angular/router';
 
 const routes: Routes = [
   {
@@ -13,23 +14,28 @@ const routes: Routes = [
   },
   {
     path: 'usuario',
-    loadChildren:()=> import ('./usuario/usuario.module').then((m)=> m.UsuarioModule )
+    loadChildren:()=> import ('./usuario/usuario.module').then((m)=> m.UsuarioModule ),
+    canLoad : [AuntenticacaoGuard],
   },
   {
     path: 'cursos',
-    loadChildren:()=> import ('./courses/courses.module' ).then((m)=> m.CoursesModule )
+    loadChildren:()=> import ('./courses/courses.module' ).then((m)=> m.CoursesModule ),
+    canLoad : [AuntenticacaoGuard],
   },
   {
     path: 'dashboard',
-    loadChildren:()=> import ('./dashboard/dashboard.module' ).then((m)=> m.DashboardModule )
+    loadChildren:()=> import ('./dashboard/dashboard.module' ).then((m)=> m.DashboardModule ),
+    canLoad : [AuntenticacaoGuard],
   },
   {
     path: 'aulas',
-    loadChildren:()=> import ('./aulas/aulas.module' ).then((m)=> m.AulasModule )
+    loadChildren:()=> import ('./aulas/aulas.module' ).then((m)=> m.AulasModule ),
+    canLoad : [AuntenticacaoGuard],
   },
   {
     path: 'exercicios',
-    loadChildren:()=> import ('./exercicios/exercicios.module' ).then((m)=> m.ExerciciosModule )
+    loadChildren:()=> import ('./exercicios/exercicios.module' ).then((m)=> m.ExerciciosModule ),
+    canLoad : [AuntenticacaoGuard],
   }
 ];
 

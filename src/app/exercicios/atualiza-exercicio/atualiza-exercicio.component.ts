@@ -18,6 +18,8 @@ export class AtualizaExercicioComponent implements OnInit {
     neoAf: new FormArray([])
   });
 
+  isDisable = true;
+
   submitted = false;
   // @ts-ignore: Object is possibly 'undefined'.
   exercicioId: number;
@@ -57,12 +59,16 @@ export class AtualizaExercicioComponent implements OnInit {
     return JSON.parse(json);
   }
 
-  addAfirmativa() {
+  addAfirmativaNeo() {
     this.neoAf.push(
       this.fb.group({
         neo: '',
       }),
     );
+  }
+
+  upAfirmativa() {
+    this.isDisable = false;
   }
 
   getAfirmativas(form: FormArray) {
@@ -76,11 +82,11 @@ export class AtualizaExercicioComponent implements OnInit {
   }
 
   updateExercicio() {
+    //console.log(this.afirmativas.value);
+
     for(let value of this.afirmativas.value) {
       console.log(value.afirmativa);
-      if (value != null) {
-        this.exercicio.afirmativas?.push(value.afirmativa);
-      }
+      this.exercicio.afirmativas?.push(value.afirmativa);
     }
 
     for(let el of this.neoAf.value) {

@@ -101,7 +101,22 @@
               name="periodo"
             />
           </div>
-          <span>Perfis do Usuario</span>
+          <div class="form-group" *ngFor="let perfil of usuario.roles; let i = index;">
+            <label for="periodo">Atualize os Perfis do Usuario</label>
+            <input
+              type="text"
+              class="form-control"
+              id="periodo"
+              required
+              [value]="perfil"
+              (change)="updateRole($event, i)"
+              name="periodo"
+            />
+            <button mat-button type="button" color="primary" (click)="remove(i)">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </div>
+          <span>Adicione mais Perfis do Usuario</span>
           <form [formGroup]="formRole">
             <button mat-button type="button" color="primary" (click)="addRoles()">
               <mat-icon>add</mat-icon>
@@ -110,8 +125,7 @@
               <ng-container *ngFor="let roless of roles.controls; let i=index" >
                 <div [formGroupName]="i">
                   <mat-form-field fxFlex="100">
-                    <div *ngIf="roless.value !== 'ADMIN' && roless.value !== 'ALUNO' && roless.value !== 'INSTRUTOR'; else perfilUser"><input formControlName="role" matInput type="text" class="form-control" placeholder="Perfil do usuario"></div>
-                    <ng-template #perfilUser><input formControlName="role" matInput type="text" class="form-control" placeholder="Perfil do Usuarios: {{ roless.value }}"></ng-template>
+                    <input formControlName="role" matInput type="text" class="form-control" placeholder="Perfil do usuario">
                   </mat-form-field>
                   <button mat-button type="button" color="primary" (click)="removeDoFormArray(roles, i)">
                     <mat-icon>delete</mat-icon>

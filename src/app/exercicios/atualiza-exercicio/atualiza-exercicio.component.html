@@ -51,36 +51,35 @@
             [(ngModel)]="exercicio.resposta"
             name="resposta"
             />
+
+            <div class="form-group" *ngFor="let afirmativa of exercicio.afirmativas; let i = index;">
+              <label for="periodo">Atualize as Afirmativas</label>
+              <input
+                type="text"
+                class="form-control"
+                id="periodo"
+                required
+                [value]="afirmativa"
+                (change)="updateAfirmativa($event, i)"
+                name="periodo"
+              />
+              <button mat-button type="button" color="primary" (click)="remove(i)">
+                <mat-icon>delete</mat-icon>
+              </button>
             </div>
-            <span>Afirmativas</span>
+            </div>
+            <span>Adicione mais Afirmativas</span>
             <form [formGroup]="formAfirmativa">
+              <button mat-button type="button" color="primary" (click)="addAfirmativa()">
+                <mat-icon>add</mat-icon>
+              </button>
               <div formArrayName="afirmativas" fxFlex="100"  fxLayout="column">
                 <ng-container *ngFor="let a of afirmativas.controls; let i=index" >
                   <div [formGroupName]="i">
                     <mat-form-field fxFlex="100">
-                      <input formControlName="afirmativa"  matInput type="text" class="form-control" value="{{ a.value }}" placeholder="Afirmativa: {{ a.value }}">
+                      <input formControlName="afirmativa"  matInput type="text" class="form-control" placeholder="Afirmativa:">
                     </mat-form-field>
                     <button mat-button type="button" color="primary" (click)="removeDoFormArray(afirmativas, i)">
-                      <mat-icon>delete</mat-icon>
-                    </button>
-                  </div>
-                </ng-container>
-              </div>
-            </form>
-            <br />
-
-            <form [formGroup]="form">
-              <button mat-button type="button" color="primary" (click)="addAfirmativaNeo()">
-                <mat-icon>add</mat-icon>
-              </button>
-              <div formArrayName="neoAf" fxFlex="100"  fxLayout="column">
-                <ng-container *ngFor="let a of neoAf.controls; let j=index" >
-
-                  <div [formGroupName]="j">
-                    <mat-form-field fxFlex="100">
-                      <input formControlName="neo" matInput type="text" class="form-control" placeholder="Afirmativa:">
-                    </mat-form-field>
-                    <button mat-button type="button" color="primary" (click)="removeDoFormArray(neoAf, j)">
                       <mat-icon>delete</mat-icon>
                     </button>
                   </div>

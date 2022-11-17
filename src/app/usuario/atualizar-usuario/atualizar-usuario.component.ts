@@ -53,10 +53,10 @@ export class AtualizarUsuarioComponent implements OnInit {
       .subscribe(data => {
         console.log(data)
         this.usuario = data;
-         // @ts-ignore: Object is possibly 'undefined'.
-        for(const role of this.usuario.roles) {
+        // Object is possibly 'undefined'.
+        /*for(const role of this.usuario.roles) {
           this.roles.push(new FormControl(role, Validators.required));
-        }
+        }*/
       }, error => console.log(error)
     );
 
@@ -70,6 +70,10 @@ export class AtualizarUsuarioComponent implements OnInit {
 
   removeDoFormArray(controls: FormArray, index: number) {
     controls.removeAt(index);
+    this.usuario.roles?.pop()?.at(index);
+  }
+
+  remove(index: number){
     this.usuario.roles?.pop()?.at(index);
   }
 
@@ -88,6 +92,13 @@ export class AtualizarUsuarioComponent implements OnInit {
 
   onSubmit() {
     this.updateUsuario();
+  }
+
+  updateRole(value: Event, index: number) {
+    // @ts-ignore: Object is possibly 'null'.
+    console.log("changed", value.target.value);
+// @ts-ignore: Object is possibly 'undefined'.
+    this.usuario.roles[index] = value.target.value
   }
 
   gotoList() {

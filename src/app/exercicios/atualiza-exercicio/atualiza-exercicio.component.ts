@@ -14,12 +14,6 @@ export class AtualizaExercicioComponent implements OnInit {
     afirmativas: new FormArray([])
   });
 
-  form = this.fb.group({
-    neoAf: new FormArray([])
-  });
-
-  isDisable = true;
-
   submitted = false;
   // @ts-ignore: Object is possibly 'undefined'.
   exercicioId: number;
@@ -30,7 +24,6 @@ export class AtualizaExercicioComponent implements OnInit {
   exercicio: Exercicio;
 
   afirmativas = this.formAfirmativa.get('afirmativas') as FormArray;
-  neoAf = this.form.get('neoAf') as FormArray;
 
   constructor(private fb: FormBuilder, private route: ActivatedRoute,
     private router: Router, private atualizaExercicio: AtualizaExercicioService) { }
@@ -45,10 +38,10 @@ export class AtualizaExercicioComponent implements OnInit {
       .subscribe(data => {
         console.log(data)
         this.exercicio = data;
-         // @ts-ignore: Object is possibly 'undefined'.
-        for(const afirmativa of this.exercicio.afirmativas) {
+
+        /*for(const afirmativa of this.exercicio.afirmativas) {
           this.afirmativas.push(new FormControl(afirmativa, Validators.required));
-        }
+        }*/
       }, error => console.log(error)
     );
 
@@ -59,16 +52,15 @@ export class AtualizaExercicioComponent implements OnInit {
     return JSON.parse(json);
   }
 
-  addAfirmativaNeo() {
-    this.neoAf.push(
-      this.fb.group({
-        neo: '',
-      }),
-    );
+  remove(index: number){
+    this.exercicio.afirmativas?.pop()?.at(index);
   }
 
-  upAfirmativa() {
-    this.isDisable = false;
+  updateAfirmativa(value: any, index: number) {
+    // @ts-ignore: Object is possibly 'null'.
+    console.log("changed", value.target.value);
+// @ts-ignore: Object is possibly 'undefined'.
+    this.exercicio.afirmativas[index] = value.target.value;
   }
 
   getAfirmativas(form: FormArray) {
@@ -81,17 +73,20 @@ export class AtualizaExercicioComponent implements OnInit {
     this.exercicio.afirmativas?.pop()?.at(index);
   }
 
+  addAfirmativa() {
+    this.afirmativas.push(
+      this.fb.group({
+        afirmativa: ''
+      })
+    );
+  }
+
   updateExercicio() {
     //console.log(this.afirmativas.value);
 
     for(let value of this.afirmativas.value) {
       console.log(value.afirmativa);
       this.exercicio.afirmativas?.push(value.afirmativa);
-    }
-
-    for(let el of this.neoAf.value) {
-      console.log(el.neo);
-      this.exercicio.afirmativas?.push(el.neo);
     }
 
     this.atualizaExercicio.atualizarExercicio(this.exercicio, this.exercicioId, this.cursoId)

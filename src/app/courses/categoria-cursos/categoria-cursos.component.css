@@ -1,11 +1,10 @@
 
 .example-card {
   max-width: 300px;
-  margin-top: 10em;
-  margin-bottom: 8px;
+  margin-bottom: 10em;
   margin-left: 25px;
   -webkit-box-reflect: below 5px
-	linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.4));
+	linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.151));
   -webkit-transition: all 0.5s ease;
 	-o-transition: all 0.5s ease;
 	transition: all 0.5s ease;
@@ -18,13 +17,19 @@
 	transform: scale(1.1);
 }
 
+.super-container{
+  /* background-color: blue; */
+  width: 80%;
+}
+
 .container {
+  /* background-color: aquamarine; */
   display:flex;
-  max-width: 80%;
   flex-wrap: wrap;
 }
 
 .wrapper{
+  /* background-color: #ff0534; */
   margin-top: 6em;
   display: flex;
   align-items: center;
@@ -33,4 +38,7 @@
 
 .titulo{
   color: #fefefe;
+  padding-left: 30px;
+  padding-bottom: 10px;
+  font-size: 2em;
 }

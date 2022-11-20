@@ -16,7 +16,7 @@ import { UsuarioLogadoService } from 'src/app/services/authentication/usuario-lo
 export class ListarCursosComponent implements OnInit {
 
   displayedColumns: string[] = ['Titulo', 'Descrição', 'Carga Horária', 'Atualização', 'Avaliação', 'Ações'];
-  usuarioLogado$ : Observable <UsuarioLogado> = this.usuarioLogadoService.retornaUsuarioLogado()
+  usuarioLogado$ : Observable<UsuarioLogado> = this.usuarioLogadoService.retornaUsuarioLogado()
   isLoggedIn = true;
   // @ts-ignore: Object is possibly 'undefined'.
   cursos: Observable<NovoCurso[]>;
@@ -51,6 +51,8 @@ export class ListarCursosComponent implements OnInit {
     this.listaCursos();
   }
 
+
+
   deletaCurso(id : number) {
     this.router.navigate(['/cursos/deletar', id]);
   }
@@ -59,15 +61,26 @@ export class ListarCursosComponent implements OnInit {
     this.router.navigate(['/cursos/atualizar', id])
   }
 
-  detalhar(id: number) {
+  matricular(id: number) {
 
-    //console.log(id);
+    console.log(id);
 
-    /*this.matricula = new Matricula(0.0, 0.0, "Em progresso")
+    this.matricula = new Matricula(0.0, 0.0, "Em progresso")
 
     this.matriculaService.matricular(id, this.matricula).subscribe(data => console.log(data),
-    error => console.log(error));*/
+    error => console.log(error));
 
     this.router.navigate(['/cursos/detalhar', id]);
+  }
+
+  detalhar(id: number) {
+
+    this.router.navigate(['/cursos/detalhar', id]);
+  }
+
+  getCursoByCategoria(categoria: string) {
+    this.cursos = this.listarCursosService.returnaCursosPelaCategoria(categoria);
+    console.log(this.cursos);
+    console.log("Entrei aqui");
   }
 }

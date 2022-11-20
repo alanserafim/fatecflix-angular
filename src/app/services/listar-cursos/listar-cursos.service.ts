@@ -21,4 +21,8 @@ export class ListaCursosService {
       tap(cursos => console.log(cursos))
     );
  }
+
+ returnaCursosPelaCategoria(categoria: string): Observable<any> {
+  return this.httpClient.get<NovoCurso[]>(`${this.API}/categoria/${categoria}`);
+ }
 }

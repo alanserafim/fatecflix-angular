@@ -7,14 +7,13 @@
         <tr>
           <th>Nota</th>
           <th>Situação</th>
-          <th>Avaliação do curso</th>
         </tr>
       </thead>
       <tbody>
         <tr *ngFor="let matricula of matriculas | async">
           <td>{{matricula.nota}}</td>
           <td>{{matricula.status}}</td>
-          <td>{{matricula.avaliacaoCurso}}</td>
+          <button (click)="gotoCurso(matricula.matriculaId)">Continuar Curso</button>
         </tr>
       </tbody>
     </table>

@@ -16,7 +16,16 @@
           </div>
         </mat-card-actions>
       </mat-card>
+      <mat-card *ngIf="user.roles.includes('INSTRUTOR')" class="example-card" >
+        <h2>Lista de Alunos</h2>
+        <div class="container" *ngFor="let usuario of usuarios | async">
+          <mat-card-title><h1>{{ usuario.name }} {{ usuario.lastname }}</h1></mat-card-title>
+          <h3>@{{ usuario.username }}</h3>
+        </div>
+      </mat-card>
     </div>
+
+    
   </div>
   <app-footer></app-footer>
 </div>

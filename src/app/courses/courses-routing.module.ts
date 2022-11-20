@@ -7,6 +7,7 @@ import { AtualizarCursoComponent } from './atualizar-curso/atualizar-curso.compo
 import { MatriculaComponent } from './matricula/matricula.component';
 import { ExibirCursoComponent } from './exibir-curso/exibir-curso.component';
 import { ExibirTrilhaCursoComponent } from './exibir-trilha-curso/exibir-trilha-curso.component';
+import { GridCursosComponent } from './grid-cursos/grid-cursos.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: 'listar',
     component: ListarCursosComponent,
+  },
+  {
+    path: 'listar/:categoria',
+    component: GridCursosComponent,
   },
   {
     path: 'trilha',

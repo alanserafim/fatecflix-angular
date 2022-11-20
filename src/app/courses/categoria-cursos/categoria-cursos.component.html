@@ -1,7 +1,11 @@
-<div class="wrapper">
-  <div class="super-container">
+<div class="categoria">
+  <button (click)="gotoList()" class="categoria-item">Todos</button>
+  <div class="categoria-list" *ngFor="let curso of list">
+    <button (click)="getCursoByCategoria(curso.categoria)" class="categoria-item">{{curso.categoria}}</button>
+  </div>
+</div>
 
-    <h2 class="titulo">Categoria X</h2>
+<!-- <h2 class="titulo">Categoria X</h2>
     <div class="container">
       <div class="card1">
         <mat-card class="example-card">
@@ -58,9 +62,4 @@
         {{longText}}
       </mat-card-content>
     </mat-card>
-  </div>
-  
-</div>
-
-</div>
-</div>
+  </div> -->

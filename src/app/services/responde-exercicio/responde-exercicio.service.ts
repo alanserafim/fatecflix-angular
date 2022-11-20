@@ -8,8 +8,8 @@ export class RespondeExercicioService {
 
   constructor(private http: HttpClient) { }
 
-  realizaExercicio(resposta: string, id: number, cursoId: number, exercicioId: number){
-    const API = `${environment.api_url}/api/v1/matriculas/${id}/curso/${cursoId}/exercicio/{exercicioId}/resposta/{resposta}`;
+  geraHistorico(nota: number, id: number, cursoId: number){
+    const API = `${environment.api_url}/api/v1/matriculas/${id}/curso/${cursoId}/nota/${nota}`;
     return this.http.post(API, null);
   }
 }

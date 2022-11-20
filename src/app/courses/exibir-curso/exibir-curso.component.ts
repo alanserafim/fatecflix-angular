@@ -5,6 +5,9 @@ import { Curso } from 'src/app/types/Curso';
 import { UsuarioLogado } from 'src/app/types/UsuarioLogado';
 import { Observable } from 'rxjs';
 import { UsuarioLogadoService } from 'src/app/services/authentication/usuario-logado/usuario-logado.service';
+import { Matricula } from 'src/app/types/Matricula';
+import { MatricularService } from 'src/app/services/matricular/matricular.service';
+import { NovoUsuario } from 'src/app/types/NovoUsuario';
 
 @Component({
   selector: 'app-exibir-curso',
@@ -19,9 +22,11 @@ export class ExibirCursoComponent implements OnInit {
   cursoId: number;
   // @ts-ignore: Object is possibly 'undefined'.
   curso: Curso;
+// @ts-ignore: Object is possibly 'undefined'.
+  usuarios: Observable<NovoUsuario[]>
   submitted = false;
 
-  constructor(private usuarioLogadoService: UsuarioLogadoService, private route: ActivatedRoute, private router: Router, private cursoService: ConsultarCursoService) { }
+  constructor(private matriculasService: MatricularService,private usuarioLogadoService: UsuarioLogadoService, private route: ActivatedRoute, private router: Router, private cursoService: ConsultarCursoService) { }
 
   ngOnInit() {
     this.curso = new Curso();
@@ -30,6 +35,9 @@ export class ExibirCursoComponent implements OnInit {
       console.log(data);
       this.curso = data;
     }, error => console.log(error));
+
+    this.usuarios = this.matriculasService.getMatriculasByCurso(this.cursoId);
+    console.log(this.usuarios);
   }
 
   gotoAulas(id: number) {

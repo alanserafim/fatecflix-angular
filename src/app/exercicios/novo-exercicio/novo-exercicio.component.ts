@@ -34,7 +34,7 @@ export class NovoExercicioComponent implements OnInit {
   }
 
   cadastraNovoExercicio(){
-    let arr = [];
+    let arr: any[] = [];
 
     for(let value of this.afirmativas.value) {
 

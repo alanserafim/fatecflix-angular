@@ -1,8 +1,11 @@
+import { Curso } from "./Curso";
+
 export class Matricula {
-  id?: number;
+  matriculaId?: number;
   avaliacaoCurso?: number;
   nota?: number;
   status?: string;
+  curso?: Curso[];
 
   constructor (avaliacaoCurso: number, nota: number, status: string) {
     this.avaliacaoCurso = avaliacaoCurso

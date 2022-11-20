@@ -3,7 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ListaExercicioService } from 'src/app/services/lista-exercicios/lista-exercicio.service';
 import { Exercicio } from 'src/app/types/Exercicio';
 import { UsuarioLogado } from 'src/app/types/UsuarioLogado';
-import {Observable} from 'rxjs';
+import {elementAt, Observable} from 'rxjs';
 import { UsuarioLogadoService } from 'src/app/services/authentication/usuario-logado/usuario-logado.service';
 import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
@@ -24,7 +24,11 @@ export class ListaExercicioComponent implements OnInit {
 // @ts-ignore: Object is possibly 'undefined'.
   arrayLength = 0;
   respostas: string[] = [];
+  acertos = 0;
+  historicoEnabled = false;
+  status = '';
 
+  acertosArr = [];
   controleAfirmativasSelecionadas = 0;
 
    usuarioLogado$ : Observable<UsuarioLogado> = this.usuarioLogadoService.retornaUsuarioLogado()
@@ -71,16 +75,43 @@ export class ListaExercicioComponent implements OnInit {
     )
   }
 
-  responder(resposta: string) {
+  responder(resposta: string, index: number, id: any) {
     console.log(resposta);
+    this.respostas.push(resposta);
 
-  }
+    this.exercicios.subscribe((data: Exercicio[]) => {
+      if(data.length > 6) {
+        if (data.at(index)?.resposta === resposta) {
+          this.acertos++;
 
-  selecionou(index: number) {
-    this.controleAfirmativasSelecionadas++;
-  }
+          console.log(this.acertos);
+        }
 
-  actionMethod(event: any) {
-    event.target.disabled = true;
+      } else if (data.length < 6) {
+        if (data.at(index)?.resposta === resposta) {
+          this.acertos = this.acertos + 2.5;
+          console.log(this.acertos);
+        }
+      } else if (data.length === 2) {
+        if (data.at(index)?.resposta === resposta) {
+          this.acertos = (this.acertos + 2) * 2;
+          console.log(this.acertos);
+        }
+      } else if (data.length === 1) {
+        if (data.at(index)?.resposta === resposta) {
+          this.acertos = 10;
+          console.log(this.acertos);
+        }
+      }
+
+      if(this.acertos >= 6) {
+        this.historicoEnabled = true;
+        this.historicoService.geraHistorico(this.acertos, id, this.cursoId);
+
+        this.status = 'Parabéns você foi aprovado, continue assim!';
+      } else {
+        this.status = 'Você foi reprovado, estude mais!';
+      }
+    })
   }
 }

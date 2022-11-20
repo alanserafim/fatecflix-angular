@@ -8,11 +8,13 @@ import { UsuarioListComponent } from './usuario-list/usuario-list.component';
 import { UsuarioDeleteComponent } from './usuario-delete/usuario-delete.component';
 import { AtualizarUsuarioComponent } from './atualizar-usuario/atualizar-usuario.component';
 import { HistoricoUsuarioComponent } from './historico-usuario/historico-usuario.component';
+import { LoginGuard } from '../services/guarda-rotas/login.guard';
 
 const routes: Routes = [
   {
     path: '',
-    component: LoginComponent
+    component: LoginComponent,
+    canLoad : [LoginGuard]
   },
   {
     path: 'cadastro',

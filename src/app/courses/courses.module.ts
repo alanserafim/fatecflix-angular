@@ -25,6 +25,8 @@ import { CardsComponent } from './listar-cursos/cards/cards.component';
 import { ListarCursosComponent } from './listar-cursos/listar-cursos.component';
 import { TabelaComponent } from './listar-cursos/tabela/tabela.component';
 import { MatriculaComponent } from './matricula/matricula.component';
+import { GridCursosComponent } from './grid-cursos/grid-cursos.component';
+import { CategoriaCursosComponent } from './categoria-cursos/categoria-cursos.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +41,8 @@ import { MatriculaComponent } from './matricula/matricula.component';
     ModalTrilhaComponent,
     CardsComponent,
     TabelaComponent,
+    GridCursosComponent,
+    CategoriaCursosComponent,
   ],
   imports: [
     CommonModule,

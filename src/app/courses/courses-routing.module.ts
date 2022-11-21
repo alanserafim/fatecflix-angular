@@ -1,3 +1,4 @@
+import { MenuCursosComponent } from './menu-cursos/menu-cursos.component';
 import { CadastrarCursoComponent } from './cadastrar-curso/cadastrar-curso.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -41,6 +42,10 @@ const routes: Routes = [
   {
     path: 'matricula',
     component: MatriculaComponent,
+  },
+  {
+    path: 'menu',
+    component: MenuCursosComponent,
   },
 ];
 

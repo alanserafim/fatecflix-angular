@@ -10,6 +10,8 @@ import { Router } from '@angular/router';
 })
 export class CategoriaCursosComponent implements OnInit {
 
+
+  
    // @ts-ignore: Object is possibly 'undefined'.
    cursos: Observable<NovoCurso[]>;
 // @ts-ignore: Object is possibly 'undefined'.

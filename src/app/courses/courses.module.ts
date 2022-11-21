@@ -27,6 +27,8 @@ import { TabelaComponent } from './listar-cursos/tabela/tabela.component';
 import { MatriculaComponent } from './matricula/matricula.component';
 import { GridCursosComponent } from './grid-cursos/grid-cursos.component';
 import { CategoriaCursosComponent } from './categoria-cursos/categoria-cursos.component';
+import { MenuCursosComponent } from './menu-cursos/menu-cursos.component';
+import { SecaoComponent } from './menu-cursos/secao/secao.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +45,8 @@ import { CategoriaCursosComponent } from './categoria-cursos/categoria-cursos.co
     TabelaComponent,
     GridCursosComponent,
     CategoriaCursosComponent,
+    MenuCursosComponent,
+    SecaoComponent,
   ],
   imports: [
     CommonModule,

@@ -18,7 +18,7 @@ export class LoginGuard implements CanLoad {
     segments: UrlSegment[]): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
 
       if(this.usuarioService.estaLogado()){
-        this.router.navigate(['usuario/perfil'])
+        this.router.navigate(['cursos/menu'])
         return false
       }
      return true;

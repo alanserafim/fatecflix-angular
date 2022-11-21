@@ -1,0 +1,28 @@
+<div class="super-container">
+  <h2 class="titulo">{{ categoriaExibicao }}</h2>
+  <div class="container">
+    <div class="card" *ngFor="let curso of cursos | async">
+      <mat-card
+        class="example-card"
+        *ngIf="curso.categoria == categoriaExibicao"
+      >
+        <mat-card-title>{{ curso.titulo }}</mat-card-title>
+        <mat-card-content>
+          <p>Carga Horária: {{ curso.cargaHorario }}</p>
+          <p>{{ curso.descricao }}</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button
+            class="btn_detalhar"
+            mat-stroked-button
+            (click)="detalhar(curso.cursoId)"
+            class="btn btn-info"
+            style="margin-right: 10px"
+          >
+            Detalhar
+          </button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</div>

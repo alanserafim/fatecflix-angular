@@ -1,0 +1,39 @@
+
+.example-card {
+  width: 332px;
+  height: 234px;
+  margin-bottom: 10em;
+  margin-left: 25px;
+  -webkit-box-reflect: below 5px
+	linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.151));
+  -webkit-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+  box-shadow: 5px 5px 15px #ff0534;
+}
+
+.example-card:hover{
+  -webkit-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+.container {
+  /* background-color: aquamarine; */
+  display:flex;
+  flex-wrap: wrap;
+}
+
+.super-container{
+  /* background-color: blue; */
+  display: flex;
+  flex-direction: column;
+  min-width: 80vw;
+}
+
+.titulo{
+  color: #fefefe;
+  padding-left: 30px;
+  padding-bottom: 10gti px;
+  font-size: 2em;
+}

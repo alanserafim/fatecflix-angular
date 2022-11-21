@@ -16,7 +16,8 @@ import { UsuarioLogadoService } from 'src/app/services/authentication/usuario-lo
 export class ListarAulasComponent implements OnInit {
   // @ts-ignore: Object is possibly 'undefined'.
   aulas: Observable<Aula[]>;
-
+  // @ts-ignore: Object is possibly 'undefined'.
+  aulaId: number;
   videoUrl: string =  '';
   arr: Aula[] = [];
   // @ts-ignore: Object is possibly 'undefined'.
@@ -48,9 +49,10 @@ export class ListarAulasComponent implements OnInit {
     )
   }
 
-  updateSrc(url: any) {
+  updateSrc(url: any, id: any) {
     let string = url;
-
+    this.aulaId = id;
+    console.log(this.aulaId);
     this.videoId = string.replace('https://www.youtube.com/watch?v=', '');
     //this.safeUrl = this._sanitizer.bypassSecurityTrustResourceUrl(this.videoUrl);
   }
@@ -59,7 +61,8 @@ export class ListarAulasComponent implements OnInit {
     this.aulasService.listarAulas(this.cursoId).subscribe(data => {
       this.videoUrl = data[0].video;
       this.videoId = this.videoUrl.replace('https://www.youtube.com/watch?v=', '');
-      
+      this.aulaId = data[0].aulaId;
+      console.log(this.aulaId);
       console.log(this.videoId);
       //this.videoUrl = url;
       //this.safeUrl = this._sanitizer.bypassSecurityTrustResourceUrl(url);

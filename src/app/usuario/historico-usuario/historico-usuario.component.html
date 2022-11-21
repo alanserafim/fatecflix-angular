@@ -1,1 +1,24 @@
-<p>Em desenvolvimento</p>
+<body>
+  <div class="content">
+  <app-header></app-header>
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Nome do Curso</th>
+          <th>Nota</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let historico of historicos | async">
+          <td>{{historico.nomeCurso}}</td>
+          <td>{{historico.nota}}</td>
+          <a href="mailto:{{ historico.emailInstrutor }}?subject=Certificado&body=Querido instrutor, me mande o meu certificado!">Contactar Instrutor</a>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<app-footer class="footer"></app-footer>
+</body>
+

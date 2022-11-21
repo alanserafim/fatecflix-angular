@@ -18,6 +18,9 @@ import { FooterModule } from '../componentes/footer/footer.module';
 import { SafePipe } from '../pipe/safe.pipe';
 import { AtualizarAulasComponent } from './atualizar-aulas/atualizar-aulas.component';
 import { DeletarAulasComponent } from './deletar-aulas/deletar-aulas.component';
+import { ComentarComponent } from './comentar/comentar.component';
+import { ComentariosComponent } from './comentarios/comentarios.component';
+import { DeletaComentarioComponent } from './deleta-comentario/deleta-comentario.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +31,9 @@ import { DeletarAulasComponent } from './deletar-aulas/deletar-aulas.component';
     SafePipe,
     AtualizarAulasComponent,
     DeletarAulasComponent,
+    ComentarComponent,
+    ComentariosComponent,
+    DeletaComentarioComponent,
   ],
   imports: [
     CommonModule,

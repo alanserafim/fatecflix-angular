@@ -30,6 +30,16 @@ export class MatriculaComponent implements OnInit {
       this.cursoId = data.curso.cursoId;
       console.log(this.cursoId);
       this.router.navigate(['/cursos/detalhar', this.cursoId]);
+    });
+  }
+  
+  gotoExercicios(id: any) {
+    this.matriculaService.getCursoByMatricula(id).subscribe(data => {
+      this.cursoId = data.curso.cursoId;
+      console.log(this.cursoId);
+      console.log(data.matriculaId);
+      this.router.navigate(['/exercicios/listar', this.cursoId, 'matricula', data.matriculaId])
     })
+    
   }
 }

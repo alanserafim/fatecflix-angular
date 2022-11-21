@@ -1,7 +1,7 @@
 
 .wrapper{
   display: flex;
-  flex-direction: row;
+  
   justify-content: space-between;
 
   background: rgb(66, 16, 11);
@@ -11,6 +11,13 @@
     rgba(0, 0, 0, 1) 91%,
     rgba(0, 0, 0, 1) 100%
   );
+}
+
+.video-comentario {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  height: 100%;
 }
 
 .container{

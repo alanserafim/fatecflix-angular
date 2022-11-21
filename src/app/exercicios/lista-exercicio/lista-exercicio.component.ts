@@ -19,6 +19,8 @@ export class ListaExercicioComponent implements OnInit {
    exercicios: Observable<Exercicio[]>;
 // @ts-ignore: Object is possibly 'undefined'.
    cursoId: number;
+   // @ts-ignore: Object is possibly 'undefined'.
+   matriculaId: number;
 // @ts-ignore: Object is possibly 'undefined'.
   selectAdvType: FormGroup;
 // @ts-ignore: Object is possibly 'undefined'.
@@ -40,6 +42,7 @@ export class ListaExercicioComponent implements OnInit {
 
   ngOnInit(): void {
     this.cursoId = this.route.snapshot.params['cursoId'];
+    this.matriculaId = this.route.snapshot.params['matriculaId'];
     this.selectAdvType = this.fb.group({
       firstCtrl: [null, Validators.required]
     });
@@ -106,7 +109,11 @@ export class ListaExercicioComponent implements OnInit {
 
       if(this.acertos >= 6) {
         this.historicoEnabled = true;
-        this.historicoService.geraHistorico(this.acertos, id, this.cursoId);
+        console.log(id);
+        console.log(this.cursoId);
+        this.historicoService.geraHistorico(this.acertos, this.matriculaId, this.cursoId).subscribe(
+          data => console.log(data)
+        );
 
         this.status = 'Parabéns você foi aprovado, continue assim!';
       } else {

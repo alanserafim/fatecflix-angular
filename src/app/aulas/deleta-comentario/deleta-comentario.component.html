@@ -1,0 +1,32 @@
+<body>
+  <app-header></app-header>
+  <mat-card class=card__container>
+    <mat-card class="card__1">
+      <mat-card-header>
+        <mat-card-title>Fatecflix</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <h2>Excluir Comentario</h2>
+      </mat-card-content>
+      <mat-card-footer>
+      </mat-card-footer>
+    </mat-card >
+    <mat-card class="card__2">
+      <form>
+        <mat-form-field appearance="outline" class="input">
+          <input matInput placeholder="Nome do Aluno" [value]="comentario.name" name="nome" disabled>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="input">
+          <input matInput placeholder="Comentario" [value]="comentario.comentario" name="descricao" disabled>
+        </mat-form-field>
+      </form>
+      <button mat-raised-button (click)="deleteComentario()" color="warn">
+        Excluir
+      </button>
+
+      <button mat-raised-button (click)="cancel()">
+        Cancelar
+      </button>
+    </mat-card>
+  </mat-card>
+</body>

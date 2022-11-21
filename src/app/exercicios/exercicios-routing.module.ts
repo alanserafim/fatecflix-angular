@@ -12,7 +12,7 @@ const routes: Routes = [
     component: NovoExercicioComponent
   },
   {
-    path: 'listar/:cursoId',
+    path: 'listar/:cursoId/matricula/:matriculaId',
     component: ListaExercicioComponent
   },
   {

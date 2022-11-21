@@ -1,3 +1,6 @@
+import { DeletaComentarioComponent } from './deleta-comentario/deleta-comentario.component';
+import { ComentarComponent } from './comentar/comentar.component';
+import { ComentariosComponent } from './comentarios/comentarios.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AtualizarAulasComponent } from './atualizar-aulas/atualizar-aulas.component';
@@ -33,7 +36,10 @@ const routes: Routes = [
     path: 'deletar/:id',
     component: DeletarAulasComponent
   },
-
+  {
+    path: 'comentario/deletar/:id/curso/:cursoId',
+    component: DeletaComentarioComponent
+  }
 ];
 
 @NgModule({

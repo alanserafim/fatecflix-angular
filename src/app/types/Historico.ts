@@ -3,4 +3,5 @@ export class Historico {
   duracaoCurso?: string;
   nomeCurso?: string;
   nota?: number;
+  emailInstrutor?: string;
 }

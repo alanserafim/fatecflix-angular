@@ -1,4 +1,4 @@
-<body>
+<div class="wrapper">
   <div class="content">
     <app-header></app-header>
     <mat-sidenav-container class="example-container">
@@ -11,7 +11,7 @@
         <mat-sidenav-content>
           <section class="usuario-dados">
             <div [hidden]="submitted" style="width: 400px;"></div>
-            <mat-card>
+            <mat-card class="card1">
               <div *ngIf="usuarioLogado$ | async as user ">
                 <h2>Perfil</h2>
                 <section class="container dados">
@@ -40,6 +40,9 @@
                     </fieldset>
                   </div>
                 </section>
+              </div>
+              <div class="img">
+                <br>
               </div>
             </mat-card>
           </section>
@@ -92,4 +95,4 @@
     </div>
   <app-footer class="footer"></app-footer>
 
-</body>
+  </div>

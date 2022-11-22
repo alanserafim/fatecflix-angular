@@ -86,3 +86,7 @@ p {
 }
 
 }
+
+.socialMedia img{
+  filter: grayscale(.85);
+}

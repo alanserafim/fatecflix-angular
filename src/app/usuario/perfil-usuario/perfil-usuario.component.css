@@ -11,11 +11,13 @@
 
 .example-container {
     min-height: 80vh;
-    background: var(--primary-background-color)
+    background: var(--primary-background-color);
+    margin-top: 5em;
   }
 
   mat-sidenav{
       width: 10vw;
+      display: none;
   }
 
   li{
@@ -32,6 +34,10 @@ mat-card {
   padding: 2em;
   background-color: var(--primary-background-color);
   color: var(--primary-text-color);
+}
+
+.card1{
+  display: flex;
  }
 
  mat-card:first-child {
@@ -45,6 +51,10 @@ label {
   font-weight: 500;
 }
 
+
+.dados{
+
+}
 .usuario-dados input{
   border-radius: 6px;
   border: 1px solid #d0d7de;
@@ -69,6 +79,7 @@ label {
   margin: 0;
   padding: 0;
   border: 0;
+  width: 60vw;
 }
 
 .dados_escolares {
@@ -86,9 +97,9 @@ fieldset {
   font-weight: bold;
 }
 
-mat-card h2{
+/* mat-card h2{
   border-bottom: 1px solid #d0d7de;
-}
+} */
 
 /*Tabela*/
 
@@ -102,9 +113,16 @@ html, body {
   height: 100%;
 }
 
-body {
+.wrapper {
   display: flex;
   flex-direction: column;
+  background: rgb(66, 16, 11);
+      background: linear-gradient(
+        135deg,
+        rgba(66, 16, 11, 1) 51%,
+        rgba(0, 0, 0, 1) 91%,
+        rgba(0, 0, 0, 1) 100%
+      );
 }
 .content {
   flex: 1 0 auto;
@@ -113,3 +131,10 @@ body {
   flex-shrink: 0;
 }
 
+.img{
+  background: url(../../../assets/imagens/perfil.svg);
+  width: 600px;
+  height: 600px;
+  background-position: cover;
+  background-repeat: no-repeat;
+}

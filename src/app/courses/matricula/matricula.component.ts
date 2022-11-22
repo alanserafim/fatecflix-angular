@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { MatricularService } from 'src/app/services/matricular/matricular.service';
 import { Curso } from 'src/app/types/Curso';
 import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-matricula',
   templateUrl: './matricula.component.html',
@@ -13,8 +14,13 @@ export class MatriculaComponent implements OnInit {
   // @ts-ignore: Object is possibly 'undefined'.
   matriculas: Observable<Matricula[]>;
    // @ts-ignore: Object is possibly 'undefined'.
-  cursoId: number; 
-  constructor(private matriculaService: MatricularService, private router: Router) { }
+  cursoId: number;
+  displayedColumns: string[] = ['Curso', 'Nota', 'Situação', 'Ações'];
+
+  constructor(
+    private matriculaService: MatricularService,
+    private router: Router
+    ) { }
 
   ngOnInit(): void {
     this.reloadData();
@@ -32,7 +38,7 @@ export class MatriculaComponent implements OnInit {
       this.router.navigate(['/cursos/detalhar', this.cursoId]);
     });
   }
-  
+
   gotoExercicios(id: any) {
     this.matriculaService.getCursoByMatricula(id).subscribe(data => {
       this.cursoId = data.curso.cursoId;
@@ -40,6 +46,6 @@ export class MatriculaComponent implements OnInit {
       console.log(data.matriculaId);
       this.router.navigate(['/exercicios/listar', this.cursoId, 'matricula', data.matriculaId])
     })
-    
+
   }
 }

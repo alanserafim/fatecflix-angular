@@ -9,6 +9,7 @@ import { MatriculaComponent } from './matricula/matricula.component';
 import { ExibirCursoComponent } from './exibir-curso/exibir-curso.component';
 import { ExibirTrilhaCursoComponent } from './exibir-trilha-curso/exibir-trilha-curso.component';
 import { GridCursosComponent } from './grid-cursos/grid-cursos.component';
+import { BreadcrumbModule } from 'angular-crumbs';
 
 const routes: Routes = [
   {
@@ -16,7 +17,7 @@ const routes: Routes = [
     component: CadastrarCursoComponent,
   },
   {
-    path: 'listar',
+    path: 'listar', data: {breadcrumb: "listar"},
     component: ListarCursosComponent,
   },
   {
@@ -36,7 +37,7 @@ const routes: Routes = [
     component: AtualizarCursoComponent,
   },
   {
-    path: 'detalhar/:id',
+    path: 'detalhar/:id', data: {breadcrumb: "detalhar"},
     component: ExibirCursoComponent,
   },
   {

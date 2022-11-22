@@ -5,3 +5,7 @@ table {
 th.mat-sort-header-sorted {
   color: black;
 }
+
+.btn_exercicios{
+  margin-left: 8px;
+}

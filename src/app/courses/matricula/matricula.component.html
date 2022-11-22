@@ -1,8 +1,6 @@
-<body>
-  <app-header></app-header>
-  <div class="content">
+<div class="content">
   <div class="panel-body">
-    <table class="table table-striped">
+    <!-- <table class="table table-striped">
       <thead>
         <tr>
           <th>Nota</th>
@@ -17,8 +15,33 @@
           <button (click)="gotoExercicios(matricula.matriculaId)">Realizar Exercicios</button>
         </tr>
       </tbody>
-    </table>
+    </table> -->
+    <table mat-table [dataSource]="matriculas" class="mat-elevation-z8">
+      <ng-container matColumnDef="Curso">
+        <th mat-header-cell *matHeaderCellDef> Curso </th>
+        <td mat-cell *matCellDef="let matricula"> {{matricula.curso.titulo}} </td>
+      </ng-container>
+      <ng-container matColumnDef="Nota">
+        <th mat-header-cell *matHeaderCellDef> Nota </th>
+        <td mat-cell *matCellDef="let matricula"> {{matricula.nota}} </td>
+      </ng-container>
+    <ng-container matColumnDef="Situação">
+      <th class="th-descricao" mat-header-cell *matHeaderCellDef> Situação </th>
+      <td mat-cell *matCellDef="let matricula"> {{matricula.status}} </td>
+    </ng-container>
+    <ng-container matColumnDef="Ações">
+      <th mat-header-cell *matHeaderCellDef> Ações </th>
+      <td mat-cell *matCellDef="let matricula">
+        <div class="buttons">
+          <button class="btn_continuar" mat-stroked-button color="primary" (click)="gotoCurso(matricula.matriculaId)">Continuar Curso</button>
+          <button class="btn_exercicios" mat-stroked-button (click)="gotoExercicios(matricula
+          .matriculaId)">Realizar Exercicios</button>
+        </div>
+      </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
   </div>
 </div>
-  <app-footer class="footer"></app-footer>
-</body>
+

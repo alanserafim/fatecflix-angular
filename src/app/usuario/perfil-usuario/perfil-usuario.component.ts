@@ -1,29 +1,13 @@
-import { UsuarioLogado } from './../../types/UsuarioLogado';
-import { Observable } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
-import {MatTableDataSource} from '@angular/material/table';
-import { UsuarioLogadoService } from 'src/app/services/authentication/usuario-logado/usuario-logado.service';
-import { NovoUsuario } from 'src/app/types/NovoUsuario';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Observable } from 'rxjs';
+import { UsuarioLogadoService } from 'src/app/services/authentication/usuario-logado/usuario-logado.service';
 import { ConsultarUsuariosService } from 'src/app/services/consultar-usuarios/consultar-usuarios.service';
 import { Usuario } from 'src/app/types/Usuario';
 
-export interface PeriodicElement {
-  curso: string;
-  posicao: number;
-  progresso: number;
-  status: string;
-  certificado: string;
-}
-
-const ELEMENT_DATA: PeriodicElement[] = [
-  {posicao: 1, curso: 'Node', progresso: 40, status: 'Em andamento', certificado: 'Indisponível'},
-  {posicao: 2, curso: 'Spring', progresso: 10, status: 'Em andamento', certificado: 'Indisponível'},
-  {posicao: 3, curso: 'Estrutura de Dados', progresso: 100, status: 'Concluído', certificado: 'Disponível'},
-];
+import { UsuarioLogado } from './../../types/UsuarioLogado';
 
 var usuarioLogado$ : UsuarioLogado
-
 
 @Component({
   selector: 'app-perfil-usuario',
@@ -34,17 +18,13 @@ export class PerfilUsuarioComponent implements OnInit {
   usuarioLogado$ : Observable <UsuarioLogado> = this.usuarioLogadoService.retornaUsuarioLogado()
 
   displayedColumns: string[] = ['posicao', 'curso', 'progresso', 'status', 'certificado'];
-  dataSource = new MatTableDataSource(ELEMENT_DATA);
 
   submitted = false;
   // @ts-ignore: Object is possibly 'undefined'.
   userId: number;
   // @ts-ignore: Object is possibly 'undefined'.
   usuario: Usuario;
-  applyFilter(event: Event) {
-    const filterValue = (event.target as HTMLInputElement).value;
-    this.dataSource.filter = filterValue.trim().toLowerCase();
-  }
+
   constructor(
     private usuarioLogadoService: UsuarioLogadoService,
     private route: ActivatedRoute,
@@ -56,7 +36,6 @@ export class PerfilUsuarioComponent implements OnInit {
 
   }
 
-  
   recebeUsuarioLogado(){
     this.usuarioLogadoService.retornaUsuarioLogado().subscribe(
       (usuario) => {

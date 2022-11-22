@@ -10,6 +10,7 @@ import { DashboardAulasComponent } from './dashboard-aulas/dashboard-aulas.compo
 import { DeletarAulasComponent } from './deletar-aulas/deletar-aulas.component';
 import { ExibirAulaComponent } from './exibir-aula/exibir-aula.component';
 import { ListarAulasComponent } from './listar-aulas/listar-aulas.component';
+import { BreadcrumbModule } from 'angular-crumbs';
 
 const routes: Routes = [
   {
@@ -21,11 +22,11 @@ const routes: Routes = [
     component: ExibirAulaComponent
   },
   {
-    path: 'listar/:id',
+    path: 'listar/:id',data: {breadcrumb: 'lista'},
     component: ListarAulasComponent
   },
   {
-    path: 'dashboard/:id',
+    path: 'dashboard/:id', data: {breadcrumb: "dashboard"},
     component: DashboardAulasComponent
   },
   {

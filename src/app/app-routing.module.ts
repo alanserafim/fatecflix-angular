@@ -10,7 +10,7 @@ const routes: Routes = [
 },
   {
     path: 'home',
-    loadChildren:()=> import ('./home/home.module').then((m)=> m.HomeModule )
+    loadChildren:()=> import ('./home/home.module').then((m)=> m.HomeModule , )
   },
   {
     path: 'usuario',
@@ -23,7 +23,7 @@ const routes: Routes = [
     canLoad : [AuntenticacaoGuard],
   },
   {
-    path: 'dashboard',
+    path: 'dashboard', data: {breadcrumb: "dashboard"},
     loadChildren:()=> import ('./dashboard/dashboard.module' ).then((m)=> m.DashboardModule ),
     canLoad : [AuntenticacaoGuard],
   },

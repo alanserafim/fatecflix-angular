@@ -13,7 +13,7 @@
     <div  style="margin-left: 5px;" *ngFor="let aula of aulas | async">
       <mat-card>
         <mat-card-title>
-          <button mat-raised-button color="primary" (click)="updateSrc(aula.video, aula.aulaId)">
+          <button mat-raised-button color="primary" color="basic" (click)="updateSrc(aula.video, aula.aulaId)">
             {{aula.titulo}}
         </button>
         </mat-card-title>

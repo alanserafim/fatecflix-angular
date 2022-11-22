@@ -45,8 +45,25 @@
 }
 
 .texto{
-  background-color: #ff0534;
+  background: rgba(66, 16, 11, 0.685);
   z-index: -1;
   position: absolute;
-  top: 80%;
+  top: 16%;
+  left: 49%;
+  text-align: center;
+  /* border: 5px solid white; */
+  box-shadow: 5px 5px 15px #ff0534;
+  border-radius: 12px;
+  padding: 1em;
+  line-height: 2em;
+  color: #fefefe;
+}
+
+.texto h1{
+  font-size: 3em;
+  font-weight: bold;
+}
+
+.texto p{
+  font-size: 2em;
 }

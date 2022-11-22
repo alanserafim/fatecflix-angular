@@ -2,7 +2,14 @@
   color: var(--footer-text-color);
   height: 150px;
   margin-top: 1em;
-  background-color: transparent;
+  background: rgb(66, 16, 11);
+  background: linear-gradient(
+    135deg,
+    rgba(66, 16, 11, 1) 51%,
+    rgba(0, 0, 0, 1) 91%,
+    rgba(0, 0, 0, 1) 100%);
+  width: auto;
+  /* background-color: transparent; */
 }
 
 .container {
@@ -32,7 +39,7 @@ p {
 }
 
 .socialMedia {
-  margin-left: 1270px;
+  margin-left: 1400px;
 }
 
 .icone_rede {
@@ -58,6 +65,49 @@ p {
   float: center;
 }
 
+@media (max-width: 750px) {
+  .socialMedia {
+    margin-left: 950px;
+  }
+  .copy {
+    float: none;
+
+   }
+}
+@media (max-width: 1325px) {
+  .socialMedia {
+    margin-left: 850px;
+  }
+ .icone_rede {
+    padding-top: 5%;
+    margin-bottom: 35px;
+    padding-left: 8%;
+  }
+ #texto1 {
+    margin-left: 50px;
+  }
+
+ .developed {
+ float: left;
+ }
+
+ .rodape {
+  height: 200px;
+ }
+
+ #texto2 {
+  padding-top: 150px;
+  margin-left: 180px;
+ }
+
+ .copy {
+  margin-left: 400px;
+  margin-bottom: 150px;
+ }
+ /* .footer {
+  margin: 1px;
+ } */
+}
 
 @media (max-width: 676px) {
   .socialMedia {
@@ -85,4 +135,10 @@ p {
   margin-left: 180px;
 }
 
+/* .footer {
+  margin: 50px;
+} */
+
 }
+
+

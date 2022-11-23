@@ -36,11 +36,11 @@ export class DeletaExercicioComponent implements OnInit {
 
   deleteExercicio(): void {
     this.deletarExercicio.deletaExercicio(this.exercicioId).subscribe(() => {
-      this.router.navigate(["/exercicios/listar", this.cursoId]);
+      this.router.navigate(["/usuario/sucesso"]);
     });
   }
 
   cancel(): void {
-    this.router.navigate(["/exercicios/listar", this.cursoId]);
+    this.router.navigate(["/usuario/sucesso"]);
   }
 }

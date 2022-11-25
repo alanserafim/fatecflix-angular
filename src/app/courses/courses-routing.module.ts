@@ -10,43 +10,69 @@ import { ExibirCursoComponent } from './exibir-curso/exibir-curso.component';
 import { ExibirTrilhaCursoComponent } from './exibir-trilha-curso/exibir-trilha-curso.component';
 import { GridCursosComponent } from './grid-cursos/grid-cursos.component';
 
+
 const routes: Routes = [
-  {
-    path: 'cadastrar',
-    component: CadastrarCursoComponent,
-  },
   {
     path: 'listar',
     component: ListarCursosComponent,
+    data:{
+      breadcrumb: 'Todos'
+    },
+    children:[ {
+      path: 'listar/:categoria',
+      component: GridCursosComponent,
+      data:{
+        breadcrumb: ':categoria'
+      },
+    },
+    {
+      path: 'cadastrar',
+      component: CadastrarCursoComponent,
+      data:{
+        breadcrumb: 'cadastro'
+      },
+    },
+    {
+      path: 'trilha',
+      component: ExibirTrilhaCursoComponent,
+      data:{
+        breadcrumb: 'trilha'
+      },
+    },
+    {
+      path: 'deletar/:id',
+      component: DeletarCursoComponent,
+      data:{
+        breadcrumb: 'deletar'
+      },
+    },
+    {
+      path: 'atualizar/:id',
+      component: AtualizarCursoComponent,
+      data:{
+        breadcrumb: 'atualizar'
+      },
+    },
+    {
+      path: 'detalhar/:id',
+      component: ExibirCursoComponent,
+      data:{
+        breadcrumb: 'detalhar'
+      },
+    },
+    {
+      path: 'matricula',
+      component: MatriculaComponent,
+      data:{
+        breadcrumb: 'matricula'
+      },
+    },
+    {
+      path: 'menu',
+      component: MenuCursosComponent,
+    }]
   },
-  {
-    path: 'listar/:categoria',
-    component: GridCursosComponent,
-  },
-  {
-    path: 'trilha',
-    component: ExibirTrilhaCursoComponent,
-  },
-  {
-    path: 'deletar/:id',
-    component: DeletarCursoComponent,
-  },
-  {
-    path: 'atualizar/:id',
-    component: AtualizarCursoComponent,
-  },
-  {
-    path: 'detalhar/:id',
-    component: ExibirCursoComponent,
-  },
-  {
-    path: 'matricula',
-    component: MatriculaComponent,
-  },
-  {
-    path: 'menu',
-    component: MenuCursosComponent,
-  },
+ 
 ];
 
 @NgModule({

@@ -3,7 +3,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { BreadcrumbModule } from "primeng/breadcrumb";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TokenInterceptor } from './services/interceptors/token.interceptor';
@@ -20,6 +20,7 @@ import { TokenInterceptor } from './services/interceptors/token.interceptor';
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    BreadcrumbModule,
   ],
   providers: [
     {

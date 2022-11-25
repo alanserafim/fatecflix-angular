@@ -77,6 +77,8 @@ h2 {
 
 .btn__submit {
   margin-top: 0.8em;
+  height: 50px;
+  border-radius: 6px;
 }
 
 /*Sticky footer*/
@@ -93,7 +95,6 @@ h2 {
 .footer {
   flex-shrink: 0;
   background-color: transparent;
-  box-shadow: 5px 5px 15px #ff0534;
 }
 
   .header {

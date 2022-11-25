@@ -92,7 +92,9 @@ button{
   flex: 1 0 auto;
 
 }
+
 .footer {
+  padding-top: 1em;
   flex-shrink: 0;
 }
 

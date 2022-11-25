@@ -1,6 +1,6 @@
 <div class="categoria">
-  <button (click)="gotoList()" class="categoria-item">Todos</button>
+  <button mat-raised-button (click)="gotoList()" class="categoria-item">Todos</button>
   <div class="categoria-list" *ngFor="let curso of list">
-    <button (click)="getCursoByCategoria(curso.categoria)" class="categoria-item">{{curso.categoria}}</button>
+    <button mat-raised-button (click)="getCursoByCategoria(curso.categoria)" class="categoria-item">{{curso.categoria}}</button>
   </div>
 </div>

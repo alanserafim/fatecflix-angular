@@ -1,107 +1,64 @@
-<div class="wrapper" *ngIf="usuarioLogado$ | async as user ">
-  <app-header></app-header>
+<div class="wrapper" >
   <div class="content">
-    <app-categoria-cursos></app-categoria-cursos>
-  <section class="titulo">
-    <h1>Cursos</h1>
-  </section>
-  <section class="cards" >
-    <mat-card class="example-card" *ngFor="let curso of cursos | async">
-        <div class="container">
-          <mat-card-title>{{curso.titulo}}</mat-card-title>
-            <p>{{curso.categoria}}</p>
-            <p>Média de Avaliação: {{curso.mediaAvaliacao}}</p>
-            <p>Carga Horária: {{curso.cargaHorario}}</p>
-            <p>{{curso.descricao}}</p>
-        </div>
-        <mat-card-actions>
-          <button class="btn_matricular" mat-stroked-button *ngIf="user.roles.includes('INSTRUTOR')" (click)="detalhar(curso.cursoId)" class="btn btn-info" style="margin-right: 10px">Detalhar</button>
-          <button class="btn_matricular" mat-stroked-button *ngIf="user.roles.includes('ALUNO')" (click)="matricular(curso.cursoId)" class="btn btn-info" style="margin-right: 10px">Matricular</button>
-          <button class="btn_atualizar" mat-stroked-button *ngIf="user.roles.includes('INSTRUTOR')" (click)="atualizaCurso(curso.cursoId)" class="btn btn-info" style="margin-left: 10px">Atualizar</button>
-          <button class="btn_deletar" mat-stroked-button color="warn"  *ngIf="user.roles.includes('INSTRUTOR')" (click)="deletaCurso(curso.cursoId)" class="btn btn-danger">Deletar</button>
-        </mat-card-actions>
-    </mat-card>
-  </section>
+      <app-header></app-header>
+      <div class="main" *ngIf="usuarioLogado$ | async as user">
+      <app-categoria-cursos></app-categoria-cursos>
+      <section class="titulo">
+        <h1>Cursos</h1>
+      </section>
+      <section class="cards">
+        <mat-card class="example-card" *ngFor="let curso of cursos | async">
+          <div class="container">
+            <mat-card-title>{{ curso.titulo }}</mat-card-title>
+            <p>{{ curso.categoria }}</p>
+            <p>Média de Avaliação: {{ curso.mediaAvaliacao }}</p>
+            <p>Carga Horária: {{ curso.cargaHorario }}</p>
+            <p>{{ curso.descricao }}</p>
+          </div>
+          <mat-card-actions>
+            <button
+              class="btn_matricular"
+              mat-stroked-button
+              *ngIf="user.roles.includes('INSTRUTOR')"
+              (click)="detalhar(curso.cursoId)"
+              class="btn btn-info"
+              style="margin-right: 10px"
+            >
+              Detalhar
+            </button>
+            <button
+              class="btn_matricular"
+              mat-stroked-button
+              *ngIf="user.roles.includes('ALUNO')"
+              (click)="matricular(curso.cursoId)"
+              class="btn btn-info"
+              style="margin-right: 10px"
+            >
+              Matricular
+            </button>
+            <button
+              class="btn_atualizar"
+              mat-stroked-button
+              *ngIf="user.roles.includes('INSTRUTOR')"
+              (click)="atualizaCurso(curso.cursoId)"
+              class="btn btn-info"
+              style="margin-left: 10px"
+            >
+              Atualizar
+            </button>
+            <button
+              class="btn_deletar"
+              mat-stroked-button
+              color="warn"
+              *ngIf="user.roles.includes('INSTRUTOR')"
+              (click)="deletaCurso(curso.cursoId)"
+              class="btn btn-danger"
+            >
+              Deletar
+            </button>
+          </mat-card-actions>
+        </mat-card>
+      </section>
+    </div>
+  <app-footer class="footer"></app-footer>
 </div>
-</div>
-
-
-    <!--
-    <section class="tabela">
-      <h1>CURSOS CADASTRADOS</h1>
-      <table mat-table [dataSource]="cursos" class="mat-elevation-z8">
-        <ng-container matColumnDef="Titulo">
-          <th mat-header-cell *matHeaderCellDef> Título </th>
-          <td mat-cell *matCellDef="let curso"> {{curso.titulo}} </td>
-        </ng-container>
-        <ng-container matColumnDef="Descrição">
-          <th class="th-descricao" mat-header-cell *matHeaderCellDef> Descrição </th>
-          <td mat-cell *matCellDef="let curso"> {{curso.descricao}} </td>
-        </ng-container>
-        <ng-container matColumnDef="Carga Horária">
-          <th mat-header-cell *matHeaderCellDef> Carga Horária </th>
-          <td mat-cell *matCellDef="let curso"> {{curso.cargaHorario}} </td>
-        </ng-container>
-        <ng-container matColumnDef="Atualização">
-          <th mat-header-cell *matHeaderCellDef> Atualização </th>
-          <td mat-cell *matCellDef="let curso"> {{curso.dataAtualizacao | date: 'dd/MM/yyyy'}} </td>
-        </ng-container>
-        <ng-container matColumnDef="Avaliação">
-          <th mat-header-cell *matHeaderCellDef> Avaliação </th>
-          <td mat-cell *matCellDef="let curso"> {{curso.mediaAvaliacao}} </td>
-        </ng-container>
-        <ng-container matColumnDef="Ações">
-          <th mat-header-cell *matHeaderCellDef> Ações </th>
-          <td mat-cell *matCellDef="let curso">
-            <div class="buttons">
-              <button class="btn_detalhar" mat-stroked-button (click)="detalhar(curso.cursoId)" class="btn btn-info" style="margin-right: 10px">Detalhar</button>
-              <button class="btn_matricular" mat-stroked-button *ngIf="user.roles.includes('ALUNO')" (click)="detalhar(curso.cursoId)" class="btn btn-info" style="margin-right: 10px">Matricular</button>
-              <button class="btn_atualizar" mat-stroked-button *ngIf="user.roles.includes('INSTRUTOR')" (click)="atualizaCurso(curso.cursoId)" class="btn btn-info" style="margin-left: 10px">Atualizar</button>
-              <button class="btn_deletar" mat-stroked-button color="warn"  *ngIf="user.roles.includes('INSTRUTOR')" (click)="deletaCurso(curso.cursoId)" class="btn btn-danger">Deletar</button>
-            </div>
-          </td>
-        </ng-container>
-        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-      </table>
-    </section>
-    -->
-
-
-
-
-
-
-
-
-
-
-<!--
- <div class="panel-body">
-    <table class="table table-striped">
-      <thead>
-        <tr>
-          <th>Titulo</th>
-          <th>Descrição</th>
-          <th>Carga Horária</th>
-          <th>Atualização</th>
-          <th>Avaliação</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let curso of cursos | async">
-          <td>{{curso.titulo}}</td>
-          <td>{{curso.descricao}}</td>
-          <td>{{curso.cargaHorario}}</td>
-          <td>{{curso.dataAtualizacao}}</td>
-          <td>{{curso.mediaAvaliacao}}</td>
-          <td>
-            <button (click)="matricular(curso.cursoId)" class="btn btn-info" style="margin-right: 10px">Matricular</button>
-            <button (click)="deletaCurso(curso.cursoId)" class="btn btn-danger">Deletar</button>
-            <button (click)="atualizaCurso(curso.cursoId)" class="btn btn-info" style="margin-left: 10px">Atualizar</button>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-
--->

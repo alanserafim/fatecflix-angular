@@ -75,6 +75,14 @@ button{
 
 
 /*Sticky footer*/
+html, body {
+  height: 100%;
+}
+
+.main {
+  min-height: 72vh;
+}
+
 .wrapper{
   display: flex;
   flex-direction: column;
@@ -90,10 +98,10 @@ button{
 
 .content {
   flex: 1 0 auto;
-
 }
 .footer {
   flex-shrink: 0;
+  box-shadow: 5px 5px 15px #ff0534;
 }
 
 

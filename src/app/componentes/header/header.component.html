@@ -1,21 +1,35 @@
 <mat-toolbar class="toolbar">
   <div class="container">
-
-    <button mat-flat-button routerLink="/home"><img class="logo-img" src="assets/imagens/FatecFlix.png" alt="" /></button>
+    <button mat-flat-button routerLink="/home">
+      <img class="logo-img" src="assets/imagens/FatecFlix.png" alt="" />
+    </button>
     <!--
     <img class="logoHeader" src="./img/logoFatecFlix.png" alt="Logo da Alura">
     -->
   </div>
-    <div class="container usuario" *ngIf="!isLoggedIn; else admin">
-      <!--<button mat-flat-button>Cursos</button>-->
-      <button class="btn__login" mat-flat-button routerLink="/home/login" >Login</button>
-      <div class="container usuario">
-        <button class="btn__matricula" routerLink="/usuario/cadastro" mat-flat-button>Matricule-se</button>
-      </div>
+  <div class="container usuario" *ngIf="!isLoggedIn; else admin">
+    <!--<button mat-flat-button>Cursos</button>-->
+    <button
+      class="btn__login"
+      mat-flat-button
+      routerLink="/home/login"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      Login
+    </button>
+    <div class="container usuario">
+      <button
+        class="btn__matricula"
+        routerLink="/usuario/cadastro"
+        mat-flat-button
+      >
+        Matricule-se
+      </button>
     </div>
+  </div>
 
-
-    <ng-template #admin>
-      <app-admin></app-admin>
-    </ng-template>
+  <ng-template #admin>
+    <app-admin></app-admin>
+  </ng-template>
 </mat-toolbar>

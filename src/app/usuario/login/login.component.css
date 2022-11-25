@@ -92,6 +92,8 @@ h2 {
 }
 .footer {
   flex-shrink: 0;
+  background-color: transparent;
+  box-shadow: 5px 5px 15px #ff0534;
 }
 
   .header {

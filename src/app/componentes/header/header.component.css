@@ -58,3 +58,7 @@ button{
     width: 170px;
   }
 }
+
+.active{
+  display: none;
+}

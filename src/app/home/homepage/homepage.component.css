@@ -139,7 +139,8 @@ main{
   font-size:18px;
   background-color: #AC1305;
   box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
-  border-radius: 5px;
+  border-radius: 6px;
+  color: #fefefe;
 }
 
 .btn-registre{
@@ -200,6 +201,5 @@ h1{
 .card-color {
   border-left: 3px solid #AC1305;
 }
-
 
 

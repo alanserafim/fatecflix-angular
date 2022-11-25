@@ -52,6 +52,7 @@ button{
   max-width: 395px;
   height: 350px;
   margin: 1em;
+  background-color: #f5f5f5;
 }
 
 .cards{
@@ -87,21 +88,24 @@ html, body {
   display: flex;
   flex-direction: column;
   min-height: 100%;
-  background: rgb(66, 16, 11);
+
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+.rodape {
+  flex-shrink: 0;
+  margin-top: 2em;
+  background-color: unset;
+  background: rgb(66, 16, 11) !important;
   background: linear-gradient(
     135deg,
     rgba(66, 16, 11, 1) 51%,
     rgba(0, 0, 0, 1) 91%,
     rgba(0, 0, 0, 1) 100%
   );
-}
-
-.content {
-  flex: 1 0 auto;
-}
-.footer {
-  flex-shrink: 0;
-  box-shadow: 5px 5px 15px #ff0534;
 }
 
 

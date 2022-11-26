@@ -31,6 +31,7 @@
 }
 mat-card-subtitle{
   padding-top: 1em;
+  color: black;
 }
 
 .content {
@@ -63,7 +64,7 @@ button{
 }
 
 .btn_video{
-  background-color: black;
+  background-color: rgba(12, 11, 11, 0.527);
   color: white;
 }
 

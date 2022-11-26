@@ -41,6 +41,8 @@ th.mat-sort-header-sorted {
 
 button{
   font-size: 1em;
+  background-color: rgb(136, 30, 21);
+  color: #fefefe;
 }
 
 .buttons{

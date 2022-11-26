@@ -49,10 +49,8 @@
             <button
               class="btn_deletar"
               mat-stroked-button
-              color="warn"
               *ngIf="user.roles.includes('INSTRUTOR')"
               (click)="deletaCurso(curso.cursoId)"
-              class="btn btn-danger"
             >
               Deletar
             </button>

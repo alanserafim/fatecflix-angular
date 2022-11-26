@@ -7,13 +7,14 @@
         [height]="400"
         [width]="690"
       ></youtube-player>
+      <app-comentar [cursoId]="cursoId" [aulaId]="aulaId"></app-comentar>
     </div>
   </section>
   <section class="container lista">
     <div  style="margin-left: 5px;" *ngFor="let aula of aulas | async">
       <mat-card>
         <mat-card-title>
-          <button mat-raised-button color="primary" color="basic" (click)="updateSrc(aula.video, aula.aulaId)">
+          <button class="btn_video" mat-stroked-button (click)="updateSrc(aula.video, aula.aulaId)">
             {{aula.titulo}}
         </button>
         </mat-card-title>
@@ -22,13 +23,13 @@
         </mat-card-subtitle>
         <mat-card-actions>
           <button mat-stroked-button *ngIf="user.roles.includes('INSTRUTOR')" (click)="atualiza(aula.aulaId)">Atualizar</button>
-          <button mat-stroked-button color="warn" *ngIf="user.roles.includes('INSTRUTOR')" (click)="deleta(aula.aulaId)">Deletar</button>
+          <button mat-stroked-button *ngIf="user.roles.includes('INSTRUTOR')" (click)="deleta(aula.aulaId)">Deletar</button>
         </mat-card-actions>
       </mat-card>
     </div>
   </section>
 </div>
-<app-comentar [cursoId]="cursoId" [aulaId]="aulaId"></app-comentar>
+
 <app-comentarios *ngIf="aulaId" (changes)="aulaId" [cursoId]="cursoId" [aulaId]="aulaId"></app-comentarios>
 
 

@@ -3,12 +3,13 @@ npm install
 npm install -g @angular/cli
 npm i angular-cli-ghpages
 
-pm install primeng --save --force
+npm install primeng --save --force
 npm install primeicons --save --force
-https://dev.to/zhiyueyi/create-a-simple-breadcrumb-in-angular-ag5
 
 npm i -g @angular/youtube-player
 npm install tslib
+
+https://dev.to/zhiyueyi/create-a-simple-breadcrumb-in-angular-ag5
 
 git config --global user.email "alan.serafim@fatec.sp.gov.br"
 git config --global user.name "alanserafim"

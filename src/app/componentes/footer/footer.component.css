@@ -27,6 +27,23 @@
   filter: grayscale(.3);
 }
 
+@media (max-width: 500px) {
+  .developed{
+    display: none;
+  }
+  .container{
+    flex-direction: column;
+  }
+  .socialMedia{
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+  .rodape{
+    height: auto;
+  }
+}
+
 
 /* #texto1 {
   margin-left: 45px;

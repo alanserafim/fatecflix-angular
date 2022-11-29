@@ -29,8 +29,13 @@ button{
 }
 
 @media (max-width: 676px) {
-  .logoHeader {
-    width: 130px;
+
+.logo button{
+  background-color: #fefefe;
+  width: 70%;
+}
+  .logo-img {
+    width: 100%;
   }
   .toolbar{
     background-color: transparent;
@@ -45,7 +50,7 @@ button{
     font-size: 1.5em;
   }
   .btn__matricula{
-    font-size: 1.3em;
+    font-size: 1.8em;
     display: unset;
     border: 2px solid #ff0534;
     border-radius: 16px;

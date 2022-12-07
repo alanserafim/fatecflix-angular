@@ -20,6 +20,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 
 @NgModule({
@@ -28,15 +30,36 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     CommonModule,
     MatCardModule,
     MatButtonModule,
+    MatInputModule,
+    MatIconModule,
+    MatGridListModule,
+    MatTableModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatButtonToggleModule,
+    MatTabsModule,
+    MatListModule,
+    MatStepperModule,
+    MatSelectModule,
+    MatSidenavModule,
+    MatToolbarModule,
+    FooterModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HeaderModule,
+    MessagesModule,
+    SucessoModule,
 
   ],
   exports: [
     MatCardModule,
     MatButtonModule,
+    MatFormFieldModule,
     MatInputModule,
     MatIconModule,
     MatGridListModule,
     MatTableModule,
+    MatPaginatorModule,
     MatDatepickerModule,
     MatNativeDateModule,
     MatButtonToggleModule,

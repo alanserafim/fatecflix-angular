@@ -1,3 +1,4 @@
+import { SharedModule } from './../shared/shared.module';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -31,17 +32,7 @@ import { JsonParsePipePipe } from '../pipe/json-parse-pipe.pipe';
   imports: [
     CommonModule,
     ExerciciosRoutingModule,
-    MatInputModule,
-    MatButtonModule,
-    FormsModule,
-    MatIconModule,
-    FooterModule,
-    HeaderModule,
-    MatCardModule,
-    MatGridListModule,
-    ReactiveFormsModule,
-    MatStepperModule,
-    MatListModule
+    SharedModule
   ]
 })
 export class ExerciciosModule { }

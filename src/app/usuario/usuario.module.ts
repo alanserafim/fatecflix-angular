@@ -1,3 +1,4 @@
+import { SharedModule } from './../shared/shared.module';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -45,25 +46,9 @@ import { UsuarioRoutingModule } from './usuario-routing.module';
   imports: [
     CommonModule,
     UsuarioRoutingModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatCardModule,
-    MatButtonModule,
-    MatSelectModule,
-    MatButtonModule,
     HomeModule,
-    MatIconModule,
-    FormsModule,
-    MessagesModule,
-    ReactiveFormsModule,
-    HeaderModule,
-    FooterModule,
-    SucessoModule,
-    MatSidenavModule,
-    MatListModule,
-    MatTableModule,
-    MatPaginatorModule,
-    CoursesModule
+    CoursesModule,
+    SharedModule
   ]
 })
 export class UsuarioModule { }

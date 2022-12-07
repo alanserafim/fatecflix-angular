@@ -1,26 +1,18 @@
-import { YouTubePlayerModule } from '@angular/youtube-player';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { MatButtonModule } from '@angular/material/button';
-import { MatCardModule } from '@angular/material/card';
-import { MatIconModule } from '@angular/material/icon';
-import { MatInputModule } from '@angular/material/input';
-import { MatGridListModule } from '@angular/material/grid-list';
+import { YouTubePlayerModule } from '@angular/youtube-player';
 
-import { AulasRoutes } from './aulas.routing';
-import { CadastrarAulasComponent } from './cadastrar-aulas/cadastrar-aulas.component';
-import { DashboardAulasComponent } from './dashboard-aulas/dashboard-aulas.component';
-import { ExibirAulaComponent } from './exibir-aula/exibir-aula.component';
-import { ListarAulasComponent } from './listar-aulas/listar-aulas.component';
-import { HeaderModule } from '../componentes/header/header.module';
-import { FooterModule } from '../componentes/footer/footer.module';
 import { SafePipe } from '../pipe/safe.pipe';
+import { SharedModule } from './../shared/shared.module';
 import { AtualizarAulasComponent } from './atualizar-aulas/atualizar-aulas.component';
-import { DeletarAulasComponent } from './deletar-aulas/deletar-aulas.component';
+import { CadastrarAulasComponent } from './cadastrar-aulas/cadastrar-aulas.component';
 import { ComentarComponent } from './comentar/comentar.component';
 import { ComentariosComponent } from './comentarios/comentarios.component';
+import { DashboardAulasComponent } from './dashboard-aulas/dashboard-aulas.component';
 import { DeletaComentarioComponent } from './deleta-comentario/deleta-comentario.component';
+import { DeletarAulasComponent } from './deletar-aulas/deletar-aulas.component';
+import { ExibirAulaComponent } from './exibir-aula/exibir-aula.component';
+import { ListarAulasComponent } from './listar-aulas/listar-aulas.component';
 
 @NgModule({
   declarations: [
@@ -37,16 +29,8 @@ import { DeletaComentarioComponent } from './deleta-comentario/deleta-comentario
   ],
   imports: [
     CommonModule,
-    MatCardModule,
-    AulasRoutes,
-    MatButtonModule,
-    MatInputModule,
-    FormsModule,
-    MatIconModule,
-    MatGridListModule,
-    FooterModule,
-    HeaderModule,
-    YouTubePlayerModule
+    YouTubePlayerModule,
+    SharedModule
   ]
 })
 export class AulasModule { }

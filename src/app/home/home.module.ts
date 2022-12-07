@@ -1,3 +1,4 @@
+import { SharedModule } from './../shared/shared.module';
 import { FooterModule } from './../componentes/footer/footer.module';
 import { HeaderModule } from './../componentes/header/header.module';
 import { CommonModule } from '@angular/common';
@@ -18,11 +19,7 @@ import { CardComponent } from './homepage/card/card.component';
   imports: [
     CommonModule,
     HomeRoutingModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatGridListModule,
-    HeaderModule,
-    FooterModule
+    SharedModule
   ],
   exports:[]
 })

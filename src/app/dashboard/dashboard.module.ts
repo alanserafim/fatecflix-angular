@@ -1,3 +1,4 @@
+import { SharedModule } from './../shared/shared.module';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
@@ -24,17 +25,7 @@ import {MatIconModule} from '@angular/material/icon';
   ],
   imports: [
     CommonModule,
-    DashboardRoutingModule,
-    MatCardModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatTableModule,
-    FooterModule,
-    HeaderModule,
-    MatListModule,
-    MatSelectModule,
-    MatSidenavModule,
-    MatIconModule
+    SharedModule
   ]
 })
 export class DashboardModule { }

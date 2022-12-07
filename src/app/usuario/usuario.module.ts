@@ -1,25 +1,9 @@
-import { SharedModule } from './../shared/shared.module';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatButtonModule } from '@angular/material/button';
-import { MatCardModule } from '@angular/material/card';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatIconModule } from '@angular/material/icon';
-import { MatInputModule } from '@angular/material/input';
-import { MatListModule } from '@angular/material/list';
-import { MatPaginatorModule } from '@angular/material/paginator';
-import { MatSelectModule } from '@angular/material/select';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatTableModule } from '@angular/material/table';
 
-import { HeaderModule } from '../componentes/header/header.module';
-import { MessagesModule } from '../componentes/messages/messages.module';
 import { CoursesModule } from '../courses/courses.module';
-import { MatriculaComponent } from '../courses/matricula/matricula.component';
 import { HomeModule } from '../home/home.module';
-import { FooterModule } from './../componentes/footer/footer.module';
-import { SucessoModule } from './../componentes/sucesso/sucesso.module';
+import { SharedModule } from './../shared/shared.module';
 import { AtualizarUsuarioComponent } from './atualizar-usuario/atualizar-usuario.component';
 import { HistoricoUsuarioComponent } from './historico-usuario/historico-usuario.component';
 import { LoginComponent } from './login/login.component';

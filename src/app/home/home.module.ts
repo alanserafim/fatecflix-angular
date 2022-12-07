@@ -1,15 +1,10 @@
-import { SharedModule } from './../shared/shared.module';
-import { FooterModule } from './../componentes/footer/footer.module';
-import { HeaderModule } from './../componentes/header/header.module';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
-import { MatGridListModule } from '@angular/material/grid-list';
-import { MatToolbarModule } from '@angular/material/toolbar';
 
+import { SharedModule } from './../shared/shared.module';
 import { HomeRoutingModule } from './home-routing.module';
-import { HomepageComponent } from './homepage/homepage.component';
 import { CardComponent } from './homepage/card/card.component';
+import { HomepageComponent } from './homepage/homepage.component';
 
 @NgModule({
   declarations: [

@@ -1,3 +1,5 @@
+import { NovoUsuarioCadastroHomeComponent } from './novo-usuario-cadastro/novo-usuario-cadastro.component';
+import { LoginHomeComponent } from './login/login.component';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
@@ -10,6 +12,8 @@ import { HomepageComponent } from './homepage/homepage.component';
   declarations: [
     HomepageComponent,
     CardComponent,
+    LoginHomeComponent,
+    NovoUsuarioCadastroHomeComponent
   ],
   imports: [
     CommonModule,

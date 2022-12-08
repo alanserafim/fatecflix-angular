@@ -9,11 +9,11 @@ import { cpfValido } from './validators/cpf-valido.validator';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-novo-usuario-cadastro',
+  selector: 'app-novo-usuario-cadastro-home',
   templateUrl: './novo-usuario-cadastro.component.html',
   styleUrls: ['./novo-usuario-cadastro.component.css']
 })
-export class NovoUsuarioCadastroComponent implements OnInit {
+export class NovoUsuarioCadastroHomeComponent implements OnInit {
 
   novoUsuarioForm!: FormGroup;
 

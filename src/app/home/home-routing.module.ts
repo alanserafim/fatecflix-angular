@@ -1,17 +1,25 @@
-import { LoginGuard } from './../services/guarda-rotas/login.guard';
-import { AuntenticacaoGuard } from './../services/guarda-rotas/auntenticacao.guard';
-import { HomepageComponent } from './homepage/homepage.component';
+import { NovoUsuarioCadastroHomeComponent } from './novo-usuario-cadastro/novo-usuario-cadastro.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
+import { LoginActivatedGuard } from './../services/guarda-rotas/login-activated.guard';
+import { HomepageComponent } from './homepage/homepage.component';
+import { LoginHomeComponent } from './login/login.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: HomepageComponent},
+    component: HomepageComponent
+  },
   {
     path: 'login',
-    loadChildren:()=> import ('../usuario/usuario.module' ).then((m)=> m.UsuarioModule ),
-    canLoad : [LoginGuard]
+    component: LoginHomeComponent,
+    canActivate : [LoginActivatedGuard]
+  },
+  {
+    path: 'cadastro',
+    component: NovoUsuarioCadastroHomeComponent,
+    canActivate : [LoginActivatedGuard]
   },
 ];
 

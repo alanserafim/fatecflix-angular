@@ -4,11 +4,11 @@ import { AuthenticationService } from 'src/app/services/authentication/login/aut
 
 
 @Component({
-  selector: 'app-login',
+  selector: 'app-login-home',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit {
+export class LoginHomeComponent implements OnInit {
   hide = true;
   email = '';
   senha = '';

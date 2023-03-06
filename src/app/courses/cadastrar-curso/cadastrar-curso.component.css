@@ -7,7 +7,7 @@ body{
   justify-content: flex-start;
   margin: 2em;
   width: 70%;
-
+  box-shadow: 6px 6px 3px rgb(153, 92, 92);
 }
 
 .card__1{
@@ -20,8 +20,6 @@ body{
   justify-content: space-between;
   border-radius: 6px;
 }
-
-
 
 .card__1 h2{
   text-align: jus;
@@ -67,9 +65,20 @@ html, body {
   height: 100%;
 }
 
-body {
+.wrapper {
+  height: 100%;
   display: flex;
   flex-direction: column;
+}
+
+.content {
+  flex: 1 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.footer {
+  flex-shrink: 0;
   background: rgb(66, 16, 11);
       background: linear-gradient(
         135deg,
@@ -77,14 +86,6 @@ body {
         rgba(0, 0, 0, 1) 91%,
         rgba(0, 0, 0, 1) 100%
       );
-}
-.content {
-  flex: 1 0 auto;
-  display: flex;
-  justify-content: center;
-}
-.footer {
-  flex-shrink: 0;
 }
 
 @media (max-width: 850px){

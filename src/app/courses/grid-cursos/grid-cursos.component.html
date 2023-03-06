@@ -17,7 +17,7 @@
           <button class="btn_matricular" mat-stroked-button *ngIf="user.roles.includes('INSTRUTOR')" (click)="detalhar(curso.cursoId)" class="btn btn-info" style="margin-right: 10px">Detalhar</button>
           <button class="btn_matricular" mat-stroked-button *ngIf="user.roles.includes('ALUNO')" (click)="detalhar(curso.cursoId)" class="btn btn-info" style="margin-right: 10px">Matricular</button>
           <button class="btn_atualizar" mat-stroked-button *ngIf="user.roles.includes('INSTRUTOR')" (click)="atualizaCurso(curso.cursoId)" class="btn btn-info" style="margin-left: 10px">Atualizar</button>
-          <button class="btn_deletar" mat-stroked-button color="warn"  *ngIf="user.roles.includes('INSTRUTOR')" (click)="deletaCurso(curso.cursoId)" class="btn btn-danger">Deletar</button>
+          <button class="btn-deletar" mat-stroked-button  *ngIf="user.roles.includes('INSTRUTOR')" (click)="deletaCurso(curso.cursoId)" class="btn btn-danger">Deletar</button>
         </mat-card-actions>
     </mat-card>
   </section>

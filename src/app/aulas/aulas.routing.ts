@@ -25,7 +25,7 @@ const routes: Routes = [
     component: ListarAulasComponent
   },
   {
-    path: 'dashboard/:id', data: {breadcrumb: "dashboard"},
+    path: 'dashboard/:id',
     component: DashboardAulasComponent
   },
   {

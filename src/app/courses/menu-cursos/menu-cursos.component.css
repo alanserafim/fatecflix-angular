@@ -79,4 +79,5 @@ html, body {
 }
 .footer {
   flex-shrink: 0;
+  box-shadow: 5px 5px 15px #ff0534;
 }

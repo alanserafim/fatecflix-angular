@@ -1,11 +1,5 @@
 .super-container{
-  background: rgb(66, 16, 11);
-  background: linear-gradient(
-    135deg,
-    rgba(66, 16, 11, 1) 51%,
-    rgba(0, 0, 0, 1) 91%,
-    rgba(0, 0, 0, 1) 100%
-  );
+
 }
 
 .container {
@@ -17,6 +11,7 @@
   width: 50vw;
   height: 50vh;
   display: flex;
+  background-color: #f5f5f5;
 }
 
 .card__banner {
@@ -95,6 +90,13 @@ h2 {
 .footer {
   flex-shrink: 0;
   background-color: transparent;
+  background: rgb(66, 16, 11);
+  background: linear-gradient(
+    135deg,
+    rgba(66, 16, 11, 1) 51%,
+    rgba(0, 0, 0, 1) 91%,
+    rgba(0, 0, 0, 1) 100%
+  );
 }
 
   .header {

@@ -49,10 +49,8 @@
             <button
               class="btn_deletar"
               mat-stroked-button
-              color="warn"
               *ngIf="user.roles.includes('INSTRUTOR')"
               (click)="deletaCurso(curso.cursoId)"
-              class="btn btn-danger"
             >
               Deletar
             </button>
@@ -60,5 +58,5 @@
         </mat-card>
       </section>
     </div>
-  <app-footer class="footer"></app-footer>
-</div>
+  </div>
+  <app-footer class="rodape"></app-footer>

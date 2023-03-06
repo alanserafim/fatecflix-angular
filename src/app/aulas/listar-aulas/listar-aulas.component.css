@@ -1,16 +1,7 @@
 
 .wrapper{
   display: flex;
-  
   justify-content: space-between;
-
-  background: rgb(66, 16, 11);
-  background: linear-gradient(
-    135deg,
-    rgba(66, 16, 11, 1) 51%,
-    rgba(0, 0, 0, 1) 91%,
-    rgba(0, 0, 0, 1) 100%
-  );
 }
 
 .video-comentario {
@@ -29,7 +20,7 @@
   width: 60%;
   display: flex;
   justify-content: center;
-  height: 80vh;
+  height: auto;
   overflow-y: hidden
 }
 
@@ -40,6 +31,7 @@
 }
 mat-card-subtitle{
   padding-top: 1em;
+  color: black;
 }
 
 .content {
@@ -53,10 +45,13 @@ mat-card-subtitle{
 .lista mat-card {
   margin-bottom: 1em;
   margin-right: 1em;
-  box-shadow: 2px 2px 8px #ff0534;;
+  box-shadow: 3px 3px 6px rgb(94, 93, 93);
 }
 
-
+button{
+  background-color: rgb(136, 30, 21);
+  color: white;
+}
 
 .btn_titulo{
   text-transform: capitalize;
@@ -68,7 +63,10 @@ mat-card-subtitle{
   margin-bottom: .4em ;
 }
 
-
+.btn_video{
+  background-color: rgba(12, 11, 11, 0.527);
+  color: white;
+}
 
 
 

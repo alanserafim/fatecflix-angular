@@ -8,7 +8,6 @@
   height: 10vh;
   justify-content: space-between;
   margin-bottom: 1em;
-  /* offset-x | offset-y | blur-radius | color */
   box-shadow: 0 1px 8px var(--primary-color);
   padding: 0 6vw 0 6vw;
 }
@@ -36,7 +35,7 @@ button{
 @media (max-width: 676px) {
 
 .logo button{
-  background-color: #fefefe;
+  background-color: var(--secondary-background-color);
   width: 70%;
 }
   .logo-img {
@@ -50,13 +49,13 @@ button{
   }
   button{
     background-color: transparent;
-    color: #fefefe;
+    color: var(--secondary-text-color);
     font-size: 1.5em;
   }
   .btn__matricula{
     font-size: 1.8em;
     display: unset;
-    border: 2px solid #ff0534;
+    border: 2px solid var(--border-neon);
     border-radius: 16px;
   }
 }

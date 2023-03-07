@@ -4,10 +4,17 @@
   --primary-text-color: black;
   --secondary-text-color: #fefefe;
   --primary-background-color: #fefefe;
+  --secondary-background-color: #fefefe;
   --header-background-color: #fefefe;
   --header-text-color: #8C1A0F;
   --footer-background: #4C0E08;
   --footer-text-color: #fefefe;
+  --border-neon: #ff0534;
+  --gradient-background-1: rgb(66, 16, 11);
+  --gradient-background-2: rgba(66, 16, 11, 1);
+  --gradient-background-3: rgba(0, 0, 0, 1);
+  --gradient-background-4: rgba(0, 0, 0, 1);
+
 }
 
 html, body { height: 100% }
@@ -18,12 +25,12 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 @media screen and (max-width: 500px) {
   .background{
-    background: rgb(66, 16, 11);
+    background: var(--gradient-background-1);
       background: linear-gradient(
         135deg,
-        rgba(66, 16, 11, 1) 51%,
-        rgba(0, 0, 0, 1) 91%,
-        rgba(0, 0, 0, 1) 100%
+        var(--gradient-background-2) 51%,
+        var(--gradient-background-3) 91%,
+        var(--gradient-background-4) 100%
       );
   }
 

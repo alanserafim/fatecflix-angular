@@ -5,15 +5,24 @@
 
 .toolbar{
   display: flex;
-  height: 7vh;
+  height: 10vh;
   justify-content: space-between;
   margin-bottom: 1em;
   /* offset-x | offset-y | blur-radius | color */
   box-shadow: 0 1px 8px var(--primary-color);
+  padding: 0 6vw 0 6vw;
 }
 
 .btn__matricula{
   display: none;
+}
+
+.logo button {
+  padding: 0;
+}
+
+.logo-img{
+  width: 20vw;
 }
 
 button{
@@ -22,12 +31,8 @@ button{
   font-size: 1.5em;
 }
 
-.logoHeader{
-  padding-top: 20px;
-  padding-bottom: 20px;
-  width: 280px;
-}
 
+/*Media Queries*/
 @media (max-width: 676px) {
 
 .logo button{
@@ -43,7 +48,6 @@ button{
   .btn__login{
     display: none;
   }
-
   button{
     background-color: transparent;
     color: #fefefe;
@@ -55,7 +59,6 @@ button{
     border: 2px solid #ff0534;
     border-radius: 16px;
   }
-
 }
 
 @media (max-width: 768px) {
@@ -63,7 +66,6 @@ button{
     width: 170px;
   }
 }
-
 .active{
   display: none;
 }

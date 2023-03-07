@@ -1,4 +1,4 @@
-/*Genericas*/
+  /*Genericas*/
 
 .container {
   display: flex;
@@ -13,6 +13,7 @@
     min-height: 80vh;
     background: var(--primary-background-color);
     margin-top: 5em;
+    padding: 1vw 6vw 1vw 6vw;
   }
 
   mat-sidenav{

@@ -18,8 +18,7 @@ export class UsuarioListComponent implements OnInit {
   @ViewChild(MatPaginator) paginator: any;
   @ViewChild(MatSort) sort: any;
 
-  displayedColumns: string[] = ['nome', 'cpf', 'username'];
-  dataSource: MatTableDataSource<any> | undefined;
+  displayedColumns: string[] = ['Nome', 'CPF', 'Username', 'Ações'];
    // @ts-ignore: Object is possibly 'undefined'.
   usuarios: Observable<NovoUsuario[]>;
 

@@ -1,21 +1,5 @@
 <div class="content">
   <div class="panel-body">
-    <!-- <table class="table table-striped">
-      <thead>
-        <tr>
-          <th>Nota</th>
-          <th>Situação</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let matricula of matriculas | async">
-          <td>{{matricula.nota}}</td>
-          <td>{{matricula.status}}</td>
-          <button (click)="gotoCurso(matricula.matriculaId)">Continuar Curso</button>
-          <button (click)="gotoExercicios(matricula.matriculaId)">Realizar Exercicios</button>
-        </tr>
-      </tbody>
-    </table> -->
     <table mat-table [dataSource]="matriculas" class="mat-elevation-z8">
       <ng-container matColumnDef="Curso">
         <th mat-header-cell *matHeaderCellDef> Curso </th>

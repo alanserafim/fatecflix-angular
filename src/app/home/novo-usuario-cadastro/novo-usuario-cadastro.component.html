@@ -1,5 +1,6 @@
 <div class="super-container">
   <app-header></app-header>
+  <div class="content">
   <form class="cadastro" [formGroup]="novoUsuarioForm" (submit)="cadastrar()">
     <div class="titulo">
       <p>Cadastre-se e comece a aprender</p>
@@ -166,6 +167,7 @@
       <p class="link"><a routerLink="/home/login">Já é usuário? Faça login!</a></p>
     </mat-card>
   </form>
+</div>
 <app-footer class="footer"></app-footer>
 
 </div>

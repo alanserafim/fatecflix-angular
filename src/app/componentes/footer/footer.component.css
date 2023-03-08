@@ -5,7 +5,6 @@
   background-color: transparent;
   width: 100%;
   padding: 0 6vw 0 6vw;
-
 }
 
 .container {
@@ -13,34 +12,32 @@
   justify-content: space-between;
 }
 
-.developed p{
-  font-size: .9em;
+.developed p {
+  font-size: 0.9em;
 }
-
 
 .icone_rede {
   margin-top: 8px;
   margin-left: 12px;
 }
 
-
-.socialMedia img{
-  filter: grayscale(.3);
+.socialMedia img {
+  filter: grayscale(0.3);
 }
 
 @media (max-width: 500px) {
-  .developed{
+  .developed {
     display: none;
   }
-  .container{
+  .container {
     flex-direction: column;
   }
-  .socialMedia{
+  .socialMedia {
     margin: 0;
     padding: 0;
     border: 0;
   }
-  .rodape{
+  .rodape {
     height: auto;
   }
 }

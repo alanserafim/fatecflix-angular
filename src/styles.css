@@ -6,14 +6,22 @@
   --primary-background-color: #fefefe;
   --secondary-background-color: #fefefe;
   --header-background-color: #fefefe;
+  --header-background-color2: #f1f1ed;
   --header-text-color: #8C1A0F;
   --footer-background: #4C0E08;
   --footer-text-color: #fefefe;
+  --landingpage-background-color: #101213;
   --border-neon: #ff0534;
   --gradient-background-1: rgb(66, 16, 11);
   --gradient-background-2: rgba(66, 16, 11, 1);
   --gradient-background-3: rgba(0, 0, 0, 1);
   --gradient-background-4: rgba(0, 0, 0, 1);
+  --btn-background-color: #AC1305;
+  --btn-background-color2: #3E850C;
+  --landingpage-box-shadow: rgba(50, 50, 50, 0.22);
+  --login-card-background: #f5f5f5;
+  --login-mobile-btn: rgba(207, 200, 200, 0.795);
+  --error-text-color: #ff0534;
 
 }
 

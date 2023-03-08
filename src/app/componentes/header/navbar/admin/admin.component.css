@@ -3,39 +3,38 @@
   font-size: 0.6em;
 }
 
-.menu{
+.menu {
   font-size: 1.2em;
 }
 
-button{
+button {
   background-color: transparent;
   color: var(--primary-color);
   font-size: 1.5em;
 }
 
-.logoHeader{
+.logoHeader {
   padding-top: 20px;
   padding-bottom: 20px;
   width: 280px;
 }
 
 @media (max-width: 676px) {
-  button{
+  button {
     font-size: 1em;
   }
 }
 
 @media (max-width: 768px) {
- .logoHeader {
+  .logoHeader {
     width: 170px;
   }
 }
 
-.icone-sair{
+.icone-sair {
   margin-left: 16px;
-
 }
 
-.btn-sair{
+.btn-sair {
   margin-left: 8px;
 }

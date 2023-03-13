@@ -7,8 +7,10 @@
       <div [hidden]="submitted" style="width: 400px">
         <form (ngSubmit)="onSubmit()">
           <div class="form-group">
-            <label for="name">Nome</label>
+            <mat-form-field>
+            <mat-label for="name">Nome</mat-label>
             <input
+              matInput
               type="text"
               class="form-control"
               id="name"
@@ -16,11 +18,14 @@
               [(ngModel)]="usuario.name"
               name="name"
             />
+          </mat-form-field>
           </div>
 
           <div class="form-group">
-            <label for="email">Email</label>
+            <mat-form-field>
+            <mat-label for="email">Email</mat-label>
             <input
+              matInput
               type="email"
               class="form-control"
               id="email"
@@ -28,11 +33,14 @@
               [(ngModel)]="usuario.email"
               name="date"
             />
+          </mat-form-field>
           </div>
 
           <div class="form-group">
-            <label for="cpf">cpf</label>
+            <mat-form-field>
+            <mat-label for="cpf">cpf</mat-label>
             <input
+              matInput
               type="text"
               class="form-control"
               id="cpf"
@@ -40,11 +48,14 @@
               [(ngModel)]="usuario.cpf"
               name="cpf"
             />
+          </mat-form-field>
           </div>
 
           <div class="form-group">
-            <label for="dtNascimento">Data de Nascimento</label>
+            <mat-form-field>
+            <mat-label for="dtNascimento">Data de Nascimento</mat-label>
             <input
+              matInput
               type="text"
               class="form-control"
               id="dtNascimento"
@@ -52,11 +63,14 @@
               [(ngModel)]="usuario.dtNascimento"
               name="dtNascimento"
             />
+          </mat-form-field>
           </div>
 
           <div class="form-group">
-            <label for="ra">RA</label>
+            <mat-form-field>
+            <mat-label for="ra">RA</mat-label>
             <input
+              matInput
               type="number"
               class="form-control"
               id="ra"
@@ -64,11 +78,14 @@
               [(ngModel)]="usuario.ra"
               name="ra"
             />
+          </mat-form-field>
           </div>
 
           <div class="form-group">
-            <label for="cursoMatriculado">Curso Matriculado</label>
+            <mat-form-field>
+            <mat-label for="cursoMatriculado">Curso Matriculado</mat-label>
             <input
+              matInput
               type="text"
               class="form-control"
               id="cursoMatriculado"
@@ -76,11 +93,14 @@
               [(ngModel)]="usuario.cursoMatriculado"
               name="cursoMatriculado"
             />
+          </mat-form-field>
           </div>
 
           <div class="form-group">
-            <label for="anoIngresso">Ano que Ingressou</label>
+            <mat-form-field>
+            <mat-label for="anoIngresso">Ano que Ingressou</mat-label>
             <input
+              matInput
               type="text"
               class="form-control"
               id="anoIngresso"
@@ -88,11 +108,14 @@
               [(ngModel)]="usuario.anoIngresso"
               name="anoIngresso"
             />
+          </mat-form-field>
           </div>
 
           <div class="form-group">
-            <label for="periodo">Periodo do curso Matriculado</label>
+            <mat-form-field>
+            <mat-label for="periodo">Periodo do curso Matriculado</mat-label>
             <input
+              matInput
               type="text"
               class="form-control"
               id="periodo"
@@ -100,10 +123,13 @@
               [(ngModel)]="usuario.periodo"
               name="periodo"
             />
+          </mat-form-field>
           </div>
           <div class="form-group" *ngFor="let perfil of usuario.roles; let i = index;">
-            <label for="periodo">Atualize os Perfis do Usuario</label>
+            <mat-form-field>
+            <mat-label for="periodo">Atualize os Perfis do Usuario</mat-label>
             <input
+                matInput
               type="text"
               class="form-control"
               id="periodo"
@@ -112,6 +138,7 @@
               (change)="updateRole($event, i)"
               name="periodo"
             />
+          </mat-form-field>
             <button mat-button type="button" color="primary" (click)="remove(i)">
               <mat-icon>delete</mat-icon>
             </button>

@@ -1,4 +1,14 @@
 <mat-toolbar class="toolbar">
+  <div class="container usuario">
+    <span><button mat-menu-item (click)="toogle()">{{nome}}</button></span>
+    <span><button mat-menu-item (click)="setFontSize('a-')">A-</button></span>
+    <span><button mat-menu-item (click)="setFontSize('a')">A</button></span>
+    <span><button mat-menu-item (click)="setFontSize('a+')">A+</button></span>
+  </div>
+</mat-toolbar>
+
+
+<mat-toolbar class="toolbar">
   <div class="container logo">
     <button mat-flat-button routerLink="/home">
       <img class="logo-img" src="assets/imagens/FatecFlix.png" alt="" />

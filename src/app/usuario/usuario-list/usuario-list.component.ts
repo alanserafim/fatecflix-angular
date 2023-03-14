@@ -19,6 +19,7 @@ export class UsuarioListComponent implements OnInit {
   @ViewChild(MatSort) sort: any;
 
   displayedColumns: string[] = ['Nome', 'CPF', 'Username', 'Ações'];
+  
    // @ts-ignore: Object is possibly 'undefined'.
   usuarios: Observable<NovoUsuario[]>;
 

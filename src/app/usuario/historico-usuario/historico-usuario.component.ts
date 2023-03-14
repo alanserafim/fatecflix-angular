@@ -12,6 +12,8 @@ export class HistoricoUsuarioComponent implements OnInit {
 // @ts-ignore: Object is possibly 'undefined'.
   historicos: Observable<Historico[]>;
 
+  displayedColumns: string[] = ['Nome do Curso', 'Nota', 'Instrutor'];  
+
   constructor(private historicosService: HistoricoService) { }
 
   ngOnInit(): void {

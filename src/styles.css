@@ -10,6 +10,21 @@
   --footer-text-color: #fefefe;
 }
 
+:root .contraste{
+  --primary-color: black;
+  --primary-text-color: white;
+  --secondary-text-color: black;
+  --primary-background-color: black;
+  --header-background-color: black;
+  --header-text-color: black;
+  --footer-background: white;
+  --footer-text-color: black;
+}
+
+body {
+  font-size: 16px;
+}
+
 html, body { height: 100% }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 

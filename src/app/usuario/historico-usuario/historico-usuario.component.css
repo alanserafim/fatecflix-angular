@@ -1,5 +1,5 @@
 th {
-  color: black;
+  color: var(--primary-text-color);
 }
 
 table{

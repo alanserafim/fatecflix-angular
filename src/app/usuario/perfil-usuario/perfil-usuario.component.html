@@ -2,59 +2,90 @@
   <div class="content">
     <app-header></app-header>
     <mat-sidenav-container class="example-container">
-        <mat-sidenav mode="side" opened>
-          <mat-action-list>
-            <button mat-list-item >Dados Pessoais</button>
-            <button mat-list-item >Matrículas</button>
-          </mat-action-list>
-        </mat-sidenav>
-        <mat-sidenav-content>
-          <section class="usuario-dados">
-            <div [hidden]="submitted" style="width: 400px;"></div>
-            <mat-card class="card1">
-              <div *ngIf="usuarioLogado$ | async as user ">
-                <h2>Perfil</h2>
-                <section class="container dados">
-                  <div class="campos">
-                    <fieldset class="dados_pessoais container">
-                      <p>Dados Pessoais</p>
-                      <label for="">Nome</label>
-                      <input class="dados__nome" type="text" value="{{ user.name }}">
-                      <label for="">Email</label>
-                      <input class="dados__email" type="text" value="{{ user.email }}">
-                      <label for="">CPF</label>
-                      <input class="dados__cpf" type="text" value="{{ user.cpf }}">
-                      <label for="">Data de Nascimento</label>
-                      <input class="dados__nascimento" type="text" value="{{ user.dtNascimento | date: 'dd/MM/yyyy' }}">
-                    </fieldset>
-                    <fieldset class="dados_escolares container">
-                      <p>Dados Escolares</p>
-                      <label for="">RA</label>
-                      <input class="dados__ra" type="text" value="{{ user.ra }}">
-                      <label for="">Curso</label>
-                      <input class="dados__curso" type="text"  value="{{ user.cursoMatriculado }}">
-                      <label for="">Ano de ingresso</label>
-                      <input class="dados__ingresso" type="text" value="{{ user.anoIngresso }}">
-                      <label for="">Período</label>
-                      <input class="dados__periodo" type="text" value="{{ user.periodo }}">
-                    </fieldset>
-                  </div>
-                </section>
-              </div>
-              <div class="img">
-                <br>
-              </div>
-            </mat-card>
-          </section>
-          <section class="usuario-historico">
-            <mat-card>
-              <h2>Matrículas</h2>
-              <app-matricula></app-matricula>
-            </mat-card>
-          </section>
-        </mat-sidenav-content>
-      </mat-sidenav-container>
-    </div>
-    <app-footer></app-footer>
-
+      <mat-sidenav mode="side" opened>
+        <mat-action-list>
+          <button mat-list-item>Dados Pessoais</button>
+          <button mat-list-item>Matrículas</button>
+        </mat-action-list>
+      </mat-sidenav>
+      <mat-sidenav-content>
+        <section class="usuario-dados">
+          <div [hidden]="submitted" style="width: 400px"></div>
+          <mat-card class="card1">
+            <div *ngIf="usuarioLogado$ | async as user">
+              <h2>Perfil</h2>
+              <section class="container dados">
+                <div class="campos">
+                  <fieldset class="dados_pessoais container">
+                    <p>Dados Pessoais</p>
+                    <label for="">Nome</label>
+                    <input
+                      class="dados__nome"
+                      type="text"
+                      value="{{ user.name }}"
+                    />
+                    <label for="">Email</label>
+                    <input
+                      class="dados__email"
+                      type="text"
+                      value="{{ user.email }}"
+                    />
+                    <label for="">CPF</label>
+                    <input
+                      class="dados__cpf"
+                      type="text"
+                      value="{{ user.cpf }}"
+                    />
+                    <label for="">Data de Nascimento</label>
+                    <input
+                      class="dados__nascimento"
+                      type="text"
+                      value="{{ user.dtNascimento | date : 'dd/MM/yyyy' }}"
+                    />
+                  </fieldset>
+                  <fieldset class="dados_escolares container">
+                    <p>Dados Escolares</p>
+                    <label for="">RA</label>
+                    <input
+                      class="dados__ra"
+                      type="text"
+                      value="{{ user.ra }}"
+                    />
+                    <label for="">Curso</label>
+                    <input
+                      class="dados__curso"
+                      type="text"
+                      value="{{ user.cursoMatriculado }}"
+                    />
+                    <label for="">Ano de ingresso</label>
+                    <input
+                      class="dados__ingresso"
+                      type="text"
+                      value="{{ user.anoIngresso }}"
+                    />
+                    <label for="">Período</label>
+                    <input
+                      class="dados__periodo"
+                      type="text"
+                      value="{{ user.periodo }}"
+                    />
+                  </fieldset>
+                </div>
+              </section>
+            </div>
+            <div class="img">
+              <br />
+            </div>
+          </mat-card>
+        </section>
+        <section class="usuario-historico">
+          <mat-card>
+            <h2>Matrículas</h2>
+            <app-matricula></app-matricula>
+          </mat-card>
+        </section>
+      </mat-sidenav-content>
+    </mat-sidenav-container>
   </div>
+  <app-footer></app-footer>
+</div>

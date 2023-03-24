@@ -15,7 +15,7 @@ body{
   background-color: var(--primary-color);
   width: 30%;
   max-width: 350px;
-  color: white;
+  color: var(--secondary-text-color);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -71,12 +71,12 @@ html, body {
 body {
   display: flex;
   flex-direction: column;
-  background: rgb(66, 16, 11);
+  background: var(--gradient-background-1);
       background: linear-gradient(
         135deg,
-        rgba(66, 16, 11, 1) 51%,
-        rgba(0, 0, 0, 1) 91%,
-        rgba(0, 0, 0, 1) 100%
+        var(--gradient-background-2) 51%,
+        var(--gradient-background-3) 91%,
+        var(--gradient-background-4) 100%
       );
 }
 .content {
@@ -117,7 +117,7 @@ body {
     height: 50px;
     border-radius: 12px;
     background-color: var(--primary-color);
-    color: #fefefe;
+    color: var(--secondary-text-color);
   }
   .content{
     height: auto;

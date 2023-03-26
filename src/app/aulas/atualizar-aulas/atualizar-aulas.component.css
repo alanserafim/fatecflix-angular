@@ -1,53 +1,51 @@
-.container{
+.container {
   display: flex;
   flex-direction: column;
 }
-body{
-  background-color: #D8DEE7;
-}
 
-.card__container{
+.card__container {
   display: flex;
   justify-content: flex-start;
   margin: 2em;
   width: 70%;
   margin-left: 240px;
-
+  box-shadow: 3px 3px 6px var(--card-box-shadow)
 }
 
-.form-control{
+.form-control {
   width: 100%;
 }
 
-.card__1{
+.card__1 {
   background-color: var(--primary-color);
   width: 30%;
   max-width: 350px;
-  color: white;
+  color: var(--secondary-text-color);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   border-radius: 6px;
 }
 
-
-
-.card__1 h2{
+.card__1 h2 {
   text-align: justify;
   font-size: 2.5em;
 }
 
-.card__1 p{
+.card__1 p {
   text-align: justify;
   font-size: 1.5em;
 }
 
-.card__2{
+.card__2 {
   box-shadow: none;
   width: 70%;
 }
+mat-card-actions{
+  display: flex;
+}
 
-.descricaoInput{
+.descricaoInput {
   width: 100%;
 }
 
@@ -65,10 +63,10 @@ body{
   padding: 3px;
 }
 
-button{
-  color: var(--primary-color);
-  margin: auto;
-  width: 100%;
+button {
+  color: var(--secondary-text-color);
+  background-color: var(--primary-color);
+  width: 50%;
   height: 50px;
   border-radius: 12px;
 }
@@ -79,34 +77,39 @@ mat-form-field {
 
 
 
-
 /*Sticky footer*/
-html, body {
+html,
+body {
   height: 100%;
 }
 
-body {
+.wrapper {
   display: flex;
   flex-direction: column;
-  background: rgb(66, 16, 11);
-      background: linear-gradient(
-        135deg,
-        rgba(66, 16, 11, 1) 51%,
-        rgba(0, 0, 0, 1) 91%,
-        rgba(0, 0, 0, 1) 100%
-      );
-}
-.content {
-  flex: 1 0 auto;
-  display: flex;
-  justify-content: center;
-}
-.footer {
-  flex-shrink: 0;
+  min-height: 100%;
+  background-color: var(--primary-background-color);
 }
 
-@media (max-width: 850px){
-  .card__container{
+.content {
+  flex: 1 0 auto;
+
+}
+
+.rodape {
+  flex-shrink: 0;
+  margin-top: 2em;
+  background-color: unset;
+  background: var(--gradient-background-1);
+      background: linear-gradient(
+        135deg,
+        var(--gradient-background-2) 51%,
+        var(--gradient-background-3) 91%,
+        var(--gradient-background-4) 100%
+      );
+}
+
+@media (max-width: 850px) {
+  .card__container {
     flex-direction: column;
     width: 90%;
     height: auto;
@@ -114,33 +117,33 @@ body {
     margin: 0;
   }
 
-  .card__1{
+  .card__1 {
     width: 90%;
     max-width: unset;
   }
 
-  .card__2{
+  .card__2 {
     width: 90%;
   }
   .content {
     padding: 1em;
   }
-  mat-card-header{
+  mat-card-header {
     align-self: center;
   }
 
-  button{
+  button {
     width: 100%;
     height: 50px;
     border-radius: 12px;
     background-color: var(--primary-color);
-    color: #fefefe;
+    color: var(--secondary-text-color);
+    
   }
-  .content{
+  .content {
     height: auto;
   }
   .footer {
     display: none;
   }
-
 }

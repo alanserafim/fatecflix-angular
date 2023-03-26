@@ -27,6 +27,7 @@
   --btn-background-color: #AC1305;
   --btn-background-color2: #3E850C;
   --btn-background-color3: rgb(136, 30, 21);
+  --btn-background-color4: rgba(12, 11, 11, 0.527);
   --login-mobile-btn: rgba(207, 200, 200, 0.795);
 
   --perfil-input-border: #d0d7de;
@@ -35,6 +36,7 @@
   --landingpage-box-shadow: rgba(50, 50, 50, 0.22);
   --cadastrar-curso-box-shadow: rgb(153, 92, 92);
   --card-box-shadow: rgb(136, 30, 21);
+  --card-box-shadow2: #3d3c3d;
   --box-reflect-gradient: rgba(0, 0, 0, 0.151);
 }
 

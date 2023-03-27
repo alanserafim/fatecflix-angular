@@ -8,7 +8,6 @@ import { DeletaExercicioComponent } from './deleta-exercicio/deleta-exercicio.co
 import { ExerciciosRoutingModule } from './exercicios-routing.module';
 import { ListaExercicioComponent } from './lista-exercicio/lista-exercicio.component';
 import { NovoExercicioComponent } from './novo-exercicio/novo-exercicio.component';
-import { ResponderExercicioComponent } from './responder-exercicio/responder-exercicio.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +15,6 @@ import { ResponderExercicioComponent } from './responder-exercicio/responder-exe
     AtualizaExercicioComponent,
     DeletaExercicioComponent,
     ListaExercicioComponent,
-    ResponderExercicioComponent,
     JsonParsePipePipe,
   ],
   imports: [

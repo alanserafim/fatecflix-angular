@@ -1,94 +1,101 @@
-body{
-  background-color: #D8DEE7;
-}
 
-.card__container{
+.card__container {
   display: flex;
   justify-content: flex-start;
   margin: 2em;
   width: 70%;
-
+  margin: auto;
+  box-shadow: 5px 5px 15px var(--card-box-shadow);
 }
 
-.card__1{
+.card__1 {
   background-color: var(--primary-color);
   width: 30%;
   max-width: 350px;
-  color: white;
+  color: var(--secondary-text-color);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   border-radius: 6px;
 }
 
-
-
-.card__1 h2{
+.card__1 h2 {
   text-align: jus;
   font-size: 2.5em;
 }
 
-.card__1 p{
+.card__1 p {
   text-align: justify;
   font-size: 1.5em;
 }
 
-.card__2{
+.card__2 {
   box-shadow: none;
   width: 70%;
 }
 
-.descricaoInput{
+.descricaoInput {
   width: 100%;
 }
 
-.input{
+.input {
   width: 100%;
 }
 
+mat-form-field{
+  width: 80%;
+}
 
-button{
-  color: var(--primary-color);
+button {
+  color: var(--secondary-text-color);
+  background-color: var(--btn-background-color3) ;
   margin: auto;
-  width: 100%;
+  width: 80%;
   height: 50px;
   border-radius: 12px;
+}
+
+.remove_btn{
+  margin-left: 1em;
+  width: 10%;
 }
 
 mat-form-field {
   margin-top: 1em;
 }
 
-
-
-
 /*Sticky footer*/
-html, body {
+html,
+body {
   height: 100%;
 }
 
-body {
+.wrapper {
   display: flex;
   flex-direction: column;
-  background: rgb(66, 16, 11);
-      background: linear-gradient(
-        135deg,
-        rgba(66, 16, 11, 1) 51%,
-        rgba(0, 0, 0, 1) 91%,
-        rgba(0, 0, 0, 1) 100%
-      );
-}
-.content {
-  flex: 1 0 auto;
-  display: flex;
-  justify-content: center;
-}
-.footer {
-  flex-shrink: 0;
+  min-height: 100%;
+  background-color: var(--primary-background-color);
 }
 
-@media (max-width: 850px){
-  .card__container{
+.content {
+  flex: 1 0 auto;
+}
+
+.footer {
+  flex-shrink: 0;
+  background: var(--gradient-background-1);
+  background: linear-gradient(
+    135deg,
+    var(--gradient-background-2) 51%,
+    var(--gradient-background-3) 91%,
+    var(--gradient-background-4) 100%
+  );
+  margin-top: 1em;
+}
+
+
+@media (max-width: 850px) {
+  .card__container {
     flex-direction: column;
     width: 90%;
     height: auto;
@@ -96,33 +103,32 @@ body {
     margin: 0;
   }
 
-  .card__1{
+  .card__1 {
     width: 90%;
     max-width: unset;
   }
 
-  .card__2{
+  .card__2 {
     width: 90%;
   }
   .content {
     padding: 1em;
   }
-  mat-card-header{
+  mat-card-header {
     align-self: center;
   }
 
-  button{
+  button {
     width: 100%;
     height: 50px;
     border-radius: 12px;
     background-color: var(--primary-color);
-    color: #fefefe;
+    color: var(--secondary-text-color);
   }
-  .content{
+  .content {
     height: auto;
   }
   .footer {
     display: none;
   }
-
 }

@@ -80,14 +80,45 @@
   --error-text-color: white;
   --right-answer-color: white;
   --link-primary-color: yellow;
-  /*Links*/
-  /*icones*/
-  /*Imagens*/
+}
 
+:root .contraste .banner {
+  filter: invert();
+}
 
+:root .contraste .img {
+  filter: invert();
+}
+
+:root .contraste .imagem {
+  filter: invert();
+}
+
+:root .contraste .check-img {
+  filter: invert();
+}
+
+:root .contraste img {
+  filter: invert();
 }
 
 body {
+  font-size: 16px;
+}
+
+.example-card {
+  font-size: 16px;
+}
+
+.card {
+  font-size: 16px;
+}
+
+.content {
+  font-size: 16px;
+}
+
+.developed {
   font-size: 16px;
 }
 

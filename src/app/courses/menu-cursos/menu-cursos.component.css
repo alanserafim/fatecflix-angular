@@ -8,6 +8,8 @@
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
   box-shadow: 5px 5px 15px var(--border-neon);
+  background-color: var(--primary-background-color);
+  color: var(--primary-text-color);
 }
 
 .example-card:hover {

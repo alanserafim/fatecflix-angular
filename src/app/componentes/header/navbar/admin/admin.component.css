@@ -3,13 +3,21 @@
   font-size: 0.6em;
 }
 
+mat-menu-item{
+  background-color: var(--header-background-color2);
+}
+
+
 .menu {
   font-size: 1.2em;
+  background-color: var(--header-background-color2);
+  color: var(--link-primary-color);
 }
+
 
 button {
   background-color: transparent;
-  color: var(--primary-color);
+  color: var(--link-primary-color);
   font-size: 1.5em;
 }
 

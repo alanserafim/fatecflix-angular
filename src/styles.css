@@ -7,6 +7,7 @@
   --footer-text-color: #fefefe;
   --error-text-color: #ff0534;
   --right-answer-color: green;
+  --link-primary-color: #8C1A0F;
 
   --primary-background-color: #fefefe;
   --secondary-background-color: #fefefe;
@@ -42,14 +43,48 @@
 }
 
 :root .contraste{
-  --primary-color: black;
+  --primary-color: white;
   --primary-text-color: white;
   --secondary-text-color: black;
-  --primary-background-color: black;
-  --header-background-color: black;
   --header-text-color: black;
-  --footer-background: white;
   --footer-text-color: black;
+
+  /*Background*/
+  --primary-background-color: black;
+  --secondary-background-color: black;
+  --header-background-color: black;
+  --header-background-color2: black;
+  --footer-background: black;
+  --landingpage-background-color: black;
+  --cadastrar-curso-background: black;
+  --login-card-background: black;
+  --text-darkred-background: black;
+
+  --landingpage-box-shadow: black;
+  --cadastrar-curso-box-shadow: black;
+  --card-box-shadow: black;
+  --card-box-shadow2: black;
+  --box-reflect-gradient: black;
+  --gradient-background-1: black;
+  --gradient-background-2: black;
+  --gradient-background-3: black;
+  --gradient-background-4: black;
+
+  --border-neon: white;
+
+  /*Texto*/
+  --primary-text-color: white;
+  --secondary-text-color: white;
+  --header-text-color: white;
+  --footer-text-color: white;
+  --error-text-color: white;
+  --right-answer-color: white;
+  --link-primary-color: yellow;
+  /*Links*/
+  /*icones*/
+  /*Imagens*/
+
+
 }
 
 body {

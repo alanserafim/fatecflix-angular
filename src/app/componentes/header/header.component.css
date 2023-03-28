@@ -5,6 +5,7 @@
 
 .barra-acessibilidade{
   height: 5vh;
+  background-color: var(--header-background-color2);
 }
 
 .toolbar {
@@ -14,6 +15,7 @@
   margin-bottom: 1em;
   box-shadow: 0 6px 6px var(--primary-color);
   padding: 0 6vw 0 6vw;
+  background-color: var(--header-background-color2);
 }
 
 .btn__matricula {
@@ -30,7 +32,7 @@
 
 button {
   background-color: transparent;
-  color: var(--primary-color);
+  color: var(--link-primary-color);
   font-size: 1.5em;
 }
 

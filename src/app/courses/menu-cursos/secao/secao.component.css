@@ -10,6 +10,8 @@
 	-o-transition: all 0.5s ease;
 	transition: all 0.5s ease;
   box-shadow: 5px 5px 15px var(--border-neon);
+  background-color: var(--primary-background-color);
+  color: var(--primary-text-color);
 }
 
 .example-card:hover{
@@ -32,7 +34,7 @@
 }
 
 .titulo{
-  color: #fefefe;
+  color: var(--secondary-text-color);
   padding-left: 30px;
   padding-bottom: 10gti px;
   font-size: 2em;

@@ -42,17 +42,64 @@
 }
 
 :root .contraste{
-  --primary-color: black;
-  --primary-text-color: white;
-  --secondary-text-color: black;
-  --primary-background-color: black;
-  --header-background-color: black;
-  --header-text-color: black;
-  --footer-background: white;
-  --footer-text-color: black;
+  --primary-color: #8C1A0F;
+  --primary-text-color: black;
+  --secondary-text-color: #fefefe;
+  --header-text-color: #8C1A0F;
+  --footer-text-color: #fefefe;
+  --error-text-color: #ff0534;
+  --right-answer-color: green;
+
+  --primary-background-color: #fefefe;
+  --secondary-background-color: #fefefe;
+  --header-background-color: #fefefe;
+  --header-background-color2: #f1f1ed;
+  --footer-background: #4C0E08;
+  --landingpage-background-color: #101213;
+  --cadastrar-curso-background: #D8DEE7;
+  --login-card-background: #f5f5f5;
+  --text-darkred-background: rgba(66, 16, 11, 0.685);
+
+  --border-neon: #ff0534;
+
+  --gradient-background-1: rgb(66, 16, 11);
+  --gradient-background-2: rgba(66, 16, 11, 1);
+  --gradient-background-3: rgba(0, 0, 0, 1);
+  --gradient-background-4: rgba(0, 0, 0, 1);
+
+  --btn-background-color: #AC1305;
+  --btn-background-color2: #3E850C;
+  --btn-background-color3: rgb(136, 30, 21);
+  --btn-background-color4: rgba(12, 11, 11, 0.527);
+  --login-mobile-btn: rgba(207, 200, 200, 0.795);
+
+  --perfil-input-border: #d0d7de;
+  --perfil-input-background: #f6f8fa;
+
+  --landingpage-box-shadow: rgba(50, 50, 50, 0.22);
+  --cadastrar-curso-box-shadow: rgb(153, 92, 92);
+  --card-box-shadow: rgb(136, 30, 21);
+  --card-box-shadow2: #3d3c3d;
+  --box-reflect-gradient: rgba(0, 0, 0, 0.151);
 }
 
 body {
+  font-size: 16px;
+}
+
+.example-card {
+  font-size: 16px;
+}
+
+.card {
+  font-size: 16px;
+}
+
+.content {
+  font-size: 16px;
+}
+
+.developed {
   font-size: 16px;
 }
 

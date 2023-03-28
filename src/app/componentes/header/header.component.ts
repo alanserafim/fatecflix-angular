@@ -49,16 +49,37 @@ export class HeaderComponent implements OnInit {
 
     //set font size
     let htmlRoot:HTMLElement = <HTMLElement> document.getElementsByTagName("body")[0];
-
-    console.log(htmlRoot);
+    let main:HTMLElement = <HTMLElement> document.getElementsByClassName("content")[0];
+    //https://www.w3schools.com/jsref/met_htmlcollection_item.asp
+    let cards:HTMLCollection = <HTMLCollection> document.getElementsByClassName("example-card");
+    let titles:HTMLCollection = <HTMLCollection> document.getElementsByClassName("mat-card-title");
+    //let loginCard:HTMLElement = <HTMLElement> document.getElementsByClassName("card")[0];
+    let footer:HTMLCollection = <HTMLCollection> document.getElementsByClassName("developed");
+    //console.log(htmlRoot);
+    //console.log(card);
 
     if (htmlRoot != null) {
       htmlRoot.style.fontSize = `${this.font_size}px`;
-      console.log(htmlRoot.style.fontSize);
+      main.style.fontSize = `${this.font_size}px`;
+      //loginCard.style.fontSize = `${this.font_size}px`;
+      for (let i = 0; i < footer.length; i++) {
+        // @ts-ignore: Object is possibly 'null'.
+        footer.item(i).style.fontSize = `${this.font_size}px`;
+      }
+
+      for (let i = 0; i < cards.length; i++) {
+        // @ts-ignore: Object is possibly 'null'.
+        cards.item(i).style.fontSize = `${this.font_size}px`;
+      }
+
+      for(let i = 0; i < titles.length; i++) {
+        // @ts-ignore: Object is possibly 'null'.
+        titles.item(i).style.fontSize = `${this.font_size}px`;
+        // @ts-ignore: Object is possibly 'null'.
+        titles.item(i).style.fontWeight = "500"
+      }
+      
     }
-
-
-
   }
 
   public toogle() {

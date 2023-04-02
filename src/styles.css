@@ -98,8 +98,31 @@
   filter: invert();
 }
 
+:root .contraste #media-img  {
+  filter: invert();
+}
+
 :root .contraste img {
   filter: invert();
+}
+
+:root .contraste table, th, td{
+  border: 1px solid white;
+}
+
+:root .contraste table button{
+  border: 1px solid white;
+  color: yellow;
+  margin-left: 3px;
+}
+
+:root .contraste mat-label, label, placeholder{
+  color: white;
+}
+
+:root .contraste input{
+  border: 1px solid white;
+  line-height: 2rem;
 }
 
 body {

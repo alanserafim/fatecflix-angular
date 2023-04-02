@@ -1,46 +1,50 @@
-/*Genericas*/
-
 .container {
   display: flex;
   flex-direction: column;
- }
+}
 
- table {
+table {
   width: 88%;
   margin: auto;
   text-align: left;
+  background-color: var(--primary-background-color);
+  color: var(--primary-text-color);
 }
 
 th {
   color: var(--primary-text-color);
 }
 
-.panel-body{
+td {
+  color: var(--primary-text-color);
+}
+
+.panel-body {
   padding: 2vh 0;
 }
 
-h1{
+h1 {
   padding: 0 0 1vw 6vw;
   text-transform: uppercase;
   font-weight: 300;
+  color: var(--primary-text-color);
 }
 
 /*Sidenav*/
 
 .example-container {
-    min-height: 80vh;
-    background: var(--primary-background-color)
-  }
+  min-height: 80vh;
+  background: var(--primary-background-color);
+}
 
-  mat-sidenav{
-      width: 10vw;
-  }
+mat-sidenav {
+  width: 10vw;
+}
 
-  li{
-    padding-top: 2em;
-    list-style: none;
-  }
-
+li {
+  padding-top: 2em;
+  list-style: none;
+}
 
 /*Dados Pessoais*/
 
@@ -50,11 +54,11 @@ mat-card {
   padding: 2em;
   background-color: var(--primary-background-color);
   color: var(--primary-text-color);
- }
+}
 
- mat-card:first-child {
+mat-card:first-child {
   margin-top: 0;
- }
+}
 
 /*Inputs*/
 
@@ -68,11 +72,15 @@ label {
   width: 100%;
 }
 
-.dados__nascimento, .dados__ingresso, .dados__curso, .dados__periodo, .dados__perfil {
+.dados__nascimento,
+.dados__ingresso,
+.dados__curso,
+.dados__periodo,
+.dados__perfil {
   width: 15w;
 }
 
-.campos{
+.campos {
   display: flex;
   flex-direction: column;
   margin: 0;
@@ -91,19 +99,20 @@ fieldset {
   border: 0;
 }
 
-.campos p{
+.campos p {
   font-weight: bold;
 }
 
-
 /*Sticky footer*/
-html, body {
+html,
+body {
   height: 100%;
 }
 
 body {
   display: flex;
   flex-direction: column;
+  background-color: var(--primary-background-color);
 }
 .content {
   flex: 1 0 auto;
@@ -111,11 +120,10 @@ body {
 .footer {
   flex-shrink: 0;
   background: var(--gradient-background-1);
-      background: linear-gradient(
-        135deg,
-        var(--gradient-background-2) 51%,
-        var(--gradient-background-3) 91%,
-        var(--gradient-background-3) 100%
-      );
+  background: linear-gradient(
+    135deg,
+    var(--gradient-background-2) 51%,
+    var(--gradient-background-3) 91%,
+    var(--gradient-background-3) 100%
+  );
 }
-

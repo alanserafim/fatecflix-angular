@@ -64,7 +64,7 @@
       formControlName="dataAtualizacao"
       >
       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-      <mat-datepicker #picker></mat-datepicker>
+      <mat-datepicker panelClass="date" #picker></mat-datepicker>
       <mat-error
       *ngIf="novoCursoForm.get('dataAtualizacao')?.errors?.['required']"
       >

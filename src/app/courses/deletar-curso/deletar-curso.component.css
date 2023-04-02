@@ -68,9 +68,19 @@ html, body {
   height: 100%;
 }
 
-body {
+.wrapper{
   display: flex;
   flex-direction: column;
+  height: 100%;
+  color: var(--primary-text-color);
+  background-color: var(--primary-background-color);
+}
+
+.content {
+  flex: 1 0 auto;
+}
+.footer {
+  flex-shrink: 0;
   background: var(--gradient-background-1);
       background: linear-gradient(
         135deg,
@@ -78,14 +88,6 @@ body {
         var(--gradient-background-3) 91%,
         var(--gradient-background-4) 100%
       );
-}
-.content {
-  flex: 1 0 auto;
-  display: flex;
-  justify-content: center;
-}
-.footer {
-  flex-shrink: 0;
 }
 
 @media (max-width: 850px){

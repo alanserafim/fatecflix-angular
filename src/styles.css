@@ -106,8 +106,21 @@
   filter: invert();
 }
 
-:root .contraste table, th, td{
+:root .contraste a {
+  color: yellow;
+}
+
+:root .contraste table,
+:root .contraste th,
+:root .contraste td{
   border: 1px solid white;
+  background-color: black;
+  color: white;
+  padding-left: 3px;
+}
+
+:root .contraste table{
+  padding-left: 0;
 }
 
 :root .contraste table button{
@@ -116,14 +129,116 @@
   margin-left: 3px;
 }
 
-:root .contraste mat-label, label, placeholder{
+:root .contraste mat-label,
+:root .contraste label,
+:root .contraste placeholder{
   color: white;
 }
 
 :root .contraste input{
-  border: 1px solid white;
-  line-height: 2rem;
+  background-color: white;
+  color: black;
+  border-radius: 4px;
+  line-height: 3rem;
+  padding-left: 6px;
 }
+
+:root .contraste button{
+  color: yellow;
+  background-color: black;
+}
+
+:root .contraste .mat-focus-indicator,
+:root .contraste .mat-menu-item:hover{
+  background-color: black;
+}
+
+:root .contraste button:disabled,
+:root .contraste button[disabled]{
+  color: white;
+}
+
+:root .contraste mat-card button{
+  border: 1px solid white;
+}
+
+:root .contraste .categoria button{
+  border: 1px solid white;
+  color: yellow !important;
+}
+
+:root .contraste mat-stroked-button button{
+  border: 1px solid white;
+}
+
+
+:root .contraste mat-icon{
+  color: white;
+}
+
+:root .contraste mat-card{
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+}
+
+:root .contraste .mat-step-header .mat-step-label.mat-step-label-active .mat-step-header .mat-step-label, .mat-step-header .mat-step-optional{
+  color: white !important;
+}
+
+:root .contraste .cadastrarForm input{
+  background-color: black;
+  color: white;
+}
+
+:root .contraste .cadastrarForm textarea{
+  background-color: black;
+}
+
+:root .contraste .cadastrarForm mat-label{
+  color: white;
+}
+
+:root .contraste .cadastrarForm .mat-form-field-appearance-outline .mat-form-field-outline{
+  color: white;
+}
+
+:root .contraste .cadastro .mat-form-field-appearance-outline .mat-form-field-outline{
+  color: white;
+}
+
+:root .contraste .cadastro input{
+  background-color: black;
+  color: white;
+}
+:root .contraste .date {
+  background-color: black;
+  color: white;
+}
+
+:root .contraste .date .mat-calendar-body-today{
+  background-color: black;
+  color: white;
+}
+:root .contraste .date .mat-calendar-content th,
+:root .contraste .date .mat-calendar-content,
+:root .contraste .date .mat-calendar-body-label,
+:root .contraste .date .mat-calendar-body-cell-content{
+  color: white !important;
+}
+
+:root .contraste .content{
+  background-color: black;
+}
+
+:root .contraste .wrapper{
+  background-color: black;
+}
+
+:root .contraste .footer{
+  background-color: black;
+}
+
 
 body {
   font-size: 16px;

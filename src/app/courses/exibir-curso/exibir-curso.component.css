@@ -36,7 +36,7 @@
   justify-content: space-between;
 }
 
-.buttons button{
+button{
   width: 45%;
   background-color: var(--btn-background-color3);
   color: var(--secondary-text-color);

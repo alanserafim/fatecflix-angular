@@ -3,10 +3,6 @@
   font-size: 0.6em;
 }
 
-.barra-acessibilidade{
-  height: 5vh;
-  background-color: var(--header-background-color2);
-}
 
 .toolbar {
   display: flex;

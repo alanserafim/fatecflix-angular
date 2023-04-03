@@ -8,13 +8,15 @@ import { HomeRoutingModule } from 'src/app/home/home-routing.module';
 import { HeaderComponent } from './header.component';
 import { AdminComponent } from './navbar/admin/admin.component';
 import {MatIconModule} from '@angular/material/icon';
+import { BarraAcessibilidadeComponent } from './barra-acessibilidade/barra-acessibilidade.component';
 
 
 
 @NgModule({
   declarations: [
     HeaderComponent,
-    AdminComponent
+    AdminComponent,
+    BarraAcessibilidadeComponent
   ],
   imports: [
     CommonModule,
@@ -25,7 +27,8 @@ import {MatIconModule} from '@angular/material/icon';
     MatIconModule
   ],
   exports: [
-    HeaderComponent
+    HeaderComponent,
+    BarraAcessibilidadeComponent
   ]
 })
 export class HeaderModule { }

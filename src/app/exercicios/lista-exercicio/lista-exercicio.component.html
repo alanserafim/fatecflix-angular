@@ -1,6 +1,6 @@
-<div class="wrapper">
-  <app-header></app-header>
-  <div class="content" *ngIf="usuarioLogado$ | async as user">
+<div  class="wrapper">
+  <app-header id="header"></app-header>
+  <div id="conteudo"  class="content" *ngIf="usuarioLogado$ | async as user" #conteudo>
     <button
       *ngIf="user.roles.includes('INSTRUTOR')"
       (click)="gotoCadastra()"
@@ -115,5 +115,5 @@
       </mat-step>
     </mat-vertical-stepper>
   </div>
-  <app-footer class="footer"></app-footer>
+  <app-footer id="footer" class="footer"></app-footer>
 </div>

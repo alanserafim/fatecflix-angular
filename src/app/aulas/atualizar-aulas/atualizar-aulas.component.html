@@ -1,7 +1,7 @@
 <div class="wrapper">
   <div class="content">
-    <app-header></app-header>
-    <mat-card class="card__container" [hidden]="submitted">
+    <app-header id="header"></app-header>
+    <mat-card id="conteudo" class="card__container" [hidden]="submitted">
       <mat-card class="card__1">
         <mat-card-header>
           <mat-card-title>Atualizar de aulas</mat-card-title>
@@ -69,5 +69,5 @@
       <button class="btn btn-success" (click)="updateAula()">UPDATE</button>
     </div>
   </div>
-  <app-footer class="rodape"></app-footer>
+  <app-footer id="footer" class="rodape"></app-footer>
 </div>

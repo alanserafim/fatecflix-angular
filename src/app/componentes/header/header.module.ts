@@ -10,7 +10,7 @@ import { AdminComponent } from './navbar/admin/admin.component';
 import {MatIconModule} from '@angular/material/icon';
 import { BarraAcessibilidadeComponent } from './barra-acessibilidade/barra-acessibilidade.component';
 
-
+import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 
 @NgModule({
   declarations: [
@@ -24,7 +24,8 @@ import { BarraAcessibilidadeComponent } from './barra-acessibilidade/barra-acess
     MatToolbarModule,
     MatButtonModule,
     MatMenuModule,
-    MatIconModule
+    MatIconModule,
+    ScrollToModule.forRoot()
   ],
   exports: [
     HeaderComponent,

@@ -1,7 +1,7 @@
-<div class="super-container">
+<div  class="super-container">
   <div class="content">
-    <app-header class="header"></app-header>
-    <form class="login" (ngSubmit)="login()" #loginForm="ngForm">
+    <app-header id="header" class="header"></app-header>
+    <form id="conteudo" class="login" (ngSubmit)="login()" #loginForm="ngForm">
       <mat-card class="card">
         <section class="card__banner">
           <h2>Faça seu login e boa aula!</h2>
@@ -74,5 +74,5 @@
       </mat-card>
     </form>
   </div>
-  <app-footer class="footer"></app-footer>
+  <app-footer id="footer" class="footer"></app-footer>
 </div>

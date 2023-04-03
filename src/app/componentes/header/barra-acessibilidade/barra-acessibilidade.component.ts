@@ -10,7 +10,7 @@ import { ETheme } from '../ETheme';
 export class BarraAcessibilidadeComponent implements OnInit {
   public nome: string = ETheme.NOME_COM_CONTRASTE;
   constructor() { }
-
+  
   ngOnInit(): void {
   }
 
@@ -90,6 +90,9 @@ export class BarraAcessibilidadeComponent implements OnInit {
       console.log(event.key);
       this.toogle();
     }
-}
+  }
 
+  toggleDestination() {
+      
+  }
 }

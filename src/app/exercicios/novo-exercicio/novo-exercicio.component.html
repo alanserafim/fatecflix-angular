@@ -1,7 +1,7 @@
-<div class="wrapper">
+<div   class="wrapper">
   <div class="content">
-    <app-header></app-header>
-    <div class="content">
+    <app-header id="header"></app-header>
+    <div id="conteudo" class="content" #conteudo>
       <mat-card class="card__container">
         <mat-card class="card__1">
           <mat-card-header>
@@ -107,5 +107,5 @@
       <button class="btn btn-success" (click)="novoExercicio()">Add</button>
     </div>
   </div>
-  <app-footer class="footer"></app-footer>
+  <app-footer id="footer" class="footer"></app-footer>
 </div>

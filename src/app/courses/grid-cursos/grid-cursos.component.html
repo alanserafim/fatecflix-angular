@@ -1,6 +1,6 @@
 <div class="wrapper" *ngIf="usuarioLogado$ | async as user ">
-  <app-header></app-header>
-  <div class="content">
+  <app-header id="header"></app-header>
+  <div id="conteudo"  class="content" id="conteudo">
     <app-categoria-cursos></app-categoria-cursos>
   <section class="titulo">
     <h1>Cursos</h1>
@@ -22,5 +22,5 @@
     </mat-card>
   </section>
 </div>
-<app-footer class="footer"></app-footer>
+<app-footer id="footer" class="footer"></app-footer>
 </div>

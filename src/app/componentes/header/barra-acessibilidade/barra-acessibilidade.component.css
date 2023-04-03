@@ -1,4 +1,6 @@
 .barra-acessibilidade{
+  display: flex;
+  justify-content: space-between;
   height: 5vh;
   background-color: var(--header-background-color2);
 }
@@ -6,6 +8,11 @@
 .container {
   display: flex;
   font-size: 0.6em;
+}
+
+.container a {
+  margin: 10px;
+  color: var(--link-primary-color)
 }
 
 

@@ -1,7 +1,7 @@
 <div class="wrapper"  *ngIf="usuarioLogado$ | async as user ">
-  <div class="content">
-    <app-header></app-header>
-    <div class="card-align">
+  <div  class="content">
+    <app-header id="header"></app-header>
+    <div class="card-align" id="conteudo">
       <mat-card class="example-card">
         <div class="container">
           <mat-card-title><h1>{{ curso.titulo }}</h1></mat-card-title>
@@ -27,5 +27,5 @@
       </mat-card>
     </div>
   </div>
-  <app-footer class="footer"></app-footer>
+  <app-footer class="footer" id="footer"></app-footer>
 </div>

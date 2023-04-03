@@ -1,7 +1,7 @@
 <div class="wrapper" >
-  <div class="content">
-      <app-header></app-header>
-      <div class="main" *ngIf="usuarioLogado$ | async as user">
+  <div   class="content">
+      <app-header id="header"></app-header>
+      <div id="conteudo" class="main" *ngIf="usuarioLogado$ | async as user" #conteudo>
       <app-categoria-cursos></app-categoria-cursos>
       <section class="titulo">
         <h1>Cursos</h1>
@@ -59,4 +59,4 @@
       </section>
     </div>
   </div>
-  <app-footer class="rodape"></app-footer>
+  <app-footer id="footer" class="rodape"></app-footer>

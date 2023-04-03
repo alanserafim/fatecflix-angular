@@ -1,6 +1,6 @@
 <div class="super-container">
-  <app-header></app-header>
-  <div class="content">
+  <app-header id="header"></app-header>
+  <div class="content" id="conteudo" >
   <form class="cadastro" [formGroup]="novoUsuarioForm" (submit)="cadastrar()">
     <div class="titulo">
       <p>Cadastre-se e comece a aprender</p>
@@ -168,6 +168,6 @@
     </mat-card>
   </form>
 </div>
-<app-footer class="footer"></app-footer>
+<app-footer id="footer" class="footer"></app-footer>
 
 </div>

@@ -1,5 +1,10 @@
 <mat-toolbar class="barra-acessibilidade">
   <div class="container">
+    <button mat-menu-item [ngxScrollTo]="'#header'">[1] Ir para cabeçalho</button>
+    <button mat-menu-item [ngxScrollTo]="'#conteudo'">[2] Ir prar conteúdo</button>
+    <button mat-menu-item [ngxScrollTo]="'#footer'">[3] Ir para rodapé</button>
+  </div>
+  <div class="container">
     <span><button mat-menu-item (click)="toogle()">{{nome}}</button></span>
     <span><button mat-menu-item (click)="setFontSize('a-')">A-</button></span>
     <span><button mat-menu-item (click)="setFontSize('a')">A</button></span>

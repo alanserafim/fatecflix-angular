@@ -119,8 +119,18 @@
         type="new-password"
         name="senha"
         formControlName="password"
+        [(ngModel)]="password"
+        (keyup)="updateRequirements()"
         >
       </mat-form-field>
+      <form>
+        <div>
+          <p *ngIf="hasMinimumLength">Deve conter pelo menos 8 caracteres</p>
+          <p *ngIf="hasUppercaseLetter">Deve conter uma letra maiúscula</p>
+          <p *ngIf="hasLowercaseLetter">Deve conter uma letra minúscula</p>
+          <p *ngIf="hasNumber">Deve conter um número</p>
+        </div>
+      </form>
       <app-messages
       *ngIf="novoUsuarioForm.get('password')?.errors?.['required'] &&
         novoUsuarioForm.get('password')?.touched"

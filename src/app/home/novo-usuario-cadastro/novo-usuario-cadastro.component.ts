@@ -21,10 +21,10 @@ export class NovoUsuarioCadastroHomeComponent implements OnInit {
   novoUsuarioForm!: FormGroup;
 
   password: string = '';
-  hasMinimumLength: boolean = true;
-  hasUppercaseLetter: boolean = true;
-  hasLowercaseLetter: boolean = true;
-  hasNumber: boolean = true;
+  hasMinimumLength: boolean = false;
+  hasUppercaseLetter: boolean = false;
+  hasLowercaseLetter: boolean = false;
+  hasNumber: boolean = false;
 
   constructor(
     private formBuilder: FormBuilder,

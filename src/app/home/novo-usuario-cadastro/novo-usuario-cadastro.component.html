@@ -5,7 +5,7 @@
       <p>Cadastre-se e comece a aprender</p>
     </div>
   <mat-card class="container card">
-    <mat-form-field appearance="outline" hideRequiredMarker>
+    <mat-form-field appearance="outline">
         <mat-label>E-mail</mat-label>
         <input
           matInput
@@ -27,14 +27,15 @@
           novoUsuarioForm.get('email')?.touched"
         mensagem="O e-mail informado não é válido.">
       </app-messages>
-      <mat-form-field appearance="outline" hideRequiredMarker>
+      <mat-form-field appearance="outline">
         <mat-label>CPF</mat-label>
-        <input
+        <input 
         matInput
         type="text"
         placeholder="000.000.000-00"
         name="cpf"
         formControlName="cpf"
+        mask="000.000.000-00"
         >
       </mat-form-field>
       <app-messages
@@ -47,8 +48,8 @@
       *ngIf="novoUsuarioForm.errors?.['cpfInvalido'] &&
       novoUsuarioForm.get('cpf')?.dirty"
       mensagem="O CPF digitado não é válido."
-    ></app-messages>
-      <mat-form-field appearance="outline" hideRequiredMarker>
+      ></app-messages>
+      <mat-form-field appearance="outline">
         <mat-label>Nome</mat-label>
         <input
         matInput
@@ -112,7 +113,7 @@
             <mat-option value="Noite">Noite</mat-option>
         </mat-select>
       </mat-form-field>
-      <mat-form-field appearance="outline" hideRequiredMarker>
+      <mat-form-field appearance="outline">
         <mat-label>Senha</mat-label>
         <input
         matInput
@@ -125,10 +126,10 @@
       </mat-form-field>
       <form>
         <div>
-          <p *ngIf="hasMinimumLength">Deve conter pelo menos 8 caracteres</p>
-          <p *ngIf="hasUppercaseLetter">Deve conter uma letra maiúscula</p>
-          <p *ngIf="hasLowercaseLetter">Deve conter uma letra minúscula</p>
-          <p *ngIf="hasNumber">Deve conter um número</p>
+          <p *ngIf="!hasMinimumLength">Deve conter pelo menos 8 caracteres</p>
+          <p *ngIf="!hasUppercaseLetter">Deve conter uma letra maiúscula</p>
+          <p *ngIf="!hasLowercaseLetter">Deve conter uma letra minúscula</p>
+          <p *ngIf="!hasNumber">Deve conter um número</p>
         </div>
       </form>
       <app-messages
@@ -148,7 +149,7 @@
     mensagem = "A senha deve possuir ao mínimo 8 digitos."
     >
   </app-messages>
-      <mat-form-field appearance="outline" hideRequiredMarker>
+      <mat-form-field appearance="outline">
         <mat-label>Confirmação de senha</mat-label>
         <input
         matInput

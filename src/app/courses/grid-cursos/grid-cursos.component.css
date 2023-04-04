@@ -39,26 +39,3 @@ button {
   justify-content: space-between;
   box-shadow: 3px 3px 6px var(--card-box-shadow);
 }
-
-/*Sticky footer*/
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
-}
-
-.content {
-  flex: 1 0 auto;
-}
-
-.footer {
-  flex-shrink: 0;
-  padding-top: 1em;
-  background: var(--gradient-background-1);
-  background: linear-gradient(
-    135deg,
-    var(--gradient-background-2) 51%,
-    var(--gradient-background-3) 91%,
-    var(--gradient-background-4) 100%
-  );
-}

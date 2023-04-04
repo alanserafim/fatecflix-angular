@@ -1,43 +1,37 @@
-<div class="wrapper">
-  <div id="conteudo"  class="content">
-    <app-header id="header"></app-header>
-    <mat-card class="card__container" id="conteudo">
-      <mat-card class="card__1">
-        <mat-card-header>
-          <mat-card-title>Fatecflix</mat-card-title>
-        </mat-card-header>
-        <mat-card-content>
-          <h2>Excluir Curso</h2>
-        </mat-card-content>
-        <mat-card-footer> </mat-card-footer>
-      </mat-card>
-      <mat-card class="card__2">
-        <form>
-          <mat-form-field appearance="outline" class="input">
-            <input
-              matInput
-              placeholder="Titulo do curso"
-              [value]="curso.titulo"
-              name="titulo"
-              disabled
-            />
-          </mat-form-field>
-          <mat-form-field appearance="outline" class="input">
-            <input
-              matInput
-              placeholder="Descrição"
-              [value]="curso.descricao"
-              name="descricao"
-              disabled
-            />
-          </mat-form-field>
-        </form>
-        <button mat-raised-button (click)="deleteCurso()" color="warn">
-          Excluir
-        </button>
-        <button mat-raised-button (click)="cancel()">Cancelar</button>
-      </mat-card>
-    </mat-card>
-  </div>
-  <app-footer id="footer" class="footer"></app-footer>
-</div>
+<mat-card class="card__container" id="conteudo">
+  <mat-card class="card__1">
+    <mat-card-header>
+      <mat-card-title>Fatecflix</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <h2>Excluir Curso</h2>
+    </mat-card-content>
+    <mat-card-footer> </mat-card-footer>
+  </mat-card>
+  <mat-card class="card__2">
+    <form>
+      <mat-form-field appearance="outline" class="input">
+        <input
+          matInput
+          placeholder="Titulo do curso"
+          [value]="curso.titulo"
+          name="titulo"
+          disabled
+        />
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="input">
+        <input
+          matInput
+          placeholder="Descrição"
+          [value]="curso.descricao"
+          name="descricao"
+          disabled
+        />
+      </mat-form-field>
+    </form>
+    <button mat-raised-button (click)="deleteCurso()" color="warn">
+      Excluir
+    </button>
+    <button mat-raised-button (click)="cancel()">Cancelar</button>
+  </mat-card>
+</mat-card>

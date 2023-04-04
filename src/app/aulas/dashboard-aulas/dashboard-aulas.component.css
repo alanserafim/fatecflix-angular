@@ -1,58 +1,32 @@
-
-
 mat-grid-tile {
   height: 70vh;
   overflow-y: scroll;
   background-color: transparent;
 }
 
-mat-grid-list{
+mat-grid-list {
   height: 70vh;
 }
 
-
-.container{
+.container {
   max-height: 95%;
   max-width: 95%;
 }
 
-app-exibir-aula{
+app-exibir-aula {
   width: auto;
   height: auto;
 }
 
-app-listar-aulas{
+app-listar-aulas {
   padding: 1em;
   height: auto;
   width: auto;
 }
 
-.tile_lista{
+.tile_lista {
   background-color: transparent;
 }
-.tile_aula{
+.tile_aula {
   background-color: var(--primary-background-color);
 }
-
-.wrapper{
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.content {
-  flex: 1 0 auto;
-}
-
-.footer {
-  background: var(--gradient-background-1);
-      background: linear-gradient(
-        135deg,
-        var(--gradient-background-2) 51%,
-        var(--gradient-background-3) 91%,
-        var(--gradient-background-4) 100%
-      );
-}
-
-
-

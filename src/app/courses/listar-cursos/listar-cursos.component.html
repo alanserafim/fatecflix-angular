@@ -1,62 +1,62 @@
-<div class="wrapper" >
-  <div   class="content">
-      <app-header id="header"></app-header>
-      <div id="conteudo" class="main" *ngIf="usuarioLogado$ | async as user" #conteudo>
-      <app-categoria-cursos></app-categoria-cursos>
-      <section class="titulo">
-        <h1>Cursos</h1>
-      </section>
-      <section class="cards">
-        <mat-card class="example-card" *ngFor="let curso of cursos | async">
-          <div class="container">
-            <mat-card-title>{{ curso.titulo }}</mat-card-title>
-            <p>{{ curso.categoria }}</p>
-            <p>Média de Avaliação: {{ curso.mediaAvaliacao }}</p>
-            <p>Carga Horária: {{ curso.cargaHorario }}</p>
-            <p>{{ curso.descricao }}</p>
-          </div>
-          <mat-card-actions>
-            <button
-              class="btn_matricular"
-              mat-stroked-button
-              *ngIf="user.roles.includes('INSTRUTOR')"
-              (click)="detalhar(curso.cursoId)"
-              class="btn btn-info"
-              style="margin-right: 10px"
-            >
-              Detalhar
-            </button>
-            <button
-              class="btn_matricular"
-              mat-stroked-button
-              *ngIf="user.roles.includes('ALUNO')"
-              (click)="matricular(curso.cursoId)"
-              class="btn btn-info"
-              style="margin-right: 10px"
-            >
-              Matricular
-            </button>
-            <button
-              class="btn_atualizar"
-              mat-stroked-button
-              *ngIf="user.roles.includes('INSTRUTOR')"
-              (click)="atualizaCurso(curso.cursoId)"
-              class="btn btn-info"
-              style="margin-left: 10px"
-            >
-              Atualizar
-            </button>
-            <button
-              class="btn_deletar"
-              mat-stroked-button
-              *ngIf="user.roles.includes('INSTRUTOR')"
-              (click)="deletaCurso(curso.cursoId)"
-            >
-              Deletar
-            </button>
-          </mat-card-actions>
-        </mat-card>
-      </section>
-    </div>
-  </div>
-  <app-footer id="footer" class="rodape"></app-footer>
+<div
+  id="conteudo"
+  class="main"
+  *ngIf="usuarioLogado$ | async as user"
+  #conteudo
+>
+  <app-categoria-cursos></app-categoria-cursos>
+  <section class="titulo">
+    <h1>Cursos</h1>
+  </section>
+  <section class="cards">
+    <mat-card class="example-card" *ngFor="let curso of cursos | async">
+      <div class="container">
+        <mat-card-title>{{ curso.titulo }}</mat-card-title>
+        <p>{{ curso.categoria }}</p>
+        <p>Média de Avaliação: {{ curso.mediaAvaliacao }}</p>
+        <p>Carga Horária: {{ curso.cargaHorario }}</p>
+        <p>{{ curso.descricao }}</p>
+      </div>
+      <mat-card-actions>
+        <button
+          class="btn_matricular"
+          mat-stroked-button
+          *ngIf="user.roles.includes('INSTRUTOR')"
+          (click)="detalhar(curso.cursoId)"
+          class="btn btn-info"
+          style="margin-right: 10px"
+        >
+          Detalhar
+        </button>
+        <button
+          class="btn_matricular"
+          mat-stroked-button
+          *ngIf="user.roles.includes('ALUNO')"
+          (click)="matricular(curso.cursoId)"
+          class="btn btn-info"
+          style="margin-right: 10px"
+        >
+          Matricular
+        </button>
+        <button
+          class="btn_atualizar"
+          mat-stroked-button
+          *ngIf="user.roles.includes('INSTRUTOR')"
+          (click)="atualizaCurso(curso.cursoId)"
+          class="btn btn-info"
+          style="margin-left: 10px"
+        >
+          Atualizar
+        </button>
+        <button
+          class="btn_deletar"
+          mat-stroked-button
+          *ngIf="user.roles.includes('INSTRUTOR')"
+          (click)="deletaCurso(curso.cursoId)"
+        >
+          Deletar
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </section>
+</div>

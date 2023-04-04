@@ -1,124 +1,116 @@
-<div   class="wrapper">
-  <div class="content">
-    <app-header id="header"></app-header>
-    <div id="conteudo" class="content" #conteudo>
-      <mat-card class="card__container">
-        <mat-card class="card__1">
-          <mat-card-header>
-            <mat-card-title>Fatecflix</mat-card-title>
-          </mat-card-header>
-          <mat-card-content>
-            <h2>Atualizar exercicio</h2>
-          </mat-card-content>
-          <mat-card-footer> </mat-card-footer>
-        </mat-card>
-        <mat-card class="card__2">
-          <h1>Atualizar Dados</h1>
-          <div [hidden]="submitted"></div>
-          <form (ngSubmit)="onSubmit()">
-            <div class="input">
-              <mat-form-field>
-                <mat-label for="titulo">Titulo:</mat-label>
-                <input
-                  matInput
-                  type="text"
-                  class="form-control"
-                  id="titulo"
-                  required
-                  [value]="exercicio.titulo"
-                  [(ngModel)]="exercicio.titulo"
-                  name="titulo"
-                />
-              </mat-form-field>
-            </div>
-            <div class="input">
-              <mat-form-field>
-                <mat-label for="enunciado">Enunciado:</mat-label>
-                <input
-                  matInput
-                  type="text"
-                  class="form-control"
-                  id="enunciado"
-                  required
-                  [value]="exercicio.enunciado"
-                  [(ngModel)]="exercicio.enunciado"
-                  name="enunciado"
-                />
-              </mat-form-field>
-            </div>
-            <div class="input">
-              <mat-form-field>
-                <mat-label for="resposta">Resposta da Questão:</mat-label>
-                <input
-                  matInput
-                  type="text"
-                  class="form-control"
-                  id="resposta"
-                  required
-                  [value]="exercicio.resposta"
-                  [(ngModel)]="exercicio.resposta"
-                  name="resposta"
-                />
-              </mat-form-field>
-              <div
-                class="form-group"
-                *ngFor="let afirmativa of exercicio.afirmativas; let i = index"
-              >
-                <mat-form-field>
-                  <mat-label for="periodo">Atualize as Afirmativas</mat-label>
+<div id="conteudo" class="content" #conteudo>
+  <mat-card class="card__container">
+    <mat-card class="card__1">
+      <mat-card-header>
+        <mat-card-title>Fatecflix</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <h2>Atualizar exercicio</h2>
+      </mat-card-content>
+      <mat-card-footer> </mat-card-footer>
+    </mat-card>
+    <mat-card class="card__2">
+      <h1>Atualizar Dados</h1>
+      <div [hidden]="submitted"></div>
+      <form (ngSubmit)="onSubmit()">
+        <div class="input">
+          <mat-form-field>
+            <mat-label for="titulo">Titulo:</mat-label>
+            <input
+              matInput
+              type="text"
+              class="form-control"
+              id="titulo"
+              required
+              [value]="exercicio.titulo"
+              [(ngModel)]="exercicio.titulo"
+              name="titulo"
+            />
+          </mat-form-field>
+        </div>
+        <div class="input">
+          <mat-form-field>
+            <mat-label for="enunciado">Enunciado:</mat-label>
+            <input
+              matInput
+              type="text"
+              class="form-control"
+              id="enunciado"
+              required
+              [value]="exercicio.enunciado"
+              [(ngModel)]="exercicio.enunciado"
+              name="enunciado"
+            />
+          </mat-form-field>
+        </div>
+        <div class="input">
+          <mat-form-field>
+            <mat-label for="resposta">Resposta da Questão:</mat-label>
+            <input
+              matInput
+              type="text"
+              class="form-control"
+              id="resposta"
+              required
+              [value]="exercicio.resposta"
+              [(ngModel)]="exercicio.resposta"
+              name="resposta"
+            />
+          </mat-form-field>
+          <div
+            class="form-group"
+            *ngFor="let afirmativa of exercicio.afirmativas; let i = index"
+          >
+            <mat-form-field>
+              <mat-label for="periodo">Atualize as Afirmativas</mat-label>
+              <input
+                matInput
+                type="text"
+                class="form-control"
+                id="periodo"
+                required
+                [value]="afirmativa"
+                (change)="updateAfirmativa($event, i)"
+                name="periodo"
+              />
+            </mat-form-field>
+            <button mat-button type="button" (click)="remove(i)">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </div>
+        </div>
+        <span>Adicione mais Afirmativas</span>
+        <form [formGroup]="formAfirmativa">
+          <button mat-button type="button" (click)="addAfirmativa()">
+            <mat-icon>add</mat-icon>
+          </button>
+          <div formArrayName="afirmativas" fxFlex="100" fxLayout="column">
+            <ng-container *ngFor="let a of afirmativas.controls; let i = index">
+              <div [formGroupName]="i">
+                <mat-form-field fxFlex="100">
                   <input
+                    formControlName="afirmativa"
                     matInput
                     type="text"
                     class="form-control"
-                    id="periodo"
-                    required
-                    [value]="afirmativa"
-                    (change)="updateAfirmativa($event, i)"
-                    name="periodo"
+                    placeholder="Afirmativa:"
                   />
                 </mat-form-field>
-                <button mat-button type="button" (click)="remove(i)">
+                <button
+                  mat-button
+                  type="button"
+                  (click)="removeDoFormArray(afirmativas, i)"
+                >
                   <mat-icon>delete</mat-icon>
                 </button>
               </div>
-            </div>
-            <span>Adicione mais Afirmativas</span>
-            <form [formGroup]="formAfirmativa">
-              <button mat-button type="button" (click)="addAfirmativa()">
-                <mat-icon>add</mat-icon>
-              </button>
-              <div formArrayName="afirmativas" fxFlex="100" fxLayout="column">
-                <ng-container
-                  *ngFor="let a of afirmativas.controls; let i = index"
-                >
-                  <div [formGroupName]="i">
-                    <mat-form-field fxFlex="100">
-                      <input
-                        formControlName="afirmativa"
-                        matInput
-                        type="text"
-                        class="form-control"
-                        placeholder="Afirmativa:"
-                      />
-                    </mat-form-field>
-                    <button
-                      mat-button
-                      type="button"
-                      (click)="removeDoFormArray(afirmativas, i)"
-                    >
-                      <mat-icon>delete</mat-icon>
-                    </button>
-                  </div>
-                </ng-container>
-              </div>
-            </form>
-            <mat-card-actions>
-              <button mat-button type="submit">ATUALIZAR</button>
-            </mat-card-actions>
-          </form>
-        </mat-card>
-      </mat-card>
-    </div>
-  </div>
-  <app-footer class="footer" id="footer"></app-footer>
+            </ng-container>
+          </div>
+        </form>
+        <mat-card-actions>
+          <button mat-button type="submit">ATUALIZAR</button>
+        </mat-card-actions>
+      </form>
+    </mat-card>
+  </mat-card>
 </div>

@@ -1,5 +1,5 @@
 body {
-  background-color: var(--primary-background-color)
+  background-color: var(--primary-background-color);
 }
 
 .card__container {
@@ -61,42 +61,13 @@ mat-card-actions {
   padding: 3px;
 }
 
-mat-label p{
+mat-label p {
   font-size: 2em;
 }
 
 .form-control {
   width: 100%;
 }
-
-
-/*Sticky footer*/
-html, body {
-  height: 100%;
-}
-
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-  background: var(--gradient-background-1);
-      background: linear-gradient(
-        135deg,
-        var(--gradient-background-2) 51%,
-        var(--gradient-background-3) 91%,
-        var(--gradient-background-3) 100%
-      );
-}
-.content {
-  flex: 1 0 auto;
-}
-.footer {
-  flex-shrink: 0;
-}
-
-
-
-
 
 @media (max-width: 850px) {
   .card__container {

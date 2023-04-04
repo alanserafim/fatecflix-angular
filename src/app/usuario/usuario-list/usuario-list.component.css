@@ -102,28 +102,3 @@ fieldset {
 .campos p {
   font-weight: bold;
 }
-
-/*Sticky footer*/
-html,
-body {
-  height: 100%;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  background-color: var(--primary-background-color);
-}
-.content {
-  flex: 1 0 auto;
-}
-.footer {
-  flex-shrink: 0;
-  background: var(--gradient-background-1);
-  background: linear-gradient(
-    135deg,
-    var(--gradient-background-2) 51%,
-    var(--gradient-background-3) 91%,
-    var(--gradient-background-3) 100%
-  );
-}

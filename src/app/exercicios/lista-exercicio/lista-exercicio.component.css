@@ -92,26 +92,3 @@ mat-list-option{
   background-color: var(--primary-background-color);
   color: var(--primary-text-color);
 }
-
-
-/*Sticky footer*/
-.wrapper{
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  background-color: var(--primary-background-color);
-}
-.content {
-  flex: 1 0 auto;
-  background-color: var(--primary-background-color);
-}
-.footer {
-  flex-shrink: 0;
-  background: var(--gradient-background-1);
-      background: linear-gradient(
-        135deg,
-        var(--gradient-background-2) 51%,
-        var(--gradient-background-3) 91%,
-        var(--gradient-background-4) 100%
-      );
-  }

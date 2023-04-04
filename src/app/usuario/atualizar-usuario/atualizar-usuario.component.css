@@ -3,26 +3,23 @@
 .container {
   display: flex;
   flex-direction: column;
- }
-
-
+}
 
 /*Sidenav*/
 
 .example-container {
-    min-height: 80vh;
-    background: var(--primary-background-color)
-  }
+  min-height: 80vh;
+  background: var(--primary-background-color);
+}
 
-  mat-sidenav{
-      width: 10vw;
-  }
+mat-sidenav {
+  width: 10vw;
+}
 
-  li{
-    padding-top: 2em;
-    list-style: none;
-  }
-
+li {
+  padding-top: 2em;
+  list-style: none;
+}
 
 /*Dados Pessoais*/
 
@@ -32,11 +29,11 @@ mat-card {
   padding: 2em;
   background-color: var(--primary-background-color);
   color: var(--primary-text-color);
- }
+}
 
- mat-card:first-child {
+mat-card:first-child {
   margin-top: 0;
- }
+}
 
 /*Inputs*/
 
@@ -45,7 +42,7 @@ label {
   font-weight: 500;
 }
 
-.usuario-dados input{
+.usuario-dados input {
   border-radius: 6px;
   padding: 8px 12px;
   margin-bottom: 1rem;
@@ -57,11 +54,15 @@ label {
   width: 100%;
 }
 
-.dados__nascimento, .dados__ingresso, .dados__curso, .dados__periodo, .dados__perfil {
+.dados__nascimento,
+.dados__ingresso,
+.dados__curso,
+.dados__periodo,
+.dados__perfil {
   width: 15w;
 }
 
-.campos{
+.campos {
   display: flex;
   flex-direction: column;
   margin: 0;
@@ -80,10 +81,9 @@ fieldset {
   border: 0;
 }
 
-.campos p{
+.campos p {
   font-weight: bold;
 }
-
 
 /*Tabela*/
 
@@ -91,52 +91,28 @@ table {
   width: 100%;
 }
 
-
-/*Sticky footer*/
-html, body {
-  height: 100%;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-}
-.content {
-  flex: 1 0 auto;
-}
-.footer {
-  flex-shrink: 0;
-  background: var(--gradient-background-1);
-      background: linear-gradient(
-        135deg,
-        var(--gradient-background-2) 51%,
-        var(--gradient-background-3) 91%,
-        var(--gradient-background-4) 100%
-      );
-}
-
-.form-group{
+.form-group {
   display: flex;
   flex-direction: column;
 }
 
-.perfil-form{
+.perfil-form {
   display: flex;
   flex-direction: column;
 }
-.wrapper{
+.wrapper {
   display: flex;
   justify-content: space-between;
 }
 
-.wrapper input{
+.wrapper input {
   width: 75%;
 }
-.btn_deletar{
+.btn_deletar {
   margin-bottom: 1em;
 }
 
-.mat-card{
+.mat-card {
   width: 80vw;
   height: auto;
   margin: auto;

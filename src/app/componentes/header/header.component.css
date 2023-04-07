@@ -34,15 +34,19 @@ button {
 
 /*Media Queries*/
 @media (max-width: 676px) {
+  .toolbar{
+    height: auto;
+    background-color: transparent;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
   .logo button {
     background-color: var(--secondary-background-color);
     width: 70%;
   }
   .logo-img {
     width: 100%;
-  }
-  .toolbar {
-    background-color: transparent;
   }
   .btn__login {
     display: none;

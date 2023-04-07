@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { UsuarioLogado } from './../../types/UsuarioLogado';
 import { Router } from '@angular/router'
 import { TokenService } from 'src/app/services/authentication/token/token.service';
+import { RefreshService } from 'src/app/services/refresh/refresh.service';
 
 
 //var usuarioLogado$ : UsuarioLogado
@@ -16,9 +17,14 @@ export class HeaderComponent implements OnInit {
   usuarioLogado$ : Observable <UsuarioLogado> = this.usuarioLogadoService.retornaUsuarioLogado();
   isLoggedIn = this.tokeService.possuiToken();
 
-  constructor(private usuarioLogadoService: UsuarioLogadoService, private route: Router, private tokeService: TokenService) { }
+  constructor(
+    private usuarioLogadoService: UsuarioLogadoService,
+    private route: Router,
+    private tokeService: TokenService,
+    private refreshService: RefreshService) { }
 
   ngOnInit(): void {
+    this.route.routeReuseStrategy.shouldReuseRoute = () => false;
   }
 
   recebeUsuarioLogado(){

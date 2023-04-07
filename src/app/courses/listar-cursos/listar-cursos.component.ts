@@ -6,6 +6,7 @@ import { Matricula } from 'src/app/types/Matricula';
 import { MatricularService } from 'src/app/services/matricular/matricular.service';
 import { UsuarioLogado } from 'src/app/types/UsuarioLogado';
 import { UsuarioLogadoService } from 'src/app/services/authentication/usuario-logado/usuario-logado.service';
+import { RefreshService } from 'src/app/services/refresh/refresh.service';
 /**/
 
 @Component({
@@ -25,7 +26,12 @@ export class ListarCursosComponent implements OnInit {
   // @ts-ignore: Object is possibly 'undefined'.
   matriculado: Observable<Matricula>;
 
-  constructor(private usuarioLogadoService: UsuarioLogadoService,private listarCursosService: ListaCursosService, private router: Router, private matriculaService: MatricularService) {
+  constructor(
+    private usuarioLogadoService: UsuarioLogadoService,
+    private listarCursosService: ListaCursosService,
+    private router: Router,
+    private matriculaService: MatricularService,
+    private refreshService : RefreshService) {
 
   }
 
@@ -43,12 +49,12 @@ export class ListarCursosComponent implements OnInit {
 
   listaCursos() {
     this.cursos = this.listarCursosService.retornaCursosUsuario();
-
     console.log(this.cursos);
   }
 
   ngOnInit(): void {
     this.listaCursos();
+    this.refreshService.load();
   }
 
 
@@ -83,4 +89,5 @@ export class ListarCursosComponent implements OnInit {
     console.log(this.cursos);
     console.log("Entrei aqui");
   }
+
 }

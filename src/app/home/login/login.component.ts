@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthenticationService } from 'src/app/services/authentication/login/authentication.service';
+import { RefreshService } from 'src/app/services/refresh/refresh.service';
 
 
 @Component({
@@ -15,7 +16,8 @@ export class LoginHomeComponent implements OnInit {
 
   constructor(
     private authService: AuthenticationService,
-    private router:Router
+    private router:Router,
+    private refreshService: RefreshService
   ) { }
 
   ngOnInit(): void {
@@ -23,7 +25,11 @@ export class LoginHomeComponent implements OnInit {
 
   login() {
     this.authService.autentica(this.email, this.senha).subscribe(()=>{
-    this.router.navigate(['cursos/listar']);
+    this.refreshService.setTrue;
+    this.router.navigateByUrl('cursos/listar', { skipLocationChange: true}).then( () => {
+      this.router.navigate(['cursos/listar'])
+    });
+
     }, (error)=> {
       alert("Usuário ou senha inválida");
       console.log(this.email, this.senha);

@@ -1,16 +1,92 @@
-<div class="container usuario" *ngIf="usuarioLogado$ | async as user ">
-  <button mat-flat-button (click)="irParaConsultaDeUsuario()" *ngIf="user.roles.includes('ADMIN')" >Gestão de Usuarios</button>
-  <button mat-flat-button *ngIf="user.roles.includes('ALUNO')" routerLink="/cursos/listar">Cursos Disponiveis</button>
-  <!-- <button mat-flat-button *ngIf="user.roles.includes('ALUNO')" routerLink="/cursos/matricula">Meus Cursos</button> -->
-  <button mat-flat-button *ngIf="user.roles.includes('ALUNO')" routerLink="/usuario/historico">Meu Historico</button>
-  <div class="menu_cursos" *ngIf="user.roles.includes('INSTRUTOR')">
-    <button mat-button [matMenuTriggerFor]="menu">Gestão de Cursos</button>
-    <mat-menu #menu="matMenu">
-      <button class="menu" mat-menu-item routerLink="/cursos/cadastrar">Cadastrar curso</button>
-      <button class="menu" mat-menu-item routerLink="/cursos/listar">Listar cursos</button>
-      <button class="menu" mat-menu-item routerLink="/cursos/menu">Menu de cursos</button>
-    </mat-menu>
+<div class="usuario" *ngIf="usuarioLogado$ | async as user">
+  <div class=" container menu__desktop">
+    <button mat-flat-button (click)="irParaConsultaDeUsuario()" *ngIf="user.roles.includes('ADMIN')">
+      Gestão de Usuarios
+    </button>
+    <button mat-flat-button *ngIf="user.roles.includes('ALUNO')" routerLink="/cursos/listar">
+      Cursos Disponiveis
+    </button>
+    <!-- <button mat-flat-button *ngIf="user.roles.includes('ALUNO')" routerLink="/cursos/matricula">Meus Cursos</button> -->
+    <button mat-flat-button *ngIf="user.roles.includes('ALUNO')" routerLink="/usuario/historico">
+      Meu Historico
+    </button>
+    <div class="menu_cursos" *ngIf="user.roles.includes('INSTRUTOR')">
+      <button mat-button [matMenuTriggerFor]="menu">Gestão de Cursos</button>
+      <mat-menu #menu="matMenu">
+        <button class="menu" mat-menu-item routerLink="/cursos/cadastrar">
+          Cadastrar curso
+        </button>
+        <button class="menu" mat-menu-item routerLink="/cursos/listar">
+          Listar cursos
+        </button>
+        <button class="menu" mat-menu-item routerLink="/cursos/menu">
+          Menu de cursos
+        </button>
+      </mat-menu>
+    </div>
+    <button class="btn-sair" mat-flat-button routerLink="/usuario/perfil">
+      Perfil
+    </button>
+    <button class="btn-sair" mat-flat-button (click)="loggout()">
+      Sair<mat-icon class="icone-sair">logout</mat-icon>
+    </button>
   </div>
-  <button class="btn-sair" mat-flat-button routerLink="/usuario/perfil">Perfil</button>
-  <button class="btn-sair" mat-flat-button (click)="loggout()" >Sair<mat-icon class="icone-sair">logout</mat-icon></button>
+  <div class="menu__mobile">
+    <mat-accordion>
+      <mat-expansion-panel hideToggle>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <mat-icon aria-hidden="false" aria-label="Icone de menu" fontIcon="menu"></mat-icon>
+          </mat-panel-title>
+          <mat-panel-description> Menu </mat-panel-description>
+        </mat-expansion-panel-header>
+        <div class="opcoes">
+          <button mat-flat-button (click)="irParaConsultaDeUsuario()" *ngIf="user.roles.includes('ADMIN')">
+            Gestão de Usuarios
+          </button>
+          <button mat-flat-button *ngIf="user.roles.includes('ALUNO')" routerLink="/cursos/listar">
+            Cursos Disponiveis
+          </button>
+          <!-- <button mat-flat-button *ngIf="user.roles.includes('ALUNO')" routerLink="/cursos/matricula">Meus Cursos</button> -->
+          <button mat-flat-button *ngIf="user.roles.includes('ALUNO')" routerLink="/usuario/historico">
+          </button>
+
+          <div class="submenu">
+            <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <div *ngIf="user.roles.includes('INSTRUTOR')">
+                    <button mat-button>
+                      Gestão de Cursos
+                    </button>
+                  </div>
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <div class="container" *ngIf="user.roles.includes('INSTRUTOR')">
+                <button mat-flat-button routerLink="/cursos/cadastrar">
+                  Cadastrar curso
+                </button>
+                <button mat-flat-button routerLink="/cursos/listar">
+                  Listar cursos
+                </button>
+                <button mat-flat-button routerLink="/cursos/menu">
+                  Menu de cursos
+                </button>
+              </div>
+
+            </mat-expansion-panel>
+          </div>
+
+          <button class="btn-sair" mat-flat-button routerLink="/usuario/perfil">
+            Perfil
+          </button>
+          <button class="btn-sair" mat-flat-button (click)="loggout()">
+            Sair<mat-icon class="icone-sair">logout</mat-icon>
+          </button>
+        </div>
+      </mat-expansion-panel>
+      <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
 </div>

@@ -27,6 +27,25 @@ button {
   width: 280px;
 }
 
+.mat-mdc-form-field + .mat-mdc-form-field {
+  margin-left: 8px;
+}
+
+.icone-sair {
+  margin-left: 16px;
+}
+
+.btn-sair {
+  margin-left: 8px;
+}
+
+.menu__mobile {
+  display: none;
+}
+
+
+
+
 @media (max-width: 676px) {
   .container{
     flex-direction: column;
@@ -38,6 +57,40 @@ button {
     padding: 0;
     margin: 0;
   }
+  .menu__desktop{
+    display: none;
+  }
+  .menu__mobile{
+    display: inline;
+    width: 80vw;
+  }
+
+  .menu__mobile button {
+    font-size: 1rem;
+  }
+  .opcoes {
+    display: flex;
+    flex-direction: column;
+  }
+  .icone-sair {
+    margin-left: 0px;
+  }
+
+  .btn-sair {
+    margin-left: 0px;
+  }
+  mat-expansion-panel-header{
+    padding: 0;
+  }
+  .mat-expansion-panel:not([class*=mat-elevation-z]) {
+    box-shadow: none;
+    border: 0;
+  }
+  .submenu button{
+    font-size: 1rem;
+  }
+
+
 }
 
 @media (max-width: 768px) {
@@ -46,10 +99,4 @@ button {
   }
 }
 
-.icone-sair {
-  margin-left: 16px;
-}
 
-.btn-sair {
-  margin-left: 8px;
-}

@@ -11,6 +11,8 @@ import {MatIconModule} from '@angular/material/icon';
 import { BarraAcessibilidadeComponent } from './barra-acessibilidade/barra-acessibilidade.component';
 
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
+import {MatExpansionModule} from '@angular/material/expansion';
+
 
 @NgModule({
   declarations: [
@@ -25,6 +27,7 @@ import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
     MatButtonModule,
     MatMenuModule,
     MatIconModule,
+    MatExpansionModule,
     ScrollToModule.forRoot()
   ],
   exports: [

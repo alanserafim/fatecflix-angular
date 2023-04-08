@@ -12,6 +12,7 @@ import { TokenService } from 'src/app/services/authentication/token/token.servic
 export class AdminComponent implements OnInit {
   usuarioLogado$ : Observable <UsuarioLogado> = this.usuarioLogadoService.retornaUsuarioLogado()
   isLoggedIn = true;
+  panelOpenState = false;
   constructor(private usuarioLogadoService: UsuarioLogadoService, private route: Router, private tokenService: TokenService) { }
 
 

@@ -22,6 +22,8 @@ import { MatStepperModule } from '@angular/material/stepper';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import {MatExpansionModule} from '@angular/material/expansion';
+
 
 
 @NgModule({
@@ -49,7 +51,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     HeaderModule,
     MessagesModule,
     SucessoModule,
-
+    MatExpansionModule
   ],
   exports: [
     MatCardModule,
@@ -75,6 +77,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     HeaderModule,
     MessagesModule,
     SucessoModule,
+    MatExpansionModule
   ],
   providers: [{ provide: MAT_DATE_LOCALE, useValue: 'pt-BR' }],
 })

@@ -51,15 +51,13 @@
           <button mat-flat-button *ngIf="user.roles.includes('ALUNO')" routerLink="/usuario/historico">
           </button>
 
-          <div class="submenu">
+          <div class="submenu" *ngIf="user.roles.includes('INSTRUTOR')">
             <mat-expansion-panel>
               <mat-expansion-panel-header>
                 <mat-panel-title>
-                  <div *ngIf="user.roles.includes('INSTRUTOR')">
                     <button mat-button>
                       Gestão de Cursos
                     </button>
-                  </div>
                 </mat-panel-title>
               </mat-expansion-panel-header>
               <div class="container" *ngIf="user.roles.includes('INSTRUTOR')">

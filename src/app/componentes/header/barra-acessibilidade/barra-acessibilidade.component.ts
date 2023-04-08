@@ -1,5 +1,6 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { ETheme } from '../ETheme';
+import { ScrollToConfigOptions, ScrollToService } from '@nicky-lenaers/ngx-scroll-to';
 
 
 @Component({
@@ -9,10 +10,38 @@ import { ETheme } from '../ETheme';
 })
 export class BarraAcessibilidadeComponent implements OnInit {
   public nome: string = ETheme.NOME_COM_CONTRASTE;
-  constructor() { }
+  constructor(private scrollToService: ScrollToService) { }
   
   ngOnInit(): void {
   }
+
+  triggerScrollToCabecalho() {
+    
+    const config: ScrollToConfigOptions = {
+      target: '#header'
+    };
+
+    this.scrollToService.scrollTo(config);
+  }
+
+  triggerScrollToConteudo() {
+    
+    const config: ScrollToConfigOptions = {
+      target: '#conteudo'
+    };
+
+    this.scrollToService.scrollTo(config);
+  }
+
+  triggerScrollToRodape() {
+    
+    const config: ScrollToConfigOptions = {
+      target: '#footer'
+    };
+
+    this.scrollToService.scrollTo(config);
+  }
+
 
   font_size = 16;
 
@@ -89,6 +118,21 @@ export class BarraAcessibilidadeComponent implements OnInit {
       // Your row selection code
       console.log(event.key);
       this.toogle();
+    }
+
+    if(event.altKey && event.key == '1') {
+      console.log(event.key);
+      this.triggerScrollToCabecalho(); 
+    }
+
+    if(event.altKey && event.key == '2') {
+      console.log(event.key);
+      this.triggerScrollToConteudo();
+    }
+
+    if(event.altKey && event.key == '3') {
+      console.log(event.key);
+      this.triggerScrollToRodape();
     }
   }
 

@@ -137,3 +137,27 @@ html, body {
   background-position: cover;
   background-repeat: no-repeat;
 }
+
+/*Media Queries*/
+@media (max-width: 676px) {
+
+  .usuario-dados input{
+    width: 100%;
+  }
+  .img{
+    display: none
+  }
+  .card1{
+    display: flex;
+    flex-direction: column-reverse;
+   }
+   .example-container {
+    background: transparent;
+    margin-top: 1rem;
+  }
+
+
+}
+
+@media (max-width: 768px) {
+}

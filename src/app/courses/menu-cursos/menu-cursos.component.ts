@@ -13,7 +13,7 @@ import { UsuarioLogado } from 'src/app/types/UsuarioLogado';
 export class MenuCursosComponent implements OnInit {
   usuarioLogado$ : Observable <UsuarioLogado> = this.usuarioLogadoService.retornaUsuarioLogado()
 
-  listaExibicao: String[] = ['Frontend', 'Backend']
+  listaExibicao: String[] = ['Frontend', 'Back End']
 
   constructor(
     private usuarioLogadoService: UsuarioLogadoService,

@@ -11,7 +11,7 @@
   margin-bottom: 1em;
   box-shadow: 0 6px 6px var(--primary-color);
   padding: 0 6vw 0 6vw;
-  background-color: var(--header-background-color2);
+  background-color: var(--primary-background-color) !important;
 }
 
 .btn__matricula {

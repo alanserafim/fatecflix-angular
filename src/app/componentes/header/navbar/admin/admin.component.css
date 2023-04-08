@@ -63,6 +63,7 @@ button {
   .menu__mobile{
     display: inline;
     width: 80vw;
+    background-color: var(--primary-background-color) !important
   }
 
   .menu__mobile button {

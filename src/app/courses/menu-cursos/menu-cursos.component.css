@@ -1,4 +1,4 @@
-.example-card {
+/* .example-card {
   max-width: 300px;
   margin-bottom: 10em;
   margin-left: 25px;
@@ -16,7 +16,7 @@
   -webkit-transform: scale(1.1);
   -ms-transform: scale(1.1);
   transform: scale(1.1);
-}
+} */
 
 .banner {
   position: relative;
@@ -80,4 +80,32 @@ body {
 .footer {
   flex-shrink: 0;
   box-shadow: 5px 5px 15px var(--border-neon);
+}
+
+
+
+/*Media Queries*/
+@media (max-width: 676px) {
+  .banner {
+    position: relative;
+    height: 40vh;
+  }
+
+  .texto {
+    top: 16%;
+    left: 2%;
+    text-align: center;
+  }
+
+  .texto h1 {
+    font-size: 1.2rem;
+  }
+
+  .texto p {
+    font-size: 1rem;
+  }
+
+}
+
+@media (max-width: 768px) {
 }

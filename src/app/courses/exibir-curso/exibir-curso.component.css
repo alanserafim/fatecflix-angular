@@ -8,6 +8,7 @@
 
 .content {
   flex: 1 0 auto;
+  padding-bottom: 2rem;
 }
 .footer {
   flex-shrink: 0;
@@ -53,3 +54,33 @@ button{
 {
   overflow-y: scroll;
 }
+
+/*Media Queries*/
+@media (max-width: 676px) {
+  .card-align{
+    flex-direction: column;
+  }
+  .example-card {
+    width: 80vw;
+    height: 50vh;
+    margin: auto;
+    background-color: var(--login-card-background);
+    box-shadow: 3px 3px 6px var(--listar-curso-box-shadow);
+  }
+  .content {
+    background: var(--gradient-background-1);
+      background: linear-gradient(
+        135deg,
+        var(--gradient-background-2) 51%,
+        var(--gradient-background-3) 91%,
+        var(--gradient-background-4) 100%
+      );
+  }
+}
+
+@media (max-width: 768px) {
+}
+
+
+
+

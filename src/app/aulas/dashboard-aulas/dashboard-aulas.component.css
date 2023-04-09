@@ -1,39 +1,4 @@
 
-
-mat-grid-tile {
-  height: 70vh;
-  overflow-y: scroll;
-  background-color: transparent;
-}
-
-mat-grid-list{
-  height: 70vh;
-}
-
-
-.container{
-  max-height: 95%;
-  max-width: 95%;
-}
-
-app-exibir-aula{
-  width: auto;
-  height: auto;
-}
-
-app-listar-aulas{
-  padding: 1em;
-  height: auto;
-  width: auto;
-}
-
-.tile_lista{
-  background-color: transparent;
-}
-.tile_aula{
-  background-color: var(--primary-background-color);
-}
-
 .wrapper{
   min-height: 100%;
   display: flex;
@@ -42,6 +7,7 @@ app-listar-aulas{
 
 .content {
   flex: 1 0 auto;
+
 }
 
 .footer {
@@ -56,3 +22,29 @@ app-listar-aulas{
 
 
 
+/*Media Queries*/
+@media (max-width: 676px) {
+  .content {
+    background: var(--gradient-background-1);
+      background: linear-gradient(
+        135deg,
+        var(--gradient-background-2) 51%,
+        var(--gradient-background-3) 91%,
+        var(--gradient-background-4) 100%
+      );
+  }
+
+  .wrapper {
+    background: var(--gradient-background-1);
+      background: linear-gradient(
+        135deg,
+        var(--gradient-background-2) 51%,
+        var(--gradient-background-3) 91%,
+        var(--gradient-background-4) 100%
+      );
+  }
+
+}
+
+@media (max-width: 768px) {
+}

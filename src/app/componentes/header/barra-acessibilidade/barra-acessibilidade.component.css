@@ -21,7 +21,7 @@
 
 /*Media Queries*/
 /*smartphones*/
-@media (min-width: 240px) {
+@media (max-width: 676px) {
   .barra-acessibilidade{
     width: 100vw;
     height: auto;

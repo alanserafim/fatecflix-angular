@@ -67,6 +67,43 @@ button{
   background-color: var(--btn-background-color4);
   color: var(--secondary-text-color);
 }
+.video__mobile{
+  display: none;
+}
 
 
+/*Media Queries*/
+@media (max-width: 676px) {
+  .wrapper{
+    width: 100vw;
+    flex-direction: column;
+    justify-content: unset;
+  }
+  .video__mobile{
+    display: unset;
+  }
+  .video__desktop{
+    display: none;
+  }
+  .container{
+    overflow-y: hidden;
+  }
 
+  .aula{
+    width: 100%;
+  }
+
+  .lista{
+    width: 94%;
+    height: auto;
+    margin: auto;
+  }
+  .lista mat-card {
+    margin-bottom: 1em;
+    margin-right: 0;
+    box-shadow: 3px 3px 6px var(--border-neon);
+  }
+}
+
+@media (max-width: 768px) {
+}

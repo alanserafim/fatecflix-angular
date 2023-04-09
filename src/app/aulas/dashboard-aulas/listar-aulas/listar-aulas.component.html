@@ -2,11 +2,19 @@
   <section id="conteudo" class="container aula">
     <div class="card-video">
       <youtube-player
+        class="video__desktop"
         [videoId]='videoId'
         suggestedQuality="highres"
         [height]="400"
         [width]="690"
       ></youtube-player>
+      <youtube-player
+      class="video__mobile"
+      [videoId]='videoId'
+      suggestedQuality="highres"
+      [height]="200"
+      [width]="360"
+    ></youtube-player>
       <app-comentar [cursoId]="cursoId" [aulaId]="aulaId"></app-comentar>
     </div>
   </section>

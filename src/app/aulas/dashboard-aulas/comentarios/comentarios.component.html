@@ -9,10 +9,8 @@
       <p>
         {{ comentario.comentario }}
       </p>
-    </mat-card-content>
-    <mat-card-actions>
       <button mat-stroked-button color="warn" *ngIf="user.roles.includes('INSTRUTOR')" (click)="deleta(comentario.comentarioId, cursoId)">Deletar</button>
-    </mat-card-actions>
+    </mat-card-content>
   </mat-card>
 </div>
 

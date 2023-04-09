@@ -25,3 +25,19 @@ mat-card-content{
   display: flex;
   justify-content: space-between;
 }
+
+/*Media Queries*/
+@media (max-width: 676px) {
+  .example-card {
+    width: 82vw;
+    margin: auto;
+    margin-top: 1rem
+  }
+
+  mat-card-content{
+    padding: 0;
+  }
+}
+
+@media (max-width: 768px) {
+}

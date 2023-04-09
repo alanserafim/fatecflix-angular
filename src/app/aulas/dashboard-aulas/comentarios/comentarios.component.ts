@@ -1,4 +1,4 @@
-import { UsuarioLogado } from './../../types/UsuarioLogado';
+import { UsuarioLogado } from '../../../types/UsuarioLogado';
 import { Observable } from 'rxjs';
 import { Component, OnInit, Input } from '@angular/core';
 import { Comentario } from 'src/app/types/Comentario';

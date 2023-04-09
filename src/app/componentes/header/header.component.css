@@ -14,10 +14,6 @@
   background-color: var(--primary-background-color) !important;
 }
 
-.btn__matricula {
-  display: none;
-}
-
 .logo button {
   padding: 0;
 }
@@ -55,12 +51,6 @@ button {
     background-color: transparent;
     color: var(--secondary-text-color);
     font-size: 1.5em;
-  }
-  .btn__matricula {
-    font-size: 1.8em;
-    display: unset;
-    border: 2px solid var(--border-neon);
-    border-radius: 16px;
   }
 }
 

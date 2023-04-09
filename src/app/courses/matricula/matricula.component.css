@@ -3,7 +3,7 @@ table {
 }
 
 th.mat-sort-header-sorted {
-  color: black;
+  color: var(--primary-text-color);
 }
 
 .btn_exercicios{
@@ -15,8 +15,12 @@ th.mat-sort-header-sorted {
   .panel-body {
     overflow-x: scroll;
   }
+  table{
+    background-color: var(--perfil-input-background);
 
+  }
   .panel-body th, .panel-body td {
+    color: var(--primary-text-color);
     min-width: 30vw;
     min-height: 10vh;
   }

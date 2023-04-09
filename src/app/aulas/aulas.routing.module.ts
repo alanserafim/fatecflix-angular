@@ -6,7 +6,7 @@ import { CadastrarAulasComponent } from './cadastrar-aulas/cadastrar-aulas.compo
 import { DashboardAulasComponent } from './dashboard-aulas/dashboard-aulas.component';
 import { DeletaComentarioComponent } from './deleta-comentario/deleta-comentario.component';
 import { DeletarAulasComponent } from './deletar-aulas/deletar-aulas.component';
-import { ListarAulasComponent } from './listar-aulas/listar-aulas.component';
+import { ListarAulasComponent } from './dashboard-aulas/listar-aulas/listar-aulas.component';
 
 const routes: Routes = [
   {

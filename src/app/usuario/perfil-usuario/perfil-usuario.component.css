@@ -60,16 +60,12 @@ label {
   background-color: var(--perfil-input-background);
   padding: 8px 12px;
   margin-bottom: 1rem;
-  width: 15vw;
+  width: 18vw;
 }
 
 .mat-form-field {
   font-size: 14px;
   width: 100%;
-}
-
-.dados__nascimento, .dados__ingresso, .dados__curso, .dados__periodo, .dados__perfil {
-  width: 15w;
 }
 
 .campos{

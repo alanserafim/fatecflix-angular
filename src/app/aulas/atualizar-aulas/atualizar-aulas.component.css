@@ -81,18 +81,19 @@ mat-form-field {
 html,
 body {
   height: 100%;
+  width: 100%;
 }
 
 .wrapper {
   display: flex;
   flex-direction: column;
-  min-height: 100%;
   background-color: var(--primary-background-color);
+  width: 100%;
 }
 
 .content {
   flex: 1 0 auto;
-
+  width: 100%;
 }
 
 .rodape {
@@ -108,13 +109,34 @@ body {
       );
 }
 
+
+@media (max-width: 676px) {
+  .content {
+    padding: 0;
+    margin: 0;
+    border: 0;
+  }
+  .wrapper {
+    background: var(--gradient-background-1);
+    background: linear-gradient(
+      135deg,
+      var(--gradient-background-2) 51%,
+      var(--gradient-background-3) 91%,
+      var(--gradient-background-4) 100%
+    );
+  }
+  .rodape {
+    background: none;
+  }
+}
+
 @media (max-width: 850px) {
   .card__container {
     flex-direction: column;
-    width: 90%;
+    width: 82%;
     height: auto;
     padding: 1em;
-    margin: 0;
+    margin: auto;
   }
 
   .card__1 {
@@ -126,7 +148,7 @@ body {
     width: 90%;
   }
   .content {
-    padding: 1em;
+    padding: 0;
   }
   mat-card-header {
     align-self: center;
@@ -138,7 +160,7 @@ body {
     border-radius: 12px;
     background-color: var(--primary-color);
     color: var(--secondary-text-color);
-    
+
   }
   .content {
     height: auto;

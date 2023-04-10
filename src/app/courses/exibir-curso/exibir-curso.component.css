@@ -64,6 +64,7 @@ button{
     width: 80vw;
     height: 50vh;
     margin: auto;
+    margin-top: 2rem;
     background-color: var(--login-card-background);
     box-shadow: 3px 3px 6px var(--listar-curso-box-shadow);
   }

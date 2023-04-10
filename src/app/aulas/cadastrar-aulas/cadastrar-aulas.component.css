@@ -31,3 +31,22 @@
         var(--gradient-background-4) 100%
       );
 }
+
+@media (max-width: 676px) {
+  .wrapper {
+    background: var(--gradient-background-1);
+    background: linear-gradient(
+      135deg,
+      var(--gradient-background-2) 51%,
+      var(--gradient-background-3) 91%,
+      var(--gradient-background-4) 100%
+    );
+  }
+
+  .wrapper mat-card{
+    width: 80vw;
+  }
+  .footer {
+    background: none;
+  }
+}

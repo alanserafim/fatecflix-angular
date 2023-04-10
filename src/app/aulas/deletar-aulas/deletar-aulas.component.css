@@ -88,12 +88,24 @@ html, body {
 }
 
 @media (max-width: 850px){
+  .wrapper {
+    background: var(--gradient-background-1);
+    background: linear-gradient(
+      135deg,
+      var(--gradient-background-2) 51%,
+      var(--gradient-background-3) 91%,
+      var(--gradient-background-4) 100%
+    );
+  }
+  .footer {
+    background: none;
+  }
   .card__container{
     flex-direction: column;
-    width: 90%;
+    width: 80%;
     height: auto;
     padding: 1em;
-    margin: 0;
+    margin: auto;
   }
 
   .card__1{
@@ -105,7 +117,7 @@ html, body {
     width: 90%;
   }
   .content {
-    padding: 1em;
+    padding: 0;
   }
   mat-card-header{
     align-self: center;
@@ -117,12 +129,10 @@ html, body {
     border-radius: 12px;
     background-color: var(--primary-color);
     color: var(--secondary-text-color);
+    margin-bottom: 1rem;
   }
   .content{
     height: auto;
-  }
-  .footer {
-    display: none;
   }
 
 }

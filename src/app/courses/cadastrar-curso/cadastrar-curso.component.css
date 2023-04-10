@@ -89,6 +89,16 @@ html, body {
 }
 
 @media (max-width: 850px){
+  .wrapper{
+    height: auto;
+    background: var(--gradient-background-1);
+      background: linear-gradient(
+        135deg,
+        var(--gradient-background-2) 51%,
+        var(--gradient-background-3) 91%,
+        var(--gradient-background-4) 100%
+      );
+  }
   .card__container{
     flex-direction: column;
     width: 90%;
@@ -121,9 +131,6 @@ html, body {
   }
   .content{
     height: auto;
-  }
-  .footer {
-    display: none;
   }
 
 }

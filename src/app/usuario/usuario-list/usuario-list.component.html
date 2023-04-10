@@ -1,8 +1,8 @@
-<body>
+<div class="wrapper">
   <app-header id="header"></app-header>
   <div class="content" id="conteudo">
+    <h1>Lista de Usuários cadastrados</h1>
     <div class="panel-body">
-      <h1>Lista de Usuários cadastrados</h1>
       <table mat-table [dataSource]="usuarios" class="mat-elevation-z8">
         <ng-container matColumnDef="Nome">
           <th mat-header-cell *matHeaderCellDef>Nome</th>
@@ -31,7 +31,6 @@
                 mat-stroked-button
                 color="primary"
                 (click)="atualizaUsuario(usuario.userId)"
-                style="margin-left: 10px"
               >
                 Atualizar
               </button>
@@ -44,4 +43,4 @@
     </div>
   </div>
   <app-footer id="footer" class="footer"></app-footer>
-</body>
+</div>

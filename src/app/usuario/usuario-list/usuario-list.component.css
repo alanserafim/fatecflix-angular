@@ -19,7 +19,7 @@ td {
   color: var(--primary-text-color);
 }
 
-.panel-body {
+.panel_body {
   padding: 2vh 0;
 }
 
@@ -103,13 +103,20 @@ fieldset {
   font-weight: bold;
 }
 
+.buttons button{
+  width: 100px;
+  margin: .5rem;
+}
+
 /*Sticky footer*/
 html,
 body {
   height: 100%;
 }
 
-body {
+
+.wrapper {
+  height: 100%;
   display: flex;
   flex-direction: column;
   background-color: var(--primary-background-color);
@@ -126,4 +133,23 @@ body {
     var(--gradient-background-3) 91%,
     var(--gradient-background-3) 100%
   );
+}
+
+/*Media Queries*/
+@media (max-width: 676px) {
+  .panel-body {
+    overflow-x: scroll;
+  }
+  .panel-body th, .panel-body td {
+    min-width: 30vw;
+    min-height: 25vh;
+  }
+  table{
+    background-color: var(--perfil-input-background);
+    margin: 1rem;
+
+  }
+}
+
+@media (max-width: 768px) {
 }

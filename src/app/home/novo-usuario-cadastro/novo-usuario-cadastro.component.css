@@ -82,6 +82,16 @@ mat-form-field {
   );
 }
 
+@media screen and (max-width: 1045px) {
+  .super-container {
+    background-color: var(--primary-background-color);
+  }
+  .card {
+    width: 70%;
+    border-color: var(--login-card-background);
+  }
+}
+
 @media screen and (min-width: 720px) {
   .super-container {
     background-color: var(--primary-background-color);

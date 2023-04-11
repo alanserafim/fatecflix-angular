@@ -31,6 +31,7 @@ button {
 /*Media Queries*/
 @media (max-width: 676px) {
   .toolbar{
+    width: 100vw;
     height: auto;
     background-color: transparent;
     flex-direction: column;

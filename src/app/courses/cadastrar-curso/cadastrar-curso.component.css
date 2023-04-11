@@ -90,6 +90,7 @@ html, body {
 
 @media (max-width: 850px){
   .wrapper{
+    width: 100vw;
     height: auto;
     background: var(--gradient-background-1);
       background: linear-gradient(
@@ -132,5 +133,4 @@ html, body {
   .content{
     height: auto;
   }
-
 }

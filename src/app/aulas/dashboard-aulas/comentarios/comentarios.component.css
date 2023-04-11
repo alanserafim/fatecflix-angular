@@ -40,4 +40,13 @@ mat-card-content{
 }
 
 @media (max-width: 768px) {
+  .example-card {
+    width: 71vw;
+    margin: auto;
+    margin-top: 1rem
+  }
+
+  mat-card-content{
+    padding: 0;
+  }
 }

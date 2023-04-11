@@ -94,10 +94,10 @@ body {
 }
 
 
-@media (max-width: 850px) {
+@media (max-width: 676px) {
   .card__container {
     flex-direction: column;
-    width: 90%;
+    width: 90vw;
     height: auto;
     padding: 1em;
     margin: 0;

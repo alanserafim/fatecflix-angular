@@ -32,3 +32,23 @@ html, body {
       );
 }
 
+/*Media Queries*/
+@media (max-width: 676px) {
+  table{
+    width: 87vw;
+    margin: auto;
+  }
+
+  .wrapper {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+  }
+} 
+
+@media (max-width: 1045px) {
+  table{
+    width: 100vw;
+    margin: auto;
+  }
+}

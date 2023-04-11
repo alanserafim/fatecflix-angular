@@ -48,6 +48,7 @@ button {
 
 @media (max-width: 676px) {
   .container{
+    width: 100vw;
     flex-direction: column;
     align-items: flex-start;
   }
@@ -90,7 +91,9 @@ button {
   .submenu button{
     font-size: 1rem;
   }
-
+  .logoHeader {
+    width: 170px;
+  }
 
 }
 

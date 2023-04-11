@@ -89,6 +89,7 @@ html, body {
 
 @media (max-width: 850px){
   .wrapper {
+    width: 100vw;
     background: var(--gradient-background-1);
     background: linear-gradient(
       135deg,

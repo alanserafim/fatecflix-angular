@@ -25,6 +25,7 @@
 /*Media Queries*/
 @media (max-width: 676px) {
   .content {
+    width: 100vw;
     background: var(--gradient-background-1);
       background: linear-gradient(
         135deg,
@@ -43,8 +44,27 @@
         var(--gradient-background-4) 100%
       );
   }
-
 }
 
 @media (max-width: 768px) {
+  .content {
+    width: 90vw;
+    background: var(--gradient-background-1);
+      background: linear-gradient(
+        135deg,
+        var(--gradient-background-2) 51%,
+        var(--gradient-background-3) 91%,
+        var(--gradient-background-4) 100%
+      );
+  }
+
+  .wrapper {
+    background: var(--gradient-background-1);
+      background: linear-gradient(
+        135deg,
+        var(--gradient-background-2) 51%,
+        var(--gradient-background-3) 91%,
+        var(--gradient-background-4) 100%
+      );
+  }
 }

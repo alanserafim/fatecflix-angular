@@ -136,7 +136,7 @@ body {
 }
 
 /*Media Queries*/
-@media (max-width: 676px) {
+@media (min-width: 676px) {
   .panel-body {
     overflow-x: scroll;
   }
@@ -146,8 +146,9 @@ body {
   }
   table{
     background-color: var(--perfil-input-background);
-    margin: 1rem;
-
+    width: 70vw;
+    height: auto;
+    margin: 5rem;
   }
 }
 

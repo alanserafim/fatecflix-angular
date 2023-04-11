@@ -8,6 +8,7 @@ import { controlValuesAreEqual } from './validators/campos-iguais.validator';
 import { cpfValido } from './validators/cpf-valido.validator';
 import { Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-novo-usuario-cadastro-home',
   templateUrl: './novo-usuario-cadastro.component.html',
@@ -16,6 +17,12 @@ import { Router } from '@angular/router';
 export class NovoUsuarioCadastroHomeComponent implements OnInit {
 
   novoUsuarioForm!: FormGroup;
+
+  password: string = '';
+  hasMinimumLength: boolean = false;
+  hasUppercaseLetter: boolean = false;
+  hasLowercaseLetter: boolean = false;
+  hasNumber: boolean = false;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -36,7 +43,8 @@ export class NovoUsuarioCadastroHomeComponent implements OnInit {
         anoIngresso: [''],
         //semestreIngresso: [''],
         periodo: [''],
-        password: ['', [Validators.required, Validators.minLength(8)]],
+        //password: ['', [Validators.required, Validators.minLength(8)]],
+        password: ['', [Validators.required]],
         confirmacao: ['', [Validators.required]],
       },
       {
@@ -48,6 +56,13 @@ export class NovoUsuarioCadastroHomeComponent implements OnInit {
         ]
       }
     )
+  }
+
+  updateRequirements(): void {
+    this.hasMinimumLength = this.password.length >= 8;
+    this.hasUppercaseLetter = /[A-Z]/.test(this.password);
+    this.hasLowercaseLetter = /[a-z]/.test(this.password);
+    this.hasNumber = /\d/.test(this.password);
   }
 
   cadastrar(){
@@ -62,8 +77,4 @@ export class NovoUsuarioCadastroHomeComponent implements OnInit {
       console.log(novoUsuario);
     })
   }
-
-
-
-
 }

@@ -102,8 +102,9 @@ mat-form-field {
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 676px) {
   .super-container {
+    height: auto;
     background: var(--gradient-background-1);
     background: linear-gradient(
       135deg,
@@ -112,11 +113,6 @@ mat-form-field {
       var(--gradient-background-4) 100%
     );
   }
-
-  app-header {
-    display: none;
-  }
-
   .titulo p {
     color: var(--secondary-text-color);
   }
@@ -136,4 +132,13 @@ mat-form-field {
     border-radius: 12px;
     color: var(--secondary-text-color);
   }
+  app-messages {
+    margin-top: 0.4rem;
+  }
+  form {
+    padding-bottom: 2rem;
+  }
+
+
 }
+

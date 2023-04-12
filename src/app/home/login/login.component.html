@@ -70,6 +70,23 @@
               >Ainda nâo tem acesso? Cadastre-se! </a
             >
           </p>
+          <div class="teste">
+            <p>Ou<br>Teste sem logar<br>*disponível temporariamente</p>
+            <div class="teste__botoes">
+              <button
+              mat-flat-button
+              (click)="loginAutomaticoAluno()"
+            >
+              Aluno
+            </button>
+             <button
+              mat-flat-button
+              (click)="loginAutomaticoInstrutor()"
+            >
+              Instrutor
+            </button>
+            </div>
+          </div>
         </section>
       </mat-card>
     </form>

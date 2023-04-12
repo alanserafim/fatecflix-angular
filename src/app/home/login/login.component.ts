@@ -9,6 +9,7 @@ import { AuthenticationService } from 'src/app/services/authentication/login/aut
   styleUrls: ['./login.component.css']
 })
 export class LoginHomeComponent implements OnInit {
+
   hide = true;
   email = '';
   senha = '';
@@ -31,4 +32,31 @@ export class LoginHomeComponent implements OnInit {
     }
     )
   }
+
+  loginAutomaticoInstrutor() {
+    const email = "instrutor";
+    const senha = "12345678"
+    this.authService.autentica(email, senha).subscribe(()=>{
+      this.router.navigate(['cursos/menu']);
+      }, (error)=> {
+        alert("Usuário ou senha inválida");
+        console.log(email, senha);
+        console.log(error);
+      }
+      )
+  }
+
+
+  loginAutomaticoAluno() {
+    const email = "aluno";
+    const senha = "12345678"
+    this.authService.autentica(email, senha).subscribe(()=>{
+      this.router.navigate(['cursos/menu']);
+      }, (error)=> {
+        alert("Usuário ou senha inválida");
+        console.log(email, senha);
+        console.log(error);
+      }
+      )
+    }
 }

@@ -137,7 +137,7 @@ html, body {
 /*Media Queries*/
 @media (max-width: 676px) {
   .usuario-dados input{
-    width: 10=0%;
+    width: 100%;
   }
   .img{
     display: none

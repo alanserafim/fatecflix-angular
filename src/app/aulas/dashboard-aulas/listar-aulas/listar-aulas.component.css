@@ -104,7 +104,7 @@ button{
     box-shadow: 3px 3px 6px var(--border-neon);
   }
 }
-
+/*
 @media (max-width: 768px) {
   .wrapper{
     width: 90vw;
@@ -135,4 +135,4 @@ button{
     margin-right: 0;
     box-shadow: 3px 3px 6px var(--border-neon);
   }
-}
+} */

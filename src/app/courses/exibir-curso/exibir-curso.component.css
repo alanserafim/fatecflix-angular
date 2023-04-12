@@ -62,7 +62,7 @@ button{
   }
   .example-card {
     width: 80vw;
-    height: 50vh;
+    min-height: 50vh;
     margin: auto;
     margin-top: 2rem;
     background-color: var(--login-card-background);
@@ -78,31 +78,13 @@ button{
         var(--gradient-background-4) 100%
       );
   }
+  .container {
+    overflow-y: hidden;
+    text-align: justify;
+    height: 89%;
+  }
 }
 
-@media (max-width: 768px) {
-  .card-align{
-    flex-direction: column;
-  }
-  .example-card {
-    width: 80vw;
-    height: 50vh;
-    margin: auto;
-    margin-top: 2rem;
-    background-color: var(--login-card-background);
-    box-shadow: 3px 3px 6px var(--listar-curso-box-shadow);
-  }
-  .content {
-    width: 90vw;
-    background: var(--gradient-background-1);
-      background: linear-gradient(
-        135deg,
-        var(--gradient-background-2) 51%,
-        var(--gradient-background-3) 91%,
-        var(--gradient-background-4) 100%
-      );
-  }
-}
 
 
 

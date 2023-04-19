@@ -3,7 +3,7 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false,
+  production: true,
   //@ts-ignore
   api_url: process.env.api_url ||'https://fatecflix.herokuapp.com' //https://fatecflix.onrender.com
 };

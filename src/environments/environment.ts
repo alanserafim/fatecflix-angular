@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  api_url: process.env.['api_url'] ||'https://fatecflix.herokuapp.com' //https://fatecflix.onrender.com
+  //@ts-ignore
+  api_url: process.env.api_url ||'https://fatecflix.herokuapp.com' //https://fatecflix.onrender.com
 };
 
 // https://fatecflix.onrender.com

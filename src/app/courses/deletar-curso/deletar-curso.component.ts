@@ -34,12 +34,12 @@ export class DeletarCursoComponent implements OnInit {
 
   deleteCurso(): void {
     this.deletarCurso.deletaCurso(this.cursoId).subscribe(() => {
-      this.router.navigate(["/cursos/listar"]);
+      this.router.navigate(["pages/cursos/listar"]);
     });
   }
 
   cancel(): void {
-    this.router.navigate(["/cursos/listar"]);
+    this.router.navigate(["pages/cursos/listar"]);
   }
 
 }

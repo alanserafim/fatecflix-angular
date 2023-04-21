@@ -13,35 +13,39 @@ const routes: Routes = [
     loadChildren: () => import('./home/home.module').then((m) => m.HomeModule),
   },
   {
-    path: 'usuario',
-    loadChildren: () =>
-      import('./usuario/usuario.module').then((m) => m.UsuarioModule),
-    canLoad: [AuntenticacaoGuard],
+    path: 'pages',
+    loadChildren: () => import('./pages/pages.module').then((m) => m.PagesModule),
   },
-  {
-    path: 'cursos',
-    loadChildren: () =>
-      import('./courses/courses.module').then((m) => m.CoursesModule),
-    canLoad: [AuntenticacaoGuard],
-  },
+  // {
+  //   path: 'usuario',
+  //   loadChildren: () =>
+  //     import('./usuario/usuario.module').then((m) => m.UsuarioModule),
+  //   canLoad: [AuntenticacaoGuard],
+  // },
+  // {
+  //   path: 'cursos',
+  //   loadChildren: () =>
+  //     import('./courses/courses.module').then((m) => m.CoursesModule),
+  //   canLoad: [AuntenticacaoGuard],
+  // },
   {
     path: 'dashboard',
     loadChildren: () =>
       import('./dashboard/dashboard.module').then((m) => m.DashboardModule),
     canLoad: [AuntenticacaoGuard],
   },
-  {
-    path: 'aulas',
-    loadChildren: () =>
-      import('./aulas/aulas.module').then((m) => m.AulasModule),
-    canLoad: [AuntenticacaoGuard],
-  },
-  {
-    path: 'exercicios',
-    loadChildren: () =>
-      import('./exercicios/exercicios.module').then((m) => m.ExerciciosModule),
-    canLoad: [AuntenticacaoGuard],
-  },
+  // {
+  //   path: 'aulas',
+  //   loadChildren: () =>
+  //     import('./aulas/aulas.module').then((m) => m.AulasModule),
+  //   canLoad: [AuntenticacaoGuard],
+  // },
+  // {
+  //   path: 'exercicios',
+  //   loadChildren: () =>
+  //     import('./exercicios/exercicios.module').then((m) => m.ExerciciosModule),
+  //   canLoad: [AuntenticacaoGuard],
+  // },
 ];
 
 @NgModule({

@@ -50,11 +50,11 @@ export class GridCursosComponent implements OnInit {
 
 
   deletaCurso(id : number) {
-    this.router.navigate(['/cursos/deletar', id]);
+    this.router.navigate(['cursos/deletar', id]);
   }
 
   atualizaCurso(id : number) {
-    this.router.navigate(['/cursos/atualizar', id])
+    this.router.navigate(['cursos/atualizar', id])
   }
 
   detalhar(id: number) {
@@ -66,7 +66,7 @@ export class GridCursosComponent implements OnInit {
     this.matriculaService.matricular(id, this.matricula).subscribe(data => console.log(data),
     error => console.log(error));*/
 
-    this.router.navigate(['/cursos/detalhar', id]);
+    this.router.navigate(['cursos/detalhar', id]);
   }
 
   getCursoByCategoria(categoria: string) {

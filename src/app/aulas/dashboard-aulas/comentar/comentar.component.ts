@@ -39,7 +39,7 @@ export class ComentarComponent implements OnInit {
     this.comentarioService.comentar(this.comentario, this.aulaId)
       .subscribe((data) => {
         console.log(data);
-        this.router.navigate(['/usuario/sucesso']);
+        this.router.navigate(['pages/usuario/sucesso']);
       },
       (error) => {
         alert("Cadastro não realizado!");

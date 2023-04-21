@@ -1,7 +1,3 @@
-body {
-  background-color: var(--primary-background-color)
-}
-
 .card__container {
   display: flex;
   justify-content: flex-start;
@@ -70,34 +66,6 @@ mat-label p{
 }
 
 
-/*Sticky footer*/
-html, body {
-  height: 100%;
-}
-
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-  background: var(--gradient-background-1);
-      background: linear-gradient(
-        135deg,
-        var(--gradient-background-2) 51%,
-        var(--gradient-background-3) 91%,
-        var(--gradient-background-3) 100%
-      );
-}
-.content {
-  flex: 1 0 auto;
-}
-.footer {
-  flex-shrink: 0;
-}
-
-
-
-
-
 @media (max-width: 850px) {
   .card__container {
     flex-direction: column;
@@ -115,9 +83,6 @@ html, body {
   .card__2 {
     width: 90%;
   }
-  .content {
-    padding: 1em;
-  }
   mat-card-header {
     align-self: center;
   }
@@ -129,11 +94,5 @@ html, body {
     background-color: var(--primary-color);
     color: var(--secondary-text-color);
   }
-  .content {
-    height: auto;
-    width: 100vw;
-  }
-  .footer {
-    display: none;
-  }
+
 }

@@ -1,3 +1,9 @@
+/* .footer{ */
+  /* border-top: 1px solid var(--border-neon); */
+  /* offset-x | offset-y | blur-radius | spread-radius | color */
+  /* box-shadow: 1px -1px 5px 5px var(--border-neon); */
+
+/* } */
 .rodape {
   color: var(--footer-text-color);
   height: 150px;

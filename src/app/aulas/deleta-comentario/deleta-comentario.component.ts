@@ -34,13 +34,13 @@ export class DeletaComentarioComponent implements OnInit {
   deleteComentario() {
     console.log(this.cursoId);
     this.comentarioService.deletaComentario(this.id).subscribe(() => {
-      this.router.navigate(["/usuario/sucesso"]);
+      this.router.navigate(["usuario/sucesso"]);
     })
   }
 
   cancel() {
     console.log(this.cursoId);
-    this.router.navigate(["/aulas/dashboard", this.cursoId]);
+    this.router.navigate(["aulas/dashboard", this.cursoId]);
   }
 
 }

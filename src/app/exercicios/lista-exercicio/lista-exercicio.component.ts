@@ -55,15 +55,15 @@ export class ListaExercicioComponent implements OnInit {
   }
 
   atualiza(id: any) {
-    this.router.navigate(['/exercicios/atualizar', id, 'curso', this.cursoId]);
+    this.router.navigate(['exercicios/atualizar', id, 'curso', this.cursoId]);
   }
 
   deleta(id: any) {
-    this.router.navigate(['/exercicios/deletar', id, 'curso', this.cursoId]);
+    this.router.navigate(['exercicios/deletar', id, 'curso', this.cursoId]);
   }
 
   gotoCadastra() {
-    this.router.navigate(['/exercicios/cadastrar', this.cursoId]);
+    this.router.navigate(['exercicios/cadastrar', this.cursoId]);
   }
 
   recebeUsuarioLogado(){

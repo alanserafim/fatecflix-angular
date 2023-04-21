@@ -76,58 +76,8 @@ mat-form-field {
 }
 
 
-
-/*Sticky footer*/
-html,
-body {
-  height: 100%;
-  width: 100%;
-}
-
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  background-color: var(--primary-background-color);
-  width: 100%;
-}
-
-.content {
-  flex: 1 0 auto;
-  width: 100%;
-}
-
-.rodape {
-  flex-shrink: 0;
-  margin-top: 2em;
-  background-color: unset;
-  background: var(--gradient-background-1);
-      background: linear-gradient(
-        135deg,
-        var(--gradient-background-2) 51%,
-        var(--gradient-background-3) 91%,
-        var(--gradient-background-4) 100%
-      );
-}
-
-
 @media (max-width: 676px) {
-  .content {
-    padding: 0;
-    margin: 0;
-    border: 0;
-  }
-  .wrapper {
-    background: var(--gradient-background-1);
-    background: linear-gradient(
-      135deg,
-      var(--gradient-background-2) 51%,
-      var(--gradient-background-3) 91%,
-      var(--gradient-background-4) 100%
-    );
-  }
-  .rodape {
-    background: none;
-  }
+
 }
 
 @media (max-width: 850px) {
@@ -161,11 +111,5 @@ body {
     background-color: var(--primary-color);
     color: var(--secondary-text-color);
 
-  }
-  .content {
-    height: auto;
-  }
-  .footer {
-    display: none;
   }
 }

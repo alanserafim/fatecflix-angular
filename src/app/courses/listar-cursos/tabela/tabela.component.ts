@@ -52,11 +52,11 @@ export class TabelaComponent implements OnInit {
   }
 
   deletaCurso(id : number) {
-    this.router.navigate(['/cursos/deletar', id]);
+    this.router.navigate(['cursos/deletar', id]);
   }
 
   atualizaCurso(id : number) {
-    this.router.navigate(['/cursos/atualizar', id])
+    this.router.navigate(['cursos/atualizar', id])
   }
 
   detalhar(id: number) {
@@ -68,6 +68,6 @@ export class TabelaComponent implements OnInit {
     this.matriculaService.matricular(id, this.matricula).subscribe(data => console.log(data),
     error => console.log(error));*/
 
-    this.router.navigate(['/cursos/detalhar', id]);
+    this.router.navigate(['cursos/detalhar', id]);
   }
 }

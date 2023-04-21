@@ -94,27 +94,6 @@ mat-list-option{
 }
 
 
-/*Sticky footer*/
-.wrapper{
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  background-color: var(--primary-background-color);
-}
-.content {
-  flex: 1 0 auto;
-  background-color: var(--primary-background-color);
-}
-.footer {
-  flex-shrink: 0;
-  background: var(--gradient-background-1);
-      background: linear-gradient(
-        135deg,
-        var(--gradient-background-2) 51%,
-        var(--gradient-background-3) 91%,
-        var(--gradient-background-4) 100%
-      );
-}
 
 @media (max-width: 676px){
   .exercicio {
@@ -124,9 +103,6 @@ mat-list-option{
     padding: 1em;
     margin: 0;
   }
-  .content {
-    padding: 1em;
-  }
 
   button{
     width: 100%;
@@ -134,8 +110,5 @@ mat-list-option{
     border-radius: 12px;
     background-color: var(--primary-color);
     color: var(--secondary-text-color);
-  }
-  .content{
-    height: auto;
   }
 }

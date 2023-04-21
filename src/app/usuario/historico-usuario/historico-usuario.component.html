@@ -1,43 +1,22 @@
-<div class="wrapper">
-  <div class="content">
-  <app-header id="header"></app-header>
-  <div  id="conteudo" class="panel-body">
-    
-    <table mat-table [dataSource]="historicos" class="mat-elevation-z8">
-      <ng-container matColumnDef="Nome do Curso">
-        <th mat-header-cell *matHeaderCellDef> Nome do Curso </th>
-        <td mat-cell *matCellDef="let historico"> {{historico.nomeCurso}} </td>
-      </ng-container>
-      <ng-container matColumnDef="Nota">
-        <th mat-header-cell *matHeaderCellDef> Nota </th>
-        <td mat-cell *matCellDef="let historico"> {{historico.nota}} </td>
-      </ng-container>
+<div id="conteudo" class="panel-body">
+
+  <table mat-table [dataSource]="historicos" class="mat-elevation-z8">
+    <ng-container matColumnDef="Nome do Curso">
+      <th mat-header-cell *matHeaderCellDef> Nome do Curso </th>
+      <td mat-cell *matCellDef="let historico"> {{historico.nomeCurso}} </td>
+    </ng-container>
+    <ng-container matColumnDef="Nota">
+      <th mat-header-cell *matHeaderCellDef> Nota </th>
+      <td mat-cell *matCellDef="let historico"> {{historico.nota}} </td>
+    </ng-container>
     <ng-container matColumnDef="Instrutor">
       <th mat-header-cell *matHeaderCellDef> Instrutor </th>
-      <td mat-cell *matCellDef="let historico"> <a href="mailto:{{ historico.emailInstrutor }}?subject=Certificado&body=Querido instrutor, me mande o meu certificado!">Contactar Instrutor</a> </td>
+      <td mat-cell *matCellDef="let historico"> <a
+          href="mailto:{{ historico.emailInstrutor }}?subject=Certificado&body=Querido instrutor, me mande o meu certificado!">Contactar
+          Instrutor</a> </td>
     </ng-container>
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
 
-    <!-- <table class="table table-striped">
-      <thead>
-        <tr>
-          <th>Nome do Curso</th>
-          <th>Nota</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let historico of historicos | async">
-          <td>{{historico.nomeCurso}}</td>
-          <td>{{historico.nota}}</td>
-          <a href="mailto:{{ historico.emailInstrutor }}?subject=Certificado&body=Querido instrutor, me mande o meu certificado!">Contactar Instrutor</a>
-        </tr>
-      </tbody>
-    </table> -->
-
-  </div>
 </div>
-<app-footer id="footer" class="footer"></app-footer>
-</div>
-

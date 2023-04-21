@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 export class CategoriaCursosComponent implements OnInit {
 
 
-  
+
    // @ts-ignore: Object is possibly 'undefined'.
    cursos: Observable<NovoCurso[]>;
 // @ts-ignore: Object is possibly 'undefined'.
@@ -34,13 +34,13 @@ export class CategoriaCursosComponent implements OnInit {
   }
 
   getCursoByCategoria(categoria: string) {
-    this.router.navigateByUrl('/cursos/listar', { skipLocationChange: true }).then(() => {
-      this.router.navigate(['/cursos/listar', categoria]);
+    this.router.navigateByUrl('pages/cursos/listar', { skipLocationChange: true }).then(() => {
+      this.router.navigate(['pages/cursos/listar', categoria]);
   });
   }
 
   gotoList() {
-    this.router.navigate(['/cursos/listar']);
+    this.router.navigate(['pages/cursos/listar']);
   }
 
   // credit: https://stackoverflow.com/a/36744732/6513921

@@ -37,6 +37,6 @@ export class MenuCursosComponent implements OnInit {
 
 
   detalhar(id: number) {
-    this.router.navigate(['/cursos/detalhar', id]);
+    this.router.navigate(['cursos/detalhar', id]);
   }
 }

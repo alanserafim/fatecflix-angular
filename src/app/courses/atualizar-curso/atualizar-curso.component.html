@@ -1,89 +1,47 @@
-<div class="wrapper">
-  <body>
-    <app-header id="header"></app-header>
-      <div id="conteudo" class="content">
-        <mat-card class="card__container">
-          <mat-card class="card__1">
-            <mat-card-header>
-              <mat-card-title>Fatecflix</mat-card-title>
-            </mat-card-header>
-            <mat-card-content>
-              <h2>Atualizar curso</h2>
-            </mat-card-content>
-            <mat-card-footer> </mat-card-footer>
-          </mat-card>
-          <mat-card class="card__2">
-            <div [hidden]="submitted"></div>
-            <form (ngSubmit)="onSubmit()">
-              <div class="input">
-                <mat-form-field>
-                  <mat-label for="titulo">Titulo:</mat-label>
-                  <input
-                    matInput
-                    type="text"
-                    class="form-control"
-                    id="titulo"
-                    required
-                    [value]="curso.titulo"
-                    [(ngModel)]="curso.titulo"
-                    name="titulo"
-                  />
-                </mat-form-field>
-              </div>
-              <div class="input">
-                <mat-form-field>
-                  <mat-label for="descricao">Descrição:</mat-label>
-                  <input
-                    matInput
-                    type="text"
-                    class="form-control"
-                    id="descricao"
-                    required
-                    [value]="curso.descricao"
-                    [(ngModel)]="curso.descricao"
-                    name="descricao"
-                  />
-                </mat-form-field>
-              </div>
-              <div class="input">
-                <mat-form-field>
-                  <mat-label for="cargaHorario">Carga Horaria:</mat-label>
-                  <input
-                    matInput
-                    type="text"
-                    class="form-control"
-                    id="cargaHorario"
-                    required
-                    [value]="curso.cargaHorario"
-                    [(ngModel)]="curso.cargaHorario"
-                    name="cargaHorario"
-                  />
-                </mat-form-field>
-              </div>
-              <div class="input">
-                <mat-form-field>
-                  <mat-label for="dataAtualizacao"
-                    >Data da Atualizacao:</mat-label
-                  >
-                  <input
-                    matInput
-                    type="date"
-                    class="form-control"
-                    id="dataAtualizacao"
-                    required
-                    [value]="curso.dataAtualizacao"
-                    [(ngModel)]="curso.dataAtualizacao"
-                    name="dataAtualizacao"
-                  />
-                </mat-form-field>
-              </div>
-              <mat-card-actions>
-                <button mat-button type="submit">ATUALIZAR</button>
-              </mat-card-actions>
-            </form>
-          </mat-card>
-        </mat-card>
+<mat-card class="card__container">
+  <mat-card class="card__1">
+    <mat-card-header>
+      <mat-card-title>Fatecflix</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <h2>Atualizar curso</h2>
+    </mat-card-content>
+    <mat-card-footer> </mat-card-footer>
+  </mat-card>
+  <mat-card class="card__2">
+    <div [hidden]="submitted"></div>
+    <form (ngSubmit)="onSubmit()">
+      <div class="input">
+        <mat-form-field>
+          <mat-label for="titulo">Titulo:</mat-label>
+          <input matInput type="text" class="form-control" id="titulo" required [value]="curso.titulo"
+            [(ngModel)]="curso.titulo" name="titulo" />
+        </mat-form-field>
       </div>
-    </body>
-  <app-footer class="footer" id="footer"></app-footer>
-</div>
+      <div class="input">
+        <mat-form-field>
+          <mat-label for="descricao">Descrição:</mat-label>
+          <input matInput type="text" class="form-control" id="descricao" required [value]="curso.descricao"
+            [(ngModel)]="curso.descricao" name="descricao" />
+        </mat-form-field>
+      </div>
+      <div class="input">
+        <mat-form-field>
+          <mat-label for="cargaHorario">Carga Horaria:</mat-label>
+          <input matInput type="text" class="form-control" id="cargaHorario" required [value]="curso.cargaHorario"
+            [(ngModel)]="curso.cargaHorario" name="cargaHorario" />
+        </mat-form-field>
+      </div>
+      <div class="input">
+        <mat-form-field>
+          <mat-label for="dataAtualizacao">Data da Atualizacao:</mat-label>
+          <input matInput type="date" class="form-control" id="dataAtualizacao" required [value]="curso.dataAtualizacao"
+            [(ngModel)]="curso.dataAtualizacao" name="dataAtualizacao" />
+        </mat-form-field>
+      </div>
+      <mat-card-actions>
+        <button mat-button type="submit">ATUALIZAR</button>
+      </mat-card-actions>
+    </form>
+  </mat-card>
+</mat-card>

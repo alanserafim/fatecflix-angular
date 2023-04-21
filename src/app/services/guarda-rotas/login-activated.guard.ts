@@ -16,7 +16,7 @@ export class LoginActivatedGuard implements CanActivate {
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
       if(this.usuarioService.estaLogado()){
-        this.router.navigate(['cursos/menu'])
+        this.router.navigate(['/pages/cursos/menu'])
         return false
       }
       return true;

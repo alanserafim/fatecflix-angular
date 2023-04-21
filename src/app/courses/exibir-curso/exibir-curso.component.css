@@ -1,26 +1,3 @@
-.wrapper{
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
-  color: var(--primary-text-color);
-  background-color: var(--primary-background-color);
-}
-
-.content {
-  flex: 1 0 auto;
-  padding-bottom: 2rem;
-}
-.footer {
-  flex-shrink: 0;
-  background: var(--gradient-background-1);
-      background: linear-gradient(
-        135deg,
-        var(--gradient-background-2) 51%,
-        var(--gradient-background-3) 91%,
-        var(--gradient-background-4) 100%
-      );
-}
-
 .example-card {
   width: 400px;
   height: 400px;
@@ -67,16 +44,6 @@ button{
     margin-top: 2rem;
     background-color: var(--login-card-background);
     box-shadow: 3px 3px 6px var(--listar-curso-box-shadow);
-  }
-  .content {
-    width: 100vw;
-    background: var(--gradient-background-1);
-      background: linear-gradient(
-        135deg,
-        var(--gradient-background-2) 51%,
-        var(--gradient-background-3) 91%,
-        var(--gradient-background-4) 100%
-      );
   }
   .container {
     overflow-y: hidden;

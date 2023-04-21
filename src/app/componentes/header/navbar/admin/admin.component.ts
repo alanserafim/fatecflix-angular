@@ -32,11 +32,11 @@ export class AdminComponent implements OnInit {
   }
 
   irParaConsultaDeUsuario() {
-    this.route.navigate(['/usuario/lista']);
+    this.route.navigate(['usuario/lista']);
   }
 
   irParaListarCursos() {
-    this.route.navigate(['/cursos/listar']);
+    this.route.navigate(['cursos/listar']);
   }
 
   loggout() {

@@ -1,119 +1,75 @@
-<div  class="wrapper">
-  <app-header id="header"></app-header>
-  <div id="conteudo"  class="content" *ngIf="usuarioLogado$ | async as user" #conteudo>
-    <button
-      *ngIf="user.roles.includes('INSTRUTOR')"
-      (click)="gotoCadastra()"
-      mat-button
-      type="submit"
-    >
-      CADASTRAR EXERCICIOS
-    </button>
+<div class="content" *ngIf="usuarioLogado$ | async as user" #conteudo>
+  <button *ngIf="user.roles.includes('INSTRUTOR')" (click)="gotoCadastra()" mat-button type="submit">
+    CADASTRAR EXERCICIOS
+  </button>
 
-    <mat-vertical-stepper [linear]="true" #stepper>
-      <mat-step
-        [stepControl]="selectAdvType"
-        *ngFor="let exercicio of exercicios | async; let i = index"
-      >
-        <form [formGroup]="selectAdvType">
-          <ng-template matStepLabel>{{ exercicio.titulo }}</ng-template>
-          <div class="exercicio">
-            <h2 class="exercicio-titulo">{{ exercicio.enunciado }}</h2>
-            <mat-selection-list
-              [disabled]="afirmativa.selectedOptions.selected[0]?.value"
-              formControlName="firstCtrl"
-              #afirmativa
-              [multiple]="false"
-            >
-              <mat-list-option
-                *ngFor="let afirmativa of exercicio.afirmativas; let i = index"
-                [value]="afirmativa"
-              >
-                <div class="alternativa">
-                  <p>{{ afirmativa }}</p>
-                </div>
-              </mat-list-option>
-            </mat-selection-list>
-            <p
-              class="resposta-correta"
-              *ngIf="
+  <mat-vertical-stepper [linear]="true" #stepper>
+    <mat-step [stepControl]="selectAdvType" *ngFor="let exercicio of exercicios | async; let i = index">
+      <form [formGroup]="selectAdvType">
+        <ng-template matStepLabel>{{ exercicio.titulo }}</ng-template>
+        <div class="exercicio">
+          <h2 class="exercicio-titulo">{{ exercicio.enunciado }}</h2>
+          <mat-selection-list [disabled]="afirmativa.selectedOptions.selected[0]?.value" formControlName="firstCtrl"
+            #afirmativa [multiple]="false">
+            <mat-list-option *ngFor="let afirmativa of exercicio.afirmativas; let i = index" [value]="afirmativa">
+              <div class="alternativa">
+                <p>{{ afirmativa }}</p>
+              </div>
+            </mat-list-option>
+          </mat-selection-list>
+          <p class="resposta-correta" *ngIf="
                 afirmativa.selectedOptions.selected[0]?.value ===
                   exercicio.resposta;
                 else errado
-              "
-            >
-              Resposta correta!
+              ">
+            Resposta correta!
+          </p>
+          <ng-template #errado>
+            <p class="resposta-errada" *ngIf="afirmativa.selectedOptions.selected[0]?.value !== null">
+              Resposta incorreta!
             </p>
-            <ng-template #errado
-              ><p
-                class="resposta-errada"
-                *ngIf="afirmativa.selectedOptions.selected[0]?.value !== null"
-              >
-                Resposta incorreta!
-              </p></ng-template
-            >
-          </div>
-          <div>
-            <!--<button *ngIf="i>0" mat-button matStepperPrevious>Anterior</button>-->
-            <button
-              mat-button
-              matStepperNext
-              matStepperNext
-              (click)="
+          </ng-template>
+        </div>
+        <div>
+          <!--<button *ngIf="i>0" mat-button matStepperPrevious>Anterior</button>-->
+          <button mat-button matStepperNext matStepperNext (click)="
                 responder(
                   afirmativa.selectedOptions.selected[0]?.value,
                   i,
                   exercicio.exercicioId
                 )
-              "
-              [disabled]="!afirmativa.selectedOptions.selected[0]?.value"
-            >
-              Responder
-            </button>
-            <button
-              mat-button
-              color="secondary"
-              *ngIf="user.roles.includes('INSTRUTOR')"
-              (click)="atualiza(exercicio.exercicioId)"
-            >
-              Atualizar
-            </button>
-            <button
-              mat-button
-              color="warn"
-              *ngIf="user.roles.includes('INSTRUTOR')"
-              (click)="deleta(exercicio.exercicioId)"
-            >
-              Deletar
-            </button>
-          </div>
-        </form>
-      </mat-step>
-      <mat-step>
-        <ng-template matStepLabel>Gabarito</ng-template>
-        <p>Você chegou ao final dos exercícios propostos.</p>
+              " [disabled]="!afirmativa.selectedOptions.selected[0]?.value">
+            Responder
+          </button>
+          <button mat-button color="secondary" *ngIf="user.roles.includes('INSTRUTOR')"
+            (click)="atualiza(exercicio.exercicioId)">
+            Atualizar
+          </button>
+          <button mat-button color="warn" *ngIf="user.roles.includes('INSTRUTOR')"
+            (click)="deleta(exercicio.exercicioId)">
+            Deletar
+          </button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Gabarito</ng-template>
+      <p>Você chegou ao final dos exercícios propostos.</p>
 
-        <p class="altenartivas-selecionadas">Alternativas selecionadas</p>
-        <div class="gabarito" *ngFor="let resposta of respostas; let i = index">
-          <p>Questão {{ i + 1 }}:</p>
-          <p>&nbsp; {{ resposta }}</p>
-        </div>
-        <p>Acertos: {{ acertos }}</p>
-        <p>{{ status }}</p>
-        <div class="buttons">
-          <button
-            [disabled]="!historicoEnabled"
-            mat-button
-            routerLink="/usuario/historico"
-          >
-            Ir para Historico
-          </button>
-          <button mat-button routerLink="/cursos/listar">
-            Volta para a pagina principal
-          </button>
-        </div>
-      </mat-step>
-    </mat-vertical-stepper>
-  </div>
-  <app-footer id="footer" class="footer"></app-footer>
-</div>
+      <p class="altenartivas-selecionadas">Alternativas selecionadas</p>
+      <div class="gabarito" *ngFor="let resposta of respostas; let i = index">
+        <p>Questão {{ i + 1 }}:</p>
+        <p>&nbsp; {{ resposta }}</p>
+      </div>
+      <p>Acertos: {{ acertos }}</p>
+      <p>{{ status }}</p>
+      <div class="buttons">
+        <button [disabled]="!historicoEnabled" mat-button routerLink="usuario/historico">
+          Ir para Historico
+        </button>
+        <button mat-button routerLink="/cursos/listar">
+          Volta para a pagina principal
+        </button>
+      </div>
+    </mat-step>
+  </mat-vertical-stepper>

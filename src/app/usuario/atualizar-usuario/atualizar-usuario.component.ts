@@ -102,7 +102,7 @@ export class AtualizarUsuarioComponent implements OnInit {
   }
 
   gotoList() {
-    this.router.navigate(['/usuario/sucesso']);
+    this.router.navigate(['pages/usuario/sucesso']);
   }
 }
 

@@ -1,30 +1,30 @@
 <div class="usuario" *ngIf="usuarioLogado$ | async as user">
   <div class=" container menu__desktop">
-    <button mat-flat-button (click)="irParaConsultaDeUsuario()" *ngIf="user.roles.includes('ADMIN')">
+    <button mat-flat-button *ngIf="user.roles.includes('ADMIN')" routerLink="usuario/lista" >
       Gestão de Usuarios
     </button>
-    <button mat-flat-button *ngIf="user.roles.includes('ALUNO')" routerLink="/cursos/listar">
+    <button mat-flat-button *ngIf="user.roles.includes('ALUNO')" routerLink="cursos/listar">
       Cursos Disponiveis
     </button>
     <!-- <button mat-flat-button *ngIf="user.roles.includes('ALUNO')" routerLink="/cursos/matricula">Meus Cursos</button> -->
-    <button mat-flat-button *ngIf="user.roles.includes('ALUNO')" routerLink="/usuario/historico">
+    <button mat-flat-button *ngIf="user.roles.includes('ALUNO')" routerLink="usuario/historico">
       Meu Historico
     </button>
     <div class="menu_cursos" *ngIf="user.roles.includes('INSTRUTOR')">
       <button mat-button [matMenuTriggerFor]="menu">Gestão de Cursos</button>
       <mat-menu #menu="matMenu">
-        <button class="menu" mat-menu-item routerLink="/cursos/cadastrar">
+        <button class="menu" mat-menu-item routerLink="cursos/cadastrar">
           Cadastrar curso
         </button>
-        <button class="menu" mat-menu-item routerLink="/cursos/listar">
+        <button class="menu" mat-menu-item routerLink="cursos/listar">
           Listar cursos
         </button>
-        <button class="menu" mat-menu-item routerLink="/cursos/menu">
+        <button class="menu" mat-menu-item routerLink="cursos/menu">
           Menu de cursos
         </button>
       </mat-menu>
     </div>
-    <button class="btn-sair" mat-flat-button routerLink="/usuario/perfil">
+    <button class="btn-sair" mat-flat-button routerLink="usuario/perfil">
       Perfil
     </button>
     <button class="btn-sair" mat-flat-button (click)="loggout()">
@@ -44,11 +44,11 @@
           <button mat-flat-button (click)="irParaConsultaDeUsuario()" *ngIf="user.roles.includes('ADMIN')">
             Gestão de Usuarios
           </button>
-          <button mat-flat-button *ngIf="user.roles.includes('ALUNO')" routerLink="/cursos/listar">
+          <button mat-flat-button *ngIf="user.roles.includes('ALUNO')" routerLink="cursos/listar">
             Cursos Disponiveis
           </button>
           <!-- <button mat-flat-button *ngIf="user.roles.includes('ALUNO')" routerLink="/cursos/matricula">Meus Cursos</button> -->
-          <button mat-flat-button *ngIf="user.roles.includes('ALUNO')" routerLink="/usuario/historico">
+          <button mat-flat-button *ngIf="user.roles.includes('ALUNO')" routerLink="usuario/historico">
           </button>
 
           <div class="submenu" *ngIf="user.roles.includes('INSTRUTOR')">
@@ -61,13 +61,13 @@
                 </mat-panel-title>
               </mat-expansion-panel-header>
               <div class="container" *ngIf="user.roles.includes('INSTRUTOR')">
-                <button mat-flat-button routerLink="/cursos/cadastrar">
+                <button mat-flat-button routerLink="cursos/cadastrar">
                   Cadastrar curso
                 </button>
-                <button mat-flat-button routerLink="/cursos/listar">
+                <button mat-flat-button routerLink="cursos/listar">
                   Listar cursos
                 </button>
-                <button mat-flat-button routerLink="/cursos/menu">
+                <button mat-flat-button routerLink="cursos/menu">
                   Menu de cursos
                 </button>
               </div>
@@ -75,7 +75,7 @@
             </mat-expansion-panel>
           </div>
 
-          <button class="btn-sair" mat-flat-button routerLink="/usuario/perfil">
+          <button class="btn-sair" mat-flat-button routerLink="usuario/perfil">
             Perfil
           </button>
           <button class="btn-sair" mat-flat-button (click)="loggout()">

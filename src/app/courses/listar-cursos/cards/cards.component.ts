@@ -49,14 +49,14 @@ export class CardsComponent implements OnInit {
   }
 
   deletaCurso(id : number) {
-    this.router.navigate(['/cursos/deletar', id]);
+    this.router.navigate(['cursos/deletar', id]);
   }
 
   atualizaCurso(id : number) {
-    this.router.navigate(['/cursos/atualizar', id])
+    this.router.navigate(['cursos/atualizar', id])
   }
 
   detalhar(id: number) {
-    this.router.navigate(['/cursos/detalhar', id]);
+    this.router.navigate(['cursos/detalhar', id]);
   }
 }

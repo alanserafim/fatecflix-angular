@@ -31,12 +31,12 @@ export class DeletarAulasComponent implements OnInit {
 
   deleteAula() {
     this.deletaAulaService.deletaAula(this.id).subscribe(() => {
-      this.router.navigate(["/usuario/sucesso"]);
+      this.router.navigate(["usuario/sucesso"]);
     });
   }
 
   cancel() {
-    this.router.navigate(["/cursos/listar"]);
+    this.router.navigate(["pages/cursos/listar"]);
   }
 
 }

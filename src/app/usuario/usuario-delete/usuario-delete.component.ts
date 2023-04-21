@@ -39,12 +39,12 @@ export class UsuarioDeleteComponent implements OnInit {
 
   deleteUsuario(): void {
     this.deletarUsuario.deletaUsuario(this.userId).subscribe(() => {
-      this.router.navigate(["/usuario/lista"]);
+      this.router.navigate(["pages/usuario/lista"]);
     });
   }
 
   cancel(): void {
-    this.router.navigate(["/usuario/lista"]);
+    this.router.navigate(["pages/usuario/lista"]);
   }
 
 }

@@ -17,7 +17,7 @@ export class HomepageComponent implements OnInit {
   }
 
   gotoRegistrar() {
-    this.router.navigate(['usuario/cadastro']);
+    this.router.navigate(['cadastro']);
   }
 
 }

@@ -19,7 +19,7 @@ export class UsuarioListComponent implements OnInit {
   @ViewChild(MatSort) sort: any;
 
   displayedColumns: string[] = ['Nome', 'CPF', 'Username', 'Ações'];
-  
+
    // @ts-ignore: Object is possibly 'undefined'.
   usuarios: Observable<NovoUsuario[]>;
 
@@ -35,11 +35,11 @@ export class UsuarioListComponent implements OnInit {
   }
 
   deletaUsuario(id : number) {
-    this.router.navigate(['/usuario/deletar', id]);
+    this.router.navigate(['pages/usuario/deletar', id]);
   }
 
   atualizaUsuario(id : number) {
-    this.router.navigate(['/usuario/atualizar', id])
+    this.router.navigate(['pages/usuario/atualizar', id])
   }
 
 }

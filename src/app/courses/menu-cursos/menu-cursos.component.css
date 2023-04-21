@@ -34,7 +34,7 @@
   font-size: 2em;
 }
 
-.content {
+.conteudo {
   background: var(--gradient-background-1);
       background: linear-gradient(
         135deg,
@@ -42,6 +42,10 @@
         var(--gradient-background-3) 91%,
         var(--gradient-background-4) 100%
       );
+}
+
+.cursos {
+  padding: 0 10vw 0 10vw;
 }
 
 

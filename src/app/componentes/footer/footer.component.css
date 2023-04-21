@@ -1,16 +1,15 @@
-/* .footer{ */
+.footer{
   /* border-top: 1px solid var(--border-neon); */
   /* offset-x | offset-y | blur-radius | spread-radius | color */
   /* box-shadow: 1px -1px 5px 5px var(--border-neon); */
-
-/* } */
+  padding: 0 10vw 0 10vw;
+}
 .rodape {
   color: var(--footer-text-color);
   height: 150px;
   margin-top: 1em;
   background-color: transparent;
   width: 100%;
-  padding: 0 6vw 0 6vw;
 }
 
 .container {
@@ -29,6 +28,9 @@
 
 .socialMedia img {
   filter: grayscale(0.3);
+}
+.socialMedia {
+  text-align: center;
 }
 
 

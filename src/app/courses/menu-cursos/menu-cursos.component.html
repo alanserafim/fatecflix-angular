@@ -1,10 +1,12 @@
-<div class="content">
+<div class="conteudo">
   <div class="banner" #conteudo>
     <div class="texto">
       <h1>Matricule-se em um de nossos cursos</h1>
       <p>e desperte para um mundo de possibilidades</p>
     </div>
   </div>
-  <app-secao [categoriaExibicao]="listaExibicao[0]"></app-secao>
-  <app-secao [categoriaExibicao]="listaExibicao[1]"></app-secao>
+  <div class="cursos">
+    <app-secao [categoriaExibicao]="listaExibicao[0]"></app-secao>
+    <app-secao [categoriaExibicao]="listaExibicao[1]"></app-secao>
+  </div>
 </div>

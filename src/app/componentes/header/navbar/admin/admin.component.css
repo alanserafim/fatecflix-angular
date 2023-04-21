@@ -1,8 +1,8 @@
 .container {
   display: flex;
+  flex-wrap: wrap;
   font-size: 0.6em;
 }
-
 mat-menu-item{
   background-color: var(--header-background-color2);
 }
@@ -81,9 +81,14 @@ button {
   .btn-sair {
     margin-left: 0px;
   }
+
   mat-expansion-panel-header{
     padding: 0;
   }
+  mat-expansion-panel {
+    max-width: 80vw;
+  }
+
   .mat-expansion-panel:not([class*=mat-elevation-z]) {
     box-shadow: none;
     border: 0;

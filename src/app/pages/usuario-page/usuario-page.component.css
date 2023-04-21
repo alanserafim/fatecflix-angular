@@ -1,7 +1,6 @@
-
-/*Sticky footer*/
 html, body {
   height: 100%;
+  width: 100%;
 }
 
 .wrapper {
@@ -12,8 +11,7 @@ html, body {
 }
 .content {
   flex: 1 0 auto;
-  min-height: 80vh
-
+  min-height: 80vh;
 }
 .footer {
   flex-shrink: 0;
@@ -27,9 +25,14 @@ html, body {
       );
 }
 
+main {
+  margin-top: 12px;
+}
+
 
 @media (max-width: 676px) {
   .wrapper {
+    width: 100vw;
     height: auto;
     background: var(--gradient-background-1);
       background: linear-gradient(
@@ -41,7 +44,7 @@ html, body {
   }
   .content {
     height: auto;
-    padding: 1em;
+    padding: 0;
   }
 
 }

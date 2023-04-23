@@ -80,11 +80,11 @@ export class ListarAulasComponent implements OnInit {
   }
 
   atualiza(id: any) {
-    this.router.navigate(['pages/aulas/atualizar', id, 'cursos', this.cursoId]);
+    this.router.navigate(['user/aulas/atualizar', id, 'cursos', this.cursoId]);
   }
 
   deleta(id: any) {
-    this.router.navigate(['pages/aulas/deletar', id]);
+    this.router.navigate(['user/aulas/deletar', id]);
   }
 
   gotoExercicio(id: number) {

@@ -55,7 +55,7 @@ export class NovoExercicioComponent implements OnInit {
     this.cadastrarExercicioService.cadastrarNovoExercicio(this.exercicio, this.cursoId)
     .subscribe((data) => {
       console.log(data);
-      this.router.navigate(['pages/usuario/sucesso']);
+      this.router.navigate(['user/usuario/sucesso']);
     },
     (error)=>{
       alert("Cadastro não realizado!");
@@ -84,7 +84,7 @@ export class NovoExercicioComponent implements OnInit {
   }
 
   gotoList() {
-    this.router.navigate(['pages/usuario/sucesso']);
+    this.router.navigate(['user/usuario/sucesso']);
   }
 
 }

@@ -1,0 +1,13 @@
+<body  class="principal">
+  <div class="content">
+    <app-barra-acessibilidade></app-barra-acessibilidade>
+    <header id="header">
+     <a routerLink="/home"><img class="logo-img" src="assets/imagens/FatecFlix.png" alt="" /></a>
+      <div class="example-button-row">
+        <button class="btn-entrar" mat-raised-button routerLink="login">Entrar</button>
+      </div>
+    </header>
+    <router-outlet id="conteudo"></router-outlet>
+  </div>
+  <app-footer id="footer" class="footer"></app-footer>
+</body>

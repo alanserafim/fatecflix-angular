@@ -34,13 +34,13 @@ export class CategoriaCursosComponent implements OnInit {
   }
 
   getCursoByCategoria(categoria: string) {
-    this.router.navigateByUrl('pages/cursos/listar', { skipLocationChange: true }).then(() => {
-      this.router.navigate(['pages/cursos/listar', categoria]);
+    this.router.navigateByUrl('user/cursos/listar', { skipLocationChange: true }).then(() => {
+      this.router.navigate(['user/cursos/listar', categoria]);
   });
   }
 
   gotoList() {
-    this.router.navigate(['pages/cursos/listar']);
+    this.router.navigate(['user/cursos/listar']);
   }
 
   // credit: https://stackoverflow.com/a/36744732/6513921

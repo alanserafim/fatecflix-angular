@@ -24,7 +24,7 @@ export class LoginHomeComponent implements OnInit {
 
   login() {
     this.authService.autentica(this.email, this.senha).subscribe(()=>{
-    this.router.navigate(['pages/cursos/menu']);
+    this.router.navigate(['user/cursos/menu']);
     }, (error)=> {
       alert("Usuário ou senha inválida");
       console.log(this.email, this.senha);
@@ -37,7 +37,7 @@ export class LoginHomeComponent implements OnInit {
     const email = "instrutor";
     const senha = "12345678"
     this.authService.autentica(email, senha).subscribe(()=>{
-      this.router.navigate(['pages/cursos/menu']);
+      this.router.navigate(['user/cursos/menu']);
       }, (error)=> {
         alert("Usuário ou senha inválida");
         console.log(email, senha);
@@ -51,7 +51,7 @@ export class LoginHomeComponent implements OnInit {
     const email = "aluno";
     const senha = "12345678"
     this.authService.autentica(email, senha).subscribe(()=>{
-      this.router.navigate(['pages/cursos/menu']);
+      this.router.navigate(['user/cursos/menu']);
       }, (error)=> {
         alert("Usuário ou senha inválida");
         console.log(email, senha);

@@ -29,6 +29,6 @@ export class SecaoComponent implements OnInit {
     console.log(this.cursos);
   }
   detalhar(id: number) {
-    this.router.navigate(['pages/cursos/detalhar', id]);
+    this.router.navigate(['user/cursos/detalhar', id]);
   }
 }

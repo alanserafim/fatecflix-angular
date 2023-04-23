@@ -101,7 +101,7 @@ export class AtualizaExercicioComponent implements OnInit {
   }
 
   gotoList() {
-    this.router.navigate(['pages/usuario/sucesso']);
+    this.router.navigate(['user/usuario/sucesso']);
   }
 
 }

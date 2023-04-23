@@ -37,7 +37,7 @@ export class CadastrarCursoComponent implements OnInit {
     const novoCurso = this.novoCursoForm.getRawValue() as NovoCurso
     this.novoCursoService.cadastrarNovoCursos(novoCurso).subscribe(()=>
     {
-      this.router.navigate(['pages/usuario/sucesso'])
+      this.router.navigate(['user/usuario/sucesso'])
     },
     (error)=> {
       alert("Cadastro de curso não realizado");

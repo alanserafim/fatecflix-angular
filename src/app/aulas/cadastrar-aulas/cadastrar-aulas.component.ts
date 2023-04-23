@@ -36,7 +36,7 @@ export class CadastrarAulasComponent implements OnInit {
     this.cadastrarAulaService.cadastrarNovaAula(this.aula, this.cursoId)
     .subscribe((data) => {
       console.log(data);
-      this.router.navigate(['pages/usuario/sucesso']);
+      this.router.navigate(['user/usuario/sucesso']);
     },
     (error)=>{
       alert("Cadastro não realizado!");
@@ -52,6 +52,6 @@ export class CadastrarAulasComponent implements OnInit {
   }
 
   gotoCurso(id: number) {
-    this.router.navigate(['pages/cursos/detalhar', id]);
+    this.router.navigate(['user/cursos/detalhar', id]);
   }
 }

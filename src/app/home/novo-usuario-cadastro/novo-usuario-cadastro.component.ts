@@ -69,7 +69,7 @@ export class NovoUsuarioCadastroHomeComponent implements OnInit {
     const novoUsuario = this.novoUsuarioForm.getRawValue() as NovoUsuario
     novoUsuario.roles = ["ALUNO"]
     this.novoUsuarioService.cadastraNovoUsuario(novoUsuario).subscribe(()=> {
-      this.router.navigate(['pages/usuario/sucesso'])
+      this.router.navigate(['user/usuario/sucesso'])
     },
     (error)=> {
       alert("Cadastro não realizado!");

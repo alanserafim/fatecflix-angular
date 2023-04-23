@@ -41,11 +41,11 @@ export class ExibirCursoComponent implements OnInit {
   }
 
   gotoAulas(id: number) {
-    this.router.navigate(['pages/aulas/dashboard', id])
+    this.router.navigate(['user/aulas/dashboard', id])
   }
 
   gotoCadastroAulas(id: number) {
-    this.router.navigate(['pages/aulas/cadastrar', id])
+    this.router.navigate(['user/aulas/cadastrar', id])
   }
 
 }

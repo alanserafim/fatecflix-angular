@@ -62,11 +62,11 @@ export class ListarCursosComponent implements OnInit {
   }
 
   deletaCurso(id: number) {
-    this.router.navigate(['pages/cursos/deletar', id]);
+    this.router.navigate(['user/cursos/deletar', id]);
   }
 
   atualizaCurso(id: number) {
-    this.router.navigate(['pages/cursos/atualizar', id]);
+    this.router.navigate(['user/cursos/atualizar', id]);
   }
 
   matricular(id: number) {
@@ -79,11 +79,11 @@ export class ListarCursosComponent implements OnInit {
       (error) => console.log(error)
     );
 
-    this.router.navigate(['pages/cursos/detalhar', id]);
+    this.router.navigate(['user/cursos/detalhar', id]);
   }
 
   detalhar(id: number) {
-    this.router.navigate(['pages/cursos/detalhar', id]);
+    this.router.navigate(['user/cursos/detalhar', id]);
   }
 
   getCursoByCategoria(categoria: string) {

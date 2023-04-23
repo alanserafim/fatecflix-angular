@@ -49,10 +49,10 @@ export class AtualizarAulasComponent implements OnInit {
   }
 
   gotoList() {
-    this.router.navigate(['pages/usuario/sucesso']);
+    this.router.navigate(['user/usuario/sucesso']);
   }
 
   gotoAula() {
-    this.router.navigate(['pages/aulas/dashboard', this.cursoId]);
+    this.router.navigate(['user/aulas/dashboard', this.cursoId]);
   }
 }

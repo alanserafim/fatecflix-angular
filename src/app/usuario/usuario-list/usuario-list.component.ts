@@ -35,11 +35,11 @@ export class UsuarioListComponent implements OnInit {
   }
 
   deletaUsuario(id : number) {
-    this.router.navigate(['pages/usuario/deletar', id]);
+    this.router.navigate(['user/usuario/deletar', id]);
   }
 
   atualizaUsuario(id : number) {
-    this.router.navigate(['pages/usuario/atualizar', id])
+    this.router.navigate(['user/usuario/atualizar', id])
   }
 
 }

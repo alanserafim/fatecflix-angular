@@ -38,7 +38,7 @@ export class AtualizarCursoComponent implements OnInit {
       .subscribe(data => console.log(data), error => console.log(error));
       this.curso = new Curso();
 
-      this.router.navigate(['pages/cursos/listar']);
+      this.router.navigate(['user/cursos/listar']);
   }
 
   onSubmit() {

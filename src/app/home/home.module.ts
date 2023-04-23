@@ -1,17 +1,17 @@
-import { NovoUsuarioCadastroHomeComponent } from './novo-usuario-cadastro/novo-usuario-cadastro.component';
-import { LoginHomeComponent } from './login/login.component';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
 import { SharedModule } from './../shared/shared.module';
 import { HomeRoutingModule } from './home-routing.module';
-import { HomepageComponent } from './homepage/homepage.component';
+import { LandingComponent } from './landing/landing.component';
+import { LoginHomeComponent } from './login/login.component';
+import { NovoUsuarioCadastroHomeComponent } from './novo-usuario-cadastro/novo-usuario-cadastro.component';
 
 @NgModule({
   declarations: [
-    HomepageComponent,
     LoginHomeComponent,
-    NovoUsuarioCadastroHomeComponent
+    NovoUsuarioCadastroHomeComponent,
+    LandingComponent
   ],
   imports: [
     CommonModule,

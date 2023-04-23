@@ -11,25 +11,25 @@ const routes: Routes = [
       {
         path: "usuario",
         loadChildren: () =>
-          import('../../usuario/usuario.module').then((m) => m.UsuarioModule),
+          import('../../features/usuario/usuario.module').then((m) => m.UsuarioModule),
           canLoad: [AuntenticacaoGuard],
       },
       {
         path: 'cursos',
         loadChildren: () =>
-          import('../../courses/courses.module').then((m) => m.CoursesModule),
+          import('../../features/courses/courses.module').then((m) => m.CoursesModule),
         canLoad: [AuntenticacaoGuard],
       },
       {
         path: 'aulas',
         loadChildren: () =>
-          import('../../aulas/aulas.module').then((m) => m.AulasModule),
+          import('../../features/aulas/aulas.module').then((m) => m.AulasModule),
         canLoad: [AuntenticacaoGuard],
       },
       {
         path: 'exercicios',
         loadChildren: () =>
-          import('../../exercicios/exercicios.module').then((m) => m.ExerciciosModule),
+          import('../../features/exercicios/exercicios.module').then((m) => m.ExerciciosModule),
         canLoad: [AuntenticacaoGuard],
       },
     ]

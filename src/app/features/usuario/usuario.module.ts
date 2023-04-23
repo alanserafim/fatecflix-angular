@@ -2,8 +2,8 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
 import { CoursesModule } from '../courses/courses.module';
-import { HomeModule } from '../home/home.module';
-import { SharedModule } from './../shared/shared.module';
+import { HomeModule } from '../../home/home.module';
+import { SharedModule } from './../../shared/shared.module';
 import { AtualizarUsuarioComponent } from './atualizar-usuario/atualizar-usuario.component';
 import { HistoricoUsuarioComponent } from './historico-usuario/historico-usuario.component';
 import { PerfilUsuarioComponent } from './perfil-usuario/perfil-usuario.component';

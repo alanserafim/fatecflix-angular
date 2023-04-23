@@ -5,7 +5,7 @@ import { UsuarioLogadoService } from 'src/app/services/authentication/usuario-lo
 import { ConsultarUsuariosService } from 'src/app/services/consultar-usuarios/consultar-usuarios.service';
 import { Usuario } from 'src/app/types/Usuario';
 
-import { UsuarioLogado } from './../../types/UsuarioLogado';
+import { UsuarioLogado } from './../../../types/UsuarioLogado';
 
 var usuarioLogado$ : UsuarioLogado
 

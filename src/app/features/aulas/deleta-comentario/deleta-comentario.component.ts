@@ -1,4 +1,4 @@
-import { Comentario } from './../../types/Comentario';
+import { Comentario } from './../../../types/Comentario';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ComentarioService } from 'src/app/services/comentario/comentario.service';

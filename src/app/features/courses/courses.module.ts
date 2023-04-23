@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { MAT_DATE_LOCALE } from '@angular/material/core';
-import { SharedModule } from './../shared/shared.module';
+import { SharedModule } from './../../shared/shared.module';
 
 import { AtualizarCursoComponent } from './atualizar-curso/atualizar-curso.component';
 import { CadastrarCursoComponent } from './cadastrar-curso/cadastrar-curso.component';

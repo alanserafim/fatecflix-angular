@@ -1,5 +1,5 @@
-import { CadastrarAulaService } from './../../services/cadastrar-aula/cadastrar-aula.service';
-import { Aula } from './../../types/Aula';
+import { CadastrarAulaService } from './../../../services/cadastrar-aula/cadastrar-aula.service';
+import { Aula } from './../../../types/Aula';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 

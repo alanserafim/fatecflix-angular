@@ -1,5 +1,5 @@
-import { ListaCursosService } from './../../services/listar-cursos/listar-cursos.service';
-import { NovoCurso } from './../../types/NovoCurso';
+import { ListaCursosService } from './../../../services/listar-cursos/listar-cursos.service';
+import { NovoCurso } from './../../../types/NovoCurso';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';

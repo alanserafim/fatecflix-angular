@@ -20,7 +20,7 @@ const routes: Routes = [
   {
     path: 'dashboard',
     loadChildren: () =>
-      import('./dashboard/dashboard.module').then((m) => m.DashboardModule),
+      import('./features/dashboard/dashboard.module').then((m) => m.DashboardModule),
     canLoad: [AuntenticacaoGuard],
   },
 ];

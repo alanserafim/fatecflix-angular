@@ -98,7 +98,7 @@ table {
 }
 
 .img {
-  background: url(../../../assets/imagens/perfil.svg);
+  background: url(../../../../assets/imagens/perfil.svg);
   width: 600px;
   height: 600px;
   background-position: cover;

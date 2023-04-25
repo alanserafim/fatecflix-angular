@@ -4,6 +4,10 @@
   justify-content: center;
 }
 
+.cadastro {
+  margin: 3rem 0;
+}
+
 .card {
   width: 80%;
   margin: auto;

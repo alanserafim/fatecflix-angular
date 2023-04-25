@@ -14,6 +14,6 @@ export class LandingComponent implements OnInit {
   }
 
   gotoRegistrar() {
-    this.router.navigate(['cadastro']);
+    this.router.navigate(['/home/cadastro']);
   }
 }

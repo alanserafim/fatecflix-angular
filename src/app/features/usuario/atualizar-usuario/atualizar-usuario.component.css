@@ -8,8 +8,8 @@
 
 
 mat-card {
-  width: 80vw;
-  margin: auto;
+  width: 40vw;
+  margin: 4em auto;
   min-height: 21vh;
   padding: 2em;
   background-color: var(--primary-background-color);
@@ -54,8 +54,7 @@ mat-label {
 @media (max-width: 676px) {
 
   mat-card {
-    max-width: 80vw;
-    margin: auto;
+    width: 80vw;
     height: auto;
     padding: 2em;
     background-color: var(--primary-background-color);
@@ -70,17 +69,10 @@ mat-label {
     display: flex;
     flex-direction: column;
   }
-
-  .wrapper {
-    height: auto;
-    background: var(--gradient-background-1);
-      background: linear-gradient(
-        135deg,
-        var(--gradient-background-2) 51%,
-        var(--gradient-background-3) 91%,
-        var(--gradient-background-4) 100%
-      );
+  .container1{
+    margin-bottom: 4vh;
   }
+
 
 }
 

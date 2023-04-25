@@ -3,8 +3,8 @@
   flex-direction: column;
 }
 
-table {
-  width: 88%;
+.panel-body table {
+  width: 80%;
   margin: auto;
   text-align: left;
   background-color: var(--primary-background-color);
@@ -108,15 +108,9 @@ fieldset {
   margin: .5rem;
 }
 
-/*Sticky footer*/
-html,
-body {
-  height: 100%;
-}
-
 
 /*Media Queries*/
-@media (min-width: 676px) {
+@media (max-width: 676px) {
   .panel-body {
     overflow-x: scroll;
   }
@@ -124,11 +118,14 @@ body {
     min-width: 30vw;
     min-height: 25vh;
   }
-  table{
+  .panel-body table{
     background-color: var(--perfil-input-background);
     width: 70vw;
     height: auto;
-    margin: 5rem;
+    margin: 2rem;
+  }
+  h1 {
+    color: var(--secondary-text-color);
   }
 }
 

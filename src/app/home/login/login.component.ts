@@ -36,7 +36,9 @@ export class LoginHomeComponent implements OnInit {
 
   //https://material.angular.io/components/snack-bar/overview
   openSnackBar(message: string, action: string) {
-    this._snackBar.open(message, action);
+    this._snackBar.open(message, action, {
+      duration: 5000
+    });
     this._snackBar._openedSnackBarRef?.onAction().subscribe(()=>{
       this.router.navigate(['home/cadastro'])
     })

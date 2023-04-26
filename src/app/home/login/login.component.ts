@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthenticationService } from 'src/app/services/authentication/login/authentication.service';
-
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-login-home',
@@ -16,7 +16,8 @@ export class LoginHomeComponent implements OnInit {
 
   constructor(
     private authService: AuthenticationService,
-    private router:Router
+    private router:Router,
+    private _snackBar: MatSnackBar
   ) { }
 
   ngOnInit(): void {
@@ -26,12 +27,22 @@ export class LoginHomeComponent implements OnInit {
     this.authService.autentica(this.email, this.senha).subscribe(()=>{
     this.router.navigate(['cursos/menu']);
     }, (error)=> {
-      alert("Usuário ou senha inválida");
+      this.openSnackBar("Usuário ou senha inválida","Cadastre-se");
       console.log(this.email, this.senha);
       console.log(error);
     }
     )
   }
+
+  //https://material.angular.io/components/snack-bar/overview
+  openSnackBar(message: string, action: string) {
+    this._snackBar.open(message, action);
+    this._snackBar._openedSnackBarRef?.onAction().subscribe(()=>{
+      this.router.navigate(['home/cadastro'])
+    })
+
+  }
+
 
   loginAutomaticoInstrutor() {
     const email = "instrutor";

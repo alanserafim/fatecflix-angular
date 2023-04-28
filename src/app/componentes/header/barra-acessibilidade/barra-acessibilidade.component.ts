@@ -1,6 +1,7 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { ETheme } from '../ETheme';
 import { ScrollToConfigOptions, ScrollToService } from '@nicky-lenaers/ngx-scroll-to';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -10,11 +11,14 @@ import { ScrollToConfigOptions, ScrollToService } from '@nicky-lenaers/ngx-scrol
 })
 export class BarraAcessibilidadeComponent implements OnInit {
   public nome: string = ETheme.NOME_COM_CONTRASTE;
-  constructor(private scrollToService: ScrollToService) { }
+  constructor(private scrollToService: ScrollToService, private route: Router) { }
   
   ngOnInit(): void {
   }
 
+  irParaPaginaAcessibilidade(){
+    this.route.navigate(['acessibilidade'])
+  }
   triggerScrollToCabecalho() {
     
     const config: ScrollToConfigOptions = {

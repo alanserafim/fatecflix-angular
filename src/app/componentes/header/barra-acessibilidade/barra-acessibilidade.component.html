@@ -1,4 +1,9 @@
 <mat-toolbar class="barra-acessibilidade">
+  <button
+  mat-menu-item
+  routerLink="/acessibilidade"
+  routerLinkActive="active"
+  >Acessibilidade</button>
   <div class="container atalhos">
     <button mat-menu-item [ngxScrollTo]="'#header'">[1] Ir para cabeçalho</button>
     <button mat-menu-item [ngxScrollTo]="'#conteudo'">[2] Ir prar conteúdo</button>

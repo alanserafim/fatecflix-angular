@@ -8,15 +8,15 @@ const KEY = 'token';
 export class TokenService {
 
   retornaToken(){
-    return localStorage.getItem(KEY) ?? "";
+    return sessionStorage.getItem(KEY) ?? "";
   }
 
   salvaToken(token : string){
-    localStorage.setItem(KEY, token);
+    sessionStorage.setItem(KEY, token);
   }
 
   excluiToken(){
-    localStorage.removeItem(KEY);
+    sessionStorage.removeItem(KEY);
   }
 
   possuiToken(){

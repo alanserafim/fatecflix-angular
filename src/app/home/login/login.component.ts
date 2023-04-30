@@ -25,7 +25,9 @@ export class LoginHomeComponent implements OnInit {
 
   login() {
     this.authService.autentica(this.email, this.senha).subscribe(()=>{
-    this.router.navigate(['cursos/menu']);
+    this.openSnackBar2("Login realizado com sucesso","");
+    setTimeout(()=>{this.router.navigate(['cursos/menu'])}, 1000)
+
     }, (error)=> {
       this.openSnackBar("usuário ou senha inválida","Cadastre-se");
       console.log(this.email, this.senha);
@@ -34,7 +36,6 @@ export class LoginHomeComponent implements OnInit {
     )
   }
 
-  //https://material.angular.io/components/snack-bar/overview
   openSnackBar(message: string, action: string) {
     this._snackBar.open(message, action, {
       duration: 5000
@@ -42,9 +43,13 @@ export class LoginHomeComponent implements OnInit {
     this._snackBar._openedSnackBarRef?.onAction().subscribe(()=>{
       this.router.navigate(['home/cadastro'])
     })
-
   }
 
+  openSnackBar2(message: string, action: string) {
+    this._snackBar.open(message, action, {
+      duration: 2000
+    });
+  }
 
   loginAutomaticoInstrutor() {
     const email = "instrutor";

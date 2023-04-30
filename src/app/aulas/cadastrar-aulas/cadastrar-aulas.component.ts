@@ -1,7 +1,9 @@
-import { CadastrarAulaService } from './../../services/cadastrar-aula/cadastrar-aula.service';
-import { Aula } from './../../types/Aula';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { SweetalertService } from 'src/app/services/sweetalert/sweetalert.service';
+
+import { CadastrarAulaService } from './../../services/cadastrar-aula/cadastrar-aula.service';
+import { Aula } from './../../types/Aula';
 
 @Component({
   selector: 'app-cadastrar-aulas',
@@ -10,7 +12,6 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class CadastrarAulasComponent implements OnInit {
   aula: Aula = new Aula();
-  submitted = false;
   // @ts-ignore: Object is possibly 'undefined'.
   cursoId: number;
 
@@ -18,7 +19,8 @@ export class CadastrarAulasComponent implements OnInit {
   constructor(
     private router: Router,
     private cadastrarAulaService : CadastrarAulaService,
-    private activatedRoute: ActivatedRoute
+    private activatedRoute: ActivatedRoute,
+    private sweeAlertService: SweetalertService
   ) { }
 
   ngOnInit(): void {
@@ -27,19 +29,21 @@ export class CadastrarAulasComponent implements OnInit {
   }
 
   novaAula(): void {
-    this.submitted = true;
     this.aula = new Aula();
   }
 
   cadastraNovaAula(){
-
     this.cadastrarAulaService.cadastrarNovaAula(this.aula, this.cursoId)
     .subscribe((data) => {
       console.log(data);
-      this.router.navigate(['usuario/sucesso']);
+      this.sweeAlertService.sucessAndMove(
+        'Aula cadastrada com sucesso',
+        `aulas/dashboard/${this.cursoId}`,
+        'Sucesso'
+      );
     },
     (error)=>{
-      alert("Cadastro não realizado!");
+      this.sweeAlertService.error('Ação não realizada');
       console.log(error);
       console.log(this.aula);
       console.log(this.cursoId)
@@ -47,7 +51,6 @@ export class CadastrarAulasComponent implements OnInit {
   }
 
   onSubmit() {
-    this.submitted = true;
     this.cadastraNovaAula();
   }
 

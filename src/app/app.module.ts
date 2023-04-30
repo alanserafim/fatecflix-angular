@@ -20,7 +20,7 @@ import { TokenInterceptor } from './services/interceptors/token.interceptor';
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    
+
   ],
   providers: [
     {

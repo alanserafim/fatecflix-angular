@@ -7,6 +7,7 @@ import { controlValuesDifferent } from './validators/campos-diferentes.validator
 import { controlValuesAreEqual } from './validators/campos-iguais.validator';
 import { cpfValido } from './validators/cpf-valido.validator';
 import { Router } from '@angular/router';
+import { SweetalertService } from 'src/app/services/sweetalert/sweetalert.service';
 
 
 @Component({
@@ -27,7 +28,8 @@ export class NovoUsuarioCadastroHomeComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private novoUsuarioService: NovoUsuarioService,
-    private router:Router
+    private router:Router,
+    private sweeAlertService: SweetalertService
   ) { }
 
   ngOnInit(): void {
@@ -69,10 +71,14 @@ export class NovoUsuarioCadastroHomeComponent implements OnInit {
     const novoUsuario = this.novoUsuarioForm.getRawValue() as NovoUsuario
     novoUsuario.roles = ["ALUNO"]
     this.novoUsuarioService.cadastraNovoUsuario(novoUsuario).subscribe(()=> {
-      this.router.navigate(['usuario/sucesso'])
+      this.sweeAlertService.sucessAndMove(
+        'Cadastro realizado com sucesso',
+        '/home/login',
+        'Sucesso'
+      );
     },
     (error)=> {
-      alert("Cadastro não realizado!");
+      this.sweeAlertService.error('Cadastro não realizado');
       console.log(error);
       console.log(novoUsuario);
     })

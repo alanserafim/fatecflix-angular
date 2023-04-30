@@ -1,7 +1,7 @@
 <div class="wrapper">
   <div class="content">
     <app-header id="header"></app-header>
-    <mat-card id="conteudo" [hidden]="submitted">
+    <mat-card id="conteudo">
       <mat-card-title>Inclusão de aulas</mat-card-title>
       <mat-card-subtitle
         >Adicone novas aulas nos cursos selecionados</mat-card-subtitle
@@ -38,9 +38,6 @@
         </mat-card-actions>
       </form>
     </mat-card>
-    <div [hidden]="!submitted">
-      <button class="btn btn-success" (click)="novaAula()">Add</button>
-    </div>
     <br />
     <!--
   <div [hidden]="!submitted">

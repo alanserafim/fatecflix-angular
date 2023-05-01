@@ -6,12 +6,14 @@ import { HomeRoutingModule } from './home-routing.module';
 import { LandingComponent } from './landing/landing.component';
 import { LoginHomeComponent } from './login/login.component';
 import { NovoUsuarioCadastroHomeComponent } from './novo-usuario-cadastro/novo-usuario-cadastro.component';
+import { AcessibilidadeComponent } from './acessibilidade/acessibilidade.component';
 
 @NgModule({
   declarations: [
     LoginHomeComponent,
     NovoUsuarioCadastroHomeComponent,
-    LandingComponent
+    LandingComponent,
+    AcessibilidadeComponent
   ],
   imports: [
     CommonModule,

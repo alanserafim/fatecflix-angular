@@ -22,12 +22,7 @@ const routes: Routes = [
     loadChildren: () =>
       import('./features/dashboard/dashboard.module').then((m) => m.DashboardModule),
     canLoad: [AuntenticacaoGuard],
-  },
-  {
-path: 'acessibilidade',
-loadChildren: ()=>
-import('./pages/acessibilidade/acessibilidade.module').then((m) => m.AcessibilidadeModule),
-  },
+  }
 ];
 
 @NgModule({

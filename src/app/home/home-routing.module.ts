@@ -5,6 +5,7 @@ import { LoginActivatedGuard } from './../services/guarda-rotas/login-activated.
 import { LandingComponent } from './landing/landing.component';
 import { LoginHomeComponent } from './login/login.component';
 import { NovoUsuarioCadastroHomeComponent } from './novo-usuario-cadastro/novo-usuario-cadastro.component';
+import { AcessibilidadeComponent } from './acessibilidade/acessibilidade.component';
 
 const routes: Routes = [
   {
@@ -20,6 +21,10 @@ const routes: Routes = [
     path: 'cadastro',
     component: NovoUsuarioCadastroHomeComponent,
     canActivate : [LoginActivatedGuard]
+  },
+  {
+    path: 'acessibilidade',
+    component: AcessibilidadeComponent,
   },
 ];
 

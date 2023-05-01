@@ -55,6 +55,6 @@ export class ComentariosComponent implements OnInit {
 
   deleta(id: any, cursoId: number) {
     console.log(cursoId);
-    this.router.navigate(['aulas/comentario/deletar', id, 'curso', cursoId]);
+    this.router.navigate(['user/aulas/comentario/deletar', id, 'curso', cursoId]);
   }
 }

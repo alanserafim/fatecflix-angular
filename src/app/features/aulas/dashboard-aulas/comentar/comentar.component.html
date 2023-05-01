@@ -1,6 +1,6 @@
 <div class="wrapper">
   <div class="content">
-  <mat-card  [hidden]="submitted">
+  <mat-card>
     <mat-card-title>Comentarios</mat-card-title>
     <form #comentarForm="ngForm" (ngSubmit)="onSubmit()">
     <div class="container">
@@ -18,9 +18,6 @@
       </mat-card-actions>
     </form>
   </mat-card>
-  <div [hidden]="!submitted">
-    <button class="btn btn-success" (click)="novoComentario()">Add</button>
-  </div>
   <br>
 </div>
 </div>

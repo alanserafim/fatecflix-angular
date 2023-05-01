@@ -47,7 +47,7 @@ export class UsuarioDeleteComponent implements OnInit {
       () => {
         this.sweeAlertService.sucessAndMove(
           'Usuário excluído com sucesso',
-          '/usuario/lista',
+          'user/usuario/lista',
           'Sucesso'
         );
       },
@@ -59,6 +59,6 @@ export class UsuarioDeleteComponent implements OnInit {
   }
 
   cancel(): void {
-    this.router.navigate(['/usuario/lista']);
+    this.router.navigate(['user/usuario/lista']);
   }
 }

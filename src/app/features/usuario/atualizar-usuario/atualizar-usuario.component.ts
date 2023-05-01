@@ -91,7 +91,7 @@ export class AtualizarUsuarioComponent implements OnInit {
         console.log(data);
         this.sweeAlertService.sucessAndMove(
           'Usuário atualizado com sucesso',
-          '/usuario/lista',
+          'user/usuario/lista',
           'Sucesso'
         );
       },

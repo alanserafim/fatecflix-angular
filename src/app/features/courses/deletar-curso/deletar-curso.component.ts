@@ -43,7 +43,7 @@ export class DeletarCursoComponent implements OnInit {
       () => {
         this.sweeAlertService.sucessAndMove(
           'Curso excluido com sucesso',
-          '/cursos/listar',
+          'user/cursos/listar',
           'Sucesso'
         );
       },
@@ -54,6 +54,6 @@ export class DeletarCursoComponent implements OnInit {
   }
 
   cancel(): void {
-    this.router.navigate(['/cursos/listar']);
+    this.router.navigate(['user/cursos/listar']);
   }
 }

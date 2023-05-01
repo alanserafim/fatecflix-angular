@@ -1,4 +1,4 @@
-<mat-card [hidden]="submitted">
+<mat-card>
   <mat-card-title>Inclusão de aulas</mat-card-title>
   <mat-card-subtitle>Adicone novas aulas nos cursos selecionados</mat-card-subtitle>
   <form class="cadastrarForm" #cadastrarAulaForm="ngForm" (ngSubmit)="onSubmit()">
@@ -24,6 +24,6 @@
     </mat-card-actions>
   </form>
 </mat-card>
-<div [hidden]="!submitted">
+<div>
   <button class="btn btn-success" (click)="novaAula()">Add</button>
 </div>

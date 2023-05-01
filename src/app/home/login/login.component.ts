@@ -26,7 +26,7 @@ export class LoginHomeComponent implements OnInit {
   login() {
     this.authService.autentica(this.email, this.senha).subscribe(()=>{
     this.openSnackBar2("Login realizado com sucesso","");
-    setTimeout(()=>{this.router.navigate(['cursos/menu'])}, 1000)
+    setTimeout(()=>{this.router.navigate(['user/cursos/menu'])}, 1000)
 
     }, (error)=> {
       this.openSnackBar("usuário ou senha inválida","Cadastre-se");

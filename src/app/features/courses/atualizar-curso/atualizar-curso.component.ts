@@ -43,7 +43,7 @@ export class AtualizarCursoComponent implements OnInit {
       () => {
         this.sweeAlertService.sucessAndMove(
           'Curso atualizado com sucesso',
-          '/cursos/listar',
+          'user/cursos/listar',
           'Sucesso'
         );
       },

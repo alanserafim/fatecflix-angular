@@ -46,7 +46,7 @@ export class AtualizarAulasComponent implements OnInit {
         console.log(data);
         this.sweeAlertService.sucessAndMove(
           'Aula atualizada com sucesso',
-          `aulas/dashboard/${this.cursoId}`,
+          `user/aulas/dashboard/${this.cursoId}`,
           'Sucesso'
         );
       },

@@ -40,7 +40,7 @@ export class DeletarAulasComponent implements OnInit {
     this.deletaAulaService.deletaAula(this.id).subscribe(() => {
       this.sweeAlertService.sucessAndMove(
         'Aula deletada com sucesso',
-        `/cursos/listar`,
+        `user/cursos/listar`,
         'Sucesso'
       );
     },
@@ -51,6 +51,6 @@ export class DeletarAulasComponent implements OnInit {
   }
 
   cancel() {
-    this.router.navigate(['/cursos/listar']);
+    this.router.navigate(['user/cursos/listar']);
   }
 }

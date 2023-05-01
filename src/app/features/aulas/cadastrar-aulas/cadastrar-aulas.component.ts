@@ -37,7 +37,7 @@ export class CadastrarAulasComponent implements OnInit {
       console.log(data);
       this.sweeAlertService.sucessAndMove(
         'Aula cadastrada com sucesso',
-        `aulas/dashboard/${this.cursoId}`,
+        `user/aulas/dashboard/${this.cursoId}`,
         'Sucesso'
       );
     },

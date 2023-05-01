@@ -6,7 +6,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TokenInterceptor } from './services/interceptors/token.interceptor';
-import { AcessibilidadeComponent } from './pages/acessibilidade/acessibilidade.component';
 
 
 

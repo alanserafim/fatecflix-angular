@@ -1,33 +1,99 @@
 <div class="wrapper" *ngIf="usuarioLogado$ | async as user ">
-  <div class="card-align" id="conteudo">
-    <mat-card class="example-card">
-      <div class="container">
-        <mat-card-title>
-          <h1>{{ curso.titulo }}</h1>
-        </mat-card-title>
-        <mat-card-subtitle>
-          <h2>{{ curso.categoria }}</h2>
-        </mat-card-subtitle>
-        <h3>{{ curso.cargaHorario }}</h3>
-        <p>{{ curso.descricao }}</p>
-      </div>
-      <mat-card-actions>
-        <div class="buttons">
-          <button mat-stroked-button (click)="gotoAulas(cursoId)">Ir para aulas</button>
-          <button mat-stroked-button (click)="gotoCadastroAulas(cursoId)"
-            *ngIf="user.roles.includes('INSTRUTOR')">Cadastrar aulas</button>
+  <div class="superior">
+    <div class="superior__esquerda">
+      <section class="info">
+        <h2 class="categoria">{{ curso.categoria }}</h2>
+        <h1 class="titulo">{{ curso.titulo }}</h1>
+        <div class="info__gerais">
+          <p>Avaliação: {{ curso.mediaAvaliacao }}</p>
+          <p>Atualizado em: {{ curso.dataAtualizacao }}</p>
+          <p>Carga Horária: {{ curso.cargaHorario }}</p>
         </div>
-      </mat-card-actions>
-    </mat-card>
-    <mat-card *ngIf="user.roles.includes('INSTRUTOR')" class="example-card">
-      <h2>Lista de Alunos</h2>
-      <div class="lista">
-        <div class="container" *ngFor="let usuario of usuarios | async">
-          <mat-card-title>
-            <h3>{{ usuario.name }} {{ usuario.lastname }}</h3>
-          </mat-card-title>
-          <p>@{{ usuario.username }}</p>
-        </div>
-      </div>
-    </mat-card>
+      </section>
+      <section class="icone">
+        <mat-icon>css</mat-icon>
+      </section>
+    </div>
+
+
   </div>
+  <section class="barra_acoes">
+    <button mat-stroked-button color="warn">matricular</button>
+    <button mat-stroked-button (click)="gotoAulas(cursoId)">continuar curso</button>
+    <button mat-stroked-button>outras ações</button>
+  </section>
+
+  <div class="inferior">
+    <div class="inferior__esquerda">
+      <section class="sobre">
+        <h3>Sobre este curso:</h3>
+        <p class="descricao">{{ curso.descricao }}</p>
+      </section>
+      <section class="aulas">
+        <h3>Aulas</h3>
+        <div class="aulas__lista" >
+
+          <mat-accordion>
+            <mat-expansion-panel hideToggle *ngFor="let aula of aulas | async">
+              <mat-expansion-panel-header>
+                <mat-panel-title>{{aula.titulo}}</mat-panel-title>
+              </mat-expansion-panel-header>
+              <p>{{aula.conteudo}}</p>
+            </mat-expansion-panel>
+          </mat-accordion>
+        </div>
+      </section>
+    </div>
+    <div class="inferior__direita">
+      <section class="estudantes" *ngIf="user.roles.includes('INSTRUTOR')">
+        <h3>Estudantes</h3>
+        <div class="estudantes__lista">
+          <div class="icon">
+            <mat-icon class="video-icon">personal_video</mat-icon>
+          </div>
+          <ul  class="lista" *ngFor="let usuario of usuarios | async">
+            <li>
+              <mat-icon>person</mat-icon>
+              <p>{{ usuario.name }} {{ usuario.lastname }}</p>
+            </li>
+
+          </ul>
+        </div>
+      </section>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- <div class="card-align" id="conteudo">
+  <mat-card class="example-card">
+    <div class="container">
+      <mat-card-title>
+        <h1>{{ curso.titulo }}</h1>
+      </mat-card-title>
+      <mat-card-subtitle>
+        <h2>{{ curso.categoria }}</h2>
+      </mat-card-subtitle>
+      <h3>{{ curso.cargaHorario }}</h3>
+      <p>{{ curso.descricao }}</p>
+    </div>
+    <mat-card-actions>
+      <div class="buttons">
+        <button mat-stroked-button (click)="gotoAulas(cursoId)">Ir para aulas</button>
+        <button mat-stroked-button (click)="gotoCadastroAulas(cursoId)"
+          *ngIf="user.roles.includes('INSTRUTOR')">Cadastrar aulas</button>
+      </div>
+    </mat-card-actions>
+  </mat-card>
+  <mat-card *ngIf="user.roles.includes('INSTRUTOR')" class="example-card">
+    <h2>Lista de Alunos</h2>
+    <div class="lista">
+      <div class="container" *ngFor="let usuario of usuarios | async">
+        <mat-card-title>
+          <h3>{{ usuario.name }} {{ usuario.lastname }}</h3>
+        </mat-card-title>
+        <p>@{{ usuario.username }}</p>
+      </div>
+    </div>
+  </mat-card> -->

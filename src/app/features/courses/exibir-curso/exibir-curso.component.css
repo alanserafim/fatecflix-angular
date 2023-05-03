@@ -1,4 +1,137 @@
-.example-card {
+
+.superior{
+  background-color: var(--detalhar-curso-background);
+  width: 80vw;
+  padding: 2vh 10vw
+}
+
+.superior__esquerda {
+  display: flex;
+  padding: 1em;
+}
+
+.info {
+  color: var(--secondary-text-color);
+  width: 40%;
+}
+
+.icone {
+  width: 40%;
+  color: var(--secondary-text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icone mat-icon {
+  transform: scale(8);
+}
+
+.info__gerais {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.barra_acoes {
+  background-color: var(--primary-background-color);
+  padding: 2vh 10vw
+
+}
+
+.barra_acoes button {
+  margin-right: 1vw;
+}
+
+
+
+.inferior {
+  background-color: var(--detalhar-curso-background2);
+  display: flex;
+  justify-content: space-between;
+  min-height: 80vh;
+  padding: 2vh 10vw
+}
+
+.inferior h3 {
+  color: var(--detalhar-curso-text-highlight);
+  font-weight: 500;;
+}
+
+.inferior__esquerda{
+  width: 40%;
+}
+
+.inferior__direita{
+  width: 50%;
+}
+
+.sobre {
+  padding: 1em;
+  text-align: justify;
+}
+
+.aulas {
+  padding: 1em;
+}
+
+.estudantes {
+  padding: 1em;
+
+}
+
+.estudantes__lista{
+  box-shadow: 5px 5px 5px 5px var(--text-darkred-background);
+  padding: 1em 0;
+}
+.estudantes p {
+  font-size: .7em;
+}
+
+.lista {
+  list-style: none;
+  padding-top: 1em;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.lista li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20%;
+  margin: 4px;
+  padding: 4px;
+  /* border: 1px solid black; */
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  padding: 2px;
+}
+
+.video-icon {
+  text-align: center;
+  transform: scale(3);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .example-card {
   width: 400px;
   height: 400px;
   margin: auto;
@@ -12,14 +145,14 @@
 .buttons {
   display: flex;
   justify-content: space-between;
-}
+} */
 
-button{
+/* button{
   width: 45%;
   background-color: var(--btn-background-color3);
   color: var(--secondary-text-color);
-}
-
+} */
+/*
 .card-align{
   height: 80%;
   display: flex;
@@ -30,10 +163,10 @@ button{
 .lista
 {
   overflow-y: scroll;
-}
+} */
 
 /*Media Queries*/
-@media (max-width: 676px) {
+/* @media (max-width: 676px) {
   .card-align{
     flex-direction: column;
   }
@@ -50,7 +183,7 @@ button{
     text-align: justify;
     height: 89%;
   }
-}
+} */
 
 
 

@@ -3,12 +3,13 @@
 ## Projeto Interdisciplinar
 
 ### Curso: 
-* Desenvolvimento de Software Multiplaforma da Fatec Zona Leste (3º Semestre)
+* Desenvolvimento de Software Multiplaforma da Fatec Zona Leste (4º Semestre)
 
 ### Disciplinas: 
-* Desenvolvimento Web III
-* Interação Humano Computador 
-* Banco de Dados Não Relacional. 
+* Laboratório de Desenvolvimento Web
+* Experiência do Usuário
+* Desenvolvimento de dispositivos móveis
+* Integração e entrega contínua
 
 
 <fig>

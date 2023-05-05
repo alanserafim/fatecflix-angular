@@ -25,13 +25,13 @@ export class ListarCursosComponent implements OnInit {
   ];
   usuarioLogado$: Observable<UsuarioLogado> =
     this.usuarioLogadoService.retornaUsuarioLogado();
-  isLoggedIn = true;
-  // @ts-ignore: Object is possibly 'undefined'.
-  cursos: Observable<NovoCurso[]>;
-  // @ts-ignore: Object is possibly 'undefined'.
-  matricula: Matricula;
-  // @ts-ignore: Object is possibly 'undefined'.
-  matriculado: Observable<Matricula>;
+    isLoggedIn = true;
+    // @ts-ignore: Object is possibly 'undefined'.
+    cursos: Observable<NovoCurso[]>;
+    // @ts-ignore: Object is possibly 'undefined'.
+    matricula: Matricula;
+    // @ts-ignore: Object is possibly 'undefined'.
+    matriculado: Observable<Matricula>;
 
   constructor(
     private usuarioLogadoService: UsuarioLogadoService,
@@ -71,9 +71,7 @@ export class ListarCursosComponent implements OnInit {
 
   matricular(id: number) {
     console.log(id);
-
     this.matricula = new Matricula(0.0, 0.0, 'Em progresso');
-
     this.matriculaService.matricular(id, this.matricula).subscribe(
       (data) => console.log(data),
       (error) => console.log(error)

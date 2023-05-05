@@ -5,8 +5,10 @@ import { UsuarioLogadoService } from 'src/app/services/authentication/usuario-lo
 import { ConsultarCursoService } from 'src/app/services/consultar-curso/consultar-curso.service';
 import { ListarAulasService } from 'src/app/services/listar-aulas/listar-aulas.service';
 import { MatricularService } from 'src/app/services/matricular/matricular.service';
+import { SweetalertService } from 'src/app/services/sweetalert/sweetalert.service';
 import { Aula } from 'src/app/types/Aula';
 import { Curso } from 'src/app/types/Curso';
+import { Matricula } from 'src/app/types/Matricula';
 import { NovoUsuario } from 'src/app/types/NovoUsuario';
 import { UsuarioLogado } from 'src/app/types/UsuarioLogado';
 
@@ -21,7 +23,6 @@ export class ExibirCursoComponent implements OnInit {
   isLoggedIn = true;
   // @ts-ignore: Object is possibly 'undefined'.
   aulas: Observable<Aula[]>;
-
   // @ts-ignore: Object is possibly 'undefined'.
   cursoId: number;
   // @ts-ignore: Object is possibly 'undefined'.
@@ -29,6 +30,11 @@ export class ExibirCursoComponent implements OnInit {
   // @ts-ignore: Object is possibly 'undefined'.
   usuarios: Observable<NovoUsuario[]>;
   submitted = false;
+  // @ts-ignore: Object is possibly 'undefined'.
+  matricula: Matricula;
+  // @ts-ignore: Object is possibly 'undefined'.
+  matriculado: Observable<Matricula>;
+
 
   constructor(
     private matriculasService: MatricularService,
@@ -36,7 +42,8 @@ export class ExibirCursoComponent implements OnInit {
     private aulasService: ListarAulasService,
     private route: ActivatedRoute,
     private router: Router,
-    private cursoService: ConsultarCursoService
+    private cursoService: ConsultarCursoService,
+    private sweetalertService: SweetalertService
   ) {}
 
   ngOnInit() {
@@ -65,6 +72,25 @@ export class ExibirCursoComponent implements OnInit {
 
   recebeListaAulas(){
     this.aulas = this.aulasService.listarAulas(this.cursoId);
+  }
+
+  matricular(id: number) {
+    console.log(id);
+    this.matricula = new Matricula(0.0, 0.0, 'Em progresso');
+    this.matriculasService.matricular(id, this.matricula).subscribe(
+      (data) => {
+        console.log(data);
+        this.sweetalertService.sucessAndMove(
+          'Matricula realizada com sucesso',
+          `/user/aulas/dashboard/${this.cursoId}`,
+          'Sucesso'
+        );
+      },
+      (error) => {
+      console.log(error);
+      this.sweetalertService.error('Matrícula não realizada');
+      }
+    );
   }
 
 }

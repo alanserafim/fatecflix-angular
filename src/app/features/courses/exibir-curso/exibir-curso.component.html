@@ -1,4 +1,4 @@
-<div class="wrapper" *ngIf="usuarioLogado$ | async as user ">
+<div class="wrapper" *ngIf="usuarioLogado$ | async as user">
   <div class="superior">
     <div class="superior__esquerda">
       <section class="info">
@@ -14,13 +14,23 @@
         <mat-icon>css</mat-icon>
       </section>
     </div>
-
-
   </div>
   <section class="barra_acoes">
-    <button mat-stroked-button color="warn">matricular</button>
-    <button mat-stroked-button (click)="gotoAulas(cursoId)">continuar curso</button>
-    <button mat-stroked-button>outras ações</button>
+    <button
+      mat-stroked-button
+      color="warn"
+      (click)="matricular(cursoId)"
+      *ngIf="user.roles.includes('ALUNO')"
+    >
+      matricular
+    </button>
+    <button mat-stroked-button (click)="gotoAulas(cursoId)">
+      continuar curso
+    </button>
+    <button mat-stroked-button [matMenuTriggerFor]="menu">outras ações</button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>Cancelar Matricula(não implementado)</button>
+    </mat-menu>
   </section>
 
   <div class="inferior">
@@ -31,14 +41,13 @@
       </section>
       <section class="aulas">
         <h3>Aulas</h3>
-        <div class="aulas__lista" >
-
+        <div class="aulas__lista">
           <mat-accordion>
             <mat-expansion-panel hideToggle *ngFor="let aula of aulas | async">
               <mat-expansion-panel-header>
-                <mat-panel-title>{{aula.titulo}}</mat-panel-title>
+                <mat-panel-title>{{ aula.titulo }}</mat-panel-title>
               </mat-expansion-panel-header>
-              <p>{{aula.conteudo}}</p>
+              <p>{{ aula.conteudo }}</p>
             </mat-expansion-panel>
           </mat-accordion>
         </div>
@@ -51,20 +60,17 @@
           <div class="icon">
             <mat-icon class="video-icon">personal_video</mat-icon>
           </div>
-          <ul  class="lista" *ngFor="let usuario of usuarios | async">
-            <li>
+          <ul class="lista">
+            <li *ngFor="let usuario of usuarios | async">
               <mat-icon>person</mat-icon>
               <p>{{ usuario.name }} {{ usuario.lastname }}</p>
             </li>
-
           </ul>
         </div>
       </section>
     </div>
   </div>
-
 </div>
-
 
 <!-- <div class="card-align" id="conteudo">
   <mat-card class="example-card">

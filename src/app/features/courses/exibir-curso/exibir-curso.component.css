@@ -24,7 +24,7 @@
 }
 
 .icone mat-icon {
-  transform: scale(8);
+  transform: scale(6);
 }
 
 .info__gerais {
@@ -77,12 +77,14 @@
 
 .estudantes {
   padding: 1em;
+  height: 80%;
 
 }
 
 .estudantes__lista{
-  box-shadow: 5px 5px 5px 5px var(--text-darkred-background);
+  background-color: var(--primary-background-color);
   padding: 1em 0;
+  min-height: 100%;
 }
 .estudantes p {
   font-size: .7em;
@@ -93,6 +95,8 @@
   padding-top: 1em;
   display: flex;
   flex-wrap: wrap;
+  overflow-y: scroll;
+  min-height: 50vh;
 }
 
 .lista li {

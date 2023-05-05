@@ -11,7 +11,7 @@
         </div>
       </section>
       <section class="icone">
-        <mat-icon>css</mat-icon>
+        <mat-icon>code</mat-icon>
       </section>
     </div>
   </div>
@@ -53,8 +53,8 @@
         </div>
       </section>
     </div>
-    <div class="inferior__direita">
-      <section class="estudantes" *ngIf="user.roles.includes('INSTRUTOR')">
+    <div class="inferior__direita" *ngIf="user.roles.includes('INSTRUTOR')">
+      <section class="estudantes">
         <h3>Estudantes</h3>
         <div class="estudantes__lista">
           <div class="icon">

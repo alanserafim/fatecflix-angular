@@ -15,7 +15,7 @@ export class UsuarioService {
   constructor(private tokenService: TokenService) {
     if(this.tokenService.possuiToken()){
       this.decodificaJWT();
-    }
+    } 
    }
 
   private decodificaJWT(){

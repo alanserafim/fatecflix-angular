@@ -27,6 +27,8 @@ export class HeaderComponent implements OnInit {
         console.log(usuario);
 
       }, (error) => {
+        this.tokeService.excluiToken();
+        this.route.navigate(['/']);
         alert("Credenciais inválidas");
         console.log(error);
       }

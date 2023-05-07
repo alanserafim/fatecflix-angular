@@ -1,8 +1,10 @@
+.wrapper {
+  margin-bottom: 1em;
+}
 
-.superior{
+.superior {
   background-color: var(--detalhar-curso-background);
-  width: 80vw;
-  padding: 2vh 10vw
+  padding: 2vh 10vw;
 }
 
 .superior__esquerda {
@@ -15,7 +17,7 @@
   width: 40%;
 }
 
-.icone {
+.superior__direita {
   width: 40%;
   color: var(--secondary-text-color);
   display: flex;
@@ -23,7 +25,7 @@
   align-items: center;
 }
 
-.icone mat-icon {
+.superior__direita mat-icon {
   transform: scale(6);
 }
 
@@ -35,34 +37,31 @@
 
 .barra_acoes {
   background-color: var(--primary-background-color);
-  padding: 2vh 10vw
-
+  padding: 2vh 10vw;
 }
 
 .barra_acoes button {
   margin-right: 1vw;
 }
 
-
-
 .inferior {
   background-color: var(--detalhar-curso-background2);
   display: flex;
   justify-content: space-between;
   min-height: 80vh;
-  padding: 2vh 10vw
+  padding: 2vh 10vw;
 }
 
 .inferior h3 {
   color: var(--detalhar-curso-text-highlight);
-  font-weight: 500;;
+  font-weight: 500;
 }
 
-.inferior__esquerda{
+.inferior__esquerda {
   width: 40%;
 }
 
-.inferior__direita{
+.inferior__direita {
   width: 50%;
 }
 
@@ -77,17 +76,17 @@
 
 .estudantes {
   padding: 1em;
-  height: 80%;
-
+  height: 82vh;
 }
 
-.estudantes__lista{
+.estudantes__lista {
   background-color: var(--primary-background-color);
   padding: 1em 0;
-  min-height: 100%;
+  min-height: 88%;
 }
 .estudantes p {
-  font-size: .7em;
+  font-size: 0.7em;
+  text-align: center;
 }
 
 .lista {
@@ -95,8 +94,8 @@
   padding-top: 1em;
   display: flex;
   flex-wrap: wrap;
+  height: 64vh;
   overflow-y: scroll;
-  min-height: 50vh;
 }
 
 .lista li {
@@ -104,9 +103,9 @@
   flex-direction: column;
   align-items: center;
   width: 20%;
-  margin: 4px;
-  padding: 4px;
-  /* border: 1px solid black; */
+  height: 16%;
+  margin: 2px;
+  padding: 2px;
 }
 
 .icon {
@@ -120,76 +119,18 @@
   transform: scale(3);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* .example-card {
-  width: 400px;
-  height: 400px;
-  margin: auto;
-  background-color: var(--login-card-background);
-  box-shadow: 3px 3px 6px var(--listar-curso-box-shadow);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.person-icon {
+  color: green;
 }
 
-.buttons {
-  display: flex;
-  justify-content: space-between;
-} */
-
-/* button{
-  width: 45%;
-  background-color: var(--btn-background-color3);
-  color: var(--secondary-text-color);
-} */
-/*
-.card-align{
-  height: 80%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.high {
+  color: green;
 }
 
-.lista
-{
-  overflow-y: scroll;
-} */
+.medium {
+  color: yellow;
+}
 
-/*Media Queries*/
-/* @media (max-width: 676px) {
-  .card-align{
-    flex-direction: column;
-  }
-  .example-card {
-    width: 80vw;
-    min-height: 50vh;
-    margin: auto;
-    margin-top: 2rem;
-    background-color: var(--login-card-background);
-    box-shadow: 3px 3px 6px var(--listar-curso-box-shadow);
-  }
-  .container {
-    overflow-y: hidden;
-    text-align: justify;
-    height: 89%;
-  }
-} */
-
-
-
-
-
+.low {
+  color: red;
+}

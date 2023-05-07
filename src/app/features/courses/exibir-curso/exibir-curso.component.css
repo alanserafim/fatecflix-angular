@@ -1,58 +1,187 @@
-.example-card {
-  width: 400px;
-  height: 400px;
-  margin: auto;
-  background-color: var(--login-card-background);
-  box-shadow: 3px 3px 6px var(--listar-curso-box-shadow);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.superior {
+  background-color: var(--detalhar-curso-background);
+  padding: 2vh 10vw;
 }
 
-.buttons {
+.superior__esquerda {
   display: flex;
-  justify-content: space-between;
+  padding: 1em;
 }
 
-button{
-  width: 45%;
-  background-color: var(--btn-background-color3);
+.info {
   color: var(--secondary-text-color);
+  width: 40%;
 }
 
-.card-align{
-  height: 80%;
+.superior__direita {
+  width: 40%;
+  color: var(--secondary-text-color);
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 
-.lista
-{
+.superior__direita mat-icon {
+  transform: scale(6);
+}
+
+.info__gerais {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.barra_acoes {
+  background-color: var(--primary-background-color);
+  padding: 2vh 10vw;
+}
+
+.barra_acoes button {
+  margin-right: 1vw;
+}
+
+.inferior {
+  background-color: var(--detalhar-curso-background2);
+  display: flex;
+  justify-content: space-between;
+  min-height: 80vh;
+  padding: 2vh 10vw;
+}
+
+.inferior h3 {
+  color: var(--detalhar-curso-text-highlight);
+  font-weight: 500;
+}
+
+.inferior__esquerda {
+  width: 40%;
+}
+
+.inferior__direita {
+  width: 50%;
+}
+
+.sobre {
+  padding: 1em;
+  text-align: justify;
+}
+
+.aulas {
+  padding: 1em;
+}
+
+.estudantes {
+  padding: 1em;
+  height: 82vh;
+}
+
+.estudantes__lista {
+  background-color: var(--primary-background-color);
+  padding: 1em 0;
+  min-height: 88%;
+}
+.estudantes p {
+  font-size: 0.7em;
+  text-align: center;
+}
+
+.lista {
+  list-style: none;
+  padding-top: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  height: 64vh;
   overflow-y: scroll;
 }
 
-/*Media Queries*/
-@media (max-width: 676px) {
-  .card-align{
-    flex-direction: column;
-  }
-  .example-card {
-    width: 80vw;
-    min-height: 50vh;
-    margin: auto;
-    margin-top: 2rem;
-    background-color: var(--login-card-background);
-    box-shadow: 3px 3px 6px var(--listar-curso-box-shadow);
-  }
-  .container {
-    overflow-y: hidden;
-    text-align: justify;
-    height: 89%;
-  }
+.lista li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20%;
+  height: 16%;
+  margin: 2px;
+  padding: 2px;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  padding: 2px;
+}
+
+.video-icon {
+  text-align: center;
+  transform: scale(3);
+}
+
+.person-icon {
+  color: green;
+}
+
+.high {
+  color: green;
+}
+
+.medium {
+  color: yellow;
+}
+
+.low {
+  color: red;
 }
 
 
+@media only screen and (max-width: 640px) {
+  .superior__direita, .superior__direita mat-icon  {
+    display: none;
+  }
+  .superior__esquerda {
+    width: 100%;
+  }
+  .info{
+    width: 100%;
+  }
 
+  .barra_acoes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .barra_acoes button {
+    margin-bottom: 8px;
+    width: 60%;
+  }
+}
 
+@media only screen and (max-width: 768px) {
+  .inferior {
+    flex-direction: column;
+    /* background-color: var(--detalhar-curso-background2);
+    display: flex;
+    justify-content: space-between;
+    min-height: 80vh;
+    padding: 2vh 10vw; */
+  }
+  .inferior__esquerda {
+    width: 100%;
+  }
 
+  .inferior__direita {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+
+}
+
+@media only screen and (max-width: 1280px) {
+  .info__gerais {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 1536px) {
+
+}

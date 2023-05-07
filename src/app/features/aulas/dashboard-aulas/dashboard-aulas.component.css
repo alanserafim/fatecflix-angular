@@ -1,3 +1,6 @@
+.componente{
+  padding: 2vh 10vw;
+}
 
 /*Media Queries*/
 @media (max-width: 676px) {

@@ -15,7 +15,7 @@ html, body {
 }
 .footer {
   flex-shrink: 0;
-  box-shadow: 5px -5px 15px var(--border-neon);
+  /* box-shadow: 5px -5px 15px var(--border-neon); */
   background: var(--gradient-background-1);
       background: linear-gradient(
         135deg,
@@ -23,10 +23,6 @@ html, body {
         var(--gradient-background-3) 91%,
         var(--gradient-background-4) 100%
       );
-}
-
-main {
-  margin-top: 12px;
 }
 
 

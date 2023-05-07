@@ -1,64 +1,66 @@
-<mat-card class=card__container>
-  <mat-card class="card__1">
-    <mat-card-header>
-      <mat-card-title>Fatecflix</mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-      <h2>Cadastre um novo curso</h2>
-      <p>E contribua com a educação de nossos alunos.</p>
-    </mat-card-content>
-    <mat-card-footer>
-    </mat-card-footer>
-  </mat-card>
-  <mat-card class="card__2">
-    <form class="cadastro" [formGroup]="novoCursoForm" (submit)="cadastrarCurso()">
-      <h1 class=>Cadastrar curso</h1>
+<div class="componente">
+  <mat-card class=card__container>
+    <mat-card class="card__1">
+      <mat-card-header>
+        <mat-card-title>Fatecflix</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <h2>Cadastre um novo curso</h2>
+        <p>E contribua com a educação de nossos alunos.</p>
+      </mat-card-content>
+      <mat-card-footer>
+      </mat-card-footer>
+    </mat-card>
+    <mat-card class="card__2">
+      <form class="cadastro" [formGroup]="novoCursoForm" (submit)="cadastrarCurso()">
+        <h1 class=>Cadastrar curso</h1>
 
-      <mat-form-field appearance="outline" class="input" hideRequiredMarker>
-        <mat-label class="titulo">Titulo:</mat-label>
-        <input matInput class="input" type="text" formControlName="titulo">
-        <mat-error *ngIf="novoCursoForm.get('titulo')?.errors?.['required']">
-          O campo título deve ser preenchido.</mat-error>
-      </mat-form-field>
+        <mat-form-field appearance="outline" class="input" hideRequiredMarker>
+          <mat-label class="titulo">Titulo:</mat-label>
+          <input matInput class="input" type="text" formControlName="titulo">
+          <mat-error *ngIf="novoCursoForm.get('titulo')?.errors?.['required']">
+            O campo título deve ser preenchido.</mat-error>
+        </mat-form-field>
 
-      <mat-form-field class="descricaoInput" appearance="outline" hideRequiredMarker>
-        <mat-label class="descricao">Descrição:</mat-label>
-        <textarea matInput formControlName="descricao">
+        <mat-form-field class="descricaoInput" appearance="outline" hideRequiredMarker>
+          <mat-label class="descricao">Descrição:</mat-label>
+          <textarea matInput formControlName="descricao">
       </textarea>
-        <mat-error *ngIf="novoCursoForm.get('descricao')?.errors?.['required']">
-          O campo descrição deve ser preenchido.</mat-error>
-      </mat-form-field>
+          <mat-error *ngIf="novoCursoForm.get('descricao')?.errors?.['required']">
+            O campo descrição deve ser preenchido.</mat-error>
+        </mat-form-field>
 
-      <mat-form-field appearance="outline" class="input" hideRequiredMarker>
-        <mat-label class="cargaHorario">Carga Horária:</mat-label>
-        <input matInput formControlName="cargaHorario" type="text">
-        <mat-error *ngIf="novoCursoForm.get('cargaHorario')?.errors?.['required']">
-          O campo carga horária deve ser preenchido.</mat-error>
-      </mat-form-field>
+        <mat-form-field appearance="outline" class="input" hideRequiredMarker>
+          <mat-label class="cargaHorario">Carga Horária:</mat-label>
+          <input matInput formControlName="cargaHorario" type="text">
+          <mat-error *ngIf="novoCursoForm.get('cargaHorario')?.errors?.['required']">
+            O campo carga horária deve ser preenchido.</mat-error>
+        </mat-form-field>
 
-      <mat-form-field appearance="outline" class="input" hideRequiredMarker>
-        <mat-label class="dataAtualizacao">Data de atualização</mat-label>
-        <input matInput [matDatepicker]="picker" formControlName="dataAtualizacao">
-        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-        <mat-datepicker panelClass="date" #picker></mat-datepicker>
-        <mat-error *ngIf="novoCursoForm.get('dataAtualizacao')?.errors?.['required']">
-          O campo data de atualização deve ser preenchido.</mat-error>
+        <mat-form-field appearance="outline" class="input" hideRequiredMarker>
+          <mat-label class="dataAtualizacao">Data de atualização</mat-label>
+          <input matInput [matDatepicker]="picker" formControlName="dataAtualizacao">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker panelClass="date" #picker></mat-datepicker>
+          <mat-error *ngIf="novoCursoForm.get('dataAtualizacao')?.errors?.['required']">
+            O campo data de atualização deve ser preenchido.</mat-error>
 
-      </mat-form-field>
+        </mat-form-field>
 
-      <mat-form-field appearance="outline" class="input" hideRequiredMarker>
-        <mat-label class="cargaHorario">Categoria</mat-label>
-        <input matInput type="text" formControlName="categoria">
-        <mat-error *ngIf="novoCursoForm.get('categoria')?.errors?.['required']">
-          O campo categoria deve ser preenchido.</mat-error>
-      </mat-form-field>
+        <mat-form-field appearance="outline" class="input" hideRequiredMarker>
+          <mat-label class="cargaHorario">Categoria</mat-label>
+          <input matInput type="text" formControlName="categoria">
+          <mat-error *ngIf="novoCursoForm.get('categoria')?.errors?.['required']">
+            O campo categoria deve ser preenchido.</mat-error>
+        </mat-form-field>
 
-      <mat-form-field appearance="outline" class="input">
-        <mat-label class="media">Média Avaliação</mat-label>
-        <input matInput type="number" formControlName="mediaAvaliacao">
-      </mat-form-field>
-      <button mat-stroked-button [disabled]="novoCursoForm.invalid">CADASTRAR
-      </button>
-    </form>
+        <mat-form-field appearance="outline" class="input">
+          <mat-label class="media">Média Avaliação</mat-label>
+          <input matInput type="number" formControlName="mediaAvaliacao">
+        </mat-form-field>
+        <button mat-stroked-button [disabled]="novoCursoForm.invalid">CADASTRAR
+        </button>
+      </form>
+    </mat-card>
   </mat-card>
-</mat-card>
+</div>

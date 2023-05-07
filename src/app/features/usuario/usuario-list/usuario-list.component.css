@@ -1,11 +1,15 @@
+.componente {
+  padding: 4vh 10.5vw;
+}
+
 .container {
   display: flex;
   flex-direction: column;
 }
 
 .panel-body table {
-  width: 80%;
-  margin: auto;
+  width: 100%;
+  /* margin: auto; */
   text-align: left;
   background-color: var(--primary-background-color);
   color: var(--primary-text-color);
@@ -19,14 +23,15 @@ td {
   color: var(--primary-text-color);
 }
 
-.panel_body {
-  padding: 2vh 0;
+.panel-body {
+  margin: 4vh 0;
+  width: 100%;
 }
 
 h1 {
-  padding: 0 0 1vw 6vw;
+  /* padding: 0 0 1vw 6vw; */
   text-transform: uppercase;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--primary-text-color);
 }
 
@@ -46,19 +51,6 @@ li {
   list-style: none;
 }
 
-/*Dados Pessoais*/
-
-mat-card {
-  margin: 0.8em;
-  min-height: 21vh;
-  padding: 2em;
-  background-color: var(--primary-background-color);
-  color: var(--primary-text-color);
-}
-
-mat-card:first-child {
-  margin-top: 0;
-}
 
 /*Inputs*/
 

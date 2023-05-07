@@ -1,8 +1,11 @@
+.componente{
+  padding: 4vh 10.5vw;
+}
+
 .card__container {
   display: flex;
   justify-content: flex-start;
-  margin: 2em;
-  width: 70%;
+  width: 100%;
   box-shadow: 6px 6px 3px var(--cadastrar-curso-box-shadow);
 }
 

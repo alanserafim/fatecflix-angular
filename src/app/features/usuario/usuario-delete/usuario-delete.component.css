@@ -1,3 +1,7 @@
+.componente {
+  padding: 2vh 10.5vw;
+}
+
 form {
   display: flex;
   flex-direction: column;

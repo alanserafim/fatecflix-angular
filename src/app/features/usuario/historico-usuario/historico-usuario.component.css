@@ -1,9 +1,13 @@
+.componente{
+  padding: 2vh 10.5vw;
+}
+
 th {
   color: var(--primary-text-color);
 }
 
 table{
-  width: 87vw;
+  width: 100%;
   margin: auto;
 }
 

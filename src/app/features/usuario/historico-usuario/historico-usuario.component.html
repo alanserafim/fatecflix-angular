@@ -1,5 +1,4 @@
-<div id="conteudo" class="panel-body">
-
+<div class="componente">
   <table mat-table [dataSource]="historicos" class="mat-elevation-z8">
     <ng-container matColumnDef="Nome do Curso">
       <th mat-header-cell *matHeaderCellDef> Nome do Curso </th>
@@ -18,5 +17,4 @@
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
-
 </div>

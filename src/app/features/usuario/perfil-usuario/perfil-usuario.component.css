@@ -5,18 +5,22 @@
   flex-direction: column;
 }
 
-/*Sidenav*/
+.componente {
+  padding: 4vh 10.5vw;
+}
 
 .example-container {
   min-height: 80vh;
   background: var(--primary-background-color);
-  margin-top: 5em;
-  padding: 1vw 6vw 1vw 6vw;
 }
 
+.dados {
+  width: 40vw;
+}
+
+
 mat-sidenav {
-  width: 10vw;
-  display: none;
+   display: none;
 }
 
 li {
@@ -98,11 +102,11 @@ table {
 }
 
 .img {
-  background: url(../../../../assets/imagens/perfil.svg);
-  width: 600px;
-  height: 600px;
-  background-position: cover;
-  background-repeat: no-repeat;
+  width: 60vh;
+}
+
+.img-perfil{
+  width: 100%;
 }
 
 /*Media Queries*/

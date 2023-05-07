@@ -268,9 +268,6 @@ body {
 html, body { height: 100% }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-
-@media only screen and (max-width: 1045px) {}
-
 @media screen and (max-width: 500px) {
   .background{
     background: var(--gradient-background-1);
@@ -283,3 +280,29 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   }
 
 }
+
+/* Medias Screen
+
+@media only screen and (max-width: 640px) {
+
+}
+
+@media only screen and (max-width: 768px) {
+
+}
+
+@media only screen and (max-width: 1024px) {
+
+}
+
+@media only screen and (max-width: 1280px) {
+
+}
+
+@media only screen and (max-width: 1536px) {
+
+}
+*/
+
+
+

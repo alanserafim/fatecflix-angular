@@ -93,4 +93,12 @@ export class ExibirCursoComponent implements OnInit {
     );
   }
 
+  atualizaCurso(id: number) {
+    this.router.navigate(['user/cursos/atualizar', id]);
+  }
+
+  deletaCurso(id: number) {
+    this.router.navigate(['user/cursos/deletar', id]);
+  }
+
 }

@@ -30,8 +30,10 @@
     <button mat-stroked-button [matMenuTriggerFor]="menu">outras ações</button>
     <mat-menu #menu="matMenu">
       <button mat-menu-item>Cancelar Matricula(não implementado)</button>
-      <button mat-menu-item>Atualizar Curso(não implementado)</button>
-      <button mat-menu-item>Deletar Curso Matricula(não implementado)</button>
+      <button mat-menu-item *ngIf="user.roles.includes('INSTRUTOR')"
+      (click)="atualizaCurso(cursoId)" >Atualizar Curso</button>
+      <button mat-menu-item *ngIf="user.roles.includes('INSTRUTOR')"
+      (click)="deletaCurso(cursoId)">Deletar Curso</button>
     </mat-menu>
   </section>
 

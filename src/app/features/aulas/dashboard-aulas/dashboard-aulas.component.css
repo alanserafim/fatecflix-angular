@@ -1,11 +1,73 @@
-.componente{
+.componente {
   padding: 2vh 10vw;
+  display: flex;
+  min-height: 80vh;
 }
+
+.esquerda {
+  border: 1px solid red;
+  width: 60vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.direita {
+  border: 1px solid green;
+  width: 20vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.video-aula {
+  background-color: blueviolet;
+  height: 60vh;
+}
+
+.info-textuais {
+  background-color: aquamarine;
+  height: 60vh;
+}
+
+.comentarios {
+  background-color: purple;
+  height: 60vh;
+}
+
+.material-tab {
+  background-color: darkgoldenrod;
+  height: 60vh;
+}
+
+.usuario-info {
+  background-color: darksalmon;
+  height: 20vh;
+}
+
+
+
+
 
 /*Media Queries*/
-@media (max-width: 676px) {
+/*
+
+@media only screen and (max-width: 640px) {
+
 }
 
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
 
 }
+
+@media only screen and (max-width: 1024px) {
+
+}
+
+@media only screen and (max-width: 1280px) {
+
+}
+
+@media only screen and (max-width: 1536px) {
+
+}
+*/

@@ -10,10 +10,16 @@ export class DashboardAulasComponent implements OnInit {
   // @ts-ignore: Object is possibly 'undefined'.
   aulas: Observable<Aula[]>;
 
+  videoId = "https://www.youtube.com/watch?v=wlTa_yTElGM"
+  width = 1100;
+  height = 500;
+
   constructor() {
    }
 
   ngOnInit(): void {
   }
+
+
 
 }

@@ -6,8 +6,16 @@
   <div class="esquerda">
 
     <section class="video-aula">
-      <h1 class="titulo"></h1>
-      <div class="video-youtube"></div>
+      <h1 class="titulo">Aula 1</h1>
+      <div class="video-youtube">
+        <youtube-player
+        class="video__desktop"
+        [videoId]='videoId'
+        suggestedQuality="highres"
+        [height]="height"
+        [width]="width"
+      ></youtube-player>
+      </div>
     </section>
 
     <section class="info-textuais">

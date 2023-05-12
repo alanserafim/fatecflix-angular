@@ -44,9 +44,23 @@
   height: 20vh;
 }
 
+::ng-deep .mat-tab-label
+{
+  width: 90px!important;
+  min-width: 6vw!important;
+}
 
+.aulas {
+  padding: 0.5vw;
+}
 
+.exercicios {
+  padding: 0.5vw;
+}
 
+.materiais {
+  padding: 0.5vw;
+}
 
 /*Media Queries*/
 /*

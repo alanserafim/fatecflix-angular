@@ -20,8 +20,21 @@
 }
 
 .video-aula {
-  background-color: blueviolet;
+  /* background-color: blueviolet; */
   height: 60vh;
+  display:flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+app-youtube-video {
+  width: 52vw;
+  padding-left: 4vw;
+  box-sizing: border-box;
+}
+
+.video-aula h1 {
+  font-weight: 500;
 }
 
 .info-textuais {

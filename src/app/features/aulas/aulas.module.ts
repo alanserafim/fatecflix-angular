@@ -13,6 +13,7 @@ import { DeletaComentarioComponent } from './deleta-comentario/deleta-comentario
 import { DeletarAulasComponent } from './deletar-aulas/deletar-aulas.component';
 import { ListarAulasComponent } from './dashboard-aulas/listar-aulas/listar-aulas.component';
 import { CadastrarAulasComponent } from './cadastrar-aulas/cadastrar-aulas.component';
+import { YoutubeVideoComponent } from './dashboard-aulas/youtube-video/youtube-video.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { CadastrarAulasComponent } from './cadastrar-aulas/cadastrar-aulas.compo
     ComentarComponent,
     ComentariosComponent,
     DeletaComentarioComponent,
+    YoutubeVideoComponent
   ],
   imports: [
     CommonModule,

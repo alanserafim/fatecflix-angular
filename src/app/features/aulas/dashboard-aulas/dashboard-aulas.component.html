@@ -6,16 +6,8 @@
   <div class="esquerda">
 
     <section class="video-aula">
-      <h1 class="titulo">Aula 1</h1>
-      <div class="video-youtube">
-        <youtube-player
-        class="video__desktop"
-        [videoId]='videoId'
-        suggestedQuality="highres"
-        [height]="height"
-        [width]="width"
-      ></youtube-player>
-      </div>
+      <h1>Titulo da Aula</h1>
+      <app-youtube-video videoID='{{videoId}}'></app-youtube-video>
     </section>
 
     <section class="info-textuais">

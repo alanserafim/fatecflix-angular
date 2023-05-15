@@ -17,11 +17,13 @@ export class DashboardAulasComponent implements OnInit {
   aulas: Observable<Aula[]>;
   // @ts-ignore: Object is possibly 'undefined'.
   aulaId: number;
+  aulaDescricao: string = '';
+  aulaTitulo: string = '';
 
   videoId: string = '';
   videoUrl: string = '';
   safeUrl?: SafeResourceUrl;
-  videoDescricao: string = '';
+
 
   // @ts-ignore: Object is possibly 'undefined'.
   cursoId: number;
@@ -57,7 +59,8 @@ export class DashboardAulasComponent implements OnInit {
         ''
       );
       this.aulaId = data[0].aulaId;
-      this.videoDescricao = data[0].conteudo;
+      this.aulaDescricao = data[0].conteudo;
+      this.aulaTitulo = data[0].titulo;
       console.log(this.aulaId);
       console.log(this.videoId);
     });
@@ -75,12 +78,13 @@ export class DashboardAulasComponent implements OnInit {
     );
   }
 
-  updateSrc(url: any, id: any, conteudo: any) {
+  updateSrc(url: any, id: any, conteudo: any, titulo: any) {
     let string = url;
     this.aulaId = id;
     console.log(this.aulaId);
     this.videoId = string.replace('https://www.youtube.com/watch?v=', '');
-    this.videoDescricao = conteudo
+    this.aulaDescricao = conteudo;
+    this.aulaTitulo = titulo;
     //this.safeUrl = this._sanitizer.bypassSecurityTrustResourceUrl(this.videoUrl);
 
   }

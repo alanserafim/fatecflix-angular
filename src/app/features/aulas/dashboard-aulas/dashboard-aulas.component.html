@@ -2,7 +2,7 @@
   <div class="esquerda">
 
     <section class="video-aula">
-      <h1>Titulo da Aula</h1>
+      <h1>{{aulaTitulo}}</h1>
       <app-youtube-video videoID='{{videoId}}'></app-youtube-video>
     </section>
 
@@ -15,7 +15,7 @@
           </mat-expansion-panel-header>
           <div class="descricao">
             <h2>Descrição</h2>
-            <p>{{videoDescricao}}
+            <p>{{aulaDescricao}}
             </p>
           </div>
           <div class="texto-apoio">
@@ -72,7 +72,7 @@
             <div class="lista-aulas" *ngFor="let aula of aulas | async">
               <mat-list class="matlist">
                 <mat-list-item>
-                  <button mat-button (click)="updateSrc(aula.video, aula.aulaId, aula.conteudo)">
+                  <button mat-button (click)="updateSrc(aula.video, aula.aulaId, aula.conteudo, aula.titulo)">
                     {{aula.titulo}}
                   </button>
                 </mat-list-item>

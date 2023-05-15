@@ -1,5 +1,5 @@
 .componente {
-  padding: 2vh 10vw;
+  padding: 4vh 10vw;
   display: flex;
   min-height: 80vh;
 }
@@ -12,11 +12,19 @@
 }
 
 .direita {
-  border: 1px solid green;
+  /* border: 1px solid green; */
   width: 20vw;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background: var(--gradient-background-1);
+  background: linear-gradient(
+    135deg,
+    var(--gradient-background-2) 51%,
+    var(--gradient-background-3) 91%,
+    var(--gradient-background-4) 100%
+  );
+  border-radius: 4px;
 }
 
 .video-aula {
@@ -52,14 +60,12 @@ app-youtube-video {
 
 .material-tab {
   /* background-color: darkgoldenrod; */
-  height: 60vh;
+  margin: 1em auto;
+  height: 90%;
+  border-radius: 4px;
+  background-color: var(--primary-background-color);
 }
 
-.usuario-info {
-  background-color: darksalmon;
-  height: 20vh;
-  display: flex;
-}
 
 ::ng-deep .mat-tab-label
 {
@@ -112,9 +118,38 @@ app-youtube-video {
   padding: .5vw;
 }
 
+
+.usuario-info {
+  min-height: 20vh;
+  /* background: var(--gradient-background-1);
+  background: linear-gradient(
+    135deg,
+    var(--gradient-background-2) 51%,
+    var(--gradient-background-3) 91%,
+    var(--gradient-background-4) 100%
+  ); */
+}
+
+.usuario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1em;
+  line-height: 1em;
+  font-weight: 500;
+  color: var(--secondary-text-color);
+}
+
 .example-header-image {
   background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
   background-size: cover;
+  margin: 1em 0;
+}
+
+.esquerda mat-expansion-panel, .esquerda mat-accordion {
+  box-shadow: none;
 }
 
 /*Media Queries*/

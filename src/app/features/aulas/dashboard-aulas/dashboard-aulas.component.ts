@@ -3,6 +3,7 @@ import { SafeResourceUrl } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { UsuarioLogadoService } from 'src/app/services/authentication/usuario-logado/usuario-logado.service';
+import { ConsultarCursoService } from 'src/app/services/consultar-curso/consultar-curso.service';
 import { ListarAulasService } from 'src/app/services/listar-aulas/listar-aulas.service';
 import { Aula } from 'src/app/types/Aula';
 import { UsuarioLogado } from 'src/app/types/UsuarioLogado';
@@ -10,7 +11,7 @@ import { UsuarioLogado } from 'src/app/types/UsuarioLogado';
 @Component({
   selector: 'app-dashboard-aulas',
   templateUrl: './dashboard-aulas.component.html',
-  styleUrls: ['./dashboard-aulas.component.css'],
+  styleUrls: ['./dashboard-aulas.component.css']
 })
 export class DashboardAulasComponent implements OnInit {
   // @ts-ignore: Object is possibly 'undefined'.
@@ -27,6 +28,8 @@ export class DashboardAulasComponent implements OnInit {
 
   // @ts-ignore: Object is possibly 'undefined'.
   cursoId: number;
+  // @ts-ignore: Object is possibly 'undefined'.
+  curso: Curso;
 
   usuarioLogado$: Observable<UsuarioLogado> = this.usuarioLogadoService.retornaUsuarioLogado();
   isLoggedIn = true;
@@ -35,11 +38,11 @@ export class DashboardAulasComponent implements OnInit {
 
   panelOpenState = true;
 
-
   constructor(
     private usuarioLogadoService: UsuarioLogadoService,
     private aulasService: ListarAulasService,
     private activatedRoute: ActivatedRoute,
+    private cursoService: ConsultarCursoService,
   ) {}
 
   ngOnInit(): void {
@@ -47,6 +50,13 @@ export class DashboardAulasComponent implements OnInit {
     this.reloadData();
     this.getUrl();
     this.recebeUsuarioLogado();
+    this.cursoService.getCursoById(this.cursoId).subscribe(
+      (data) => {
+        console.log(data);
+        this.curso = data;
+      },
+      (error) => console.log(error)
+    );
   }
 
   reloadData() {

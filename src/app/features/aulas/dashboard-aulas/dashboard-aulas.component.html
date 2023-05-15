@@ -2,7 +2,7 @@
   <div class="esquerda">
 
     <section class="video-aula">
-      <h1>{{aulaTitulo}}</h1>
+      <h1>{{curso.titulo}} - {{aulaTitulo}}</h1>
       <app-youtube-video videoID='{{videoId}}'></app-youtube-video>
     </section>
 
@@ -123,10 +123,14 @@
     </div>
 
     <div class="usuario-info">
-      <div mat-card-avatar class="example-header-image"></div>
       <section class="usuario">
-        <h3>{{usuario.name}} {{usuario.lastname}}</h3>
-        <h3>@{{usuario.username}}</h3>
+        <div class="usuario-img">
+          <div mat-card-avatar class="example-header-image"></div>
+        </div>
+        <div class="usuario-dados">
+          <p>{{usuario.name}} {{usuario.lastname}}</p>
+          <p>@{{usuario.username}}</p>
+        </div>
       </section>
 
     </div>

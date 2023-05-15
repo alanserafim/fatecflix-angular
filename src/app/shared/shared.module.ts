@@ -25,6 +25,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatMenuModule} from '@angular/material/menu';
+import {MatDividerModule} from '@angular/material/divider';
+
 
 
 
@@ -55,7 +57,8 @@ import {MatMenuModule} from '@angular/material/menu';
     SucessoModule,
     MatExpansionModule,
     MatSnackBarModule,
-    MatMenuModule
+    MatMenuModule,
+    MatDividerModule
   ],
   exports: [
     MatCardModule,
@@ -82,7 +85,8 @@ import {MatMenuModule} from '@angular/material/menu';
     MessagesModule,
     SucessoModule,
     MatExpansionModule,
-    MatMenuModule
+    MatMenuModule,
+    MatDividerModule
   ],
   providers: [{ provide: MAT_DATE_LOCALE, useValue: 'pt-BR' }],
 })

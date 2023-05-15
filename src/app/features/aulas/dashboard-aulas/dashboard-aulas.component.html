@@ -1,7 +1,3 @@
-<!-- <div class="componente">
-  <app-listar-aulas></app-listar-aulas>
-</div> -->
-
 <div class="componente">
   <div class="esquerda">
 
@@ -12,28 +8,55 @@
 
     <section class="info-textuais">
 
+      <mat-accordion>
+        <mat-expansion-panel [expanded]="true">
+          <mat-expansion-panel-header>
+            <mat-panel-title>Conteúdo textual</mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="descricao">
+            <h2>Descrição</h2>
+            <p>{{videoDescricao}}
+            </p>
+          </div>
+          <div class="texto-apoio">
+            <h2>Texto de Apoio</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ornare mauris non metus lacinia tincidunt.
+              Nunc gravida sodales porttitor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+              inceptos himenaeos. Maecenas imperdiet lorem cursus viverra ultrices. Duis faucibus nunc libero, sed
+              malesuada ante blandit quis. Praesent ornare sodales enim, ut auctor odio. Nulla sollicitudin sodales
+              ipsum a imperdiet. Integer rhoncus pretium dignissim. Sed ut tempus tellus. Duis sagittis fermentum dui
+              eget finibus.
+              Maecenas vel risus enim. Phasellus rutrum, diam in ullamcorper iaculis, neque sem bibendum tellus, id
+              facilisis leo leo eu lorem. Proin a ultrices turpis. Sed faucibus porta risus ut tincidunt. Sed eu est
+              erat. Donec aliquam ex ante, eget finibus magna interdum a. Donec ornare ultrices dolor non finibus.
+              Nullam varius, diam non consequat sagittis, magna quam eleifend mauris, sit amet porttitor nulla ligula at
+              turpis. Nunc sed enim luctus, sagittis turpis sit amet, fringilla quam. Vivamus sodales, libero quis
+              dapibus pharetra, lacus lorem dictum urna, id ornare est nulla sit amet urna. In et ex mi. Maecenas
+              tincidunt est vel arcu commodo, ornare scelerisque sem facilisis. Donec non malesuada elit. Vestibulum
+              vitae turpis sit amet justo interdum molestie non ut mauris. Praesent augue augue, venenatis quis nunc ut,
+              pulvinar pharetra erat. Ut tempor nisi eu eleifend pulvinar.
+            </p>
+          </div>
+        </mat-expansion-panel>
+      </mat-accordion>
 
-      <div class="elemento-clicavel1"></div>
-      <div class="descricao">
-        <h2></h2>
-        <p></p>
-      </div>
-
-      <div class="texto-apoio">
-        <h2></h2>
-        <p></p>
-      </div>
     </section>
 
     <section class="comentarios">
-      <div class="elemento-clicavel2"></div>
+      <mat-accordion>
+        <mat-expansion-panel [expanded]="true">
+          <mat-expansion-panel-header>
+            <mat-panel-title>Comentários</mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="comentar">
+            <app-comentar [cursoId]="cursoId" [aulaId]="aulaId"></app-comentar>
+          </div>
+          <div class="lista-comentarios">
+            <app-comentarios *ngIf="aulaId" (changes)="aulaId" [cursoId]="cursoId" [aulaId]="aulaId"></app-comentarios>
+          </div>
+        </mat-expansion-panel>
+      </mat-accordion>
 
-      <div class="comentar">
-
-      </div>
-      <div class="lista-comentarios">
-
-      </div>
     </section>
   </div>
 
@@ -46,31 +69,54 @@
         <mat-tab label="Aulas">
           <section class="aulas">
             <h3>Lista de Aulas</h3>
-            <h3>Lista de Aulas</h3>
-            <h3>Lista de Aulas</h3>
-            <h3>Lista de Aulas</h3>
-            <h3>Lista de Aulas</h3>
-            <h3>Lista de Aulas</h3>
+            <div class="lista-aulas" *ngFor="let aula of aulas | async">
+              <mat-list class="matlist">
+                <mat-list-item>
+                  <button mat-button (click)="updateSrc(aula.video, aula.aulaId, aula.conteudo)">
+                    {{aula.titulo}}
+                  </button>
+                </mat-list-item>
+                <mat-divider></mat-divider>
+              </mat-list>
+            </div>
           </section>
         </mat-tab>
         <mat-tab label="Exercícios">
           <section class="exercicios">
             <h3>Lista de Exercícios</h3>
-            <h3>Lista de Exercícios</h3>
-            <h3>Lista de Exercícios</h3>
-            <h3>Lista de Exercícios</h3>
-            <h3>Lista de Exercícios</h3>
-            <h3>Lista de Exercícios</h3>
+            <mat-list class="matlist">
+              <mat-list-item>
+                <button mat-button>
+                  Exercício 01
+                </button>
+              </mat-list-item>
+              <mat-divider></mat-divider>
+              <mat-list-item>
+                <button mat-button>
+                  Exercício 02
+                </button>
+              </mat-list-item>
+              <mat-divider></mat-divider>
+            </mat-list>
           </section>
         </mat-tab>
         <mat-tab label="Materiais">
           <section class="materiais">
             <h3>Lista de Materiais</h3>
-            <h3>Lista de Materiais</h3>
-            <h3>Lista de Materiais</h3>
-            <h3>Lista de Materiais</h3>
-            <h3>Lista de Materiais</h3>
-            <h3>Lista de Materiais</h3>
+            <mat-list class="matlist">
+              <mat-list-item>
+                <button mat-button>
+                  Material 01
+                </button>
+              </mat-list-item>
+              <mat-divider></mat-divider>
+              <mat-list-item>
+                <button mat-button>
+                  Material 02
+                </button>
+              </mat-list-item>
+              <mat-divider></mat-divider>
+            </mat-list>
           </section>
         </mat-tab>
       </mat-tab-group>

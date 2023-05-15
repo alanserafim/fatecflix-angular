@@ -5,7 +5,7 @@
 }
 
 .esquerda {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   width: 60vw;
   display: flex;
   flex-direction: column;
@@ -37,18 +37,21 @@ app-youtube-video {
   font-weight: 500;
 }
 
-.info-textuais {
-  background-color: aquamarine;
-  height: 60vh;
+
+/* .info-textuais {
+} */
+
+.info-textuais p {
+  text-align: justify;
 }
 
 .comentarios {
-  background-color: purple;
-  height: 60vh;
+  /* background-color: purple; */
+  margin-top: 2vh;
 }
 
 .material-tab {
-  background-color: darkgoldenrod;
+  /* background-color: darkgoldenrod; */
   height: 60vh;
 }
 
@@ -66,6 +69,31 @@ app-youtube-video {
 .aulas {
   padding: 0.5vw;
 }
+
+.aulas button {
+  width: 100%;
+  max-width: 100%;
+  text-align: left;
+  font-weight: 400;
+  font-size: 1em;
+  color: var(--primary-text-color);
+}
+
+.matlist {
+  padding-top: 0;
+  margin-top: 0;
+}
+
+::ng-deep .mat-list-base .mat-list-item .mat-list-item-content {
+  padding: 0 !important;
+}
+
+.aulas h3{
+  padding: 0;
+  margin: 0;
+  font-weight: 500;
+}
+
 
 .exercicios {
   padding: 0.5vw;

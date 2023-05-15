@@ -28,9 +28,10 @@ export class DashboardAulasComponent implements OnInit {
   // @ts-ignore: Object is possibly 'undefined'.
   cursoId: number;
 
-  usuarioLogado$: Observable<UsuarioLogado> =
-  this.usuarioLogadoService.retornaUsuarioLogado();
+  usuarioLogado$: Observable<UsuarioLogado> = this.usuarioLogadoService.retornaUsuarioLogado();
   isLoggedIn = true;
+  // @ts-ignore: Object is possibly 'undefined'.
+  usuario: UsuarioLogado
 
   panelOpenState = true;
 
@@ -45,6 +46,7 @@ export class DashboardAulasComponent implements OnInit {
     this.cursoId = this.activatedRoute.snapshot.params['id'];
     this.reloadData();
     this.getUrl();
+    this.recebeUsuarioLogado();
   }
 
   reloadData() {
@@ -69,6 +71,7 @@ export class DashboardAulasComponent implements OnInit {
   recebeUsuarioLogado() {
     this.usuarioLogadoService.retornaUsuarioLogado().subscribe(
       (usuario) => {
+        this.usuario = usuario;
         console.log(usuario);
       },
       (error) => {

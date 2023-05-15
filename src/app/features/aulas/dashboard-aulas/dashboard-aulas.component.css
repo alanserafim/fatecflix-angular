@@ -58,6 +58,7 @@ app-youtube-video {
 .usuario-info {
   background-color: darksalmon;
   height: 20vh;
+  display: flex;
 }
 
 ::ng-deep .mat-tab-label
@@ -111,6 +112,10 @@ app-youtube-video {
   padding: .5vw;
 }
 
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
 
 /*Media Queries*/
 /*

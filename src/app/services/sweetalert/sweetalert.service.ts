@@ -18,6 +18,11 @@ export class SweetalertService {
     this.showAlertAndMove(title, message, 'success', rota);
   }
 
+  public sucessAndRefresh(message: string, title?: string): void {
+    //@ts-ignore
+    this.showAlertAndRefresh(title, message, 'success');
+  }
+
   public info(message: string, title?: string): void {
     //@ts-ignore
     this.showAlert(title, message, 'info');
@@ -48,4 +53,18 @@ export class SweetalertService {
       }
     });
   }
+
+  private showAlertAndRefresh(
+    title: string,
+    message: string,
+    icon: SweetAlertIcon,
+  ) {
+    Swal.fire(title, message, icon).then((result) => {
+      if (result.isConfirmed) {
+        setTimeout(()=> {location.reload()}, 400)
+      }
+    });
+  }
+
+
 }

@@ -42,9 +42,8 @@ export class ComentarComponent implements OnInit {
     this.comentarioService.comentar(this.comentario, this.aulaId).subscribe(
       (data) => {
         console.log(data);
-        this.sweeAlertService.sucessAndMove(
+        this.sweeAlertService.sucessAndRefresh(
           'Comentário cadastrado com sucesso',
-          `/user/aulas/dashboard/${this.aulaId}`,
           'Sucesso'
         );
       },

@@ -31,7 +31,7 @@ export class YoutubeVideoComponent implements OnInit {
     this.videoWidth = Math.min(
       //@ts-ignore
       this.youTubePlayer.nativeElement.clientWidth,
-      680
+      920
     );
     // so you keep the ratio
     this.videoHeight = this.videoWidth * 0.6;

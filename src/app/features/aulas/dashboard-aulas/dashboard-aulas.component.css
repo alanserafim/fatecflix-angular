@@ -2,6 +2,7 @@
   padding: 4vh 10vw;
   display: flex;
   min-height: 80vh;
+  background-color: var(--detalhar-curso-background2);
 }
 
 .esquerda {
@@ -17,32 +18,26 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: var(--gradient-background-1);
-  background: linear-gradient(
-    135deg,
-    var(--gradient-background-2) 51%,
-    var(--gradient-background-3) 91%,
-    var(--gradient-background-4) 100%
-  );
-  border-radius: 4px;
+  background: var(--footer-background);
+  /* border-radius: 4px; */
 }
 
 .video-aula {
-  /* background-color: blueviolet; */
-  height: 60vh;
+  background: var(--footer-background);
+  height: 80vh;
   display:flex;
   flex-direction: column;
-  align-content: center;
 }
 
 app-youtube-video {
-  width: 52vw;
-  padding-left: 4vw;
-  box-sizing: border-box;
+  width: 58vw;
 }
 
 .video-aula h1 {
+  padding-top: 1em;
+  font-size: 2.5em;
   font-weight: 500;
+  color: var(--secondary-text-color);
 }
 
 
@@ -58,11 +53,15 @@ app-youtube-video {
   margin-top: 2vh;
 }
 
+.lista-comentarios {
+  overflow-y: scroll;
+  max-height: 50vh;
+}
+
 .material-tab {
   /* background-color: darkgoldenrod; */
   margin: 1em auto;
   height: 90%;
-  border-radius: 4px;
   background-color: var(--primary-background-color);
 }
 

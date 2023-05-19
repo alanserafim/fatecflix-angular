@@ -1,5 +1,5 @@
 .example-card {
-  width: 100%;
+  width: 90%;
   margin-bottom: 4px;
   box-shadow: none;
 }
@@ -10,7 +10,7 @@
 }
 
 mat-card-content{
-  width: 100%;
+  width: 90%;
   text-align: justify;
 }
 

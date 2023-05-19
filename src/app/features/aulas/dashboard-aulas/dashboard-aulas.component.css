@@ -25,16 +25,19 @@
 .video-aula {
   background: var(--footer-background);
   height: 80vh;
-  display:flex;
+  display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: .5vw;
 }
 
 app-youtube-video {
-  width: 58vw;
+  width: 54vw;
 }
 
 .video-aula h1 {
-  padding-top: 1em;
+  padding-top: 2vh;
   font-size: 2.5em;
   font-weight: 500;
   color: var(--secondary-text-color);
@@ -109,14 +112,6 @@ app-youtube-video {
   padding: 0.5vw;
 }
 
-.video-aula {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: .5vw;
-}
-
 
 .usuario-info {
   min-height: 20vh;
@@ -152,7 +147,6 @@ app-youtube-video {
 }
 
 /*Media Queries*/
-/*
 
 @media only screen and (max-width: 640px) {
 
@@ -163,14 +157,15 @@ app-youtube-video {
 }
 
 @media only screen and (max-width: 1024px) {
-
+  
 }
 
 @media only screen and (max-width: 1280px) {
+
 
 }
 
 @media only screen and (max-width: 1536px) {
 
+
 }
-*/

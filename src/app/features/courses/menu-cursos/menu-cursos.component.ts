@@ -14,13 +14,27 @@ export class MenuCursosComponent implements OnInit {
   usuarioLogado$ : Observable <UsuarioLogado> = this.usuarioLogadoService.retornaUsuarioLogado()
 
   listaExibicao: String[] = ['Frontend', 'Ferramentas']
+  // @ts-ignore: Object is possibly 'undefined'.
+  cursos: Observable<NovoCurso[]>;
+
+  categorias: String[] = [""];
 
   constructor(
     private usuarioLogadoService: UsuarioLogadoService,
     private router: Router,
+    private listarCursosService: ListaCursosService,
   ) { }
 
   ngOnInit(): void {
+    this.listaCursos();
+    // for (let i = 0; i < this.cursos.length; i++) {
+    //   this.categorias[0] = this.cursos[0];
+    // }
+  }
+
+  listaCursos() {
+    this.cursos = this.listarCursosService.retornaCursosUsuario();
+    console.log(this.cursos);
   }
 
   recebeUsuarioLogado(){

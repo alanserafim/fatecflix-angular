@@ -9,12 +9,19 @@ import { UsuarioLogado } from 'src/app/types/UsuarioLogado';
 @Component({
   selector: 'app-grid-cursos',
   templateUrl: './grid-cursos.component.html',
-  styleUrls: ['./grid-cursos.component.css']
+  styleUrls: ['./grid-cursos.component.css'],
 })
 export class GridCursosComponent implements OnInit {
-
-  displayedColumns: string[] = ['Titulo', 'Descrição', 'Carga Horária', 'Atualização', 'Avaliação', 'Ações'];
-  usuarioLogado$ : Observable<UsuarioLogado> = this.usuarioLogadoService.retornaUsuarioLogado()
+  displayedColumns: string[] = [
+    'Titulo',
+    'Descrição',
+    'Carga Horária',
+    'Atualização',
+    'Avaliação',
+    'Ações',
+  ];
+  usuarioLogado$: Observable<UsuarioLogado> =
+    this.usuarioLogadoService.retornaUsuarioLogado();
   isLoggedIn = true;
   // @ts-ignore: Object is possibly 'undefined'.
   cursos: Observable<NovoCurso[]>;
@@ -22,57 +29,52 @@ export class GridCursosComponent implements OnInit {
   matricula: Matricula;
   // @ts-ignore: Object is possibly 'undefined'.
   matriculado: Observable<Matricula>;
-// @ts-ignore: Object is possibly 'undefined'.
+  // @ts-ignore: Object is possibly 'undefined'.
   categoria: string;
 
-  constructor(private route: ActivatedRoute, private usuarioLogadoService: UsuarioLogadoService,private listarCursosService: ListaCursosService, private router: Router, private matriculaService: MatricularService) { }
+  constructor(
+    private route: ActivatedRoute,
+    private usuarioLogadoService: UsuarioLogadoService,
+    private listarCursosService: ListaCursosService,
+    private router: Router
+  ) {}
 
-  recebeUsuarioLogado(){
+  recebeUsuarioLogado() {
     this.usuarioLogadoService.retornaUsuarioLogado().subscribe(
       (usuario) => {
         console.log(usuario);
-
-      }, (error) => {
-        alert("Credenciais inválidas");
+      },
+      (error) => {
+        alert('Credenciais inválidas');
         console.log(error);
       }
-    )
+    );
   }
 
   ngOnInit() {
     this.categoria = this.route.snapshot.params['categoria'];
-
-    this.cursos = this.listarCursosService.returnaCursosPelaCategoria(this.categoria);
-
+    this.cursos = this.listarCursosService.returnaCursosPelaCategoria(
+      this.categoria
+    );
     console.log(this.cursos);
   }
 
-
-
-  deletaCurso(id : number) {
+  deletaCurso(id: number) {
     this.router.navigate(['cursos/deletar', id]);
   }
 
-  atualizaCurso(id : number) {
-    this.router.navigate(['cursos/atualizar', id])
+  atualizaCurso(id: number) {
+    this.router.navigate(['cursos/atualizar', id]);
   }
 
   detalhar(id: number) {
-
-    //console.log(id);
-
-    /*this.matricula = new Matricula(0.0, 0.0, "Em progresso")
-
-    this.matriculaService.matricular(id, this.matricula).subscribe(data => console.log(data),
-    error => console.log(error));*/
-
     this.router.navigate(['cursos/detalhar', id]);
   }
 
   getCursoByCategoria(categoria: string) {
-    this.cursos = this.listarCursosService.returnaCursosPelaCategoria(categoria);
+    this.cursos =
+      this.listarCursosService.returnaCursosPelaCategoria(categoria);
     console.log(this.cursos);
-    console.log("Entrei aqui");
+    console.log('Entrei aqui');
   }
-
 }

@@ -1,7 +1,9 @@
 
 .example-card {
-  width: 332px;
-  height: 234px;
+  width: 18vw;
+  max-width: 260px;
+  height: 25vh;
+  max-height: 200px;
   margin-bottom: 10em;
   margin-left: 25px;
   -webkit-box-reflect: below 5px
@@ -14,6 +16,13 @@
   color: var(--primary-text-color);
 }
 
+.card {
+  padding-top: 1em;
+  height: 36vh;
+  max-height: 310px;
+  /* background-color: aqua; */
+}
+
 .example-card:hover{
   -webkit-transform: scale(1.1);
 	-ms-transform: scale(1.1);
@@ -21,12 +30,14 @@
 }
 
 .container {
+  /* background-color: greenyellow; */
   display:flex;
   flex-wrap: nowrap;
   overflow-x: auto;
 }
 
 .super-container{
+  /* background-color: coral; */
   display: flex;
   flex-direction: column;
 }
@@ -35,14 +46,18 @@
 .titulo{
   color: var(--secondary-text-color);
   padding-left: 30px;
-  padding-bottom: 10gti px;
+  padding-bottom: 10px;
   font-size: 2em;
 }
 
 mat-card-content{
   overflow-y: hidden;
   text-align: justify;
-  height: 150px;
+  height: 12vh;
+}
+
+mat-card-title {
+  font-size: 1.3em;
 }
 
 /*Media Queries*/

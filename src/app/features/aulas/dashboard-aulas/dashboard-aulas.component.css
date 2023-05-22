@@ -148,15 +148,53 @@ app-youtube-video {
 
 /*Media Queries*/
 
-@media only screen and (max-width: 640px) {
 
+@media only screen and (max-width: 768px) {
+  .esquerda .video-aula h1 {
+    font-size: 1em;
+  }
+  .matlist mat-list-item {
+    font-size: .8em;
+  }
+  ::ng-deep .mat-tab-label
+{
+  width: 70px !important;
+  min-width: 6vw!important;
+}
 }
 
-@media only screen and (min-width: 768px) {
-
-}
-
-@media only screen and (min-width: 1024px) {
+@media only screen and (max-width: 1024px) {
+  .video-aula {
+    height: auto;
+    width: auto;
+  }
+  .material-tab {
+    width: 95%;
+    height: 80%;
+  }
+  .usuario-info {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 20%;
+    min-height: auto;
+  }
+  .video-aula h1 {
+    font-size: 1.5em;
+  }
+  .esquerda {
+    width: 50vw;
+  }
+  .direita {
+    width: 30vw;
+    height: auto;
+  }
+  .componente {
+    min-height: auto;
+  }
+  app-youtube-video {
+    width: 44vw;
+  }
 
 }
 
@@ -166,6 +204,6 @@ app-youtube-video {
 }
 
 @media only screen and (min-width: 1536px) {
-  
+
 
 }

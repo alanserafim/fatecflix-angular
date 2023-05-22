@@ -79,7 +79,7 @@ app-youtube-video {
   padding: 0.5vw;
 }
 
-.aulas button {
+.aulas button, .materiais button, .exercicios button  {
   width: 100%;
   max-width: 100%;
   text-align: left;
@@ -213,7 +213,8 @@ app-youtube-video {
 @media only screen and (max-width: 540px) {
   .componente {
     flex-direction: column-reverse;
-    width: 80vw;
+    width: 100vw;
+    padding: 0;
   }
   .esquerda {
     width: 100%;
@@ -225,24 +226,36 @@ app-youtube-video {
   .video-aula {
     width: 100%;
     margin: 0;
+    padding: 0;
   }
   app-youtube-video {
-    width: 78vw;
+    width: 100vw;
   }
   .video-aula h1 {
     font-size: 1.5em;
   }
   .material-tab {
     width: 100%;
+    min-height: 20vh;
+    max-height: 20vh;
+
   }
+  .matlist {
+    overflow-y: scroll;
+    min-height: 20vh;
+    max-height: 20vh;
+  }
+
+
   .usuario-info {
     display: none;
   }
   ::ng-deep .mat-tab-label
 {
-  width: 90px !important;
+  width: 30vw !important;
   min-width: 6vw!important;
 }
+
 .material-tab {
   max-height: 50%;
 }

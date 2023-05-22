@@ -68,22 +68,20 @@
       <mat-tab-group class="tab" animationDuration="1000ms">
         <mat-tab label="Aulas">
           <section class="aulas">
-            <h3>Lista de Aulas</h3>
-            <div class="lista-aulas" *ngFor="let aula of aulas | async">
+            <div class="lista-aulas" >
               <mat-list class="matlist">
-                <mat-list-item>
+                <mat-list-item *ngFor="let aula of aulas | async">
                   <button mat-button (click)="updateSrc(aula.video, aula.aulaId, aula.conteudo, aula.titulo)">
                     {{aula.titulo}}
                   </button>
+                  <mat-divider></mat-divider>
                 </mat-list-item>
-                <mat-divider></mat-divider>
               </mat-list>
             </div>
           </section>
         </mat-tab>
         <mat-tab label="Exercícios">
           <section class="exercicios">
-            <h3>Lista de Exercícios</h3>
             <mat-list class="matlist">
               <mat-list-item>
                 <button mat-button>
@@ -102,7 +100,6 @@
         </mat-tab>
         <mat-tab label="Materiais">
           <section class="materiais">
-            <h3>Lista de Materiais</h3>
             <mat-list class="matlist">
               <mat-list-item>
                 <button mat-button>

@@ -149,6 +149,7 @@ app-youtube-video {
 /*Media Queries*/
 
 
+
 @media only screen and (max-width: 768px) {
   .esquerda .video-aula h1 {
     font-size: 1em;
@@ -205,5 +206,45 @@ app-youtube-video {
 
 @media only screen and (min-width: 1536px) {
 
+
+}
+
+
+@media only screen and (max-width: 540px) {
+  .componente {
+    flex-direction: column-reverse;
+    width: 80vw;
+  }
+  .esquerda {
+    width: 100%;
+  }
+  .direita {
+    width: 100%;
+    background-color: unset;
+  }
+  .video-aula {
+    width: 100%;
+    margin: 0;
+  }
+  app-youtube-video {
+    width: 78vw;
+  }
+  .video-aula h1 {
+    font-size: 1.5em;
+  }
+  .material-tab {
+    width: 100%;
+  }
+  .usuario-info {
+    display: none;
+  }
+  ::ng-deep .mat-tab-label
+{
+  width: 90px !important;
+  min-width: 6vw!important;
+}
+.material-tab {
+  max-height: 50%;
+}
 
 }

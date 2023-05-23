@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { UsuarioLogadoService } from 'src/app/services/authentication/usuario-logado/usuario-logado.service';
-import { ListaCursosService } from 'src/app/services/listar-cursos/listar-cursos.service';
-import { MatricularService } from 'src/app/services/matricular/matricular.service';
+import { ListaCursosService } from 'src/app/services/cursos/listar-cursos/listar-cursos.service';
 import { UsuarioLogado } from 'src/app/types/UsuarioLogado';
 
 @Component({

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Matricula } from 'src/app/types/Matricula';
 import { Observable } from 'rxjs';
-import { MatricularService } from 'src/app/services/matricular/matricular.service';
+import { MatricularService } from 'src/app/services/usuarios/matricular/matricular.service';
 import { Curso } from 'src/app/types/Curso';
 import { Router } from '@angular/router';
 

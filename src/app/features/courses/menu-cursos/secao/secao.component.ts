@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
-import { ListaCursosService } from 'src/app/services/listar-cursos/listar-cursos.service';
+import { ListaCursosService } from 'src/app/services/cursos/listar-cursos/listar-cursos.service';
 import { UsuarioLogado } from 'src/app/types/UsuarioLogado';
 
 @Component({

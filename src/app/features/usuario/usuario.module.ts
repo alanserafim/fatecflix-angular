@@ -1,7 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
-import { CoursesModule } from '../courses/courses.module';
 import { HomeModule } from '../../home/home.module';
 import { SharedModule } from './../../shared/shared.module';
 import { AtualizarUsuarioComponent } from './atualizar-usuario/atualizar-usuario.component';
@@ -11,6 +10,7 @@ import { SucessoRequisicaoComponent } from './sucesso-requisicao/sucesso-requisi
 import { UsuarioDeleteComponent } from './usuario-delete/usuario-delete.component';
 import { UsuarioListComponent } from './usuario-list/usuario-list.component';
 import { UsuarioRoutingModule } from './usuario-routing.module';
+import { CoursesModule } from '../courses/courses.module';
 
 //import { HTTP_INTERCEPTORS } from '@angular/common/http';
 

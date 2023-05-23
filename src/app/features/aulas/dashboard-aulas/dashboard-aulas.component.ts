@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { SafeResourceUrl } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
+import { ListarAulasService } from 'src/app/services/aulas/listar-aulas/listar-aulas.service';
 import { UsuarioLogadoService } from 'src/app/services/authentication/usuario-logado/usuario-logado.service';
-import { ConsultarCursoService } from 'src/app/services/consultar-curso/consultar-curso.service';
-import { ListarAulasService } from 'src/app/services/listar-aulas/listar-aulas.service';
+import { ConsultarCursoService } from 'src/app/services/cursos/consultar-curso/consultar-curso.service';
 import { Aula } from 'src/app/types/Aula';
 import { UsuarioLogado } from 'src/app/types/UsuarioLogado';
 

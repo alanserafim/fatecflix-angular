@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ConsultarUsuariosService } from 'src/app/services/consultar-usuarios/consultar-usuarios.service';
 import { Usuario } from 'src/app/types/Usuario';
 import {
   FormArray,
@@ -13,6 +12,7 @@ import {
 import { Roles } from 'src/app/types/Roles';
 import { __values } from 'tslib';
 import { SweetalertService } from 'src/app/services/sweetalert/sweetalert.service';
+import { ConsultarUsuariosService } from 'src/app/services/usuarios/consultar-usuarios/consultar-usuarios.service';
 
 @Component({
   selector: 'app-atualizar-usuario',

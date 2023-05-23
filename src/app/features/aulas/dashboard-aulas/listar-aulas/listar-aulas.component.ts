@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
-import { ListarAulasService } from 'src/app/services/listar-aulas/listar-aulas.service';
 import { Aula } from 'src/app/types/Aula';
 import { __values } from 'tslib';
 import { Observable, of } from 'rxjs';
 import { UsuarioLogado } from 'src/app/types/UsuarioLogado';
 import { UsuarioLogadoService } from 'src/app/services/authentication/usuario-logado/usuario-logado.service';
+import { ListarAulasService } from 'src/app/services/aulas/listar-aulas/listar-aulas.service';
 
 @Component({
   selector: 'app-listar-aulas',

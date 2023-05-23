@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { AtualizaExercicioService } from 'src/app/services/atualiza-exercicio/atualiza-exercicio.service';
-import { DeletaExercicioService } from 'src/app/services/deleta-exercicio/deleta-exercicio.service';
+import { AtualizaExercicioService } from 'src/app/services/exercicios/atualiza-exercicio/atualiza-exercicio.service';
+import { DeletaExercicioService } from 'src/app/services/exercicios/deleta-exercicio/deleta-exercicio.service';
 import { Exercicio } from 'src/app/types/Exercicio';
 
 @Component({

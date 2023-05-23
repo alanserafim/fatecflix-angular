@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { CadastrarAulaService } from 'src/app/services/cadastrar-aula/cadastrar-aula.service';
+import { CadastrarAulaService } from 'src/app/services/aulas/cadastrar-aula/cadastrar-aula.service';
 import { SweetalertService } from 'src/app/services/sweetalert/sweetalert.service';
 import { Aula } from 'src/app/types/Aula';
 

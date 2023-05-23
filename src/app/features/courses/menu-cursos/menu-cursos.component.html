@@ -5,8 +5,7 @@
       <p>e desperte para um mundo de possibilidades</p>
     </div>
   </div>
-  <div class="cursos">
-    <app-secao [categoriaExibicao]="listaExibicao[0]"></app-secao>
-    <app-secao [categoriaExibicao]="listaExibicao[1]"></app-secao>
+  <div class="cursos" *ngFor="let item of categoriasList">
+    <app-secao [categoriaExibicao]="item.categoria"></app-secao>
   </div>
 </div>

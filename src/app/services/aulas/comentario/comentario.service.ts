@@ -1,5 +1,5 @@
 import { Observable } from 'rxjs';
-import { Comentario } from './../../types/Comentario';
+import { Comentario } from '../../../types/Comentario';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';

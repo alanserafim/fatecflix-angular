@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { UsuarioLogadoService } from 'src/app/services/authentication/usuario-logado/usuario-logado.service';
-import { ConsultarUsuariosService } from 'src/app/services/consultar-usuarios/consultar-usuarios.service';
 import { Usuario } from 'src/app/types/Usuario';
 
 import { UsuarioLogado } from './../../../types/UsuarioLogado';
+import { ConsultarUsuariosService } from 'src/app/services/usuarios/consultar-usuarios/consultar-usuarios.service';
 
 var usuarioLogado$ : UsuarioLogado
 

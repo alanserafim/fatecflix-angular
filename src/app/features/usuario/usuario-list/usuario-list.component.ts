@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { NovoUsuario } from 'src/app/types/NovoUsuario';
 import { Observable } from 'rxjs';
-import { ConsultarUsuariosService } from 'src/app/services/consultar-usuarios/consultar-usuarios.service';
 import { Router } from '@angular/router'
 import {AfterViewInit, ViewChild} from '@angular/core';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatSort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
+import { ConsultarUsuariosService } from 'src/app/services/usuarios/consultar-usuarios/consultar-usuarios.service';
 
 @Component({
   selector: 'app-usuario-list',

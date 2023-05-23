@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormArray, FormBuilder, ValidatorFn, FormGroup, FormControl, Validators } from '@angular/forms';
 import { Exercicio } from 'src/app/types/Exercicio';
-import { AtualizaExercicioService } from 'src/app/services/atualiza-exercicio/atualiza-exercicio.service';
+import { AtualizaExercicioService } from 'src/app/services/exercicios/atualiza-exercicio/atualiza-exercicio.service';
 
 @Component({
   selector: 'app-atualiza-exercicio',

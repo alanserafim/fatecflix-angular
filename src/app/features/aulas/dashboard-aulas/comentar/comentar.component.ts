@@ -1,7 +1,7 @@
 import { ActivatedRoute, Router } from '@angular/router';
 import { Comentario } from '../../../../types/Comentario';
 import { Component, OnInit, Input } from '@angular/core';
-import { ComentarioService } from 'src/app/services/comentario/comentario.service';
+import { ComentarioService } from 'src/app/services/aulas/comentario/comentario.service';
 import { SweetalertService } from 'src/app/services/sweetalert/sweetalert.service';
 
 @Component({

@@ -1,12 +1,12 @@
-import { ListaCursosService } from './../../../services/listar-cursos/listar-cursos.service';
 import { NovoCurso } from './../../../types/NovoCurso';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
 import { Matricula } from 'src/app/types/Matricula';
-import { MatricularService } from 'src/app/services/matricular/matricular.service';
+import { MatricularService } from 'src/app/services/usuarios/matricular/matricular.service';
 import { UsuarioLogado } from 'src/app/types/UsuarioLogado';
 import { UsuarioLogadoService } from 'src/app/services/authentication/usuario-logado/usuario-logado.service';
+import { ListaCursosService } from 'src/app/services/cursos/listar-cursos/listar-cursos.service';
 /**/
 
 @Component({

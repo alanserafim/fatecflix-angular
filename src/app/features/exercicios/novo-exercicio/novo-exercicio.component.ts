@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { NovoExercicioService } from 'src/app/services/novo-exercicio/novo-exercicio.service';
 import { Exercicio } from 'src/app/types/Exercicio';
 import { FormArray, FormBuilder, ValidatorFn, FormGroup, FormControl, Validators } from '@angular/forms';
+import { NovoExercicioService } from 'src/app/services/exercicios/novo-exercicio/novo-exercicio.service';
 
 @Component({
   selector: 'app-novo-exercicio',

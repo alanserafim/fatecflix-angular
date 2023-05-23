@@ -1,4 +1,4 @@
-import { NovoUsuario } from './../../types/NovoUsuario';
+import { NovoUsuario } from '../../../types/NovoUsuario';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';

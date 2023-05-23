@@ -1,8 +1,9 @@
-import { NovoCurso } from './../../types/NovoCurso';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, tap } from 'rxjs';
+import { Observable } from 'rxjs';
+import { NovoCurso } from 'src/app/types/NovoCurso';
 import { environment } from 'src/environments/environment';
+
 
 @Injectable({
   providedIn: 'root'
@@ -17,9 +18,6 @@ export class ListaCursosService {
 
  retornaCursosUsuario(): Observable<any> {
     return this.httpClient.get<NovoCurso[]>(this.API)
-    .pipe(
-      tap(cursos => console.log(cursos))
-    );
  }
 
  returnaCursosPelaCategoria(categoria: string): Observable<any> {

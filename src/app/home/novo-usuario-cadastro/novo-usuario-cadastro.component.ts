@@ -1,5 +1,5 @@
 import { NovoUsuario } from './../../types/NovoUsuario';
-import { NovoUsuarioService } from './../../services/novo-usuario/novo-usuario.service';
+import { NovoUsuarioService } from '../../services/usuarios/novo-usuario/novo-usuario.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { controlValuesDifferent } from './validators/campos-diferentes.validator';

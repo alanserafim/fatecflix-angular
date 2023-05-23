@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ConsultarCursoService } from 'src/app/services/consultar-curso/consultar-curso.service';
-import { DeletarCursoService } from 'src/app/services/deletar-curso/deletar-curso.service';
+import { ConsultarCursoService } from 'src/app/services/cursos/consultar-curso/consultar-curso.service';
+import { DeletarCursoService } from 'src/app/services/cursos/deletar-curso/deletar-curso.service';
 import { SweetalertService } from 'src/app/services/sweetalert/sweetalert.service';
 import { Curso } from 'src/app/types/Curso';
 

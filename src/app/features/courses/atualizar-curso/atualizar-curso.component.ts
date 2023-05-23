@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { AtualizarCursoService } from 'src/app/services/atualizar-curso/atualizar-curso.service';
-import { ConsultarCursoService } from 'src/app/services/consultar-curso/consultar-curso.service';
+import { AtualizarCursoService } from 'src/app/services/cursos/atualizar-curso/atualizar-curso.service';
+import { ConsultarCursoService } from 'src/app/services/cursos/consultar-curso/consultar-curso.service';
 import { SweetalertService } from 'src/app/services/sweetalert/sweetalert.service';
 import { Curso } from 'src/app/types/Curso';
 

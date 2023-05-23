@@ -3,7 +3,7 @@ import { Observable } from 'rxjs';
 import { Component, OnInit, Input } from '@angular/core';
 import { Comentario } from 'src/app/types/Comentario';
 import { UsuarioLogadoService } from 'src/app/services/authentication/usuario-logado/usuario-logado.service';
-import { ComentarioService } from 'src/app/services/comentario/comentario.service';
+import { ComentarioService } from 'src/app/services/aulas/comentario/comentario.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({

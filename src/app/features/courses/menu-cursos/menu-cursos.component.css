@@ -47,12 +47,15 @@
 
 .cursos {
   padding: 0 10vw 0 10vw;
-  /* background-color: blueviolet; */
 }
 
 
 /*Media Queries*/
 @media (max-width: 676px) {
+  .cursos {
+    padding: 0 1vw;
+  }
+
   .banner {
     position: relative;
     height: 40vh;

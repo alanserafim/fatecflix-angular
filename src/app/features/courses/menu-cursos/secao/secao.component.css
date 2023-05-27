@@ -93,10 +93,12 @@ https://pt.stackoverflow.com/questions/68928/como-estilizar-a-barra-de-rolagem
 */
 
 /*Media Queries*/
+
 @media (max-width: 676px) {
   .example-card {
     max-width: 80vw;
-    height: 260px;
+    min-width: 180px;
+    height: 280px;
     margin-left: 10vw;
   }
   .example-card:first-child {
@@ -115,11 +117,24 @@ https://pt.stackoverflow.com/questions/68928/como-estilizar-a-barra-de-rolagem
   mat-card-content{
     overflow-y: hidden;
     text-align: justify;
-    min-height: 18vh;
+    min-height: 104px;
+    max-height: 104px;
   }
+  mat-card-title {
+    height: 36px;
+  }
+}
 
+@media (max-width: 1024px) {
+  mat-card-content{
+    overflow-y: hidden;
+    text-align: justify;
+    min-height: 104px;
+    max-height: 104px;
+  }
+  mat-card-title {
+    height: 36px;
+  }
 }
 
 
-@media (max-width: 768px) {
-}

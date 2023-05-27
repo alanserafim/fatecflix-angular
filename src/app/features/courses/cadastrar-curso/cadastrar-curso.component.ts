@@ -37,7 +37,7 @@ export class CadastrarCursoComponent implements OnInit {
       () => {
         this.sweeAlertService.sucessAndMove(
           'Curso cadastrado com sucesso',
-          'user/cursos/listar',
+          'user/cursos/menu',
           'Sucesso'
         );
       },

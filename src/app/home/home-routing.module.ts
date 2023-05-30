@@ -6,25 +6,32 @@ import { LandingComponent } from './landing/landing.component';
 import { LoginHomeComponent } from './login/login.component';
 import { NovoUsuarioCadastroHomeComponent } from './novo-usuario-cadastro/novo-usuario-cadastro.component';
 import { AcessibilidadeComponent } from './acessibilidade/acessibilidade.component';
+import { CertificadoComponent } from '../certificado/certificado.component';
+
 
 const routes: Routes = [
   {
     path: '',
-    component: LandingComponent
+    component: LandingComponent,
   },
   {
     path: 'login',
     component: LoginHomeComponent,
-    canActivate : [LoginActivatedGuard]
+    canActivate: [LoginActivatedGuard],
   },
   {
     path: 'cadastro',
     component: NovoUsuarioCadastroHomeComponent,
-    canActivate : [LoginActivatedGuard]
+    canActivate: [LoginActivatedGuard],
   },
   {
     path: 'acessibilidade',
     component: AcessibilidadeComponent,
+  },
+
+  {
+    path: 'certificado',
+    component: CertificadoComponent,
   },
 ];
 

@@ -6,12 +6,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TokenInterceptor } from './services/interceptors/token.interceptor';
+import { CertificadoComponent } from './certificado/certificado.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    CertificadoComponent,
   ],
   imports: [
     BrowserModule,

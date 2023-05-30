@@ -158,6 +158,18 @@ h1 {
   border-left: 3px solid var(--btn-background-color);
 }
 
+
+.card__id{
+  display: flex;
+  /* align-items: stretch; */
+}
+
+
+.card h2 {
+  margin-left: 4px;
+  font-size: 1.2em;
+}
+
 @media screen and (max-width: 800px) {
 
   #titulo1 {

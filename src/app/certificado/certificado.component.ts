@@ -86,7 +86,7 @@ export class CertificadoComponent implements OnInit {
               margin-top: 10px;
             }
             </style>
-            <body onload="window.print();window.close()">${printContents}</body>
+            <body onload="window.print();window.close()" class="wrapper">${printContents}</body>
           </head>
         </html>
       `)

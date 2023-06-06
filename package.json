@@ -24,6 +24,7 @@
     "@angular/youtube-player": "^14.2.6",
     "@nicky-lenaers/ngx-scroll-to": "^14.0.0",
     "@sweetalert2/ngx-sweetalert2": "^12.1.0",
+    "@types/jspdf": "^2.0.0",
     "jspdf": "^2.5.1",
     "jwt-decode": "^3.1.2",
     "ng-accessibility-bar": "^1.2.3",

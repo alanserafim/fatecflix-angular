@@ -4,13 +4,12 @@
 
 export const environment = {
   production: true,
-  api_url:'https://fatecflix.herokuapp.com'
+  api_url:  process.env["API_URL"] || 'https://fatecflix.herokuapp.com',
+  //'https://fatecflix-server.herokuapp.com'
   //'http://18.223.115.200:8080'
   //'https://fatecflix.herokuapp.com'
   // https://fatecflix.onrender.com
 };
-
-// https://fatecflix.onrender.com
 
 /*
  * For easier debugging in development mode, you can import the following file

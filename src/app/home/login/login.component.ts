@@ -87,7 +87,7 @@ export class LoginHomeComponent implements OnInit {
     name: string = "";
 
     openDialog(): void {
-      const dialogRef = this.dialog.open(DialogComponent, {
+        const dialogRef = this.dialog.open(DialogComponent, {
         data: {name: this.name, animal: this.animal},
       });
 

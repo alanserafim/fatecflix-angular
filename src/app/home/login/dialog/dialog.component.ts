@@ -1,5 +1,6 @@
 import { LoginHomeComponent } from './../login.component';
 import { Component, Inject, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 export interface DialogData {
@@ -13,6 +14,9 @@ export interface DialogData {
   styleUrls: ['./dialog.component.css']
 })
 export class DialogComponent implements OnInit {
+
+  perfilControl = new FormControl('');
+  perfil?: string;
 
   constructor(
     public dialogRef: MatDialogRef<LoginHomeComponent>,

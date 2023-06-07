@@ -170,6 +170,16 @@ h1 {
   font-size: 1.2em;
 }
 
+
+.card a, .card a:visited {
+  text-decoration: none;
+  list-style: none;
+  color: unset;
+}
+
+
+
+
 @media screen and (max-width: 800px) {
 
   #titulo1 {

@@ -1,3 +1,4 @@
+import { DialogComponent } from './login/dialog/dialog.component';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
@@ -13,7 +14,8 @@ import { AcessibilidadeComponent } from './acessibilidade/acessibilidade.compone
     LoginHomeComponent,
     NovoUsuarioCadastroHomeComponent,
     LandingComponent,
-    AcessibilidadeComponent
+    AcessibilidadeComponent,
+    DialogComponent
   ],
   imports: [
     CommonModule,

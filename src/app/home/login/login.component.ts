@@ -1,7 +1,9 @@
+import { DialogComponent } from './dialog/dialog.component';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthenticationService } from 'src/app/services/authentication/login/authentication.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-login-home',
@@ -17,7 +19,8 @@ export class LoginHomeComponent implements OnInit {
   constructor(
     private authService: AuthenticationService,
     private router:Router,
-    private _snackBar: MatSnackBar
+    private _snackBar: MatSnackBar,
+    public dialog: MatDialog
   ) { }
 
   ngOnInit(): void {
@@ -77,4 +80,21 @@ export class LoginHomeComponent implements OnInit {
       }
       )
     }
+
+    //Dialog
+
+    animal: string = "";
+    name: string = "";
+
+    openDialog(): void {
+      const dialogRef = this.dialog.open(DialogComponent, {
+        data: {name: this.name, animal: this.animal},
+      });
+
+      dialogRef.afterClosed().subscribe(result => {
+        console.log('The dialog was closed');
+        this.animal = result;
+      });
+    }
+
 }

@@ -1,0 +1,19 @@
+<h1 mat-dialog-title> Olá visitante</h1>
+<div mat-dialog-content>
+  <p>Está conhecendo nossa Plataforma?</p>
+  <p>Escolha um perfil para se aventurar</p>
+</div>
+<div class="botoes">
+  <button mat-flat-button>
+    <mat-icon>school</mat-icon>
+    Aluno
+  </button>
+  <button mat-flat-button>
+    <mat-icon>create</mat-icon>
+    instrutor
+  </button>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial>Ok</button>
+</div>

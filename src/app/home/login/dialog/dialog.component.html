@@ -6,14 +6,13 @@
   </div>
   <div class="botoes">
     <mat-button-toggle-group [formControl]="perfilControl" name="fontStyle" aria-label="Font Style">
-      <mat-button-toggle value="aluno"><mat-icon>school</mat-icon> Aluno</mat-button-toggle>
-      <mat-button-toggle value="instrutor"><mat-icon>create</mat-icon> Instrutor</mat-button-toggle>
+      <mat-button-toggle value="aluno"><mat-icon class="icone-aluno">school</mat-icon> Aluno</mat-button-toggle>
+      <mat-button-toggle value="instrutor"><mat-icon class="icone-instrutor">create</mat-icon>
+        Instrutor</mat-button-toggle>
     </mat-button-toggle-group>
   </div>
-  <!-- <p>Perfil escolhido: {{perfilControl.value}}</p> -->
   <div class="dialog-actions" mat-dialog-actions>
     <button mat-button (click)="onNoClick()">Cancelar</button>
     <button mat-button [mat-dialog-close]="perfilControl.value">Acessar</button>
   </div>
 </div>
-

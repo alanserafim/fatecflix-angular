@@ -19,14 +19,6 @@
   --login-card-background: #f5f5f5;
   --text-darkred-background: rgba(66, 16, 11, 0.685);
 
-  /* detalhar curso*/
-  --detalhar-curso-background: #8C0E03;
-  --detalhar-curso-background2: #F2F2F2;
-  --detalhar-curso-text-highlight: #8C0E03;
-  /* aula*/
-  --aula-background1: #8C0E03;
-
-
   --border-neon: #ff0534;
 
   --gradient-background-1: rgb(66, 16, 11);
@@ -48,6 +40,21 @@
   --card-box-shadow: rgb(136, 30, 21);
   --card-box-shadow2: #3d3c3d;
   --box-reflect-gradient: rgba(0, 0, 0, 0.151);
+
+  /*Fazer o contraste*/
+
+  /* detalhar curso*/
+  --detalhar-curso-background: #8C0E03;
+  --detalhar-curso-background2: #F2F2F2;
+  --detalhar-curso-text-highlight: #8C0E03;
+  /* aula*/
+  --aula-background1: #8C0E03;
+  /*Login dialog*/
+  --cor-icone-aluno: blue;
+  --cor-icone-instrutor: red;
+
+
+
 }
 
 :root .contraste{

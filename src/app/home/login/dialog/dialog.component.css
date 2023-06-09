@@ -1,5 +1,7 @@
 h1 {
   text-align: center;
+  color: var(--error-text-color);
+  font-weight: bold;
 }
 
 p {
@@ -13,4 +15,12 @@ p {
 
  .botoes{
   margin-top: 8px;
+ }
+
+.icone-aluno {
+  color: var(--cor-icone-aluno);
+ }
+
+ .icone-instrutor {
+  color: var(--cor-icone-instrutor);
  }

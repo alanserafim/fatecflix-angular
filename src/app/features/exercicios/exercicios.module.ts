@@ -6,8 +6,9 @@ import { SharedModule } from './../../shared/shared.module';
 import { AtualizaExercicioComponent } from './atualiza-exercicio/atualiza-exercicio.component';
 import { DeletaExercicioComponent } from './deleta-exercicio/deleta-exercicio.component';
 import { ExerciciosRoutingModule } from './exercicios-routing.module';
-import { ListaExercicioComponent } from './lista-exercicio/lista-exercicio.component';
+import { ListaExercicioComponent } from './exibe-exercicio/stepper/lista-exercicio.component';
 import { NovoExercicioComponent } from './novo-exercicio/novo-exercicio.component';
+import { AlternativasComponent } from './exibe-exercicio/alternativas/alternativas.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { NovoExercicioComponent } from './novo-exercicio/novo-exercicio.componen
     DeletaExercicioComponent,
     ListaExercicioComponent,
     JsonParsePipePipe,
+    AlternativasComponent,
   ],
   imports: [
     CommonModule,

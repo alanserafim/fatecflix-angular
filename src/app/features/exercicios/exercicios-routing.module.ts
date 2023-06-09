@@ -2,8 +2,9 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AtualizaExercicioComponent } from './atualiza-exercicio/atualiza-exercicio.component';
 import { DeletaExercicioComponent } from './deleta-exercicio/deleta-exercicio.component';
-import { ListaExercicioComponent } from './lista-exercicio/lista-exercicio.component';
+import { ListaExercicioComponent } from './exibe-exercicio/stepper/lista-exercicio.component';
 import { NovoExercicioComponent } from './novo-exercicio/novo-exercicio.component';
+import { AlternativasComponent } from './exibe-exercicio/alternativas/alternativas.component';
 
 const routes: Routes = [
   {
@@ -13,6 +14,10 @@ const routes: Routes = [
   {
     path: 'listar/:cursoId/matricula/:matriculaId',
     component: ListaExercicioComponent
+  },
+  {
+    path: 'exibir',
+    component: AlternativasComponent
   },
   {
     path: 'deletar/:id/curso/:cursoId',

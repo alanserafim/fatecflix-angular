@@ -44,7 +44,7 @@ export class MatriculaComponent implements OnInit {
       this.cursoId = data.curso.cursoId;
       console.log(this.cursoId);
       console.log(data.matriculaId);
-      this.router.navigate(['exercicios/listar', this.cursoId, 'matricula', data.matriculaId])
+      this.router.navigate(['user/exercicios/listar', this.cursoId, 'matricula', data.matriculaId])
     })
 
   }

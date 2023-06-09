@@ -1,0 +1,52 @@
+.componente {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  min-height: 100vh;
+  margin: auto;
+  margin-top: 2em;
+}
+
+.componente h1 {
+  text-align: center;
+}
+
+.enunciado, .proposicao {
+  text-align: justify;
+}
+
+.alternativa {
+  display: flex;
+  align-items: center;
+  background-color: rgb(226, 226, 226);
+  min-height: 8vh;
+  margin-bottom: 1em;
+}
+
+.identificador {
+  background-color:rgb(226, 226, 226);
+  width: 6vw;
+  min-height: 6vh;
+}
+
+.identificador p {
+  font-size: 1.8em;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 6vh;
+}
+
+.conteudo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fefefe;
+  min-height: 6vh;
+  margin: 12px;
+  padding: 1em;
+  width: 90%;
+}
+
+.conteudo p {
+  text-align: justify;
+}

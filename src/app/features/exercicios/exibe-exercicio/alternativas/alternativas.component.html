@@ -4,31 +4,41 @@
     {{enunciado}}
   </p>
   <p class="proprosicao">{{proposicao}}:</p>
-  <section class="alternativas">
-    <div class="alternativa">
-      <div class="identificador"><p>{{identificador}}</p></div>
-      <div class="conteudo"><p>{{conteudo}}</p></div>
+
+  <form class="exercicioForm">
+
+    <section class="alternativas">
+
+      <div class="alternativa">
+        <label for="{{identificador}}" class="input-label">
+          <div class="identificador"><p>{{identificador}}</p></div>
+          <div class="conteudo"><p>{{conteudo}}</p></div>
+        </label>
+        <input type="checkbox" id="{{identificador}}" name="{{identificador}}" value="{{identificador}}">
+      </div>
+
+      <div class="alternativa">
+        <div class="identificador"><p>B</p></div>
+        <div class="conteudo"><p>{{conteudo}}</p></div>
+        <input type="checkbox">
+      </div>
+
+      <div class="alternativa">
+        <div class="identificador"><p>C</p></div>
+        <div class="conteudo"><p>{{conteudo}}</p></div>
+        <input type="checkbox">
+      </div>
+
+      <div class="alternativa">
+        <div class="identificador"><p>D</p></div>
+        <div class="conteudo"><p>{{conteudo}}</p></div>
+        <input type="checkbox">
+      </div>
+
+    </section>
+    <div class="botoes">
+      <button mat-stroked-button class="verificar">CONFERIR RESPOSTAS</button>
+      <button mat-stroked-button class="avancar">PRÓXIMO EXERCÍCIO</button>
     </div>
-
-    <div class="alternativa">
-      <div class="identificador"><p>B</p></div>
-      <div class="conteudo"><p>{{conteudo}}</p></div>
-    </div>
-
-    <div class="alternativa">
-      <div class="identificador"><p>C</p></div>
-      <div class="conteudo"><p>{{conteudo}}</p></div>
-    </div>
-
-    <div class="alternativa">
-      <div class="identificador"><p>D</p></div>
-      <div class="conteudo"><p>{{conteudo}}</p></div>
-    </div>
-
-  </section>
-  <div class="botoes">
-    <button mat-stroked-button class="verificar">verificar</button>
-    <button mat-stroked-button class="avancar">avançar</button>
-  </div>
-
+  </form>
 </div>

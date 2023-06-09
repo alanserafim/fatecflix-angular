@@ -15,7 +15,7 @@ import { AcessibilidadeComponent } from './acessibilidade/acessibilidade.compone
     NovoUsuarioCadastroHomeComponent,
     LandingComponent,
     AcessibilidadeComponent,
-    DialogComponent
+    DialogComponent,
   ],
   imports: [
     CommonModule,

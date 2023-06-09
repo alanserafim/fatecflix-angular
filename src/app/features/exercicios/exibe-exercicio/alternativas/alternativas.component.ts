@@ -11,9 +11,6 @@ export class AlternativasComponent implements OnInit {
   proposicao: string = "Escolha a alternativa correta"
   identificador: string = "A"
   conteudo: string = "Lorem ipsum dolor sit amet consectetur adipisicinelit. Commodi quos, eaque libero laboriosam veniam eius nemo quod imped"
-  + "dignissimos ullam laudantium dolores ad cumque facilis repellendus fugiadolor aperiam reiciendis."
-  + "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque asperiores omnis, harum doloremque voluptates architecto quis aliquid deleniti"
-  + "sequi a asumenda officiis, excepturi corrupti eum aperiam? Debitis sit non inventor assumenda.";
 
   constructor() { }
 

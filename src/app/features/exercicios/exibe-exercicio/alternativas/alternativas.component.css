@@ -23,6 +23,12 @@
   margin-bottom: 1em;
 }
 
+.input-label {
+  display: flex;
+  align-items: center;
+  background-color: rgb(226, 226, 226);
+}
+
 .identificador {
   background-color:rgb(226, 226, 226);
   width: 6vw;
@@ -30,7 +36,8 @@
 }
 
 .identificador p {
-  font-size: 1.8em;
+  font-size: 2em;
+  font-weight: bold;
   text-align: center;
   vertical-align: middle;
   line-height: 6vh;
@@ -49,4 +56,18 @@
 
 .conteudo p {
   text-align: justify;
+}
+
+.botoes {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.verificar {
+  background-color: green;
+  color: white;
+}
+
+.avancar {
+  margin-left: 8px;
 }

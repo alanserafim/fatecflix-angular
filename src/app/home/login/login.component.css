@@ -1,4 +1,5 @@
-.container, form {
+.container,
+form {
   display: flex;
   flex-direction: column;
 }
@@ -7,7 +8,7 @@
   width: 50vw;
   height: 68vh;
   display: flex;
-  background-color: var(--login-card-background)
+  background-color: var(--login-card-background);
 }
 
 .card__banner {
@@ -85,15 +86,19 @@ h2 {
   text-align: center;
 }
 
-.teste__botoes{
+.teste__botoes {
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
 }
 
-.teste__botoes button{
+.teste__botoes button {
   border: 1px solid var(--primary-color);
   color: var(--primary-color);
   background-color: var(--secondary-background-color);
+  width: 100%;
+  height: 50px;
+  border-radius: 6px;
 }
 
 /*Sticky footer*/
@@ -137,11 +142,11 @@ h2 {
     height: auto;
     background: var(--gradient-background-1);
     background: linear-gradient(
-    135deg,
-    var(--gradient-background-2) 51%,
-    var(--gradient-background-3) 91%,
-    var(--gradient-background-4) 100%
-  );
+      135deg,
+      var(--gradient-background-2) 51%,
+      var(--gradient-background-3) 91%,
+      var(--gradient-background-4) 100%
+    );
   }
   .footer {
     display: unset;
@@ -184,13 +189,21 @@ h2 {
   .btn__senha {
     background-color: var(--login-mobile-btn);
   }
+  .teste {
+    width: 36vw;
+  }
+  .teste__botoes button {
+    min-width: 240px;
+    height: 50px;
+    border-radius: 12px;
+  }
 
   p {
     margin-top: 1em;
     text-align: center;
   }
   a {
-    font-size: .95rem;
+    font-size: 0.95rem;
     font-weight: 500;
     text-decoration: none;
     color: var(--primary-color);

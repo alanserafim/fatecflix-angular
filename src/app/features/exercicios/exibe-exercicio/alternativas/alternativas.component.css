@@ -45,6 +45,7 @@
 
 .conteudo {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: #fefefe;
@@ -70,4 +71,22 @@
 
 .avancar {
   margin-left: 8px;
+}
+
+.checkbox:checked ~ label {
+  opacity: 0.5;
+}
+
+.resultado {
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 1em 0;
+  color: green;
+}
+
+.good {
+  color: green;
+}
+.bad {
+  color: red;
 }

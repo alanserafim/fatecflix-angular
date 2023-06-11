@@ -5,39 +5,62 @@
   </p>
   <p class="proprosicao">{{proposicao}}:</p>
 
-  <form class="exercicioForm">
+  <form class="exercicioForm" [formGroup]="exercicioForm" (ngSubmit)="verificarRespostas()">
 
     <section class="alternativas">
 
       <div class="alternativa">
-        <label for="{{identificador}}" class="input-label">
-          <div class="identificador"><p>{{identificador}}</p></div>
-          <div class="conteudo"><p>{{conteudo}}</p></div>
+        <input
+          class="checkbox"
+          type="checkbox"
+          id="alternativaA"
+          name="alternativaA"
+          value="A"
+          formControlName="alternativaA" >
+
+        <label for="alternativaA" class="input-label">
+          <div class="identificador"><p>A</p></div>
+          <div class="conteudo">
+            <p>{{conteudo}}</p>
+            <p *ngIf="submetido">
+              Conteudo de correção
+            </p>
+
+          </div>
         </label>
-        <input type="checkbox" id="{{identificador}}" name="{{identificador}}" value="{{identificador}}">
+
       </div>
 
       <div class="alternativa">
-        <div class="identificador"><p>B</p></div>
-        <div class="conteudo"><p>{{conteudo}}</p></div>
-        <input type="checkbox">
+        <input
+          class="checkbox"
+          type="checkbox"
+          id="alternativaB"
+          name="alternativaB"
+          alue="A"
+          formControlName="alternativaB" >
+        <label for="alternativaB" class="input-label">
+          <div class="identificador"><p>B</p></div>
+          <div class="conteudo">
+            <p>{{conteudo}}</p>
+            <p *ngIf="submetido">
+              Conteudo de correção
+            </p>
+
+          </div>
+        </label>
+
+      </div>
+      <p>{{exercicioForm.value | json}}</p>
+      <div *ngIf="submetido == true" class="resultado" [class.bad]="verificador == false">
+        <p> {{resultado}}</p>
       </div>
 
-      <div class="alternativa">
-        <div class="identificador"><p>C</p></div>
-        <div class="conteudo"><p>{{conteudo}}</p></div>
-        <input type="checkbox">
-      </div>
 
-      <div class="alternativa">
-        <div class="identificador"><p>D</p></div>
-        <div class="conteudo"><p>{{conteudo}}</p></div>
-        <input type="checkbox">
-      </div>
 
     </section>
     <div class="botoes">
-      <button mat-stroked-button class="verificar">CONFERIR RESPOSTAS</button>
+      <button mat-stroked-button class="verificar" type="submit">CONFERIR RESPOSTAS</button>
       <button mat-stroked-button class="avancar">PRÓXIMO EXERCÍCIO</button>
     </div>
   </form>

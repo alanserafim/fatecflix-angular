@@ -3,7 +3,7 @@
     CADASTRAR EXERCICIOS
   </button>
 
-  <mat-vertical-stepper [linear]="true" #stepper>
+  <!-- <mat-vertical-stepper [linear]="true" #stepper>
     <mat-step [stepControl]="selectAdvType" *ngFor="let exercicio of exercicios | async; let i = index">
       <form [formGroup]="selectAdvType">
         <ng-template matStepLabel>{{ exercicio.titulo }}</ng-template>
@@ -31,7 +31,6 @@
           </ng-template>
         </div>
         <div>
-          <!--<button *ngIf="i>0" mat-button matStepperPrevious>Anterior</button>-->
           <button mat-button matStepperNext matStepperNext (click)="
                 responder(
                   afirmativa.selectedOptions.selected[0]?.value,
@@ -72,4 +71,4 @@
         </button>
       </div>
     </mat-step>
-  </mat-vertical-stepper>
+  </mat-vertical-stepper> -->

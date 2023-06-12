@@ -57,6 +57,7 @@
 
 .conteudo p {
   text-align: justify;
+  min-width:40vw;
 }
 
 .botoes {
@@ -76,6 +77,8 @@
 .checkbox:checked ~ label {
   opacity: 0.5;
 }
+
+
 
 .resultado {
   font-size: 1.2em;

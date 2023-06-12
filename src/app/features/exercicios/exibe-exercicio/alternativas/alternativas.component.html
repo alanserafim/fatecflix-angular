@@ -1,66 +1,43 @@
 <div class="componente">
-  <h1>Gerando um componente em angular</h1>
+  <h1>{{exercicio.titulo}}</h1>
   <p class="enunciado">
-    {{enunciado}}
+    {{exercicio.enunciado}}
   </p>
-  <p class="proprosicao">{{proposicao}}:</p>
+  <p class="proprosicao">{{exercicio.proposicao}}:</p>
 
-  <form class="exercicioForm" [formGroup]="exercicioForm" (ngSubmit)="verificarRespostas()">
-
-    <section class="alternativas">
-
-      <div class="alternativa">
+  <form class="exercicioForm" [formGroup]="exercicioForm">
+    <section class="alternativas" >
+      <div class="alternativa" *ngFor="let afirmativa of formAfirmativas.controls" >
+        <ng-container [formGroup]="$any(afirmativa)">
         <input
           class="checkbox"
           type="checkbox"
-          id="alternativaA"
-          name="alternativaA"
-          value="A"
-          formControlName="alternativaA" >
+          id="{{afirmativa.get('identificador')?.value}}"
+          name="{{afirmativa.get('identificador')?.value}}"
+          [value]="false"
+          formControlName="categoria"
+          >
 
-        <label for="alternativaA" class="input-label">
-          <div class="identificador"><p>A</p></div>
+        <label for="{{afirmativa.get('identificador')?.value}}" class="input-label">
+          <div class="identificador"><p> {{afirmativa.get('identificador')?.value}}</p></div>
           <div class="conteudo">
-            <p>{{conteudo}}</p>
+            <p>{{afirmativa.get('conteudo')?.value}}</p>
             <p *ngIf="submetido">
-              Conteudo de correção
+              {{afirmativa.get('corretiva')?.value}}
             </p>
-
           </div>
         </label>
-
+      </ng-container>
       </div>
 
-      <div class="alternativa">
-        <input
-          class="checkbox"
-          type="checkbox"
-          id="alternativaB"
-          name="alternativaB"
-          alue="A"
-          formControlName="alternativaB" >
-        <label for="alternativaB" class="input-label">
-          <div class="identificador"><p>B</p></div>
-          <div class="conteudo">
-            <p>{{conteudo}}</p>
-            <p *ngIf="submetido">
-              Conteudo de correção
-            </p>
-
-          </div>
-        </label>
-
-      </div>
       <p>{{exercicioForm.value | json}}</p>
+
       <div *ngIf="submetido == true" class="resultado" [class.bad]="verificador == false">
         <p> {{resultado}}</p>
       </div>
-
-
-
     </section>
     <div class="botoes">
-      <button mat-stroked-button class="verificar" type="submit">CONFERIR RESPOSTAS</button>
+      <button mat-stroked-button class="verificar" (click)="verificarRespostas()">CONFERIR RESPOSTAS</button>
       <button mat-stroked-button class="avancar">PRÓXIMO EXERCÍCIO</button>
     </div>
   </form>

@@ -1,12 +1,8 @@
-import { Usuario } from './../../../../types/Usuario';
-import { map } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormGroup } from '@angular/forms';
 import {
   Afirmativa,
-  Exercicio,
   ExercicioTrueFalse,
-  Resposta,
 } from 'src/app/types/Exercicio';
 
 @Component({
@@ -153,6 +149,7 @@ export class AlternativasComponent implements OnInit {
     );
     if (resultadoUsuario) {
       this.verificador = true;
+      this.exercicioForm.disable();
       this.resultado = 'Parabéns, resposta correta!';
     } else {
       this.resultado = 'Ops, resposta incorreta. Tente novamente!';

@@ -9,29 +9,27 @@
     <section class="alternativas" >
       <div
       class="alternativa"
-      [class.input-label-true]="afirmativa.get('resposta')?.value == true && submetido == true && afirmativa.get('categoria')?.value == true"
+
       *ngFor="let afirmativa of formAfirmativas.controls" >
-        <ng-container [formGroup]="$any(afirmativa)">
+        <ng-container [formGroup]="$any(afirmativa)" >
         <input
           class="checkbox"
           type="checkbox"
           id="{{afirmativa.get('identificador')?.value}}"
           name="{{afirmativa.get('identificador')?.value}}"
-          [value]="false"
           formControlName="categoria"
           >
         <label
+        readonly="true"
         for="{{afirmativa.get('identificador')?.value}}"
         class="input-label"
-        [class.input-label-true]="afirmativa.get('resposta')?.value == true && submetido == true && afirmativa.get('categoria')?.value == true"
-
         >
           <div class="identificador"><p> {{afirmativa.get('identificador')?.value}}</p></div>
           <div class="conteudo">
             <p>{{afirmativa.get('conteudo')?.value}}</p>
             <div
             class="corretiva"
-            *ngIf="submetido"
+            *ngIf="verificador"
             [class.corretiva__true]="afirmativa.get('resposta')?.value == true"
             [class.corretiva__false]="afirmativa.get('resposta')?.value == false"
             >
@@ -52,3 +50,8 @@
     </div>
   </form>
 </div>
+
+<!--
+
+      [class.input-label-true]="afirmativa.get('resposta')?.value == true && submetido == true && afirmativa.get('categoria')?.value == true"
+ -->

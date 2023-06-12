@@ -34,6 +34,10 @@
       (click)="atualizaCurso(cursoId)" >Atualizar Curso</button>
       <button mat-menu-item *ngIf="user.roles.includes('INSTRUTOR')"
       (click)="deletaCurso(cursoId)">Deletar Curso</button>
+      <button mat-menu-item *ngIf="user.roles.includes('INSTRUTOR')"
+      (click)="gotoCadastroAulas(cursoId)" >Cadastrar Aulas</button>
+      <button mat-menu-item *ngIf="user.roles.includes('INSTRUTOR')"
+       >Cadastrar Exercício</button>
     </mat-menu>
   </section>
 

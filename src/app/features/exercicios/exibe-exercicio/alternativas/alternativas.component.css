@@ -29,6 +29,11 @@
   background-color: rgb(226, 226, 226);
 }
 
+.input-label-true {
+  background-color: green;
+}
+
+
 .identificador {
   background-color:rgb(226, 226, 226);
   width: 6vw;
@@ -75,7 +80,7 @@
 }
 
 .checkbox:checked ~ label {
-  opacity: 0.5;
+  opacity: 0.8;
 }
 
 
@@ -92,4 +97,19 @@
 }
 .bad {
   color: red;
+}
+
+.corretiva {
+  min-height: 5vh;
+  background-color: white;
+  padding: 1em;
+}
+
+.corretiva__true {
+  color: green;
+}
+
+.corretiva__false {
+  color: red;
+
 }

@@ -260,6 +260,20 @@
   background-color: black;
 }
 
+:root .contraste .esquerda .mat-expanded,
+:root .contraste .esquerda .mat-expansion-panel-header-title,
+:root .contraste .esquerda .mat-expansion-panel-header,
+:root .contraste .esquerda .mat-accordion,
+:root .contraste .esquerda .mat-expansion-panel,
+:root .contraste .aulas .mat-expanded,
+:root .contraste .aulas .mat-expansion-panel-header-title,
+:root .contraste .aulas .mat-expansion-panel-header,
+:root .contraste .aulas .mat-accordion,
+:root .contraste .aulas .mat-expansion-panel
+{
+  background-color: black !important;
+  color: white !important;
+}
 
 body {
   font-size: 16px;

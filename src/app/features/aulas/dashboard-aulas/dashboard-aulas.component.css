@@ -146,10 +146,13 @@ app-youtube-video {
   box-shadow: none;
 }
 
+::ng-deep .mat-tab-label .mat-tab-label-content {
+  color: var(--primary-text-color) !important;
+}
+
+
+
 /*Media Queries*/
-
-
-
 @media only screen and (max-width: 768px) {
   .esquerda .video-aula h1 {
     font-size: 1em;

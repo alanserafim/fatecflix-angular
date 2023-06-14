@@ -1,6 +1,12 @@
+.componente {
+  background-color: var(--primary-background-color);
+  color: var(--primary-text-color);
+  padding: 1em;
+}
+
 h1 {
   text-align: center;
-  color: var(--error-text-color);
+  color: var(--header-text-color);
   font-weight: bold;
 }
 

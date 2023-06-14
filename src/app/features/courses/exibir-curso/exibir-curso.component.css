@@ -1,3 +1,7 @@
+.wrapper {
+  color: var(--primary-text-color);
+}
+
 .superior {
   background-color: var(--detalhar-curso-background);
   padding: 2vh 10vw;
@@ -68,6 +72,15 @@
 
 .aulas {
   padding: 1em;
+
+}
+::ng-deep .aulas .mat-expanded,
+::ng-deep .aulas .mat-expansion-panel-header-title,
+::ng-deep .aulas .mat-expansion-panel-header,
+::ng-deep .aulas .mat-accordion,
+::ng-deep .aulas .mat-expansion-panel
+{
+  background-color: white !important;
 }
 
 .estudantes {
@@ -76,7 +89,7 @@
 }
 
 .estudantes__lista {
-  background-color: var(--primary-background-color);
+  background-color: var(--detalhar-curso-background3);
   padding: 1em 0;
   min-height: 88%;
 }

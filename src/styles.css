@@ -46,6 +46,8 @@
   /* detalhar curso*/
   --detalhar-curso-background: #8C0E03;
   --detalhar-curso-background2: #F2F2F2;
+  --detalhar-curso-background3: white;
+
   --detalhar-curso-text-highlight: #8C0E03;
   /* aula*/
   --aula-background1: #8C0E03;
@@ -74,6 +76,10 @@
   --cadastrar-curso-background: black;
   --login-card-background: black;
   --text-darkred-background: black;
+  --detalhar-curso-background: black;
+  --detalhar-curso-background2: black;
+  --detalhar-curso-background3: grey;
+  --detalhar-curso-text-highlight: black
 
   --landingpage-box-shadow: black;
   --cadastrar-curso-box-shadow: black;

@@ -2,6 +2,7 @@ import { Component, HostListener, OnInit } from '@angular/core';
 import { ETheme } from '../ETheme';
 import { ScrollToConfigOptions, ScrollToService } from '@nicky-lenaers/ngx-scroll-to';
 import { Router } from '@angular/router';
+import { AcessibilidadeService } from 'src/app/services/acessibilidade/acessibilidade.service';
 
 
 @Component({
@@ -10,17 +11,31 @@ import { Router } from '@angular/router';
   styleUrls: ['./barra-acessibilidade.component.css']
 })
 export class BarraAcessibilidadeComponent implements OnInit {
-  public nome: string = ETheme.NOME_COM_CONTRASTE;
-  constructor(private scrollToService: ScrollToService, private route: Router) { }
-  
+  public nome: string = "";
+  constructor(
+    private scrollToService: ScrollToService,
+    private route: Router,
+    private acessibilidadeService: AcessibilidadeService
+    ) { }
+
   ngOnInit(): void {
+    this.getOpcaoContaste();
+  }
+
+  getOpcaoContaste(){
+    // if(this.acessibilidadeService.retornaOpcaoContraste() === "Com contraste"){
+    //   this.nome = ETheme.NOME_COM_CONTRASTE;
+    // }
+    // else {
+    //   this.nome = ETheme.NOME_SEM_CONTRASTE;
+    // }
   }
 
   irParaPaginaAcessibilidade(){
     this.route.navigate(['acessibilidade'])
   }
   triggerScrollToCabecalho() {
-    
+
     const config: ScrollToConfigOptions = {
       target: '#header'
     };
@@ -29,7 +44,7 @@ export class BarraAcessibilidadeComponent implements OnInit {
   }
 
   triggerScrollToConteudo() {
-    
+
     const config: ScrollToConfigOptions = {
       target: '#conteudo'
     };
@@ -38,7 +53,7 @@ export class BarraAcessibilidadeComponent implements OnInit {
   }
 
   triggerScrollToRodape() {
-    
+
     const config: ScrollToConfigOptions = {
       target: '#footer'
     };
@@ -96,12 +111,13 @@ export class BarraAcessibilidadeComponent implements OnInit {
   }
 
   public toogle() {
-    const theme = document.body.classList.toggle('contraste');
 
+    const theme = document.body.classList.toggle('contraste');
     if (theme) {
+      this.acessibilidadeService.salvaOpcaoContraste(ETheme.NOME_SEM_CONTRASTE)
       return (this.nome = ETheme.NOME_SEM_CONTRASTE);
     }
-
+    this.acessibilidadeService.salvaOpcaoContraste(ETheme.NOME_COM_CONTRASTE)
     return (this.nome = ETheme.NOME_COM_CONTRASTE)
   }
 
@@ -126,7 +142,7 @@ export class BarraAcessibilidadeComponent implements OnInit {
 
     if(event.altKey && event.key == '1') {
       console.log(event.key);
-      this.triggerScrollToCabecalho(); 
+      this.triggerScrollToCabecalho();
     }
 
     if(event.altKey && event.key == '2') {
@@ -141,6 +157,6 @@ export class BarraAcessibilidadeComponent implements OnInit {
   }
 
   toggleDestination() {
-      
+
   }
 }

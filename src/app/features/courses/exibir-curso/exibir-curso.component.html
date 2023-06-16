@@ -29,16 +29,21 @@
     </button>
     <button mat-stroked-button [matMenuTriggerFor]="menu">outras ações</button>
     <mat-menu #menu="matMenu">
-      <button mat-menu-item>Cancelar Matricula(não implementado)</button>
-      <button mat-menu-item *ngIf="user.roles.includes('INSTRUTOR')"
-      (click)="atualizaCurso(cursoId)" >Atualizar Curso</button>
-      <button mat-menu-item *ngIf="user.roles.includes('INSTRUTOR')"
-      (click)="deletaCurso(cursoId)">Deletar Curso</button>
-      <button mat-menu-item *ngIf="user.roles.includes('INSTRUTOR')"
-      (click)="gotoCadastroAulas(cursoId)" >Cadastrar Aulas</button>
-      <button mat-menu-item *ngIf="user.roles.includes('INSTRUTOR')"
-       >Cadastrar Exercício</button>
+      <button mat-menu-item>Cancelar Matricula (não implementado)</button>
     </mat-menu>
+
+    <button mat-stroked-button [matMenuTriggerFor]="menuCursos" *ngIf="user.roles.includes('INSTRUTOR')">cursos</button>
+    <mat-menu #menuCursos="matMenu">
+      <button mat-menu-item (click)="atualizaCurso(cursoId)" >Atualizar Curso</button>
+      <button mat-menu-item (click)="deletaCurso(cursoId)">Deletar Curso</button>
+    </mat-menu>
+
+    <button mat-stroked-button [matMenuTriggerFor]="menuAulas" *ngIf="user.roles.includes('INSTRUTOR')">aulas</button>
+    <mat-menu #menuAulas="matMenu">
+      <button mat-menu-item (click)="gotoCadastroAulas(cursoId)" >Cadastrar Aulas</button>
+      <button mat-menu-item >Cadastrar Exercício (não implementado)</button>
+    </mat-menu>
+
   </section>
 
   <div class="inferior">

@@ -11,7 +11,7 @@ import { AcessibilidadeService } from 'src/app/services/acessibilidade/acessibil
   styleUrls: ['./barra-acessibilidade.component.css']
 })
 export class BarraAcessibilidadeComponent implements OnInit {
-  public nome: string = "";
+  public nome: string = ETheme.NOME_COM_CONTRASTE;
   constructor(
     private scrollToService: ScrollToService,
     private route: Router,
@@ -23,19 +23,20 @@ export class BarraAcessibilidadeComponent implements OnInit {
   }
 
   getOpcaoContaste(){
-    // if(this.acessibilidadeService.retornaOpcaoContraste() === "Com contraste"){
-    //   this.nome = ETheme.NOME_COM_CONTRASTE;
-    // }
-    // else {
-    //   this.nome = ETheme.NOME_SEM_CONTRASTE;
-    // }
+    if(this.acessibilidadeService.retornaOpcaoContraste() === "Com contraste"){
+      this.nome = ETheme.NOME_SEM_CONTRASTE;
+      document.body.classList.toggle('contraste');
+    }
+    else {
+      this.nome = ETheme.NOME_COM_CONTRASTE;
+    }
   }
 
   irParaPaginaAcessibilidade(){
     this.route.navigate(['acessibilidade'])
   }
-  triggerScrollToCabecalho() {
 
+  triggerScrollToCabecalho() {
     const config: ScrollToConfigOptions = {
       target: '#header'
     };
@@ -111,13 +112,12 @@ export class BarraAcessibilidadeComponent implements OnInit {
   }
 
   public toogle() {
-
     const theme = document.body.classList.toggle('contraste');
     if (theme) {
-      this.acessibilidadeService.salvaOpcaoContraste(ETheme.NOME_SEM_CONTRASTE)
+      this.acessibilidadeService.salvaOpcaoContraste(ETheme.NOME_COM_CONTRASTE)
       return (this.nome = ETheme.NOME_SEM_CONTRASTE);
     }
-    this.acessibilidadeService.salvaOpcaoContraste(ETheme.NOME_COM_CONTRASTE)
+    this.acessibilidadeService.salvaOpcaoContraste(ETheme.NOME_SEM_CONTRASTE)
     return (this.nome = ETheme.NOME_COM_CONTRASTE)
   }
 

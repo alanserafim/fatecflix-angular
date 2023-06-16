@@ -19,7 +19,7 @@ export class BarraAcessibilidadeComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
-    this.getOpcaoContaste();
+    // this.getOpcaoContaste();
   }
 
   getOpcaoContaste(){

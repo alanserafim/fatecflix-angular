@@ -1,8 +1,8 @@
 
 .example-card {
   width: 18vw;
-  max-width: 260px;
-  min-width: 260px;
+  max-width: 210px;
+  min-width: 210px;
   height: 25vh;
   max-height: 200px;
   margin-bottom: 10em;
@@ -23,6 +23,12 @@
   max-height: 310px;
   /* background-color: aqua; */
 }
+.btn_detalhar {
+  background-color: var(--primary-background-color);
+  font-size: 1em;
+  
+}
+
 
 .example-card:hover{
   -webkit-transform: scale(1.1);
@@ -52,15 +58,24 @@
   font-size: 2em;
 }
 
+mat-card-title {
+  font-size: 1.1em;
+  
+}
+
+.card_titulo {
+  background-color: var(--transparencia1);
+  padding: 4px;
+  border-radius: 6px;
+}
+
 mat-card-content{
   overflow-y: hidden;
   text-align: justify;
   height: 12vh;
 }
 
-mat-card-title {
-  font-size: 1.3em;
-}
+
 
 /* Let's get this party started */
 ::-webkit-scrollbar {

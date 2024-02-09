@@ -21,7 +21,7 @@
             <mat-label>Senha</mat-label>
             <input class="input" matInput [type]="hide ? 'password' : 'text'" [(ngModel)]="senha" name="senha"
               #campoSenha="ngModel" required />
-            <button type="button" class="btn__senha" mat-icon-button matSuffix (click)="hide = !hide"
+            <button type="button" class="btn__senha" id="btn__senha-visibilidade" mat-icon-button matSuffix (click)="hide = !hide"
               [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
               <mat-icon>{{
                 hide ? "visibility_off" : "visibility"

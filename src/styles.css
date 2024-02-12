@@ -235,6 +235,35 @@
   background-color: black;
   color: white;
 }
+
+:root .contraste .cadastro .formfield {
+  margin-top: 2rem;
+  height: 90px;
+}
+
+:root .contraste .cadastro app-messages{
+  color: red;
+}
+
+:root .contraste .cadastro .link a{
+  color: yellow;
+}
+
+:root .contraste .cadastro .red_icon {
+  color: red;
+}
+
+/* MAT-select */
+:root .contraste .mat-option-text,
+:root .contraste .cadastro .mat-select-value
+{ 
+  color: white!important; 
+}
+
+:root .contraste .mat-option-text  {
+  background-color: black !important;
+}
+
 :root .contraste .date {
   background-color: black;
   color: white;

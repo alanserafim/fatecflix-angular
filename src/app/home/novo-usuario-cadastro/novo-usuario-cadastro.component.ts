@@ -40,7 +40,7 @@ export class NovoUsuarioCadastroHomeComponent implements OnInit {
         cpf: ['', [Validators.required, Validators.minLength(11)]],
         name: ['', [Validators.required]],
         dtNascimento: [''],
-        ra: [''],
+        ra: ['', [Validators.required, Validators.minLength(11)]],
         cursoMatriculado: [''],
         anoIngresso: [''],
         //semestreIngresso: [''],

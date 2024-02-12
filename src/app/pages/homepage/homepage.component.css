@@ -10,6 +10,13 @@ body {
 }
 .content {
   flex: 1 0 auto;
+   background: linear-gradient(
+    135deg,
+    var(--gradient-background-2) 51%,
+    var(--gradient-background-3) 91%,
+    var(--gradient-background-4) 100%
+  );
+  
 }
 
 header {
@@ -91,5 +98,4 @@ header {
     width: 100%;
   }
 }
-@media screen and (max-width: 1045px) {
-}
+

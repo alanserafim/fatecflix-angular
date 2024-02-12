@@ -1,91 +1,142 @@
-<form class="cadastro" [formGroup]="novoUsuarioForm" (submit)="cadastrar()">
-  <div class="titulo">
-    <p>Cadastre-se e comece a aprender</p>
-  </div>
+<form class="cadastro fundo" [formGroup]="novoUsuarioForm" (submit)="cadastrar()">
   <mat-card class="container card">
-    <mat-form-field appearance="outline">
-      <mat-label>E-mail</mat-label>
-      <input matInput type="email" placeholder="aluno@fatec.sp.gov.br" name="email" formControlName="email">
-    </mat-form-field>
-    <app-messages *ngIf="novoUsuarioForm.get('email')?.errors?.['required'] &&
-          novoUsuarioForm.get('email')?.touched" mensagem="O campo e-mail é obrigatório.">
-    </app-messages>
-    <app-messages *ngIf="
-          novoUsuarioForm.get('email')?.errors?.['email'] &&
-          novoUsuarioForm.get('email')?.touched" mensagem="O e-mail informado não é válido.">
-    </app-messages>
-    <mat-form-field appearance="outline">
-      <mat-label>CPF</mat-label>
-      <input matInput type="text" placeholder="000.000.000-00" name="cpf" formControlName="cpf" mask="000.000.000-00">
-    </mat-form-field>
-    <app-messages *ngIf="novoUsuarioForm.get('cpf')?.errors?.['required'] &&
-          novoUsuarioForm.get('cpf')?.touched" mensagem="O campo CPF é obrigatório.">
-    </app-messages>
-    <app-messages *ngIf="novoUsuarioForm.errors?.['cpfInvalido'] &&
-      novoUsuarioForm.get('cpf')?.dirty" mensagem="O CPF digitado não é válido."></app-messages>
-    <mat-form-field appearance="outline">
+    <div class="titulo">
+      <p>Cadastre-se e comece a aprender</p>
+    </div>
+    <mat-form-field appearance="outline" class="formfield">
       <mat-label>Nome</mat-label>
-      <input matInput type="text" placeholder="Nome Sobrenome" name="nome" formControlName="name">
+      <input matInput type="text" placeholder="Nome Sobrenome" name="nome" formControlName="name" maxlength="150">
     </mat-form-field>
     <app-messages *ngIf="novoUsuarioForm.get('name')?.errors?.['required'] &&
           novoUsuarioForm.get('name')?.touched" mensagem="O campo nome é obrigatório.">
     </app-messages>
-    <mat-form-field appearance="outline">
-      <mat-label>Data de Nascimento</mat-label>
-      <input matInput type="date" placeholder="00/00/0000" name="dataNascimento" formControlName="dtNascimento">
-    </mat-form-field>
-    <mat-form-field appearance="outline">
-      <mat-label>RA</mat-label>
-      <input matInput name="ra" formControlName="ra">
-    </mat-form-field>
-    <mat-form-field appearance="outline">
+    <div class="campo_container">
+      <div class="campo">
+        <mat-form-field appearance="outline" class="formfield">
+          <mat-label>E-mail</mat-label>
+          <input matInput type="email" placeholder="aluno@fatec.sp.gov.br" name="email" formControlName="email"
+            maxlength="50">
+        </mat-form-field>
+        <app-messages *ngIf="novoUsuarioForm.get('email')?.errors?.['required'] &&
+              novoUsuarioForm.get('email')?.touched" mensagem="O campo e-mail é obrigatório.">
+        </app-messages>
+        <app-messages *ngIf="
+              novoUsuarioForm.get('email')?.errors?.['email'] &&
+              novoUsuarioForm.get('email')?.touched" mensagem="O e-mail informado não é válido.">
+        </app-messages>
+      </div>
+      <div class="campo">
+        <mat-form-field appearance="outline" class="formfield">
+          <mat-label>CPF</mat-label>
+          <input matInput type="text" placeholder="000.000.000-00" name="cpf" formControlName="cpf"
+            mask="000.000.000-00" maxlength="14">
+        </mat-form-field>
+        <app-messages *ngIf="novoUsuarioForm.get('cpf')?.errors?.['required'] &&
+              novoUsuarioForm.get('cpf')?.touched" mensagem="O campo CPF é obrigatório.">
+        </app-messages>
+        <app-messages *ngIf="novoUsuarioForm.errors?.['cpfInvalido'] &&
+          novoUsuarioForm.get('cpf')?.dirty" mensagem="O CPF digitado não é válido.">
+        </app-messages>
+      </div>
+    </div>
+    <div class="campo_container">
+      <div class="campo">
+        <mat-form-field appearance="outline" class="formfield">
+          <mat-label>Data de Nascimento</mat-label>
+          <input matInput type="date" placeholder="00/00/0000" name="dataNascimento" formControlName="dtNascimento">
+        </mat-form-field>
+      </div>
+      <div class="campo">
+        <mat-form-field appearance="outline" class="formfield">
+          <mat-label>RA</mat-label>
+          <input matInput name="ra" formControlName="ra" minlength="10">
+        </mat-form-field>
+        <app-messages *ngIf="novoUsuarioForm.get('ra')?.errors?.['required'] &&
+        novoUsuarioForm.get('ra')?.touched" mensagem="O campo RA é obrigatório.">
+        </app-messages>
+        <app-messages *ngIf="novoUsuarioForm.get('ra')?.errors?.['minlength'] &&
+        novoUsuarioForm.get('ra')?.touched" mensagem="O RA deve possuir ao mínimo 10 digitos.">
+        </app-messages>
+      </div>
+    </div>
+    <mat-form-field appearance="outline" class="formfield">
       <mat-label>Curso</mat-label>
       <input matInput type="text" name="curso" formControlName="cursoMatriculado">
     </mat-form-field>
-    <mat-form-field appearance="outline">
-      <mat-label>Ano de ingresso</mat-label>
-      <input matInput type="text" name="anoIngresso" formControlName="anoIngresso">
-    </mat-form-field>
-
-    <mat-form-field appearance="outline">
-      <mat-label>Período</mat-label>
-      <mat-select name="periodo" formControlName="periodo">
-        <mat-option value="Manhã">Manhã</mat-option>
-        <mat-option value="Tarde">Tarde</mat-option>
-        <mat-option value="Noite">Noite</mat-option>
-      </mat-select>
-    </mat-form-field>
-    <mat-form-field appearance="outline">
-      <mat-label>Senha</mat-label>
-      <input matInput type="new-password" name="senha" formControlName="password" [(ngModel)]="password"
-        (keyup)="updateRequirements()">
-    </mat-form-field>
-    <form>
-      <div>
-        <p *ngIf="!hasMinimumLength">Deve conter pelo menos 8 caracteres</p>
-        <p *ngIf="!hasUppercaseLetter">Deve conter uma letra maiúscula</p>
-        <p *ngIf="!hasLowercaseLetter">Deve conter uma letra minúscula</p>
-        <p *ngIf="!hasNumber">Deve conter um número</p>
+    <div class="campo_container">
+      <div class="campo">
+        <mat-form-field appearance="outline" class="formfield">
+          <mat-label>Ano de ingresso</mat-label>
+          <input matInput type="text" name="anoIngresso" formControlName="anoIngresso" maxlength="4">
+        </mat-form-field>
       </div>
-    </form>
-    <app-messages *ngIf="novoUsuarioForm.get('password')?.errors?.['required'] &&
-        novoUsuarioForm.get('password')?.touched" mensagem="O campo senha é obrigatório.">
-    </app-messages>
-    <app-messages *ngIf="novoUsuarioForm.errors?.['matchValues'] &&
-    novoUsuarioForm.get('password')?.dirty"
-      mensagem="A senha não pode ser igual ao email, cpf ou data de nascimento."></app-messages>
-    <app-messages *ngIf="novoUsuarioForm.get('password')?.errors?.['minlength'] &&
-    novoUsuarioForm.get('password')?.touched" mensagem="A senha deve possuir ao mínimo 8 digitos.">
-    </app-messages>
-    <mat-form-field appearance="outline">
-      <mat-label>Confirmação de senha</mat-label>
-      <input matInput type="current-password" name="confirmacao" formControlName="confirmacao">
-    </mat-form-field>
-    <app-messages *ngIf="novoUsuarioForm.get('confirmacao')?.errors?.['required'] &&
-      novoUsuarioForm.get('confirmacao')?.touched" mensagem="O campo confirmação de senha é obrigatório.">
-    </app-messages>
-    <app-messages *ngIf="novoUsuarioForm.errors?.['valuesDoNotMatch'] &&
-        novoUsuarioForm.get('confirmacao')?.touched" mensagem="As senhas informadas não são iguais."></app-messages>
+      <div class="campo">
+        <mat-form-field appearance="outline" class="formfield">
+          <mat-label>Período</mat-label>
+          <mat-select name="periodo" formControlName="periodo" class="my-mat-select">
+            <mat-option class="my-mat-option" value="Manhã">Manhã</mat-option>
+            <mat-option class="my-mat-option" value="Tarde">Tarde</mat-option>
+            <mat-option class="my-mat-option" value="Noite">Noite</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="campo_container">
+      <div class="campo">
+        <mat-form-field appearance="outline" class="formfield">
+          <mat-label>Senha</mat-label>
+          <input matInput type="new-password" name="senha" formControlName="password" [(ngModel)]="password"
+            maxlength="30" (keyup)="updateRequirements()">
+        </mat-form-field>
+        <app-messages *ngIf="novoUsuarioForm.get('password')?.errors?.['required'] &&
+            novoUsuarioForm.get('password')?.touched" mensagem="O campo senha é obrigatório.">
+        </app-messages>
+        <app-messages class="mensagem" *ngIf="novoUsuarioForm.errors?.['matchValues'] &&
+        novoUsuarioForm.get('password')?.dirty"
+          mensagem="A senha não pode ser igual ao e-mail, CPF ou Data de Nascimento."></app-messages>
+        <app-messages *ngIf="novoUsuarioForm.get('password')?.errors?.['minlength'] &&
+        novoUsuarioForm.get('password')?.touched" mensagem="A senha deve possuir ao mínimo 8 digitos.">
+        </app-messages>
+
+        <div class="senha_requisitos_container">
+          <div class="error-check">
+            <mat-icon *ngIf="!hasMinimumLength" class="red_icon">cancel</mat-icon>
+            <mat-icon *ngIf="hasMinimumLength" class="green_icon">check_circle</mat-icon>
+            <p class="text_check">Deve conter pelo menos 8 caracteres</p>
+          </div>
+
+          <div class="error-check">
+            <mat-icon *ngIf="!hasUppercaseLetter" class="red_icon">cancel</mat-icon>
+            <mat-icon *ngIf="hasUppercaseLetter" class="green_icon">check_circle</mat-icon>
+            <p class="text_check">Deve conter uma letra maiúscula</p>
+          </div>
+
+          <div class="error-check">
+            <mat-icon *ngIf="!hasLowercaseLetter" class="red_icon">cancel</mat-icon>
+            <mat-icon *ngIf="hasLowercaseLetter" class="green_icon">check_circle</mat-icon>
+            <p class="text_check">Deve conter uma letra minúscula</p>
+          </div>
+
+          <div class="error-check">
+            <mat-icon *ngIf="!hasNumber" class="red_icon">cancel</mat-icon>
+            <mat-icon *ngIf="hasNumber" class="green_icon">check_circle</mat-icon>
+            <p class="text_check">Deve conter um número</p>
+          </div>
+        </div>
+      </div>
+      <div class="campo">
+        <mat-form-field appearance="outline" class="formfield">
+          <mat-label>Confirmação de senha</mat-label>
+          <input matInput type="current-password" name="confirmacao" formControlName="confirmacao" maxlength="30">
+        </mat-form-field>
+        <app-messages *ngIf="novoUsuarioForm.get('confirmacao')?.errors?.['required'] &&
+          novoUsuarioForm.get('confirmacao')?.touched" mensagem="O campo confirmação de senha é obrigatório.">
+        </app-messages>
+        <app-messages *ngIf="novoUsuarioForm.errors?.['valuesDoNotMatch'] &&
+            novoUsuarioForm.get('confirmacao')?.touched" mensagem="As senhas informadas não são iguais.">
+        </app-messages>
+      </div>
+    </div>
     <button class="btn__cadastrar" [disabled]="novoUsuarioForm.invalid" mat-flat-button>CADASTRAR</button>
     <p class="link"><a routerLink="/home/login">Já é usuário? Faça login!</a></p>
   </mat-card>

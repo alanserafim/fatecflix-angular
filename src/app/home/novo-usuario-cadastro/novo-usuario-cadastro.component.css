@@ -1,16 +1,53 @@
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
-
 .cadastro {
-  margin: 3rem 0;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .card {
-  width: 80%;
-  margin: auto;
+  width: 50%;
+  padding: 2rem;
+}
+
+.campo_container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.campo {
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+}
+
+.red_icon {
+  color: red;
+}
+
+.green_icon {
+  color: green;
+}
+
+.error-check {
+  display: flex;
+}
+
+.text_check {
+  margin-left: 5px;
+}
+
+.senha_requisitos_container {
+  margin-top: 1rem;
+}
+
+.mensagem {
+  font-size: 0.9rem;
 }
 
 button {
@@ -37,15 +74,17 @@ mat-form-field {
   height: 2em;
   border-radius: 6px;
   padding: 1em;
+  width: 80%;
+  display: flex;
+  align-items: center;
 }
 
 .titulo p {
-  text-align: center;
+  text-align: left;
   font-size: 1.5em;
   font-weight: 500;
   color: var(--primary-text-color);
-  text-transform: uppercase;
-  font-weight: 300;
+  font-weight: 400;
 }
 .link {
   text-align: center;
@@ -63,64 +102,38 @@ mat-form-field {
   color: var(--secondary-text-color);
 }
 
-/*Sticky footer*/
-
-.super-container {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
+/* default and hover color */
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+  color: black;
 }
 
-.content {
-  flex: 1 0 auto;
-  padding-bottom: 4vh;
-}
-.footer {
-  flex-shrink: 0;
-  background: var(--gradient-background-1);
-  background: linear-gradient(
-    135deg,
-    var(--gradient-background-2) 51%,
-    var(--gradient-background-3) 91%,
-    var(--gradient-background-4) 100%
-  );
-}
-
-@media screen and (max-width: 1045px) {
+@media screen and (max-width: 1090px) {
   .super-container {
     background-color: var(--primary-background-color);
   }
   .card {
-    width: 70%;
+    width: 80%;
     border-color: var(--login-card-background);
   }
 }
 
-@media screen and (min-width: 720px) {
-  .super-container {
-    background-color: var(--primary-background-color);
+@media screen and (max-width: 770px) {
+  .campo_container {
+    flex-direction: column;
+  }
+  .campo {
+    width: 100%;
+  }
+  .cadastro {
+    padding: 0;
   }
   .card {
-    width: 40%;
-    border-color: var(--login-card-background);
+    padding: 0.5rem 1rem;
+    margin: 1rem 0;
   }
 }
 
 @media (max-width: 676px) {
-  .super-container {
-    height: auto;
-    background: var(--gradient-background-1);
-    background: linear-gradient(
-      135deg,
-      var(--gradient-background-2) 51%,
-      var(--gradient-background-3) 91%,
-      var(--gradient-background-4) 100%
-    );
-  }
-  .titulo p {
-    color: var(--secondary-text-color);
-  }
-
   .link {
     text-align: center;
   }
@@ -142,7 +155,4 @@ mat-form-field {
   form {
     padding-bottom: 2rem;
   }
-
-
 }
-

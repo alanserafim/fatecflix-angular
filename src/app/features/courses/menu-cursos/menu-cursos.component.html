@@ -5,7 +5,20 @@
       <p>e desperte para um mundo de possibilidades</p>
     </div>
   </div>
-  <div class="cursos" *ngFor="let item of categoriasList">
-    <app-secao [categoriaExibicao]="item.categoria"></app-secao>
+  <app-barra-pesquisa
+    [categorias]="listaDeCategorias"
+    (novaCategoriaSelecionadaEvento)="selecionaCategoria($event)"
+  ></app-barra-pesquisa>
+
+  <div *ngIf="categoriaSelecionada == 'Todos'; else elseBlock">
+    <div class="cursos" *ngFor="let item of categoriasList">
+      <app-secao [categoriaExibicao]="item.categoria"></app-secao>
+    </div>
   </div>
+  <ng-template #elseBlock>
+    <div class="cursos">
+      <app-secao categoriaExibicao="{{categoriaSelecionada}}"></app-secao>
+    </div>
+  </ng-template>
 </div>
+

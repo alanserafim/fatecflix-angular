@@ -1,0 +1,15 @@
+.super-container {
+  background-color: white;
+  display: flex;
+  justify-content: flex-end;
+  height: 20vh;
+  margin-bottom: 20px;
+  padding: 4px 40px;
+ }
+.container-pesquisa {
+
+}
+
+.container-filtro {
+
+}

@@ -27,6 +27,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatDialogModule} from '@angular/material/dialog';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
 
 
 @NgModule({
@@ -58,7 +59,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatSnackBarModule,
     MatMenuModule,
     MatDividerModule,
-    MatDialogModule
+    MatDialogModule,
+    MatAutocompleteModule
   ],
   exports: [
     MatCardModule,
@@ -87,7 +89,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatExpansionModule,
     MatMenuModule,
     MatDividerModule,
-    MatDialogModule
+    MatDialogModule,
+    MatAutocompleteModule
   ],
   providers: [{ provide: MAT_DATE_LOCALE, useValue: 'pt-BR' }],
 })

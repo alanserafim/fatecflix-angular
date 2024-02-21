@@ -15,14 +15,14 @@ export class MenuCursosComponent implements OnInit {
   usuarioLogado$: Observable<UsuarioLogado> =
     this.usuarioLogadoService.retornaUsuarioLogado();
 
-  listaExibicao: String[] = ['Frontend', 'Ferramentas'];
-
   // @ts-ignore: Object is possibly 'undefined'.
   cursos: Observable<NovoCurso[]>;
   // @ts-ignore: Object is possibly 'undefined'.
   cursosEncontrados: Observable<NovoCurso[]>;
 
   categoriasList: any[] = [];
+  listaDeCategorias: string[] = []
+  categoriaSelecionada: string = ''
 
   constructor(
     private usuarioLogadoService: UsuarioLogadoService,
@@ -32,7 +32,9 @@ export class MenuCursosComponent implements OnInit {
 
   ngOnInit(): void {
     this.listaCategorias();
-    this.listaExibicao = this.categoriasList;''
+    this.categoriaSelecionada = 'Todos'
+    console.log(this.categoriaSelecionada == 'Todos')
+
   }
 
   listaCategorias() {
@@ -45,7 +47,13 @@ export class MenuCursosComponent implements OnInit {
             .reduce((m, t) => m.set(t.categoria, t), new Map())
             .values()
         );
-        console.log(this.categoriasList);
+        console.log("categoriaList")
+        console.log(this.categoriasList)
+        //@ts-ignore
+        this.listaDeCategorias = this.categoriasList.map(curso => String(curso.categoria))
+        console.log("listaDeCategorias")
+        console.log(this.listaDeCategorias)
+
       });
   }
 
@@ -63,5 +71,9 @@ export class MenuCursosComponent implements OnInit {
 
   detalhar(id: number) {
     this.router.navigate(['cursos/detalhar', id]);
+  }
+
+  selecionaCategoria(categoria: string){
+    this.categoriaSelecionada = categoria
   }
 }

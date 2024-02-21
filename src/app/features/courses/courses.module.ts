@@ -19,6 +19,7 @@ import { TabelaComponent } from './listar-cursos/tabela/tabela.component';
 import { MatriculaComponent } from './matricula/matricula.component';
 import { MenuCursosComponent } from './menu-cursos/menu-cursos.component';
 import { SecaoComponent } from './menu-cursos/secao/secao.component';
+import { BarraPesquisaComponent } from './menu-cursos/barra-pesquisa/barra-pesquisa.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { SecaoComponent } from './menu-cursos/secao/secao.component';
     CategoriaCursosComponent,
     MenuCursosComponent,
     SecaoComponent,
-    MatriculaComponent
+    MatriculaComponent,
+    BarraPesquisaComponent
   ],
   exports: [MatriculaComponent],
   imports: [

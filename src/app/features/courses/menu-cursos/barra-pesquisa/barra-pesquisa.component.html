@@ -1,19 +1,13 @@
 <div class="super-container">
-<form action="">
-  <div class="container-pesquisa">
-  <!-- implementar campo de pesquisa -->
-  </div>
   <div class="container-filtro">
-    <p>Filtrar por</p>
     <mat-form-field appearance="fill">
-      <mat-label>Categoria</mat-label>
+      <mat-label>Filtrar por categoria</mat-label>
       <mat-select [formControl]="categoriasControl" #novaCategoria (valueChange)="selecionaCategoria(novaCategoria.value)">
-        <mat-option value="Todos">Todos</mat-option>
+        <mat-option value="Todos">Todas</mat-option>
         <mat-option *ngFor="let categoria of categorias" [value]="categoria">
           {{categoria}}
         </mat-option>
       </mat-select>
     </mat-form-field>
   </div>
-</form>
 </div>

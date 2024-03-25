@@ -260,6 +260,12 @@
   color: white!important; 
 }
 
+:root .contraste .container-filtro .mat-select-value
+{ 
+  color: white!important; 
+}
+
+
 :root .contraste .mat-option-text  {
   background-color: black !important;
 }

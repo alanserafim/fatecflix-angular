@@ -1,15 +1,21 @@
 .super-container {
-  background-color: white;
+  background-color: transparent;
   display: flex;
   justify-content: flex-end;
-  height: 20vh;
-  margin-bottom: 20px;
-  padding: 4px 40px;
+  margin-bottom: 10px;
+  padding: 4px 10%;
+  color: var(--secondary-text-color)
  }
-.container-pesquisa {
-
+ 
+ .container-filtro mat-form-field {
+  background-color: var(--primary-background-color);
+  border-radius: 12px;
 }
 
-.container-filtro {
-
+@media (max-width: 676px) {
+  .super-container {
+    justify-content: flex-start;
+    padding: 4px 36px;
+  }
 }
+
